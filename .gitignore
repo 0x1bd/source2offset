@@ -1,0 +1,5 @@
+.gradle/
+build/
+*.kexe
+*.s2map.json
+local.properties
