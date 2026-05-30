@@ -1,0 +1,45 @@
+{
+  "worldrenderer": {
+    "offsetSemantics": "declared_fields_relative_to_class_object",
+    "wrapperInheritanceGenerated": false,
+    "classes": {
+      "CEntityComponent": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "CEntityInstance": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_iszPrivateVScripts": {
+            "offset": 8,
+            "type": "CUtlSymbolLarge"
+          },
+          "m_pEntity": {
+            "offset": 16,
+            "type": "CEntityIdentity*"
+          },
+          "m_CScriptComponent": {
+            "offset": 40,
+            "type": "CScriptComponent*"
+          }
+        }
+      },
+      "CScriptComponent": {
+        "reflectedParent": "CEntityComponent",
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_scriptClassName": {
+            "offset": 48,
+            "type": "CUtlSymbolLarge"
+          }
+        }
+      }
+    },
+    "enums": {
+      "RTProxyInstanceFlags_t": {
+        "RTPROXY_INSTANCE_FLAG_NONE": 0,
+        "RTPROXY_INSTANCE_UNIQUE_MESH": 1
+      }
+    }
+  }
+}

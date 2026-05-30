@@ -1,0 +1,92 @@
+{
+  "client": {
+    "CGameEntitySystem_m_EntityClasses": {
+      "rva": 2720,
+      "access": "member_offset",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris OffsetToEntityClasses."
+    },
+    "CGameEntitySystem_m_EntityList": {
+      "rva": 16,
+      "access": "member_offset",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris EntityListOffset."
+    },
+    "dwGameEntitySystem": {
+      "rva": 73770704,
+      "access": "pointer_slot_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris EntitySystemPointer."
+    },
+    "dwGameRules": {
+      "rva": 73899600,
+      "access": "pointer_slot_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris GameRulesPointer."
+    },
+    "dwGlobalVars": {
+      "rva": 71427928,
+      "access": "pointer_slot_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris GlobalVarsPointer."
+    },
+    "dwLocalPlayerController": {
+      "rva": 73705400,
+      "access": "pointer_slot_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris LocalPlayerControllerPointer."
+    },
+    "dwPlantedC4s": {
+      "rva": 73962848,
+      "access": "direct_address_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris PlantedC4sPointer (vector storage)."
+    },
+    "dwViewMatrix": {
+      "rva": 73933504,
+      "access": "direct_address_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Alias for native world-to-projection matrix storage."
+    },
+    "dwViewRender": {
+      "rva": 73933776,
+      "access": "pointer_slot_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris ViewRenderPointer."
+    },
+    "dwViewToProjectionMatrix": {
+      "rva": 73933568,
+      "access": "direct_address_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris ViewToProjectionMatrixPointer."
+    },
+    "dwWorldToProjectionMatrix": {
+      "rva": 73933504,
+      "access": "direct_address_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Osiris WorldToProjectionMatrixPointer."
+    }
+  }
+}

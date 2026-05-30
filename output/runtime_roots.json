@@ -1,0 +1,14 @@
+{
+  "roots": [
+    {
+      "name": "GameEntitySystem",
+      "sourceModule": "libengine2.so",
+      "sourceInterface": "GameResourceServiceClientV001",
+      "sourceInterfaceRva": 10238752,
+      "memberOffset": 80,
+      "verifiedTargetType": "CGameEntitySystem",
+      "targetAddressAtDumpTime": 140507350245376,
+      "provenance": "live_itanium_RTTI_verified_relationship"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "host": {
+    "offsetSemantics": "declared_fields_relative_to_class_object",
+    "wrapperInheritanceGenerated": false,
+    "classes": {
+      "CAnimScriptBase": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_bIsValid": {
+            "offset": 8,
+            "type": "bool"
+          }
+        }
+      },
+      "EmptyTestScript": {
+        "reflectedParent": "CAnimScriptBase",
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_hTest": {
+            "offset": 16,
+            "type": "CAnimScriptParam<float32>"
+          }
+        }
+      }
+    },
+    "enums": {}
+  }
+}

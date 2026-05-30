@@ -1,0 +1,164 @@
+{
+  "scenesystem": {
+    "offsetSemantics": "declared_fields_relative_to_class_object",
+    "wrapperInheritanceGenerated": false,
+    "classes": {
+      "CSSDSEndFrameViewInfo": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_nViewId": {
+            "offset": 0,
+            "type": "uint64"
+          },
+          "m_ViewName": {
+            "offset": 8,
+            "type": "CUtlString"
+          }
+        }
+      },
+      "CSSDSMsg_EndFrame": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_Views": {
+            "offset": 0,
+            "type": "CUtlVector<CSSDSEndFrameViewInfo>"
+          }
+        }
+      },
+      "CSSDSMsg_LayerBase": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_viewId": {
+            "offset": 0,
+            "type": "SceneViewId_t"
+          },
+          "m_ViewName": {
+            "offset": 16,
+            "type": "CUtlString"
+          },
+          "m_nLayerId": {
+            "offset": 24,
+            "type": "uint64"
+          },
+          "m_LayerName": {
+            "offset": 32,
+            "type": "CUtlString"
+          },
+          "m_displayText": {
+            "offset": 40,
+            "type": "CUtlString"
+          }
+        }
+      },
+      "CSSDSMsg_PostLayer": {
+        "reflectedParent": "CSSDSMsg_LayerBase",
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "CSSDSMsg_PreLayer": {
+        "reflectedParent": "CSSDSMsg_LayerBase",
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "CSSDSMsg_ViewRender": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_viewId": {
+            "offset": 0,
+            "type": "SceneViewId_t"
+          },
+          "m_ViewName": {
+            "offset": 16,
+            "type": "CUtlString"
+          }
+        }
+      },
+      "CSSDSMsg_ViewTarget": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_Name": {
+            "offset": 0,
+            "type": "CUtlString"
+          },
+          "m_TextureId": {
+            "offset": 8,
+            "type": "uint64"
+          },
+          "m_nWidth": {
+            "offset": 16,
+            "type": "int32"
+          },
+          "m_nHeight": {
+            "offset": 20,
+            "type": "int32"
+          },
+          "m_nRequestedWidth": {
+            "offset": 24,
+            "type": "int32"
+          },
+          "m_nRequestedHeight": {
+            "offset": 28,
+            "type": "int32"
+          },
+          "m_nNumMipLevels": {
+            "offset": 32,
+            "type": "int32"
+          },
+          "m_nDepth": {
+            "offset": 36,
+            "type": "int32"
+          },
+          "m_nMultisampleNumSamples": {
+            "offset": 40,
+            "type": "int32"
+          },
+          "m_nFormat": {
+            "offset": 44,
+            "type": "int32"
+          }
+        }
+      },
+      "CSSDSMsg_ViewTargetList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_viewId": {
+            "offset": 0,
+            "type": "SceneViewId_t"
+          },
+          "m_ViewName": {
+            "offset": 16,
+            "type": "CUtlString"
+          },
+          "m_Targets": {
+            "offset": 24,
+            "type": "CUtlVector<CSSDSMsg_ViewTarget>"
+          }
+        }
+      },
+      "SceneViewId_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_nViewId": {
+            "offset": 0,
+            "type": "uint64"
+          },
+          "m_nFrameCount": {
+            "offset": 8,
+            "type": "uint64"
+          }
+        }
+      }
+    },
+    "enums": {
+      "ESceneViewDebugOverlaysListenerDataType_t": {
+        "k_ESceneViewDebugOverlaysListenerDataType_BoxAngles": 3,
+        "k_ESceneViewDebugOverlaysListenerDataType_Capsule": 2,
+        "k_ESceneViewDebugOverlaysListenerDataType_Line": 4,
+        "k_ESceneViewDebugOverlaysListenerDataType_SolidBoxAngles": 5,
+        "k_ESceneViewDebugOverlaysListenerDataType_Sphere": 1,
+        "k_ESceneViewDebugOverlaysListenerDataType_Text3D": 6,
+        "k_ESceneViewDebugOverlaysListenerDataType_Unknown": 0
+      }
+    }
+  }
+}

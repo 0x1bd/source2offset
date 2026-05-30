@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-05-30T16:39:52Z",
+  "capabilities": [
+    {
+      "level": "ok",
+      "feature": "interfaces",
+      "message": "Resolved 5 named interface instance(s) through live CreateInterface calls."
+    },
+    {
+      "level": "not_requested",
+      "feature": "elf_symbols",
+      "message": "Retained ELF symbol export is disabled by default; pass --symbols when investigating exported names."
+    },
+    {
+      "level": "ok",
+      "feature": "schema",
+      "message": "Dumped every field and enum visible through live SchemaSystem metadata."
+    },
+    {
+      "level": "ok",
+      "feature": "entity_system_root",
+      "message": "Verified CGameEntitySystem through GameResourceServiceClientV001+0x50 using live RTTI."
+    },
+    {
+      "level": "ok",
+      "feature": "global_offsets",
+      "message": "Emitted 11 native Linux target(s) from unique Osiris-style pattern matches."
+    },
+    {
+      "level": "provenance",
+      "feature": "osiris_linux_patterns",
+      "message": "Patterns are adapted from Osiris Linux MemoryPatterns (MIT); schema-reflected fields are still emitted from live SchemaSystem rather than duplicated here."
+    },
+    {
+      "level": "unavailable",
+      "feature": "dwLocalPlayerPawn",
+      "message": "Osiris Linux does not define a local-pawn global pattern, and the historical a2x Linux dwLocalPlayerPawn rule does not match this supplied libclient.so. Derive the local pawn from dwLocalPlayerController + reflected m_hPlayerPawn through CGameEntitySystem."
+    },
+    {
+      "level": "hybrid",
+      "feature": "private_global_offsets",
+      "message": "Private globals are emitted only after live validation; signature-backed discoveries are marked in offsets metadata."
+    }
+  ],
+  "schemaScopes": 18,
+  "schemaClasses": 993,
+  "schemaFields": 5533,
+  "namedInterfaces": 5,
+  "rttiRuntimeRoots": 1,
+  "validatedOffsets": 11
+}

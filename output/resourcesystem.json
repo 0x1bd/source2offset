@@ -1,0 +1,408 @@
+{
+  "resourcesystem": {
+    "offsetSemantics": "declared_fields_relative_to_class_object",
+    "wrapperInheritanceGenerated": false,
+    "classes": {
+      "AABB_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_vMinBounds": {
+            "offset": 0,
+            "type": "Vector"
+          },
+          "m_vMaxBounds": {
+            "offset": 12,
+            "type": "Vector"
+          }
+        }
+      },
+      "CFuseProgram": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_programBuffer": {
+            "offset": 0,
+            "type": "CUtlVector<uint8>"
+          },
+          "m_variablesRead": {
+            "offset": 24,
+            "type": "CUtlVector<FuseVariableIndex_t>"
+          },
+          "m_variablesWritten": {
+            "offset": 48,
+            "type": "CUtlVector<FuseVariableIndex_t>"
+          },
+          "m_nMaxTempVarsUsed": {
+            "offset": 72,
+            "type": "int32"
+          }
+        }
+      },
+      "CFuseSymbolTable": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_constants": {
+            "offset": 0,
+            "type": "CUtlVector<ConstantInfo_t>"
+          },
+          "m_variables": {
+            "offset": 24,
+            "type": "CUtlVector<VariableInfo_t>"
+          },
+          "m_functions": {
+            "offset": 48,
+            "type": "CUtlVector<FunctionInfo_t>"
+          },
+          "m_constantMap": {
+            "offset": 72,
+            "type": "CUtlHashtable<CUtlStringToken,int32>"
+          },
+          "m_variableMap": {
+            "offset": 104,
+            "type": "CUtlHashtable<CUtlStringToken,int32>"
+          },
+          "m_functionMap": {
+            "offset": 136,
+            "type": "CUtlHashtable<CUtlStringToken,int32>"
+          }
+        }
+      },
+      "ConstantInfo_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_name": {
+            "offset": 0,
+            "type": "CUtlString"
+          },
+          "m_nameToken": {
+            "offset": 8,
+            "type": "CUtlStringToken"
+          },
+          "m_flValue": {
+            "offset": 12,
+            "type": "float32"
+          }
+        }
+      },
+      "FourQuaternions": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "x": {
+            "offset": 0,
+            "type": "fltx4"
+          },
+          "y": {
+            "offset": 16,
+            "type": "fltx4"
+          },
+          "z": {
+            "offset": 32,
+            "type": "fltx4"
+          },
+          "w": {
+            "offset": 48,
+            "type": "fltx4"
+          }
+        }
+      },
+      "FunctionInfo_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_name": {
+            "offset": 8,
+            "type": "CUtlString"
+          },
+          "m_nameToken": {
+            "offset": 16,
+            "type": "CUtlStringToken"
+          },
+          "m_nParamCount": {
+            "offset": 20,
+            "type": "int32"
+          },
+          "m_nIndex": {
+            "offset": 24,
+            "type": "FuseFunctionIndex_t"
+          },
+          "m_bIsPure": {
+            "offset": 26,
+            "type": "bool"
+          }
+        }
+      },
+      "FuseFunctionIndex_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_Value": {
+            "offset": 0,
+            "type": "uint16"
+          }
+        }
+      },
+      "FuseVariableIndex_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_Value": {
+            "offset": 0,
+            "type": "uint16"
+          }
+        }
+      },
+      "InfoForResourceTypeCAnimData": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCAnimationGroup": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCCSGOEconItem": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCChoreoSceneResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCCompositeMaterialKit": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCDOTANovelsList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCDOTAPatchNotesList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCDotaItemDefinitionResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCEntityLump": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCGcExportableExternalData": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCJavaScriptResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCModel": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCMorphSetData": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCNmClip": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCNmGraphDefinition": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCNmSkeleton": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCPanoramaDynamicImages": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCPanoramaLayout": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCPanoramaStyle": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCPhysAggregateData": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCPostProcessingResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCRenderMesh": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCResponseRulesList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCSequenceGroupData": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCSmartProp": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCSurfaceGraph": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCTestResourceData": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCTextureBase": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCTypeScriptResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVDataItemDefs": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVDataResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVMixListResource": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVPhysXSurfacePropertiesList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVSoundEventScriptList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVSoundStackScriptList": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVoiceContainerBase": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCVoxelVisibility": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeCWorldNode": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeIAnimGraphModelBinding": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeIMaterial2": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeIParticleSnapshot": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeIParticleSystemDefinition": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeIPulseGraphDef": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeIVectorGraphic": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeManifestTestResource_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeProceduralTestResource_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "InfoForResourceTypeWorld_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
+      },
+      "ManifestTestResource_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_name": {
+            "offset": 0,
+            "type": "CUtlString"
+          },
+          "m_child": {
+            "offset": 8,
+            "type": "CStrongHandle<InfoForResourceTypeManifestTestResource_t>"
+          }
+        }
+      },
+      "PackedAABB_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_nPackedMin": {
+            "offset": 0,
+            "type": "uint32"
+          },
+          "m_nPackedMax": {
+            "offset": 4,
+            "type": "uint32"
+          }
+        }
+      },
+      "VariableInfo_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_name": {
+            "offset": 0,
+            "type": "CUtlString"
+          },
+          "m_nameToken": {
+            "offset": 8,
+            "type": "CUtlStringToken"
+          },
+          "m_nIndex": {
+            "offset": 12,
+            "type": "FuseVariableIndex_t"
+          },
+          "m_nNumComponents": {
+            "offset": 14,
+            "type": "uint8"
+          },
+          "m_eVarType": {
+            "offset": 15,
+            "type": "FuseVariableType_t"
+          },
+          "m_eAccess": {
+            "offset": 16,
+            "type": "FuseVariableAccess_t"
+          }
+        }
+      }
+    },
+    "enums": {
+      "FuseVariableType_t": {
+        "BOOL": 1,
+        "FLOAT32": 8,
+        "INT16": 3,
+        "INT32": 4,
+        "INT8": 2,
+        "INVALID": 0,
+        "UINT16": 6,
+        "UINT32": 7,
+        "UINT8": 5
+      }
+    }
+  }
+}

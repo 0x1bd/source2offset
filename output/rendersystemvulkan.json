@@ -1,0 +1,250 @@
+{
+  "rendersystemvulkan": {
+    "offsetSemantics": "declared_fields_relative_to_class_object",
+    "wrapperInheritanceGenerated": false,
+    "classes": {
+      "RenderInputLayoutField_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_pSemanticName": {
+            "offset": 0,
+            "type": "char[32]"
+          },
+          "m_nSemanticIndex": {
+            "offset": 32,
+            "type": "int8"
+          },
+          "m_nOffset": {
+            "offset": 40,
+            "type": "int16"
+          },
+          "m_nSlot": {
+            "offset": 42,
+            "type": "int8"
+          },
+          "m_nSlotType": {
+            "offset": 43,
+            "type": "RenderSlotType_t"
+          },
+          "m_szShaderSemantic": {
+            "offset": 44,
+            "type": "char[32]"
+          }
+        }
+      },
+      "RsBlendStateDesc_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_srcBlendBits": {
+            "offset": 0,
+            "type": "uint32"
+          },
+          "m_blendOpBits": {
+            "offset": 0,
+            "type": "bitfield:30"
+          },
+          "m_bAlphaToCoverageEnable": {
+            "offset": 0,
+            "type": "bitfield:1"
+          },
+          "m_bIndependentBlendEnable": {
+            "offset": 0,
+            "type": "bitfield:1"
+          },
+          "m_destBlendBits": {
+            "offset": 4,
+            "type": "uint32"
+          },
+          "m_srcBlendAlphaBits": {
+            "offset": 8,
+            "type": "uint32"
+          },
+          "m_destBlendAlphaBits": {
+            "offset": 12,
+            "type": "uint32"
+          },
+          "m_renderTargetWriteMaskBits": {
+            "offset": 16,
+            "type": "uint32"
+          },
+          "m_blendOpAlphaBits": {
+            "offset": 24,
+            "type": "uint32"
+          },
+          "m_blendEnableBits": {
+            "offset": 28,
+            "type": "uint8"
+          },
+          "m_srgbWriteEnableBits": {
+            "offset": 29,
+            "type": "uint8"
+          }
+        }
+      },
+      "RsDepthStencilStateDesc_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_bDepthTestEnable": {
+            "offset": 0,
+            "type": "bitfield:1"
+          },
+          "m_bDepthWriteEnable": {
+            "offset": 0,
+            "type": "bitfield:1"
+          },
+          "m_depthFunc": {
+            "offset": 1,
+            "type": "RsComparison_t"
+          },
+          "m_stencilState": {
+            "offset": 2,
+            "type": "RsStencilStateDesc_t"
+          }
+        }
+      },
+      "RsRasterizerStateDesc_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_nFillMode": {
+            "offset": 0,
+            "type": "RsFillMode_t"
+          },
+          "m_nCullMode": {
+            "offset": 1,
+            "type": "RsCullMode_t"
+          },
+          "m_bDepthClipEnable": {
+            "offset": 2,
+            "type": "bool"
+          },
+          "m_bMultisampleEnable": {
+            "offset": 3,
+            "type": "bool"
+          },
+          "m_nDepthBias": {
+            "offset": 4,
+            "type": "int32"
+          },
+          "m_flDepthBiasClamp": {
+            "offset": 8,
+            "type": "float32"
+          },
+          "m_flSlopeScaledDepthBias": {
+            "offset": 12,
+            "type": "float32"
+          }
+        }
+      },
+      "RsStencilStateDesc_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_bStencilEnable": {
+            "offset": 0,
+            "type": "bitfield:1"
+          },
+          "m_frontStencilFailOp": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_frontStencilDepthFailOp": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_frontStencilPassOp": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_frontStencilFunc": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_backStencilFailOp": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_backStencilDepthFailOp": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_backStencilPassOp": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_backStencilFunc": {
+            "offset": 0,
+            "type": "bitfield:3"
+          },
+          "m_nStencilReadMask": {
+            "offset": 4,
+            "type": "uint8"
+          },
+          "m_nStencilWriteMask": {
+            "offset": 5,
+            "type": "uint8"
+          }
+        }
+      },
+      "SheetSequenceIntegerId_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_Value": {
+            "offset": 0,
+            "type": "uint32"
+          }
+        }
+      },
+      "VsInputSignatureElement_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_pName": {
+            "offset": 0,
+            "type": "char[64]"
+          },
+          "m_pSemantic": {
+            "offset": 64,
+            "type": "char[64]"
+          },
+          "m_pD3DSemanticName": {
+            "offset": 128,
+            "type": "char[64]"
+          },
+          "m_nD3DSemanticIndex": {
+            "offset": 192,
+            "type": "int32"
+          }
+        }
+      },
+      "VsInputSignature_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_elems": {
+            "offset": 0,
+            "type": "CUtlVector<VsInputSignatureElement_t>"
+          },
+          "m_depth_elems": {
+            "offset": 24,
+            "type": "CUtlVector<VsInputSignatureElement_t>"
+          }
+        }
+      }
+    },
+    "enums": {
+      "RenderPrimitiveType_t": {
+        "RENDER_PRIM_COMPUTE_SHADER": 11,
+        "RENDER_PRIM_HETEROGENOUS": 10,
+        "RENDER_PRIM_INSTANCED_QUADS": 9,
+        "RENDER_PRIM_LINES": 1,
+        "RENDER_PRIM_LINES_WITH_ADJACENCY": 2,
+        "RENDER_PRIM_LINE_STRIP": 3,
+        "RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY": 4,
+        "RENDER_PRIM_MESH_SHADER": 12,
+        "RENDER_PRIM_POINTS": 0,
+        "RENDER_PRIM_TRIANGLES": 5,
+        "RENDER_PRIM_TRIANGLES_WITH_ADJACENCY": 6,
+        "RENDER_PRIM_TRIANGLE_STRIP": 7,
+        "RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY": 8,
+        "RENDER_PRIM_TYPE_COUNT": 13
+      }
+    }
+  }
+}

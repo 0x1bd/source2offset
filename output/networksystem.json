@@ -1,0 +1,18 @@
+{
+  "networksystem": {
+    "offsetSemantics": "declared_fields_relative_to_class_object",
+    "wrapperInheritanceGenerated": false,
+    "classes": {
+      "ChangeAccessorFieldPathIndex_t": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {
+          "m_Value": {
+            "offset": 0,
+            "type": "int32"
+          }
+        }
+      }
+    },
+    "enums": {}
+  }
+}
