@@ -154,7 +154,10 @@ class NativeOffsetDumper(
         }
 
         val csgoInput = client.base + csgoInputRva
+        val clientSize = client.size.toLong()
+
         val discovered = mutableMapOf<String, Long>()
+        val encountered = mutableSetOf<String>()
 
         for (slot in 0 until CCSGO_INPUT_BUTTON_SLOT_COUNT) {
             val buttonObject = runCatching {
@@ -178,14 +181,18 @@ class NativeOffsetDumper(
             val buttonName = normaliseButtonName(rawName) ?: continue
             if (buttonName !in SUPPORTED_BUTTON_NAMES) continue
 
+            encountered += buttonName
+
             val stateAddress = buttonObject + KEY_BUTTON_STATE
             val stateRva = stateAddress - client.base
 
-            if (stateRva < 0L || stateRva >= client.size.toByte()) {
+            if (stateRva !in 0 until clientSize) {
                 messages += CapabilityMessage(
                     "rejected",
                     "buttons_$buttonName",
-                    "Live button object for '$buttonName' resolved outside libclient.so static storage.",
+                    "Live KeyButton.state for '$buttonName' resolved outside libclient.so: " +
+                            "stateRva=0x${stateRva.toULong().toString(16)}, " +
+                            "moduleSize=0x${clientSize.toULong().toString(16)}.",
                 )
                 continue
             }
@@ -204,12 +211,14 @@ class NativeOffsetDumper(
             }
 
             val previous = discovered.put(buttonName, stateRva)
+
             if (previous != null && previous != stateRva) {
                 messages += CapabilityMessage(
                     "rejected",
                     "buttons_$buttonName",
                     "Multiple distinct KeyButton.state RVAs were found for '$buttonName'.",
                 )
+                discovered.remove(buttonName)
                 continue
             }
 
@@ -220,20 +229,20 @@ class NativeOffsetDumper(
                     rva = stateRva,
                     access = "direct_address_rva",
                     discovery = "live_ccsgoinput_keybutton_state",
-                    validation = "CCSGOInput slot $slot points to a readable KeyButton named '$rawName'; emitted state field at +0x30.",
+                    validation = "CCSGOInput slot $slot points to readable KeyButton '$rawName'; emitted state field at +0x30.",
                     confidence = "validated",
-                    note = "a2x-compatible KeyButton.state RVA. This is a 32-bit state field.",
+                    note = "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value.",
                 ),
                 log,
             )
         }
 
         for (expectedName in SUPPORTED_BUTTON_NAMES) {
-            if (expectedName !in discovered) {
+            if (expectedName !in discovered && expectedName !in encountered) {
                 messages += CapabilityMessage(
                     "unavailable",
                     "buttons_$expectedName",
-                    "No validated live KeyButton named '$expectedName' was reachable from dwCSGOInput in this run.",
+                    "No live KeyButton named '$expectedName' was reachable from dwCSGOInput in this run.",
                 )
             }
         }
