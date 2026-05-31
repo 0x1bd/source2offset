@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libanimationsystem.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object AnimationsystemSchema {
 
     /** Fields declared directly by CBasePulseGraphInstance. */
@@ -23,8 +15,6 @@ object AnimationsystemSchema {
         const val SCHEMA_NAME: String = "CBasePulseGraphInstance"
     }
 
-    /** Read/write view of decodable fields declared directly by CBasePulseGraphInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBasePulseGraphInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -35,8 +25,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CParticleCollectionBindingInstance"
     }
 
-    /** Read/write view of decodable fields declared directly by CParticleBindingRealPulse.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CParticleBindingRealPulseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -47,8 +35,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CBasePulseGraphInstance"
     }
 
-    /** Read/write view of decodable fields declared directly by CParticleCollectionBindingInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CParticleCollectionBindingInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -58,8 +44,6 @@ object AnimationsystemSchema {
         const val SCHEMA_NAME: String = "CPulseArraylib"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseArraylib.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseArraylibStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -70,8 +54,6 @@ object AnimationsystemSchema {
         const val m_nEditorNodeID: Long = 0x8L // PulseDocNodeID_t; schema=m_nEditorNodeID
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Base.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nEditorNodeID: PulseDocNodeID_t; no safe value decoder was proven. */
         val m_nEditorNodeIDAddress: Long get() = base + CPulseCell_Base.m_nEditorNodeID
@@ -83,8 +65,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_Base"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseFlow.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseFlowStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -96,8 +76,6 @@ object AnimationsystemSchema {
         const val m_WakeResume: Long = 0x48L // CPulse_ResumePoint; schema=m_WakeResume
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseLerp.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseLerpStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_WakeResume: CPulse_ResumePoint; no safe value decoder was proven. */
         val m_WakeResumeAddress: Long get() = base + CPulseCell_BaseLerp.m_WakeResume
@@ -109,8 +87,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_Base"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseRequirement.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseRequirementStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -121,8 +97,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_Base"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseValue.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseValueStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -133,8 +107,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_BaseFlow"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseYieldingInflow.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseYieldingInflowStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -147,8 +119,6 @@ object AnimationsystemSchema {
         const val m_RegisterMap: Long = 0x50L // PulseRegisterMap_t; schema=m_RegisterMap
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_BaseEntrypoint.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_BaseEntrypointStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_EntryChunk: PulseRuntimeChunkIndex_t; no safe value decoder was proven. */
         val m_EntryChunkAddress: Long get() = base + CPulseCell_Inflow_BaseEntrypoint.m_EntryChunk
@@ -165,8 +135,6 @@ object AnimationsystemSchema {
         const val m_ExpectedParamType: Long = 0xA0L // CPulseValueFullType; schema=m_ExpectedParamType
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_EntOutputHandler.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_EntOutputHandlerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_SourceEntity: PulseSymbol_t; no safe value decoder was proven. */
         val m_SourceEntityAddress: Long get() = base + CPulseCell_Inflow_EntOutputHandler.m_SourceEntity
@@ -183,8 +151,6 @@ object AnimationsystemSchema {
         const val m_EventName: Long = 0x80L // PulseSymbol_t; schema=m_EventName
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_EventHandler.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_EventHandlerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_EventName: PulseSymbol_t; no safe value decoder was proven. */
         val m_EventNameAddress: Long get() = base + CPulseCell_Inflow_EventHandler.m_EventName
@@ -197,8 +163,6 @@ object AnimationsystemSchema {
         const val m_HookName: Long = 0x80L // PulseSymbol_t; schema=m_HookName
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_GraphHook.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_GraphHookStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_HookName: PulseSymbol_t; no safe value decoder was proven. */
         val m_HookNameAddress: Long get() = base + CPulseCell_Inflow_GraphHook.m_HookName
@@ -212,8 +176,6 @@ object AnimationsystemSchema {
         const val m_bSelfReference: Long = 0x82L // bool; schema=m_bSelfReference
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_ObservableVariableListener.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_ObservableVariableListenerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nBlackboardReference: PulseRuntimeBlackboardReferenceIndex_t; no safe value decoder was proven. */
         val m_nBlackboardReferenceAddress: Long get() = base + CPulseCell_Inflow_ObservableVariableListener.m_nBlackboardReference
@@ -228,8 +190,6 @@ object AnimationsystemSchema {
         const val m_OnInterval: Long = 0x90L // SignatureOutflow_Continue; schema=m_OnInterval
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IntervalTimer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IntervalTimerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Completed: CPulse_ResumePoint; no safe value decoder was proven. */
         val m_CompletedAddress: Long get() = base + CPulseCell_IntervalTimer.m_Completed
@@ -247,8 +207,6 @@ object AnimationsystemSchema {
         const val m_bCompleteOnNextWake: Long = 0x10L // bool; schema=m_bCompleteOnNextWake
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IntervalTimer::CursorState_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IntervalTimer__CursorState_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_StartTime: GameTime_t; no safe value decoder was proven. */
         val m_StartTimeAddress: Long get() = base + CPulseCell_IntervalTimer__CursorState_t.m_StartTime
@@ -265,8 +223,6 @@ object AnimationsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_BaseRequirement"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IsRequirementValid.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IsRequirementValidStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -277,8 +233,6 @@ object AnimationsystemSchema {
         const val m_bIsValid: Long = 0x0L // bool; schema=m_bIsValid
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IsRequirementValid::Criteria_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IsRequirementValid__Criteria_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bIsValid: Boolean by bool(CPulseCell_IsRequirementValid__Criteria_t.m_bIsValid)
     }
@@ -289,8 +243,6 @@ object AnimationsystemSchema {
         const val m_nCurrentCount: Long = 0x0L // int32; schema=m_nCurrentCount
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_LimitCount::InstanceState_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_LimitCount__InstanceState_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nCurrentCount: Int by int32(CPulseCell_LimitCount__InstanceState_t.m_nCurrentCount)
     }
@@ -305,8 +257,6 @@ object AnimationsystemSchema {
         const val m_OnCanceled: Long = 0xB0L // CPulse_ResumePoint; schema=m_OnCanceled
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Timeline.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_TimelineStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_TimelineEvents: CUtlVector<CPulseCell_Timeline::TimelineEvent_t>; no safe value decoder was proven. */
         val m_TimelineEventsAddress: Long get() = base + CPulseCell_Timeline.m_TimelineEvents
@@ -324,8 +274,6 @@ object AnimationsystemSchema {
         const val m_Curve: Long = 0x48L // CPiecewiseCurve; schema=m_Curve
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Value_Curve.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Value_CurveStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Curve: CPiecewiseCurve; no safe value decoder was proven. */
         val m_CurveAddress: Long get() = base + CPulseCell_Value_Curve.m_Curve
@@ -337,8 +285,6 @@ object AnimationsystemSchema {
         const val m_TagName: Long = 0x0L // PulseSymbol_t; schema=m_TagName
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_WaitForCursorsWithTagBase::CursorState_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_WaitForCursorsWithTagBase__CursorState_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_TagName: PulseSymbol_t; no safe value decoder was proven. */
         val m_TagNameAddress: Long get() = base + CPulseCell_WaitForCursorsWithTagBase__CursorState_t.m_TagName
@@ -352,8 +298,6 @@ object AnimationsystemSchema {
         const val m_OnTrue: Long = 0xC0L // CPulse_ResumePoint; schema=m_OnTrue
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_WaitForObservable.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_WaitForObservableStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Condition: PulseObservableBoolExpression_t; no safe value decoder was proven. */
         val m_ConditionAddress: Long get() = base + CPulseCell_WaitForObservable.m_Condition
@@ -380,8 +324,6 @@ object AnimationsystemSchema {
         const val m_OutputConnections: Long = 0x128L // CUtlVector<CPulse_OutputConnection*>; schema=m_OutputConnections
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseGraphDef.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseGraphDefStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_DomainIdentifier: PulseSymbol_t; no safe value decoder was proven. */
         val m_DomainIdentifierAddress: Long get() = base + CPulseGraphDef.m_DomainIdentifier
@@ -418,8 +360,6 @@ object AnimationsystemSchema {
         const val m_nSrcInstruction: Long = 0x48L // int32; schema=m_nSrcInstruction
     }
 
-    /** Read/write view of decodable fields declared directly by CPulse_InvokeBinding.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulse_InvokeBindingStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_RegisterMap: PulseRegisterMap_t; no safe value decoder was proven. */
         val m_RegisterMapAddress: Long get() = base + CPulse_InvokeBinding.m_RegisterMap
@@ -441,8 +381,6 @@ object AnimationsystemSchema {
         const val m_OutflowRegisterMap: Long = 0x18L // PulseRegisterMap_t; schema=m_OutflowRegisterMap
     }
 
-    /** Read/write view of decodable fields declared directly by CPulse_OutflowConnection.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulse_OutflowConnectionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_SourceOutflowName: PulseSymbol_t; no safe value decoder was proven. */
         val m_SourceOutflowNameAddress: Long get() = base + CPulse_OutflowConnection.m_SourceOutflowName
@@ -459,8 +397,6 @@ object AnimationsystemSchema {
         const val m_Outflows: Long = 0x0L // CUtlVector<PulseNodeDynamicOutflows_t::DynamicOutflow_t>; schema=m_Outflows
     }
 
-    /** Read/write view of decodable fields declared directly by PulseNodeDynamicOutflows_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PulseNodeDynamicOutflows_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Outflows: CUtlVector<PulseNodeDynamicOutflows_t::DynamicOutflow_t>; no safe value decoder was proven. */
         val m_OutflowsAddress: Long get() = base + PulseNodeDynamicOutflows_t.m_Outflows
@@ -473,8 +409,6 @@ object AnimationsystemSchema {
         const val m_Connection: Long = 0x8L // CPulse_OutflowConnection; schema=m_Connection
     }
 
-    /** Read/write view of decodable fields declared directly by PulseNodeDynamicOutflows_t::DynamicOutflow_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PulseNodeDynamicOutflows_t__DynamicOutflow_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_OutflowID: CGlobalSymbol; no safe value decoder was proven. */
         val m_OutflowIDAddress: Long get() = base + PulseNodeDynamicOutflows_t__DynamicOutflow_t.m_OutflowID
@@ -489,8 +423,6 @@ object AnimationsystemSchema {
         const val m_Outflows: Long = 0x0L // CUtlVector<OutflowWithRequirements_t>; schema=m_Outflows
     }
 
-    /** Read/write view of decodable fields declared directly by PulseSelectorOutflowList_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PulseSelectorOutflowList_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Outflows: CUtlVector<OutflowWithRequirements_t>; no safe value decoder was proven. */
         val m_OutflowsAddress: Long get() = base + PulseSelectorOutflowList_t.m_Outflows

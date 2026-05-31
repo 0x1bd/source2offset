@@ -16,6 +16,142 @@
       "confidence": "signature",
       "note": "Osiris EntityListOffset."
     },
+    "buttons_attack": {
+      "rva": 73862224,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 0 points to readable KeyButton 'attack'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_attack2": {
+      "rva": 73862064,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 11 points to readable KeyButton 'attack2'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_back": {
+      "rva": 73861168,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 4 points to readable KeyButton 'back'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_duck": {
+      "rva": 73859984,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 2 points to readable KeyButton 'duck'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_forward": {
+      "rva": 73861328,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 3 points to readable KeyButton 'forward'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_jump": {
+      "rva": 73860144,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 1 points to readable KeyButton 'jump'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_left": {
+      "rva": 73861008,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 9 points to readable KeyButton 'left'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_lookatweapon": {
+      "rva": 73996464,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 35 points to readable KeyButton 'lookatweapon'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_reload": {
+      "rva": 73862384,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 13 points to readable KeyButton 'reload'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_right": {
+      "rva": 73860848,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 10 points to readable KeyButton 'right'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_showscores": {
+      "rva": 73996784,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 33 points to readable KeyButton 'showscores'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_sprint": {
+      "rva": 73862544,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 16 points to readable KeyButton 'sprint'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_turnleft": {
+      "rva": 73861904,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 7 points to readable KeyButton 'turnleft'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_turnright": {
+      "rva": 73861744,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 8 points to readable KeyButton 'turnright'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_use": {
+      "rva": 73860304,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 5 points to readable KeyButton 'use'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "buttons_zoom": {
+      "rva": 73996624,
+      "access": "direct_address_rva",
+      "discovery": "live_ccsgoinput_keybutton_state",
+      "validation": "CCSGOInput slot 34 points to readable KeyButton 'zoom'; state field at +0x30 read successfully.",
+      "confidence": "validated",
+      "note": "a2x-compatible KeyButton.state RVA. This is a 32-bit state field; write the complete state value."
+    },
+    "dwCSGOInput": {
+      "rva": 73993184,
+      "access": "direct_address_rva",
+      "discovery": "osiris_linux_pattern",
+      "validation": "unique_pattern_match",
+      "confidence": "signature",
+      "note": "Linux CCSGOInput direct global object, verified through CreateMove vtable method."
+    },
     "dwGameEntitySystem": {
       "rva": 73770704,
       "access": "pointer_slot_rva",

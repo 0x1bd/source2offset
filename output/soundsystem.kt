@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libsoundsystem.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object SoundsystemSchema {
 
     /** Fields declared directly by CAudioEmphasisSample. */
@@ -25,8 +17,6 @@ object SoundsystemSchema {
         const val m_flValue: Long = 0x4L // float32; schema=m_flValue
     }
 
-    /** Read/write view of decodable fields declared directly by CAudioEmphasisSample.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAudioEmphasisSampleStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flTime: Float by float(CAudioEmphasisSample.m_flTime)
         var m_flValue: Float by float(CAudioEmphasisSample.m_flValue)
@@ -43,8 +33,6 @@ object SoundsystemSchema {
         const val m_flEaseOut: Long = 0x64L // float32; schema=m_flEaseOut
     }
 
-    /** Read/write view of decodable fields declared directly by CAudioMorphData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAudioMorphDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_times: CUtlVector<float32>; no safe value decoder was proven. */
         val m_timesAddress: Long get() = base + CAudioMorphData.m_times
@@ -66,8 +54,6 @@ object SoundsystemSchema {
         const val m_nPhonemeCode: Long = 0x8L // int32; schema=m_nPhonemeCode
     }
 
-    /** Read/write view of decodable fields declared directly by CAudioPhonemeTag.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAudioPhonemeTagStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flStartTime: Float by float(CAudioPhonemeTag.m_flStartTime)
         var m_flEndTime: Float by float(CAudioPhonemeTag.m_flEndTime)
@@ -83,8 +69,6 @@ object SoundsystemSchema {
         const val m_morphData: Long = 0x38L // CAudioMorphData; schema=m_morphData
     }
 
-    /** Read/write view of decodable fields declared directly by CAudioSentence.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAudioSentenceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bShouldVoiceDuck: Boolean by bool(CAudioSentence.m_bShouldVoiceDuck)
         /** Raw address of m_RunTimePhonemes: CUtlVector<CAudioPhonemeTag>; no safe value decoder was proven. */
@@ -107,8 +91,6 @@ object SoundsystemSchema {
         const val m_flListenerReverbModifierWhenSourceReverbIsActive: Long = 0x18L // float32; schema=m_flListenerReverbModifierWhenSourceReverbIsActive
     }
 
-    /** Read/write view of decodable fields declared directly by CDSPMixgroupModifier.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CDSPMixgroupModifierStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_mixgroup: Long by ptr64(CDSPMixgroupModifier.m_mixgroup)
         var m_flModifier: Float by float(CDSPMixgroupModifier.m_flModifier)
@@ -124,8 +106,6 @@ object SoundsystemSchema {
         const val m_table: Long = 0x0L // CUtlVector<CDspPresetModifierList>; schema=m_table
     }
 
-    /** Read/write view of decodable fields declared directly by CDSPPresetMixgroupModifierTable.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CDSPPresetMixgroupModifierTableStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_table: CUtlVector<CDspPresetModifierList>; no safe value decoder was proven. */
         val m_tableAddress: Long get() = base + CDSPPresetMixgroupModifierTable.m_table
@@ -138,8 +118,6 @@ object SoundsystemSchema {
         const val m_modifiers: Long = 0x8L // CUtlVector<CDSPMixgroupModifier>; schema=m_modifiers
     }
 
-    /** Read/write view of decodable fields declared directly by CDspPresetModifierList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CDspPresetModifierListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_dspName: Long by ptr64(CDspPresetModifierList.m_dspName)
         /** Raw address of m_modifiers: CUtlVector<CDSPMixgroupModifier>; no safe value decoder was proven. */
@@ -157,8 +135,6 @@ object SoundsystemSchema {
         const val m_flBPMInvFactor: Long = 0x1CL // float32; schema=m_flBPMInvFactor
     }
 
-    /** Read/write view of decodable fields declared directly by CSndSeqInstBaseSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSndSeqInstBaseSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nType: SndSeqInstrumentType_t; no safe value decoder was proven. */
         val m_nTypeAddress: Long get() = base + CSndSeqInstBaseSchema.m_nType
@@ -187,8 +163,6 @@ object SoundsystemSchema {
         const val m_hSoundEventHash: Long = 0xD8L // uint32; schema=m_hSoundEventHash
     }
 
-    /** Read/write view of decodable fields declared directly by CSndSeqInstMidiSampler.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSndSeqInstMidiSamplerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bIsSoundEvent: Boolean by bool(CSndSeqInstMidiSampler.m_bIsSoundEvent)
         var m_bStopPrevious: Boolean by bool(CSndSeqInstMidiSampler.m_bStopPrevious)
@@ -209,8 +183,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CSndSeqInstBaseSchema"
     }
 
-    /** Read/write view of decodable fields declared directly by CSndSeqInstSndEvtSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSndSeqInstSndEvtSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -221,8 +193,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "ISndSeqInstruments"
     }
 
-    /** Read/write view of decodable fields declared directly by CSndSeqInstruments.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSndSeqInstrumentsStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -238,8 +208,6 @@ object SoundsystemSchema {
         const val m_bCountStopped: Long = 0x15L // bool; schema=m_bCountStopped
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionLimitSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionLimitSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nMaxCount: Int by int32(CSosGroupActionLimitSchema.m_nMaxCount)
         /** Raw address of m_nStopType: SosActionStopType_t; no safe value decoder was proven. */
@@ -264,8 +232,6 @@ object SoundsystemSchema {
         const val m_bSaveToGroup: Long = 0x28L // bool; schema=m_bSaveToGroup
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionMemberCountEnvelopeSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionMemberCountEnvelopeSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nBaseCount: Int by int32(CSosGroupActionMemberCountEnvelopeSchema.m_nBaseCount)
         var m_nTargetCount: Int by int32(CSosGroupActionMemberCountEnvelopeSchema.m_nTargetCount)
@@ -289,8 +255,6 @@ object SoundsystemSchema {
         const val m_flTestDepth: Long = 0x1CL // float32; schema=m_flTestDepth
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionOcclusionSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionOcclusionSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flCalculationInterval: Float by float(CSosGroupActionOcclusionSchema.m_flCalculationInterval)
         var m_flRadius: Float by float(CSosGroupActionOcclusionSchema.m_flRadius)
@@ -305,8 +269,6 @@ object SoundsystemSchema {
         const val SCHEMA_NAME: String = "CSosGroupActionSchema"
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -322,8 +284,6 @@ object SoundsystemSchema {
         const val m_nSortType: Long = 0x20L // SosActionSetParamSortType_t; schema=m_nSortType
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionSetSoundeventParameterSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionSetSoundeventParameterSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nMaxCount: Int by int32(CSosGroupActionSetSoundeventParameterSchema.m_nMaxCount)
         var m_flMinValue: Float by float(CSosGroupActionSetSoundeventParameterSchema.m_flMinValue)
@@ -346,8 +306,6 @@ object SoundsystemSchema {
         const val m_groupBoundingBoxMaxsOpvar: Long = 0x30L // CUtlString; schema=m_groupBoundingBoxMaxsOpvar
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionSoundeventClusterSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionSoundeventClusterSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nMinNearby: Int by int32(CSosGroupActionSoundeventClusterSchema.m_nMinNearby)
         var m_flClusterEpsilon: Float by float(CSosGroupActionSoundeventClusterSchema.m_flClusterEpsilon)
@@ -366,8 +324,6 @@ object SoundsystemSchema {
         const val m_strCountKeyName: Long = 0x10L // CUtlString; schema=m_strCountKeyName
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionSoundeventCountSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionSoundeventCountSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bExcludeStoppedSounds: Boolean by bool(CSosGroupActionSoundeventCountSchema.m_bExcludeStoppedSounds)
         var m_strCountKeyName: Long by ptr64(CSosGroupActionSoundeventCountSchema.m_strCountKeyName)
@@ -389,8 +345,6 @@ object SoundsystemSchema {
         const val m_strMaxValueName: Long = 0x30L // CUtlString; schema=m_strMaxValueName
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionSoundeventMinMaxValuesSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionSoundeventMinMaxValuesSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_strQueryPublicFieldName: Long by ptr64(CSosGroupActionSoundeventMinMaxValuesSchema.m_strQueryPublicFieldName)
         var m_strDelayPublicFieldName: Long by ptr64(CSosGroupActionSoundeventMinMaxValuesSchema.m_strDelayPublicFieldName)
@@ -414,8 +368,6 @@ object SoundsystemSchema {
         const val m_bPriorityReadButDontContribute: Long = 0x20L // CUtlString; schema=m_bPriorityReadButDontContribute
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionSoundeventPrioritySchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionSoundeventPrioritySchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_priorityValue: Long by ptr64(CSosGroupActionSoundeventPrioritySchema.m_priorityValue)
         var m_priorityVolumeScalar: Long by ptr64(CSosGroupActionSoundeventPrioritySchema.m_priorityVolumeScalar)
@@ -431,8 +383,6 @@ object SoundsystemSchema {
         const val m_flMaxDuration: Long = 0xCL // float32; schema=m_flMaxDuration
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionTimeBlockLimitSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionTimeBlockLimitSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nMaxCount: Int by int32(CSosGroupActionTimeBlockLimitSchema.m_nMaxCount)
         var m_flMaxDuration: Float by float(CSosGroupActionTimeBlockLimitSchema.m_flMaxDuration)
@@ -445,8 +395,6 @@ object SoundsystemSchema {
         const val m_flMaxDuration: Long = 0x8L // float32; schema=m_flMaxDuration
     }
 
-    /** Read/write view of decodable fields declared directly by CSosGroupActionTimeLimitSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosGroupActionTimeLimitSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flMaxDuration: Float by float(CSosGroupActionTimeLimitSchema.m_flMaxDuration)
     }
@@ -472,8 +420,6 @@ object SoundsystemSchema {
         const val m_vActions: Long = 0x58L // CUtlVector<CSosGroupActionSchema*>; schema=m_vActions
     }
 
-    /** Read/write view of decodable fields declared directly by CSosSoundEventGroupSchema.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSosSoundEventGroupSchemaStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nGroupType: SosGroupType_t; no safe value decoder was proven. */
         val m_nGroupTypeAddress: Long get() = base + CSosSoundEventGroupSchema.m_nGroupType
@@ -507,8 +453,6 @@ object SoundsystemSchema {
         const val m_pSound: Long = 0x18L // CVoiceContainerBase*; schema=m_pSound
     }
 
-    /** Read/write view of decodable fields declared directly by CSoundContainerReference.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSoundContainerReferenceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_namespace: Long by ptr64(CSoundContainerReference.m_namespace)
         var m_bUseReference: Boolean by bool(CSoundContainerReference.m_bUseReference)
@@ -525,8 +469,6 @@ object SoundsystemSchema {
         const val m_pSounds: Long = 0x20L // CUtlVector<CVoiceContainerBase*>; schema=m_pSounds
     }
 
-    /** Read/write view of decodable fields declared directly by CSoundContainerReferenceArray.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSoundContainerReferenceArrayStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bUseReference: Boolean by bool(CSoundContainerReferenceArray.m_bUseReference)
         /** Raw address of m_sounds: CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>; no safe value decoder was proven. */
@@ -540,8 +482,6 @@ object SoundsystemSchema {
         const val m_soundEventVMix: Long = 0x0L // CStrongHandle<InfoForResourceTypeCVMixListResource>; schema=m_soundEventVMix
     }
 
-    /** Read/write view of decodable fields declared directly by CSoundEventMetaData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSoundEventMetaDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_soundEventVMix: CStrongHandle<InfoForResourceTypeCVMixListResource>; no safe value decoder was proven. */
         val m_soundEventVMixAddress: Long get() = base + CSoundEventMetaData.m_soundEventVMix
@@ -552,8 +492,6 @@ object SoundsystemSchema {
         const val SCHEMA_NAME: String = "CSoundInfoHeader"
     }
 
-    /** Read/write view of decodable fields declared directly by CSoundInfoHeader.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSoundInfoHeaderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -564,8 +502,6 @@ object SoundsystemSchema {
         const val m_name: Long = 0x0L // CUtlString; schema=m_name
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixAdditionalOutput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixAdditionalOutputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(CVMixAdditionalOutput.m_name)
     }
@@ -577,8 +513,6 @@ object SoundsystemSchema {
         const val m_displayName: Long = 0x8L // CUtlString; schema=m_displayName
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixAudioMeter.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixAudioMeterStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(CVMixAudioMeter.m_name)
         var m_displayName: Long by ptr64(CVMixAudioMeter.m_displayName)
@@ -591,8 +525,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixAutoFilterDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixAutoFilterProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixAutoFilterProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixAutoFilterDesc_t. */
         val m_desc: SoundsystemSchema.VMixAutoFilterDesc_tStruct
@@ -608,8 +540,6 @@ object SoundsystemSchema {
         const val m_bIsStackVar: Long = 0xDL // bool; schema=m_bIsStackVar
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixAutomaticControlInput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixAutomaticControlInputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(CVMixAutomaticControlInput.m_name)
         var m_nControlInputIndex: Int by int32(CVMixAutomaticControlInput.m_nControlInputIndex)
@@ -625,8 +555,6 @@ object SoundsystemSchema {
         const val m_flxfade: Long = 0x18L // float32; schema=m_flxfade
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixBaseProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixBaseProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(CVMixBaseProcessorDesc.m_name)
         var m_nChannels: Int by int32(CVMixBaseProcessorDesc.m_nChannels)
@@ -640,8 +568,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixBoxverbDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixBoxverb2ProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixBoxverb2ProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixBoxverbDesc_t. */
         val m_desc: SoundsystemSchema.VMixBoxverbDesc_tStruct
@@ -655,8 +581,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixBoxverbDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixBoxverbProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixBoxverbProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixBoxverbDesc_t. */
         val m_desc: SoundsystemSchema.VMixBoxverbDesc_tStruct
@@ -676,8 +600,6 @@ object SoundsystemSchema {
         const val m_nInputValue1: Long = 0x1CL // int32; schema=m_nInputValue1
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixCommand.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixCommandStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nCommand: VMixGraphCommandID_t; no safe value decoder was proven. */
         val m_nCommandAddress: Long get() = base + CVMixCommand.m_nCommand
@@ -697,8 +619,6 @@ object SoundsystemSchema {
         const val m_flDefaultValue: Long = 0xCL // float32; schema=m_flDefaultValue
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixControlInput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixControlInputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flDefaultValue: Float by float(CVMixControlInput.m_flDefaultValue)
     }
@@ -710,8 +630,6 @@ object SoundsystemSchema {
         const val m_nArrayIndex: Long = 0xCL // int32; schema=m_nArrayIndex
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixControlInputArray.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixControlInputArrayStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nArrayIndex: Int by int32(CVMixControlInputArray.m_nArrayIndex)
     }
@@ -723,8 +641,6 @@ object SoundsystemSchema {
         const val m_nValueIndex: Long = 0xCL // int32; schema=m_nValueIndex
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixControlMeter.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixControlMeterStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nValueIndex: Int by int32(CVMixControlMeter.m_nValueIndex)
     }
@@ -736,8 +652,6 @@ object SoundsystemSchema {
         const val m_flDefaultValue: Long = 0xCL // float32; schema=m_flDefaultValue
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixControlOutput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixControlOutputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flDefaultValue: Float by float(CVMixControlOutput.m_flDefaultValue)
     }
@@ -749,8 +663,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixConvolutionDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixConvolutionProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixConvolutionProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixConvolutionDesc_t. */
         val m_desc: SoundsystemSchema.VMixConvolutionDesc_tStruct
@@ -764,8 +676,6 @@ object SoundsystemSchema {
         const val m_nControlPointStart: Long = 0x4L // uint32; schema=m_nControlPointStart
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixCurveHeader.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixCurveHeaderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nControlPointCount: UInt by uint32(CVMixCurveHeader.m_nControlPointCount)
         var m_nControlPointStart: UInt by uint32(CVMixCurveHeader.m_nControlPointStart)
@@ -778,8 +688,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixDelayDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixDelayProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixDelayProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixDelayDesc_t. */
         val m_desc: SoundsystemSchema.VMixDelayDesc_tStruct
@@ -793,8 +701,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixDiffusorDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixDiffusorProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixDiffusorProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixDiffusorDesc_t. */
         val m_desc: SoundsystemSchema.VMixDiffusorDesc_tStruct
@@ -808,8 +714,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixDualCompressorDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixDualCompressorProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixDualCompressorProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixDualCompressorDesc_t. */
         val m_desc: SoundsystemSchema.VMixDualCompressorDesc_tStruct
@@ -823,8 +727,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixDynamics3BandDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixDynamics3BandProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixDynamics3BandProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixDynamics3BandDesc_t. */
         val m_desc: SoundsystemSchema.VMixDynamics3BandDesc_tStruct
@@ -838,8 +740,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixDynamicsCompressorDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixDynamicsCompressorProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixDynamicsCompressorProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixDynamicsCompressorDesc_t. */
         val m_desc: SoundsystemSchema.VMixDynamicsCompressorDesc_tStruct
@@ -853,8 +753,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixDynamicsDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixDynamicsProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixDynamicsProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixDynamicsDesc_t. */
         val m_desc: SoundsystemSchema.VMixDynamicsDesc_tStruct
@@ -868,8 +766,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixEQ8Desc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixEQ8ProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixEQ8ProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixEQ8Desc_t. */
         val m_desc: SoundsystemSchema.VMixEQ8Desc_tStruct
@@ -883,8 +779,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x20L // VMixEffectChainDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixEffectChainProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixEffectChainProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixEffectChainDesc_t. */
         val m_desc: SoundsystemSchema.VMixEffectChainDesc_tStruct
@@ -898,8 +792,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixEnvelopeDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixEnvelopeProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixEnvelopeProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixEnvelopeDesc_t. */
         val m_desc: SoundsystemSchema.VMixEnvelopeDesc_tStruct
@@ -913,8 +805,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixFilterDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixFilterProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixFilterProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixFilterDesc_t. */
         val m_desc: SoundsystemSchema.VMixFilterDesc_tStruct
@@ -928,8 +818,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixFlangerDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixFlangerProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixFlangerProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixFlangerDesc_t. */
         val m_desc: SoundsystemSchema.VMixFlangerDesc_tStruct
@@ -943,8 +831,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixFreeverbDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixFreeverbProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixFreeverbProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixFreeverbDesc_t. */
         val m_desc: SoundsystemSchema.VMixFreeverbDesc_tStruct
@@ -959,8 +845,6 @@ object SoundsystemSchema {
         const val m_bIsMainGraph: Long = 0xCL // bool; schema=m_bIsMainGraph
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixGraphDescData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixGraphDescDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(CVMixGraphDescData.m_name)
         var m_nGraphOutputChannels: Int by int32(CVMixGraphDescData.m_nGraphOutputChannels)
@@ -973,8 +857,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVMixInputBase"
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixImpulseResponseInput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixImpulseResponseInputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -985,8 +867,6 @@ object SoundsystemSchema {
         const val m_name: Long = 0x0L // CUtlString; schema=m_name
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixInputBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixInputBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(CVMixInputBase.m_name)
     }
@@ -998,8 +878,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixModDelayDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixModDelayProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixModDelayProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixModDelayDesc_t. */
         val m_desc: SoundsystemSchema.VMixModDelayDesc_tStruct
@@ -1013,8 +891,6 @@ object SoundsystemSchema {
         const val m_defaultValue: Long = 0x10L // CUtlString; schema=m_defaultValue
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixNameInput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixNameInputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_defaultValue: Long by ptr64(CVMixNameInput.m_defaultValue)
     }
@@ -1026,8 +902,6 @@ object SoundsystemSchema {
         const val m_nValueIndex: Long = 0xCL // int32; schema=m_nValueIndex
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixNameInputMeter.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixNameInputMeterStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nValueIndex: Int by int32(CVMixNameInputMeter.m_nValueIndex)
     }
@@ -1039,8 +913,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixOscDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixOscProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixOscProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixOscDesc_t. */
         val m_desc: SoundsystemSchema.VMixOscDesc_tStruct
@@ -1054,8 +926,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixPannerDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixPannerProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixPannerProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixPannerDesc_t. */
         val m_desc: SoundsystemSchema.VMixPannerDesc_tStruct
@@ -1069,8 +939,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixPitchShiftDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixPitchShiftProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixPitchShiftProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixPitchShiftDesc_t. */
         val m_desc: SoundsystemSchema.VMixPitchShiftDesc_tStruct
@@ -1084,8 +952,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixPlateverbDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixPlateReverbProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixPlateReverbProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixPlateverbDesc_t. */
         val m_desc: SoundsystemSchema.VMixPlateverbDesc_tStruct
@@ -1099,8 +965,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x20L // VMixPresetDSPDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixPresetDSPProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixPresetDSPProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixPresetDSPDesc_t. */
         val m_desc: SoundsystemSchema.VMixPresetDSPDesc_tStruct
@@ -1114,8 +978,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixShaperDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixShaperProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixShaperProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixShaperDesc_t. */
         val m_desc: SoundsystemSchema.VMixShaperDesc_tStruct
@@ -1128,8 +990,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVMixBaseProcessorDesc"
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixSteamAudioDirectProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixSteamAudioDirectProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1140,8 +1000,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVMixBaseProcessorDesc"
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixSteamAudioHRTFProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixSteamAudioHRTFProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1152,8 +1010,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVMixBaseProcessorDesc"
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixSteamAudioHybridReverbProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixSteamAudioHybridReverbProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1164,8 +1020,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVMixBaseProcessorDesc"
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixSteamAudioPathingProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixSteamAudioPathingProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1176,8 +1030,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVMixBaseProcessorDesc"
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixStereoDelayProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixStereoDelayProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1189,8 +1041,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x20L // VMixSubgraphSwitchDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixSubgraphSwitchProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixSubgraphSwitchProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixSubgraphSwitchDesc_t. */
         val m_desc: SoundsystemSchema.VMixSubgraphSwitchDesc_tStruct
@@ -1204,8 +1054,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixUtilityDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixUtilityProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixUtilityProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixUtilityDesc_t. */
         val m_desc: SoundsystemSchema.VMixUtilityDesc_tStruct
@@ -1219,8 +1067,6 @@ object SoundsystemSchema {
         const val m_desc: Long = 0x1CL // VMixVocoderDesc_t; schema=m_desc
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixVocoderProcessorDesc.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixVocoderProcessorDescStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixVocoderDesc_t. */
         val m_desc: SoundsystemSchema.VMixVocoderDesc_tStruct
@@ -1235,8 +1081,6 @@ object SoundsystemSchema {
         const val m_nProcessor: Long = 0x18L // int32; schema=m_nProcessor
     }
 
-    /** Read/write view of decodable fields declared directly by CVMixVsndInput.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVMixVsndInputStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_defaultValue: Long by ptr64(CVMixVsndInput.m_defaultValue)
         var m_nProcessor: Int by int32(CVMixVsndInput.m_nProcessor)
@@ -1258,8 +1102,6 @@ object SoundsystemSchema {
         const val m_encodedHeader: Long = 0x58L // CUtlBinaryBlock; schema=m_encodedHeader
     }
 
-    /** Read/write view of decodable fields declared directly by CVSound.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVSoundStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nRate: Int by int32(CVSound.m_nRate)
         /** Raw address of m_nFormat: CVSoundFormat_t; no safe value decoder was proven. */
@@ -1285,8 +1127,6 @@ object SoundsystemSchema {
         const val m_flGainAmount: Long = 0xB0L // float32; schema=m_flGainAmount
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerAmpedDecayingSineWave.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerAmpedDecayingSineWaveStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flGainAmount: Float by float(CVoiceContainerAmpedDecayingSineWave.m_flGainAmount)
     }
@@ -1298,8 +1138,6 @@ object SoundsystemSchema {
         const val m_curve: Long = 0x10L // CPiecewiseCurve; schema=m_curve
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerAnalysisBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerAnalysisBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bRegenerateCurveOnCompile: Boolean by bool(CVoiceContainerAnalysisBase.m_bRegenerateCurveOnCompile)
         /** Raw address of m_curve: CPiecewiseCurve; no safe value decoder was proven. */
@@ -1312,8 +1150,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVoiceContainerGenerator"
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerAsyncGenerator.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerAsyncGeneratorStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1325,8 +1161,6 @@ object SoundsystemSchema {
         const val m_pEnvelopeAnalyzer: Long = 0xA0L // CVoiceContainerAnalysisBase*; schema=m_pEnvelopeAnalyzer
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CVSound. */
         val m_vSound: SoundsystemSchema.CVSoundStruct
@@ -1343,8 +1177,6 @@ object SoundsystemSchema {
         const val m_flBlendFactor: Long = 0xE8L // float32; schema=m_flBlendFactor
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerBlender.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerBlenderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReference. */
         val m_firstSound: SoundsystemSchema.CSoundContainerReferenceStruct
@@ -1363,8 +1195,6 @@ object SoundsystemSchema {
         const val m_flDecayTime: Long = 0xACL // float32; schema=m_flDecayTime
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerDecayingSineWave.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerDecayingSineWaveStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flFrequency: Float by float(CVoiceContainerDecayingSineWave.m_flFrequency)
         var m_flDecayTime: Float by float(CVoiceContainerDecayingSineWave.m_flDecayTime)
@@ -1376,8 +1206,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVoiceContainerBase"
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerDefault.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerDefaultStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1391,8 +1219,6 @@ object SoundsystemSchema {
         const val m_flCrossfadeTime: Long = 0xE4L // float32; schema=m_flCrossfadeTime
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerEnum.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerEnumStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReferenceArray. */
         val m_soundsToPlay: SoundsystemSchema.CSoundContainerReferenceArrayStruct
@@ -1409,8 +1235,6 @@ object SoundsystemSchema {
         const val m_analysisContainer: Long = 0xB0L // CVoiceContainerAnalysisBase*; schema=m_analysisContainer
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerEnvelope.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerEnvelopeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_sound: CStrongHandle<InfoForResourceTypeCVoiceContainerBase>; no safe value decoder was proven. */
         val m_soundAddress: Long get() = base + CVoiceContainerEnvelope.m_sound
@@ -1426,8 +1250,6 @@ object SoundsystemSchema {
         const val m_flThreshold: Long = 0x58L // float32; schema=m_flThreshold
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerEnvelopeAnalyzer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerEnvelopeAnalyzerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_mode: EMode_t; no safe value decoder was proven. */
         val m_modeAddress: Long get() = base + CVoiceContainerEnvelopeAnalyzer.m_mode
@@ -1441,8 +1263,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVoiceContainerBase"
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerGenerator.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerGeneratorStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1459,8 +1279,6 @@ object SoundsystemSchema {
         const val m_sourceAudio: Long = 0xD0L // CStrongHandle<InfoForResourceTypeCVoiceContainerBase>; schema=m_sourceAudio
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerGranulator.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerGranulatorStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flGrainLength: Float by float(CVoiceContainerGranulator.m_flGrainLength)
         var m_flGrainCrossfadeAmount: Float by float(CVoiceContainerGranulator.m_flGrainCrossfadeAmount)
@@ -1482,8 +1300,6 @@ object SoundsystemSchema {
         const val m_bCrossFade: Long = 0xD4L // bool; schema=m_bCrossFade
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerLoopTrigger.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerLoopTriggerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReference. */
         val m_sound: SoundsystemSchema.CSoundContainerReferenceStruct
@@ -1508,8 +1324,6 @@ object SoundsystemSchema {
         const val m_bEqualPow: Long = 0xDAL // bool; schema=m_bEqualPow
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerLoopXFade.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerLoopXFadeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReference. */
         val m_sound: SoundsystemSchema.CSoundContainerReferenceStruct
@@ -1532,8 +1346,6 @@ object SoundsystemSchema {
         const val m_flCrossover: Long = 0xE4L // float32; schema=m_flCrossover
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerMultiBlender.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerMultiBlenderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReferenceArray. */
         val m_soundsToPlay: SoundsystemSchema.CSoundContainerReferenceArrayStruct
@@ -1548,8 +1360,6 @@ object SoundsystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CVoiceContainerGenerator"
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerNull.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerNullStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1568,8 +1378,6 @@ object SoundsystemSchema {
         const val m_curve4: Long = 0x1B8L // CPiecewiseCurve; schema=m_curve4
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerParameterBlender.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerParameterBlenderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReference. */
         val m_firstSound: SoundsystemSchema.CSoundContainerReferenceStruct
@@ -1601,8 +1409,6 @@ object SoundsystemSchema {
         const val m_grainResources: Long = 0xD0L // CUtlVector<CStrongHandle<InfoForResourceTypeCVoiceContainerBase>>; schema=m_grainResources
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerRandomSampler.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerRandomSamplerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flAmplitude: Float by float(CVoiceContainerRandomSampler.m_flAmplitude)
         var m_flAmplitudeJitter: Float by float(CVoiceContainerRandomSampler.m_flAmplitudeJitter)
@@ -1622,8 +1428,6 @@ object SoundsystemSchema {
         const val m_flModulatorAmount: Long = 0xB0L // float32; schema=m_flModulatorAmount
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerRealtimeFMSineWave.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerRealtimeFMSineWaveStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flCarrierFrequency: Float by float(CVoiceContainerRealtimeFMSineWave.m_flCarrierFrequency)
         var m_flModulatorFrequency: Float by float(CVoiceContainerRealtimeFMSineWave.m_flModulatorFrequency)
@@ -1639,8 +1443,6 @@ object SoundsystemSchema {
         const val m_fProbabilityWeights: Long = 0xE8L // CUtlVector<float32>; schema=m_fProbabilityWeights
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerSelector.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerSelectorStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_mode: PlayBackMode_t; no safe value decoder was proven. */
         val m_modeAddress: Long get() = base + CVoiceContainerSelector.m_mode
@@ -1658,8 +1460,6 @@ object SoundsystemSchema {
         const val m_soundsToPlay: Long = 0xA8L // CUtlVector<CVoiceContainerSetElement>; schema=m_soundsToPlay
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerSet.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerSetStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_soundsToPlay: CUtlVector<CVoiceContainerSetElement>; no safe value decoder was proven. */
         val m_soundsToPlayAddress: Long get() = base + CVoiceContainerSet.m_soundsToPlay
@@ -1672,8 +1472,6 @@ object SoundsystemSchema {
         const val m_flVolumeDB: Long = 0x20L // float32; schema=m_flVolumeDB
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerSetElement.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerSetElementStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSoundContainerReference. */
         val m_sound: SoundsystemSchema.CSoundContainerReferenceStruct
@@ -1696,8 +1494,6 @@ object SoundsystemSchema {
         const val m_gainSweep: Long = 0x140L // CPiecewiseCurve; schema=m_gainSweep
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerShapedNoise.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerShapedNoiseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bUseCurveForFrequency: Boolean by bool(CVoiceContainerShapedNoise.m_bUseCurveForFrequency)
         var m_flFrequency: Float by float(CVoiceContainerShapedNoise.m_flFrequency)
@@ -1720,8 +1516,6 @@ object SoundsystemSchema {
         const val m_tones: Long = 0xB8L // CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>; schema=m_tones
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerStaticAdditiveSynth.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerStaticAdditiveSynthStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_tones: CUtlVector<CVoiceContainerStaticAdditiveSynth::CTone>; no safe value decoder was proven. */
         val m_tonesAddress: Long get() = base + CVoiceContainerStaticAdditiveSynth.m_tones
@@ -1736,8 +1530,6 @@ object SoundsystemSchema {
         const val m_nInstancesAtMaxVolume: Long = 0xCL // int32; schema=m_nInstancesAtMaxVolume
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerStaticAdditiveSynth__CGainScalePerInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flMinVolume: Float by float(CVoiceContainerStaticAdditiveSynth__CGainScalePerInstance.m_flMinVolume)
         var m_nInstancesAtMinVolume: Int by int32(CVoiceContainerStaticAdditiveSynth__CGainScalePerInstance.m_nInstancesAtMinVolume)
@@ -1757,8 +1549,6 @@ object SoundsystemSchema {
         const val m_volumeScaling: Long = 0x50L // CVoiceContainerStaticAdditiveSynth::CGainScalePerInstance; schema=m_volumeScaling
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerStaticAdditiveSynth::CHarmonic.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerStaticAdditiveSynth__CHarmonicStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nWaveform: EWaveform; no safe value decoder was proven. */
         val m_nWaveformAddress: Long get() = base + CVoiceContainerStaticAdditiveSynth__CHarmonic.m_nWaveform
@@ -1782,8 +1572,6 @@ object SoundsystemSchema {
         const val m_bSyncInstances: Long = 0x58L // bool; schema=m_bSyncInstances
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerStaticAdditiveSynth::CTone.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerStaticAdditiveSynth__CToneStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_harmonics: CUtlVector<CVoiceContainerStaticAdditiveSynth::CHarmonic>; no safe value decoder was proven. */
         val m_harmonicsAddress: Long get() = base + CVoiceContainerStaticAdditiveSynth__CTone.m_harmonics
@@ -1799,8 +1587,6 @@ object SoundsystemSchema {
         const val m_soundsToPlay: Long = 0xA8L // CUtlVector<CSoundContainerReference>; schema=m_soundsToPlay
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerSwitch.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerSwitchStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_soundsToPlay: CUtlVector<CSoundContainerReference>; no safe value decoder was proven. */
         val m_soundsToPlayAddress: Long get() = base + CVoiceContainerSwitch.m_soundsToPlay
@@ -1816,8 +1602,6 @@ object SoundsystemSchema {
         const val m_flTapeSpeedReleaseTime: Long = 0xCCL // float32; schema=m_flTapeSpeedReleaseTime
     }
 
-    /** Read/write view of decodable fields declared directly by CVoiceContainerTapePlayer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CVoiceContainerTapePlayerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bShouldWraparound: Boolean by bool(CVoiceContainerTapePlayer.m_bShouldWraparound)
         /** Raw address of m_sourceAudio: CStrongHandle<InfoForResourceTypeCVoiceContainerBase>; no safe value decoder was proven. */
@@ -1831,8 +1615,6 @@ object SoundsystemSchema {
         const val SCHEMA_NAME: String = "ISndSeqInstruments"
     }
 
-    /** Read/write view of decodable fields declared directly by ISndSeqInstruments.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ISndSeqInstrumentsStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1847,8 +1629,6 @@ object SoundsystemSchema {
         const val pVelocityZones: Long = 0x8L // VelocityZone_t*; schema=pVelocityZones
     }
 
-    /** Read/write view of decodable fields declared directly by KeyGroup_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class KeyGroup_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nCenterNote: UByte by uint8(KeyGroup_t.nCenterNote)
         var nMinNote: UByte by uint8(KeyGroup_t.nMinNote)
@@ -1863,8 +1643,6 @@ object SoundsystemSchema {
         const val nNoteNum: Long = 0x0L // uint8; schema=nNoteNum
     }
 
-    /** Read/write view of decodable fields declared directly by SamplerVoice_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SamplerVoice_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nNoteNum: UByte by uint8(SamplerVoice_t.nNoteNum)
     }
@@ -1875,8 +1653,6 @@ object SoundsystemSchema {
         const val m_EditItems: Long = 0x0L // CUtlVector<SosEditItemInfo_t>; schema=m_EditItems
     }
 
-    /** Read/write view of decodable fields declared directly by SelectedEditItemInfo_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SelectedEditItemInfo_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_EditItems: CUtlVector<SosEditItemInfo_t>; no safe value decoder was proven. */
         val m_EditItemsAddress: Long get() = base + SelectedEditItemInfo_t.m_EditItems
@@ -1892,8 +1668,6 @@ object SoundsystemSchema {
         const val itemPos: Long = 0x28L // Vector2D; schema=itemPos
     }
 
-    /** Read/write view of decodable fields declared directly by SosEditItemInfo_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SosEditItemInfo_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of itemType: SosEditItemType_t; no safe value decoder was proven. */
         val itemTypeAddress: Long get() = base + SosEditItemInfo_t.itemType
@@ -1917,8 +1691,6 @@ object SoundsystemSchema {
         const val m_nLFOShape: Long = 0x28L // VMixLFOShape_t; schema=m_nLFOShape
     }
 
-    /** Read/write view of decodable fields declared directly by VMixAutoFilterDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixAutoFilterDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flEnvelopeAmount: Float by float(VMixAutoFilterDesc_t.m_flEnvelopeAmount)
         var m_flAttackTimeMS: Float by float(VMixAutoFilterDesc_t.m_flAttackTimeMS)
@@ -1955,8 +1727,6 @@ object SoundsystemSchema {
         const val m_flTaps: Long = 0x4CL // float32; schema=m_flTaps
     }
 
-    /** Read/write view of decodable fields declared directly by VMixBoxverbDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixBoxverbDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flSizeMax: Float by float(VMixBoxverbDesc_t.m_flSizeMax)
         var m_flSizeMin: Float by float(VMixBoxverbDesc_t.m_flSizeMin)
@@ -1992,8 +1762,6 @@ object SoundsystemSchema {
         const val m_flHighCutoffFreq: Long = 0x1CL // float32; schema=m_flHighCutoffFreq
     }
 
-    /** Read/write view of decodable fields declared directly by VMixConvolutionDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixConvolutionDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fldbGain: Float by float(VMixConvolutionDesc_t.m_fldbGain)
         var m_flPreDelayMS: Float by float(VMixConvolutionDesc_t.m_flPreDelayMS)
@@ -2017,8 +1785,6 @@ object SoundsystemSchema {
         const val m_flWidth: Long = 0x24L // float32; schema=m_flWidth
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDelayDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDelayDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixFilterDesc_t. */
         val m_feedbackFilter: SoundsystemSchema.VMixFilterDesc_tStruct
@@ -2040,8 +1806,6 @@ object SoundsystemSchema {
         const val m_flOutputGain: Long = 0xCL // float32; schema=m_flOutputGain
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDiffusorDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDiffusorDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flSize: Float by float(VMixDiffusorDesc_t.m_flSize)
         var m_flComplexity: Float by float(VMixDiffusorDesc_t.m_flComplexity)
@@ -2059,8 +1823,6 @@ object SoundsystemSchema {
         const val m_bandDesc: Long = 0x10L // VMixDynamicsBand_t; schema=m_bandDesc
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDualCompressorDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDualCompressorDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flRMSTimeMS: Float by float(VMixDualCompressorDesc_t.m_flRMSTimeMS)
         var m_fldbKneeWidth: Float by float(VMixDualCompressorDesc_t.m_fldbKneeWidth)
@@ -2086,8 +1848,6 @@ object SoundsystemSchema {
         const val m_bandDesc: Long = 0x24L // VMixDynamicsBand_t[3]; schema=m_bandDesc
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDynamics3BandDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDynamics3BandDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fldbGainOutput: Float by float(VMixDynamics3BandDesc_t.m_fldbGainOutput)
         var m_flRMSTimeMS: Float by float(VMixDynamics3BandDesc_t.m_flRMSTimeMS)
@@ -2117,8 +1877,6 @@ object SoundsystemSchema {
         const val m_bSolo: Long = 0x21L // bool; schema=m_bSolo
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDynamicsBand_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDynamicsBand_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fldbGainInput: Float by float(VMixDynamicsBand_t.m_fldbGainInput)
         var m_fldbGainOutput: Float by float(VMixDynamicsBand_t.m_fldbGainOutput)
@@ -2146,8 +1904,6 @@ object SoundsystemSchema {
         const val m_bPeakMode: Long = 0x20L // bool; schema=m_bPeakMode
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDynamicsCompressorDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDynamicsCompressorDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fldbOutputGain: Float by float(VMixDynamicsCompressorDesc_t.m_fldbOutputGain)
         var m_fldbCompressionThreshold: Float by float(VMixDynamicsCompressorDesc_t.m_fldbCompressionThreshold)
@@ -2177,8 +1933,6 @@ object SoundsystemSchema {
         const val m_bPeakMode: Long = 0x2CL // bool; schema=m_bPeakMode
     }
 
-    /** Read/write view of decodable fields declared directly by VMixDynamicsDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixDynamicsDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fldbGain: Float by float(VMixDynamicsDesc_t.m_fldbGain)
         var m_fldbNoiseGateThreshold: Float by float(VMixDynamicsDesc_t.m_fldbNoiseGateThreshold)
@@ -2200,8 +1954,6 @@ object SoundsystemSchema {
         const val m_stages: Long = 0x0L // VMixFilterDesc_t[8]; schema=m_stages
     }
 
-    /** Read/write view of decodable fields declared directly by VMixEQ8Desc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixEQ8Desc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_stages: VMixFilterDesc_t[8]; no safe value decoder was proven. */
         val m_stagesAddress: Long get() = base + VMixEQ8Desc_t.m_stages
@@ -2213,8 +1965,6 @@ object SoundsystemSchema {
         const val m_effectName: Long = 0x0L // CUtlString; schema=m_effectName
     }
 
-    /** Read/write view of decodable fields declared directly by VMixEffectChainDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixEffectChainDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_effectName: Long by ptr64(VMixEffectChainDesc_t.m_effectName)
     }
@@ -2227,8 +1977,6 @@ object SoundsystemSchema {
         const val m_flReleaseTimeMS: Long = 0x8L // float32; schema=m_flReleaseTimeMS
     }
 
-    /** Read/write view of decodable fields declared directly by VMixEnvelopeDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixEnvelopeDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flAttackTimeMS: Float by float(VMixEnvelopeDesc_t.m_flAttackTimeMS)
         var m_flHoldTimeMS: Float by float(VMixEnvelopeDesc_t.m_flHoldTimeMS)
@@ -2246,8 +1994,6 @@ object SoundsystemSchema {
         const val m_flQ: Long = 0xCL // float32; schema=m_flQ
     }
 
-    /** Read/write view of decodable fields declared directly by VMixFilterDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixFilterDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nFilterType: VMixFilterType_t; no safe value decoder was proven. */
         val m_nFilterTypeAddress: Long get() = base + VMixFilterDesc_t.m_nFilterType
@@ -2273,8 +2019,6 @@ object SoundsystemSchema {
         const val m_bApplyAntialiasing: Long = 0x20L // bool; schema=m_bApplyAntialiasing
     }
 
-    /** Read/write view of decodable fields declared directly by VMixFlangerDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixFlangerDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bPhaseInvert: Boolean by bool(VMixFlangerDesc_t.m_bPhaseInvert)
         var m_flGlideTime: Float by float(VMixFlangerDesc_t.m_flGlideTime)
@@ -2296,8 +2040,6 @@ object SoundsystemSchema {
         const val m_flLateReflections: Long = 0xCL // float32; schema=m_flLateReflections
     }
 
-    /** Read/write view of decodable fields declared directly by VMixFreeverbDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixFreeverbDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flRoomSize: Float by float(VMixFreeverbDesc_t.m_flRoomSize)
         var m_flDamp: Float by float(VMixFreeverbDesc_t.m_flDamp)
@@ -2319,8 +2061,6 @@ object SoundsystemSchema {
         const val m_bApplyAntialiasing: Long = 0x2CL // bool; schema=m_bApplyAntialiasing
     }
 
-    /** Read/write view of decodable fields declared directly by VMixModDelayDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixModDelayDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: VMixFilterDesc_t. */
         val m_feedbackFilter: SoundsystemSchema.VMixFilterDesc_tStruct
@@ -2343,8 +2083,6 @@ object SoundsystemSchema {
         const val m_flPhase: Long = 0x8L // float32; schema=m_flPhase
     }
 
-    /** Read/write view of decodable fields declared directly by VMixOscDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixOscDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of oscType: VMixLFOShape_t; no safe value decoder was proven. */
         val oscTypeAddress: Long get() = base + VMixOscDesc_t.oscType
@@ -2359,8 +2097,6 @@ object SoundsystemSchema {
         const val m_flStrength: Long = 0x4L // float32; schema=m_flStrength
     }
 
-    /** Read/write view of decodable fields declared directly by VMixPannerDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixPannerDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_type: VMixPannerType_t; no safe value decoder was proven. */
         val m_typeAddress: Long get() = base + VMixPannerDesc_t.m_type
@@ -2376,8 +2112,6 @@ object SoundsystemSchema {
         const val m_nProcType: Long = 0xCL // int32; schema=m_nProcType
     }
 
-    /** Read/write view of decodable fields declared directly by VMixPitchShiftDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixPitchShiftDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nGrainSampleCount: Int by int32(VMixPitchShiftDesc_t.m_nGrainSampleCount)
         var m_flPitchShift: Float by float(VMixPitchShiftDesc_t.m_flPitchShift)
@@ -2397,8 +2131,6 @@ object SoundsystemSchema {
         const val m_flFeedbackDiffusion2: Long = 0x18L // float32; schema=m_flFeedbackDiffusion2
     }
 
-    /** Read/write view of decodable fields declared directly by VMixPlateverbDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixPlateverbDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flPrefilter: Float by float(VMixPlateverbDesc_t.m_flPrefilter)
         var m_flInputDiffusion1: Float by float(VMixPlateverbDesc_t.m_flInputDiffusion1)
@@ -2415,8 +2147,6 @@ object SoundsystemSchema {
         const val m_effectName: Long = 0x0L // CUtlString; schema=m_effectName
     }
 
-    /** Read/write view of decodable fields declared directly by VMixPresetDSPDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixPresetDSPDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_effectName: Long by ptr64(VMixPresetDSPDesc_t.m_effectName)
     }
@@ -2431,8 +2161,6 @@ object SoundsystemSchema {
         const val m_nOversampleFactor: Long = 0x10L // int32; schema=m_nOversampleFactor
     }
 
-    /** Read/write view of decodable fields declared directly by VMixShaperDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixShaperDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nShape: Int by int32(VMixShaperDesc_t.m_nShape)
         var m_fldbDrive: Float by float(VMixShaperDesc_t.m_fldbDrive)
@@ -2452,8 +2180,6 @@ object SoundsystemSchema {
         const val m_flInterpolationTime: Long = 0x30L // float32; schema=m_flInterpolationTime
     }
 
-    /** Read/write view of decodable fields declared directly by VMixSubgraphSwitchDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixSubgraphSwitchDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(VMixSubgraphSwitchDesc_t.m_name)
         var m_effectName: Long by ptr64(VMixSubgraphSwitchDesc_t.m_effectName)
@@ -2476,8 +2202,6 @@ object SoundsystemSchema {
         const val m_flBassFreq: Long = 0x14L // float32; schema=m_flBassFreq
     }
 
-    /** Read/write view of decodable fields declared directly by VMixUtilityDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixUtilityDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nOp: VMixChannelOperation_t; no safe value decoder was proven. */
         val m_nOpAddress: Long get() = base + VMixUtilityDesc_t.m_nOp
@@ -2503,8 +2227,6 @@ object SoundsystemSchema {
         const val m_bPeakMode: Long = 0x24L // bool; schema=m_bPeakMode
     }
 
-    /** Read/write view of decodable fields declared directly by VMixVocoderDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VMixVocoderDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nBandCount: Int by int32(VMixVocoderDesc_t.m_nBandCount)
         var m_flBandwidth: Float by float(VMixVocoderDesc_t.m_flBandwidth)
@@ -2527,8 +2249,6 @@ object SoundsystemSchema {
         const val pSamples: Long = 0x4L // uint32[4]; schema=pSamples
     }
 
-    /** Read/write view of decodable fields declared directly by VelocityZone_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VelocityZone_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nMaxVel: UByte by uint8(VelocityZone_t.nMaxVel)
         var nNextSelection: UByte by uint8(VelocityZone_t.nNextSelection)

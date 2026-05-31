@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libscenesystem.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object ScenesystemSchema {
 
     /** Fields declared directly by CSSDSEndFrameViewInfo. */
@@ -25,8 +17,6 @@ object ScenesystemSchema {
         const val m_ViewName: Long = 0x8L // CUtlString; schema=m_ViewName
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSEndFrameViewInfo.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSEndFrameViewInfoStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nViewId: ULong by uint64(CSSDSEndFrameViewInfo.m_nViewId)
         var m_ViewName: Long by ptr64(CSSDSEndFrameViewInfo.m_ViewName)
@@ -38,8 +28,6 @@ object ScenesystemSchema {
         const val m_Views: Long = 0x0L // CUtlVector<CSSDSEndFrameViewInfo>; schema=m_Views
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_EndFrame.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_EndFrameStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Views: CUtlVector<CSSDSEndFrameViewInfo>; no safe value decoder was proven. */
         val m_ViewsAddress: Long get() = base + CSSDSMsg_EndFrame.m_Views
@@ -55,8 +43,6 @@ object ScenesystemSchema {
         const val m_displayText: Long = 0x28L // CUtlString; schema=m_displayText
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_LayerBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_LayerBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: SceneViewId_t. */
         val m_viewId: ScenesystemSchema.SceneViewId_tStruct
@@ -73,8 +59,6 @@ object ScenesystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CSSDSMsg_LayerBase"
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_PostLayer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_PostLayerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -85,8 +69,6 @@ object ScenesystemSchema {
         const val PARENT_SCHEMA_NAME: String = "CSSDSMsg_LayerBase"
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_PreLayer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_PreLayerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -98,8 +80,6 @@ object ScenesystemSchema {
         const val m_ViewName: Long = 0x10L // CUtlString; schema=m_ViewName
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_ViewRender.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_ViewRenderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: SceneViewId_t. */
         val m_viewId: ScenesystemSchema.SceneViewId_tStruct
@@ -122,8 +102,6 @@ object ScenesystemSchema {
         const val m_nFormat: Long = 0x2CL // int32; schema=m_nFormat
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_ViewTarget.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_ViewTargetStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Name: Long by ptr64(CSSDSMsg_ViewTarget.m_Name)
         var m_TextureId: ULong by uint64(CSSDSMsg_ViewTarget.m_TextureId)
@@ -145,8 +123,6 @@ object ScenesystemSchema {
         const val m_Targets: Long = 0x18L // CUtlVector<CSSDSMsg_ViewTarget>; schema=m_Targets
     }
 
-    /** Read/write view of decodable fields declared directly by CSSDSMsg_ViewTargetList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSSDSMsg_ViewTargetListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: SceneViewId_t. */
         val m_viewId: ScenesystemSchema.SceneViewId_tStruct
@@ -163,8 +139,6 @@ object ScenesystemSchema {
         const val m_nFrameCount: Long = 0x8L // uint64; schema=m_nFrameCount
     }
 
-    /** Read/write view of decodable fields declared directly by SceneViewId_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SceneViewId_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nViewId: ULong by uint64(SceneViewId_t.m_nViewId)
         var m_nFrameCount: ULong by uint64(SceneViewId_t.m_nFrameCount)

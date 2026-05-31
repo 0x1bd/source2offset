@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libhost.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object HostSchema {
 
     /** Fields declared directly by CAnimScriptBase. */
@@ -24,8 +16,6 @@ object HostSchema {
         const val m_bIsValid: Long = 0x8L // bool; schema=m_bIsValid
     }
 
-    /** Read/write view of decodable fields declared directly by CAnimScriptBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAnimScriptBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bIsValid: Boolean by bool(CAnimScriptBase.m_bIsValid)
     }
@@ -37,8 +27,6 @@ object HostSchema {
         const val m_hTest: Long = 0x10L // CAnimScriptParam<float32>; schema=m_hTest
     }
 
-    /** Read/write view of decodable fields declared directly by EmptyTestScript.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class EmptyTestScriptStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hTest: CAnimScriptParam<float32>; no safe value decoder was proven. */
         val m_hTestAddress: Long get() = base + EmptyTestScript.m_hTest

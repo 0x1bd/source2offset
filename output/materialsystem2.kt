@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libmaterialsystem2.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object Materialsystem2Schema {
 
     /** Fields declared directly by MaterialParamBuffer_t. Reflected parent: MaterialParam_t. */
@@ -25,8 +17,6 @@ object Materialsystem2Schema {
         const val m_value: Long = 0x8L // CUtlBinaryBlock; schema=m_value
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParamBuffer_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParamBuffer_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_value: CUtlBinaryBlock; no safe value decoder was proven. */
         val m_valueAddress: Long get() = base + MaterialParamBuffer_t.m_value
@@ -39,8 +29,6 @@ object Materialsystem2Schema {
         const val m_flValue: Long = 0x8L // float32; schema=m_flValue
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParamFloat_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParamFloat_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flValue: Float by float(MaterialParamFloat_t.m_flValue)
     }
@@ -52,8 +40,6 @@ object Materialsystem2Schema {
         const val m_nValue: Long = 0x8L // int32; schema=m_nValue
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParamInt_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParamInt_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nValue: Int by int32(MaterialParamInt_t.m_nValue)
     }
@@ -65,8 +51,6 @@ object Materialsystem2Schema {
         const val m_value: Long = 0x8L // CUtlString; schema=m_value
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParamString_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParamString_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_value: Long by ptr64(MaterialParamString_t.m_value)
     }
@@ -78,8 +62,6 @@ object Materialsystem2Schema {
         const val m_pValue: Long = 0x8L // CStrongHandle<InfoForResourceTypeCTextureBase>; schema=m_pValue
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParamTexture_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParamTexture_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_pValue: CStrongHandle<InfoForResourceTypeCTextureBase>; no safe value decoder was proven. */
         val m_pValueAddress: Long get() = base + MaterialParamTexture_t.m_pValue
@@ -92,8 +74,6 @@ object Materialsystem2Schema {
         const val m_value: Long = 0x8L // Vector4D; schema=m_value
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParamVector_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParamVector_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_value: Vector4D; no safe value decoder was proven. */
         val m_valueAddress: Long get() = base + MaterialParamVector_t.m_value
@@ -105,8 +85,6 @@ object Materialsystem2Schema {
         const val m_name: Long = 0x0L // CUtlString; schema=m_name
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialParam_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialParam_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(MaterialParam_t.m_name)
     }
@@ -130,8 +108,6 @@ object Materialsystem2Schema {
         const val m_renderAttributesUsed: Long = 0x118L // CUtlVector<CUtlString>; schema=m_renderAttributesUsed
     }
 
-    /** Read/write view of decodable fields declared directly by MaterialResourceData_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class MaterialResourceData_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_materialName: Long by ptr64(MaterialResourceData_t.m_materialName)
         var m_shaderName: Long by ptr64(MaterialResourceData_t.m_shaderName)
@@ -182,8 +158,6 @@ object Materialsystem2Schema {
         const val m_vBlurTint: Long = 0x4CL // Vector[5]; schema=m_vBlurTint
     }
 
-    /** Read/write view of decodable fields declared directly by PostProcessingBloomParameters_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PostProcessingBloomParameters_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_blendMode: BloomBlendMode_t; no safe value decoder was proven. */
         val m_blendModeAddress: Long get() = base + PostProcessingBloomParameters_t.m_blendMode
@@ -216,8 +190,6 @@ object Materialsystem2Schema {
         const val m_fGradientScale: Long = 0x10L // float32; schema=m_fGradientScale
     }
 
-    /** Read/write view of decodable fields declared directly by PostProcessingFogScatteringParameters_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PostProcessingFogScatteringParameters_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fRadius: Float by float(PostProcessingFogScatteringParameters_t.m_fRadius)
         var m_fScale: Float by float(PostProcessingFogScatteringParameters_t.m_fScale)
@@ -236,8 +208,6 @@ object Materialsystem2Schema {
         const val m_flLocalContrastVignetteBlur: Long = 0x10L // float32; schema=m_flLocalContrastVignetteBlur
     }
 
-    /** Read/write view of decodable fields declared directly by PostProcessingLocalContrastParameters_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PostProcessingLocalContrastParameters_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flLocalContrastStrength: Float by float(PostProcessingLocalContrastParameters_t.m_flLocalContrastStrength)
         var m_flLocalContrastEdgeStrength: Float by float(PostProcessingLocalContrastParameters_t.m_flLocalContrastEdgeStrength)
@@ -264,8 +234,6 @@ object Materialsystem2Schema {
         const val m_fogScatteringParams: Long = 0x124L // PostProcessingFogScatteringParameters_t; schema=m_fogScatteringParams
     }
 
-    /** Read/write view of decodable fields declared directly by PostProcessingResource_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PostProcessingResource_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bHasTonemapParams: Boolean by bool(PostProcessingResource_t.m_bHasTonemapParams)
         /** Embedded reflected value: PostProcessingTonemapParameters_t. */
@@ -313,8 +281,6 @@ object Materialsystem2Schema {
         const val m_flMaxHighlightLum: Long = 0x38L // float32; schema=m_flMaxHighlightLum
     }
 
-    /** Read/write view of decodable fields declared directly by PostProcessingTonemapParameters_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PostProcessingTonemapParameters_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flExposureBias: Float by float(PostProcessingTonemapParameters_t.m_flExposureBias)
         var m_flShoulderStrength: Float by float(PostProcessingTonemapParameters_t.m_flShoulderStrength)
@@ -344,8 +310,6 @@ object Materialsystem2Schema {
         const val m_vColorTint: Long = 0x18L // Vector; schema=m_vColorTint
     }
 
-    /** Read/write view of decodable fields declared directly by PostProcessingVignetteParameters_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PostProcessingVignetteParameters_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flVignetteStrength: Float by float(PostProcessingVignetteParameters_t.m_flVignetteStrength)
         /** Raw address of m_vCenter: Vector2D; no safe value decoder was proven. */

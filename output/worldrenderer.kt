@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libworldrenderer.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object WorldrendererSchema {
 
     /** Fields declared directly by CEntityComponent. */
@@ -23,8 +15,6 @@ object WorldrendererSchema {
         const val SCHEMA_NAME: String = "CEntityComponent"
     }
 
-    /** Read/write view of decodable fields declared directly by CEntityComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEntityComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -37,8 +27,6 @@ object WorldrendererSchema {
         const val m_CScriptComponent: Long = 0x28L // CScriptComponent*; schema=m_CScriptComponent
     }
 
-    /** Read/write view of decodable fields declared directly by CEntityInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEntityInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iszPrivateVScripts: Long by ptr64(CEntityInstance.m_iszPrivateVScripts)
         var m_pEntity: Long by ptr64(CEntityInstance.m_pEntity)
@@ -52,8 +40,6 @@ object WorldrendererSchema {
         const val m_scriptClassName: Long = 0x30L // CUtlSymbolLarge; schema=m_scriptClassName
     }
 
-    /** Read/write view of decodable fields declared directly by CScriptComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CScriptComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_scriptClassName: Long by ptr64(CScriptComponent.m_scriptClassName)
     }

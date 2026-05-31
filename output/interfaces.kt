@@ -5,8 +5,6 @@
 
 package org.kvxd.source2offset.offsets
 
-/** Named Source 2 interfaces resolved by calling CreateInterface in the live process.
- *  Every value is an RVA to the direct interface instance, not a pointer slot. */
 object client_Interfaces {
     const val Source2ClientPrediction001: Long = 0x467B000L
 }

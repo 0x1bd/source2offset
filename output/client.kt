@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libclient.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object ClientSchema {
 
     /** Fields declared directly by AnimGraph2SerializedPoseRecipeSlot_t. */
@@ -24,8 +16,6 @@ object ClientSchema {
         const val m_topology: Long = 0x30L // CUtlBinaryBlock; schema=m_topology
     }
 
-    /** Read/write view of decodable fields declared directly by AnimGraph2SerializedPoseRecipeSlot_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class AnimGraph2SerializedPoseRecipeSlot_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_topology: CUtlBinaryBlock; no safe value decoder was proven. */
         val m_topologyAddress: Long get() = base + AnimGraph2SerializedPoseRecipeSlot_t.m_topology
@@ -37,8 +27,6 @@ object ClientSchema {
         const val m_hExternalGraph: Long = 0x10L // ExternalAnimGraphHandle_t; schema=m_hExternalGraph
     }
 
-    /** Read/write view of decodable fields declared directly by CAnimGraphControllerBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAnimGraphControllerBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hExternalGraph: ExternalAnimGraphHandle_t; no safe value decoder was proven. */
         val m_hExternalGraphAddress: Long get() = base + CAnimGraphControllerBase.m_hExternalGraph
@@ -55,8 +43,6 @@ object ClientSchema {
         const val m_CachedResults: Long = 0x30L // CUtlVector<CAttributeManager::cached_attribute_float_t>; schema=m_CachedResults
     }
 
-    /** Read/write view of decodable fields declared directly by CAttributeManager.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAttributeManagerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Providers: CUtlVector<CHandle<C_BaseEntity>>; no safe value decoder was proven. */
         val m_ProvidersAddress: Long get() = base + CAttributeManager.m_Providers
@@ -77,8 +63,6 @@ object ClientSchema {
         const val flOut: Long = 0x10L // float32; schema=flOut
     }
 
-    /** Read/write view of decodable fields declared directly by CAttributeManager::cached_attribute_float_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CAttributeManager__cached_attribute_float_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flIn: Float by float(CAttributeManager__cached_attribute_float_t.flIn)
         var iAttribHook: Long by ptr64(CAttributeManager__cached_attribute_float_t.iAttribHook)
@@ -106,8 +90,6 @@ object ClientSchema {
         const val m_bHasAnimatedMaterialAttributes: Long = 0x1088L // bool; schema=m_bHasAnimatedMaterialAttributes
     }
 
-    /** Read/write view of decodable fields declared directly by CBaseAnimGraph.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBaseAnimGraphStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_graphControllerManager: CAnimGraphControllerManager; no safe value decoder was proven. */
         val m_graphControllerManagerAddress: Long get() = base + CBaseAnimGraph.m_graphControllerManager
@@ -167,8 +149,6 @@ object ClientSchema {
         const val m_nPrevAnimationAlgorithm: Long = 0x699L // AnimationAlgorithm_t; schema=m_nPrevAnimationAlgorithm
     }
 
-    /** Read/write view of decodable fields declared directly by CBaseAnimGraphController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBaseAnimGraphControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nAnimationAlgorithm: AnimationAlgorithm_t; no safe value decoder was proven. */
         val m_nAnimationAlgorithmAddress: Long get() = base + CBaseAnimGraphController.m_nAnimationAlgorithm
@@ -233,8 +213,6 @@ object ClientSchema {
         const val m_OnFail: Long = 0x798L // CEntityIOOutput; schema=m_OnFail
     }
 
-    /** Read/write view of decodable fields declared directly by CBaseFilter.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBaseFilterStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bNegated: Boolean by bool(CBaseFilter.m_bNegated)
         /** Raw address of m_OnPass: CEntityIOOutput; no safe value decoder was proven. */
@@ -266,8 +244,6 @@ object ClientSchema {
         const val m_iDesiredFOV: Long = 0x90CL // uint32; schema=m_iDesiredFOV
     }
 
-    /** Read/write view of decodable fields declared directly by CBasePlayerController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBasePlayerControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_CommandContext: C_CommandContext; no safe value decoder was proven. */
         val m_CommandContextAddress: Long get() = base + CBasePlayerController.m_CommandContext
@@ -299,8 +275,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CBasePlayerControllerAPI"
     }
 
-    /** Read/write view of decodable fields declared directly by CBasePlayerControllerAPI.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBasePlayerControllerAPIStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -315,8 +289,6 @@ object ClientSchema {
         const val m_mPreferredCatchTransform: Long = 0x10F0L // CTransform; schema=m_mPreferredCatchTransform
     }
 
-    /** Read/write view of decodable fields declared directly by CBaseProp.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBasePropStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bModelOverrodeBlockLOS: Boolean by bool(CBaseProp.m_bModelOverrodeBlockLOS)
         var m_iShapeType: Int by int32(CBaseProp.m_iShapeType)
@@ -330,8 +302,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CBasePulseGraphInstance"
     }
 
-    /** Read/write view of decodable fields declared directly by CBasePulseGraphInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBasePulseGraphInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -343,8 +313,6 @@ object ClientSchema {
         const val m_bBombPlantedHere: Long = 0xFFDL // bool; schema=m_bBombPlantedHere
     }
 
-    /** Read/write view of decodable fields declared directly by CBombTarget.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBombTargetStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bBombPlantedHere: Boolean by bool(CBombTarget.m_bBombPlantedHere)
     }
@@ -365,8 +333,6 @@ object ClientSchema {
         const val m_vecWheelDrag: Long = 0x78L // CUtlVector<float32>; schema=m_vecWheelDrag
     }
 
-    /** Read/write view of decodable fields declared directly by CBuoyancyHelper.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CBuoyancyHelperStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pController: Long by ptr64(CBuoyancyHelper.m_pController)
         /** Raw address of m_nFluidType: CUtlStringToken; no safe value decoder was proven. */
@@ -420,8 +386,6 @@ object ClientSchema {
         const val m_flinchIsOnFire: Long = 0x528L // CAnimGraph2ParamOptionalRef<bool>; schema=m_flinchIsOnFire
     }
 
-    /** Read/write view of decodable fields declared directly by CCS2PawnGraphController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCS2PawnGraphControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_bIsDefusing: CAnimGraph2ParamOptionalRef<bool>; no safe value decoder was proven. */
         val m_bIsDefusingAddress: Long get() = base + CCS2PawnGraphController.m_bIsDefusing
@@ -507,8 +471,6 @@ object ClientSchema {
         const val m_reloadStage: Long = 0x250L // CAnimGraph2ParamOptionalRef<CGlobalSymbol>; schema=m_reloadStage
     }
 
-    /** Read/write view of decodable fields declared directly by CCS2WeaponGraphController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCS2WeaponGraphControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_action: CAnimGraph2ParamOptionalRef<CGlobalSymbol>; no safe value decoder was proven. */
         val m_actionAddress: Long get() = base + CCS2WeaponGraphController.m_action
@@ -558,8 +520,6 @@ object ClientSchema {
         const val __m_pChainEntity: Long = 0x8L // CNetworkVarChainer; schema=__m_pChainEntity
     }
 
-    /** Read/write view of decodable fields declared directly by CCSGameModeRules.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSGameModeRulesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of __m_pChainEntity: CNetworkVarChainer; no safe value decoder was proven. */
         val __m_pChainEntityAddress: Long get() = base + CCSGameModeRules.__m_pChainEntity
@@ -572,8 +532,6 @@ object ClientSchema {
         const val m_WeaponSequence: Long = 0x30L // C_NetworkUtlVectorBase<CUtlString>; schema=m_WeaponSequence
     }
 
-    /** Read/write view of decodable fields declared directly by CCSGameModeRules_ArmsRace.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSGameModeRules_ArmsRaceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_WeaponSequence: C_NetworkUtlVectorBase<CUtlString>; no safe value decoder was proven. */
         val m_WeaponSequenceAddress: Long get() = base + CCSGameModeRules_ArmsRace.m_WeaponSequence
@@ -586,8 +544,6 @@ object ClientSchema {
         const val m_obsInterpState: Long = 0x68L // ObserverInterpState_t; schema=m_obsInterpState
     }
 
-    /** Read/write view of decodable fields declared directly by CCSObserver_ObserverServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSObserver_ObserverServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_obsInterpState: ObserverInterpState_t; no safe value decoder was proven. */
         val m_obsInterpStateAddress: Long get() = base + CCSObserver_ObserverServices.m_obsInterpState
@@ -599,8 +555,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPlayer_UseServices"
     }
 
-    /** Read/write view of decodable fields declared directly by CCSObserver_UseServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSObserver_UseServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -617,8 +571,6 @@ object ClientSchema {
         const val m_flLastShotFOV: Long = 0x2ACL // float32; schema=m_flLastShotFOV
     }
 
-    /** Read/write view of decodable fields declared directly by CCSPlayerBase_CameraServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSPlayerBase_CameraServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iFOV: UInt by uint32(CCSPlayerBase_CameraServices.m_iFOV)
         var m_iFOVStart: UInt by uint32(CCSPlayerBase_CameraServices.m_iFOVStart)
@@ -703,8 +655,6 @@ object ClientSchema {
         const val m_bFireBulletsSeedSynchronized: Long = 0xAD5L // bool; schema=m_bFireBulletsSeedSynchronized
     }
 
-    /** Read/write view of decodable fields declared directly by CCSPlayerController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSPlayerControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pInGameMoneyServices: Long by ptr64(CCSPlayerController.m_pInGameMoneyServices)
         var m_pInventoryServices: Long by ptr64(CCSPlayerController.m_pInventoryServices)
@@ -787,8 +737,6 @@ object ClientSchema {
         const val m_totalHitsOnServer: Long = 0x48L // int32; schema=m_totalHitsOnServer
     }
 
-    /** Read/write view of decodable fields declared directly by CCSPlayer_BulletServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSPlayer_BulletServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_totalHitsOnServer: Int by int32(CCSPlayer_BulletServices.m_totalHitsOnServer)
     }
@@ -799,8 +747,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPlayer_UseServices"
     }
 
-    /** Read/write view of decodable fields declared directly by CCSPlayer_UseServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSPlayer_UseServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -814,8 +760,6 @@ object ClientSchema {
         const val m_flSwimSoundTime: Long = 0x58L // float32; schema=m_flSwimSoundTime
     }
 
-    /** Read/write view of decodable fields declared directly by CCSPlayer_WaterServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCSPlayer_WaterServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flWaterJumpTime: Float by float(CCSPlayer_WaterServices.m_flWaterJumpTime)
         /** Raw address of m_vecWaterJumpVel: Vector; no safe value decoder was proven. */
@@ -830,8 +774,6 @@ object ClientSchema {
         const val m_nCashStackValue: Long = 0xF30L // int32; schema=m_nCashStackValue
     }
 
-    /** Read/write view of decodable fields declared directly by CCashStack.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCashStackStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nCashStackValue: Int by int32(CCashStack.m_nCashStackValue)
     }
@@ -858,8 +800,6 @@ object ClientSchema {
         const val m_flCapsuleRadius: Long = 0xACL // float32; schema=m_flCapsuleRadius
     }
 
-    /** Read/write view of decodable fields declared directly by CCollisionProperty.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CCollisionPropertyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_collisionAttribute: VPhysicsCollisionAttribute_t; no safe value decoder was proven. */
         val m_collisionAttributeAddress: Long get() = base + CCollisionProperty.m_collisionAttribute
@@ -900,8 +840,6 @@ object ClientSchema {
         const val m_pAnimGraphDestructibleGraphController: Long = 0x68L // CBaseAnimGraphDestructibleParts_GraphController*; schema=m_pAnimGraphDestructibleGraphController
     }
 
-    /** Read/write view of decodable fields declared directly by CDestructiblePartsComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CDestructiblePartsComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of __m_pChainEntity: CNetworkVarChainer; no safe value decoder was proven. */
         val __m_pChainEntityAddress: Long get() = base + CDestructiblePartsComponent.__m_pChainEntity
@@ -916,8 +854,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CEntityComponent"
     }
 
-    /** Read/write view of decodable fields declared directly by CEntityComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEntityComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -930,8 +866,6 @@ object ClientSchema {
         const val m_CScriptComponent: Long = 0x28L // CScriptComponent*; schema=m_CScriptComponent
     }
 
-    /** Read/write view of decodable fields declared directly by CEntityInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEntityInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iszPrivateVScripts: Long by ptr64(CEntityInstance.m_iszPrivateVScripts)
         var m_pEntity: Long by ptr64(CEntityInstance.m_pEntity)
@@ -943,8 +877,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CEntitySubclassVDataBase"
     }
 
-    /** Read/write view of decodable fields declared directly by CEntitySubclassVDataBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEntitySubclassVDataBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -966,8 +898,6 @@ object ClientSchema {
         const val m_soundEventHash: Long = 0x808L // uint32; schema=m_soundEventHash
     }
 
-    /** Read/write view of decodable fields declared directly by CEnvSoundscape.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEnvSoundscapeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_OnPlay: CEntityIOOutput; no safe value decoder was proven. */
         val m_OnPlayAddress: Long get() = base + CEnvSoundscape.m_OnPlay
@@ -991,8 +921,6 @@ object ClientSchema {
         const val m_MainSoundscapeName: Long = 0x810L // CUtlSymbolLarge; schema=m_MainSoundscapeName
     }
 
-    /** Read/write view of decodable fields declared directly by CEnvSoundscapeProxy.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CEnvSoundscapeProxyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_MainSoundscapeName: Long by ptr64(CEnvSoundscapeProxy.m_MainSoundscapeName)
     }
@@ -1002,8 +930,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CFilterMultipleAPI"
     }
 
-    /** Read/write view of decodable fields declared directly by CFilterMultipleAPI.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFilterMultipleAPIStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1048,8 +974,6 @@ object ClientSchema {
         const val m_vRenderOrigin: Long = 0x130L // Vector; schema=m_vRenderOrigin
     }
 
-    /** Read/write view of decodable fields declared directly by CGameSceneNode.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CGameSceneNodeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_bDirtyHierarchy: bitfield:1; no safe value decoder was proven. */
         val m_bDirtyHierarchyAddress: Long get() = base + CGameSceneNode.m_bDirtyHierarchy
@@ -1115,8 +1039,6 @@ object ClientSchema {
         const val m_flBoundsExpandRadius: Long = 0x14L // float32; schema=m_flBoundsExpandRadius
     }
 
-    /** Read/write view of decodable fields declared directly by CHitboxComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CHitboxComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flBoundsExpandRadius: Float by float(CHitboxComponent.m_flBoundsExpandRadius)
     }
@@ -1132,8 +1054,6 @@ object ClientSchema {
         const val m_hLight: Long = 0x78CL // CHandle<C_BaseEntity>; schema=m_hLight
     }
 
-    /** Read/write view of decodable fields declared directly by CInfoDynamicShadowHint.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CInfoDynamicShadowHintStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bDisabled: Boolean by bool(CInfoDynamicShadowHint.m_bDisabled)
         var m_flRange: Float by float(CInfoDynamicShadowHint.m_flRange)
@@ -1150,8 +1070,6 @@ object ClientSchema {
         const val m_vBoxMaxs: Long = 0x79CL // Vector; schema=m_vBoxMaxs
     }
 
-    /** Read/write view of decodable fields declared directly by CInfoDynamicShadowHintBox.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CInfoDynamicShadowHintBoxStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vBoxMins: Vector; no safe value decoder was proven. */
         val m_vBoxMinsAddress: Long get() = base + CInfoDynamicShadowHintBox.m_vBoxMins
@@ -1169,8 +1087,6 @@ object ClientSchema {
         const val m_FanForceCurveString: Long = 0x7D0L // CUtlSymbolLarge; schema=m_FanForceCurveString
     }
 
-    /** Read/write view of decodable fields declared directly by CInfoFan.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CInfoFanStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_fFanForceMaxRadius: Float by float(CInfoFan.m_fFanForceMaxRadius)
         var m_fFanForceMinRadius: Float by float(CInfoFan.m_fFanForceMinRadius)
@@ -1196,8 +1112,6 @@ object ClientSchema {
         const val m_bCheckCSSClasses: Long = 0x958L // bool; schema=m_bCheckCSSClasses
     }
 
-    /** Read/write view of decodable fields declared directly by CInfoOffscreenPanoramaTexture.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CInfoOffscreenPanoramaTextureStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bDisabled: Boolean by bool(CInfoOffscreenPanoramaTexture.m_bDisabled)
         var m_nResolutionX: Int by int32(CInfoOffscreenPanoramaTexture.m_nResolutionX)
@@ -1222,8 +1136,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_PointEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by CInfoTarget.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CInfoTargetStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1241,8 +1153,6 @@ object ClientSchema {
         const val m_bPassthoughCaller: Long = 0x7B4L // bool; schema=m_bPassthoughCaller
     }
 
-    /** Read/write view of decodable fields declared directly by CLogicRelay.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CLogicRelayStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_OnSpawn: CEntityIOOutput; no safe value decoder was proven. */
         val m_OnSpawnAddress: Long get() = base + CLogicRelay.m_OnSpawn
@@ -1261,8 +1171,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by CLogicalEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CLogicalEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1279,8 +1187,6 @@ object ClientSchema {
         const val m_hPath: Long = 0x7D0L // CHandle<CPathWithDynamicNodes>; schema=m_hPath
     }
 
-    /** Read/write view of decodable fields declared directly by CPathNode.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPathNodeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vInTangentLocal: Vector; no safe value decoder was proven. */
         val m_vInTangentLocalAddress: Long get() = base + CPathNode.m_vInTangentLocal
@@ -1298,8 +1204,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CPathSimpleAPI"
     }
 
-    /** Read/write view of decodable fields declared directly by CPathSimpleAPI.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPathSimpleAPIStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1310,8 +1214,6 @@ object ClientSchema {
         const val __m_pChainEntity: Long = 0x8L // CNetworkVarChainer; schema=__m_pChainEntity
     }
 
-    /** Read/write view of decodable fields declared directly by CPlayerPawnComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPlayerPawnComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of __m_pChainEntity: CNetworkVarChainer; no safe value decoder was proven. */
         val __m_pChainEntityAddress: Long get() = base + CPlayerPawnComponent.__m_pChainEntity
@@ -1343,8 +1245,6 @@ object ClientSchema {
         const val m_angDemoViewAngles: Long = 0x200L // QAngle; schema=m_angDemoViewAngles
     }
 
-    /** Read/write view of decodable fields declared directly by CPlayer_CameraServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPlayer_CameraServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vecCsViewPunchAngle: QAngle; no safe value decoder was proven. */
         val m_vecCsViewPunchAngleAddress: Long get() = base + CPlayer_CameraServices.m_vecCsViewPunchAngle
@@ -1387,8 +1287,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPlayerPawnComponent"
     }
 
-    /** Read/write view of decodable fields declared directly by CPlayer_ItemServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPlayer_ItemServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1405,8 +1303,6 @@ object ClientSchema {
         const val m_flObserverChaseDistanceCalcTime: Long = 0x5CL // GameTime_t; schema=m_flObserverChaseDistanceCalcTime
     }
 
-    /** Read/write view of decodable fields declared directly by CPlayer_ObserverServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPlayer_ObserverServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iObserverMode: UByte by uint8(CPlayer_ObserverServices.m_iObserverMode)
         var m_hObserverTarget: UInt by uint32(CPlayer_ObserverServices.m_hObserverTarget)
@@ -1424,8 +1320,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPlayerPawnComponent"
     }
 
-    /** Read/write view of decodable fields declared directly by CPlayer_UseServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPlayer_UseServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1436,8 +1330,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPlayerPawnComponent"
     }
 
-    /** Read/write view of decodable fields declared directly by CPlayer_WaterServices.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPlayer_WaterServicesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1452,8 +1344,6 @@ object ClientSchema {
         const val m_pTargetPanel: Long = 0x1188L // C_PointClientUIWorldPanel*; schema=m_pTargetPanel
     }
 
-    /** Read/write view of decodable fields declared directly by CPointOffScreenIndicatorUi.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPointOffScreenIndicatorUiStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bBeenEnabled: Boolean by bool(CPointOffScreenIndicatorUi.m_bBeenEnabled)
         var m_bHide: Boolean by bool(CPointOffScreenIndicatorUi.m_bHide)
@@ -1476,8 +1366,6 @@ object ClientSchema {
         const val m_snapshotFilter: Long = 0x12CL // PrecipitationFilter_t; schema=m_snapshotFilter
     }
 
-    /** Read/write view of decodable fields declared directly by CPrecipitationVData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPrecipitationVDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_szParticlePrecipitationEffect: CResourceNameTyped<CWeakHandle<InfoForResourceTypeIParticleSystemDefinition>>; no safe value decoder was proven. */
         val m_szParticlePrecipitationEffectAddress: Long get() = base + CPrecipitationVData.m_szParticlePrecipitationEffect
@@ -1498,8 +1386,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "CPulseArraylib"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseArraylib.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseArraylibStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1510,8 +1396,6 @@ object ClientSchema {
         const val m_nEditorNodeID: Long = 0x8L // PulseDocNodeID_t; schema=m_nEditorNodeID
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Base.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nEditorNodeID: PulseDocNodeID_t; no safe value decoder was proven. */
         val m_nEditorNodeIDAddress: Long get() = base + CPulseCell_Base.m_nEditorNodeID
@@ -1523,8 +1407,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_Base"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseFlow.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseFlowStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1536,8 +1418,6 @@ object ClientSchema {
         const val m_WakeResume: Long = 0x48L // CPulse_ResumePoint; schema=m_WakeResume
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseLerp.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseLerpStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_WakeResume: CPulse_ResumePoint; no safe value decoder was proven. */
         val m_WakeResumeAddress: Long get() = base + CPulseCell_BaseLerp.m_WakeResume
@@ -1549,8 +1429,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_Base"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseRequirement.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseRequirementStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1561,8 +1439,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_Base"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseValue.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseValueStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1573,8 +1449,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_BaseFlow"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_BaseYieldingInflow.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_BaseYieldingInflowStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1587,8 +1461,6 @@ object ClientSchema {
         const val m_RegisterMap: Long = 0x50L // PulseRegisterMap_t; schema=m_RegisterMap
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_BaseEntrypoint.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_BaseEntrypointStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_EntryChunk: PulseRuntimeChunkIndex_t; no safe value decoder was proven. */
         val m_EntryChunkAddress: Long get() = base + CPulseCell_Inflow_BaseEntrypoint.m_EntryChunk
@@ -1605,8 +1477,6 @@ object ClientSchema {
         const val m_ExpectedParamType: Long = 0xA0L // CPulseValueFullType; schema=m_ExpectedParamType
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_EntOutputHandler.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_EntOutputHandlerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_SourceEntity: PulseSymbol_t; no safe value decoder was proven. */
         val m_SourceEntityAddress: Long get() = base + CPulseCell_Inflow_EntOutputHandler.m_SourceEntity
@@ -1623,8 +1493,6 @@ object ClientSchema {
         const val m_EventName: Long = 0x80L // PulseSymbol_t; schema=m_EventName
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_EventHandler.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_EventHandlerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_EventName: PulseSymbol_t; no safe value decoder was proven. */
         val m_EventNameAddress: Long get() = base + CPulseCell_Inflow_EventHandler.m_EventName
@@ -1637,8 +1505,6 @@ object ClientSchema {
         const val m_HookName: Long = 0x80L // PulseSymbol_t; schema=m_HookName
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_GraphHook.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_GraphHookStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_HookName: PulseSymbol_t; no safe value decoder was proven. */
         val m_HookNameAddress: Long get() = base + CPulseCell_Inflow_GraphHook.m_HookName
@@ -1652,8 +1518,6 @@ object ClientSchema {
         const val m_bSelfReference: Long = 0x82L // bool; schema=m_bSelfReference
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Inflow_ObservableVariableListener.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Inflow_ObservableVariableListenerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nBlackboardReference: PulseRuntimeBlackboardReferenceIndex_t; no safe value decoder was proven. */
         val m_nBlackboardReferenceAddress: Long get() = base + CPulseCell_Inflow_ObservableVariableListener.m_nBlackboardReference
@@ -1668,8 +1532,6 @@ object ClientSchema {
         const val m_OnInterval: Long = 0x90L // SignatureOutflow_Continue; schema=m_OnInterval
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IntervalTimer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IntervalTimerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Completed: CPulse_ResumePoint; no safe value decoder was proven. */
         val m_CompletedAddress: Long get() = base + CPulseCell_IntervalTimer.m_Completed
@@ -1687,8 +1549,6 @@ object ClientSchema {
         const val m_bCompleteOnNextWake: Long = 0x10L // bool; schema=m_bCompleteOnNextWake
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IntervalTimer::CursorState_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IntervalTimer__CursorState_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_StartTime: GameTime_t; no safe value decoder was proven. */
         val m_StartTimeAddress: Long get() = base + CPulseCell_IntervalTimer__CursorState_t.m_StartTime
@@ -1705,8 +1565,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CPulseCell_BaseRequirement"
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IsRequirementValid.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IsRequirementValidStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1717,8 +1575,6 @@ object ClientSchema {
         const val m_bIsValid: Long = 0x0L // bool; schema=m_bIsValid
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_IsRequirementValid::Criteria_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_IsRequirementValid__Criteria_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bIsValid: Boolean by bool(CPulseCell_IsRequirementValid__Criteria_t.m_bIsValid)
     }
@@ -1729,8 +1585,6 @@ object ClientSchema {
         const val m_nCurrentCount: Long = 0x0L // int32; schema=m_nCurrentCount
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_LimitCount::InstanceState_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_LimitCount__InstanceState_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nCurrentCount: Int by int32(CPulseCell_LimitCount__InstanceState_t.m_nCurrentCount)
     }
@@ -1745,8 +1599,6 @@ object ClientSchema {
         const val m_OnCanceled: Long = 0xB0L // CPulse_ResumePoint; schema=m_OnCanceled
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_PlaySequence.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_PlaySequenceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_SequenceName: Long by ptr64(CPulseCell_PlaySequence.m_SequenceName)
         /** Embedded reflected value: PulseNodeDynamicOutflows_t. */
@@ -1768,8 +1620,6 @@ object ClientSchema {
         const val m_OnCanceled: Long = 0xB0L // CPulse_ResumePoint; schema=m_OnCanceled
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Timeline.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_TimelineStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_TimelineEvents: CUtlVector<CPulseCell_Timeline::TimelineEvent_t>; no safe value decoder was proven. */
         val m_TimelineEventsAddress: Long get() = base + CPulseCell_Timeline.m_TimelineEvents
@@ -1787,8 +1637,6 @@ object ClientSchema {
         const val m_Curve: Long = 0x48L // CPiecewiseCurve; schema=m_Curve
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_Value_Curve.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_Value_CurveStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Curve: CPiecewiseCurve; no safe value decoder was proven. */
         val m_CurveAddress: Long get() = base + CPulseCell_Value_Curve.m_Curve
@@ -1800,8 +1648,6 @@ object ClientSchema {
         const val m_TagName: Long = 0x0L // PulseSymbol_t; schema=m_TagName
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_WaitForCursorsWithTagBase::CursorState_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_WaitForCursorsWithTagBase__CursorState_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_TagName: PulseSymbol_t; no safe value decoder was proven. */
         val m_TagNameAddress: Long get() = base + CPulseCell_WaitForCursorsWithTagBase__CursorState_t.m_TagName
@@ -1815,8 +1661,6 @@ object ClientSchema {
         const val m_OnTrue: Long = 0xC0L // CPulse_ResumePoint; schema=m_OnTrue
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseCell_WaitForObservable.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseCell_WaitForObservableStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Condition: PulseObservableBoolExpression_t; no safe value decoder was proven. */
         val m_ConditionAddress: Long get() = base + CPulseCell_WaitForObservable.m_Condition
@@ -1843,8 +1687,6 @@ object ClientSchema {
         const val m_OutputConnections: Long = 0x128L // CUtlVector<CPulse_OutputConnection*>; schema=m_OutputConnections
     }
 
-    /** Read/write view of decodable fields declared directly by CPulseGraphDef.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulseGraphDefStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_DomainIdentifier: PulseSymbol_t; no safe value decoder was proven. */
         val m_DomainIdentifierAddress: Long get() = base + CPulseGraphDef.m_DomainIdentifier
@@ -1881,8 +1723,6 @@ object ClientSchema {
         const val m_nSrcInstruction: Long = 0x48L // int32; schema=m_nSrcInstruction
     }
 
-    /** Read/write view of decodable fields declared directly by CPulse_InvokeBinding.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulse_InvokeBindingStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_RegisterMap: PulseRegisterMap_t; no safe value decoder was proven. */
         val m_RegisterMapAddress: Long get() = base + CPulse_InvokeBinding.m_RegisterMap
@@ -1904,8 +1744,6 @@ object ClientSchema {
         const val m_OutflowRegisterMap: Long = 0x18L // PulseRegisterMap_t; schema=m_OutflowRegisterMap
     }
 
-    /** Read/write view of decodable fields declared directly by CPulse_OutflowConnection.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CPulse_OutflowConnectionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_SourceOutflowName: PulseSymbol_t; no safe value decoder was proven. */
         val m_SourceOutflowNameAddress: Long get() = base + CPulse_OutflowConnection.m_SourceOutflowName
@@ -1927,8 +1765,6 @@ object ClientSchema {
         const val m_iEnemyTaserKills: Long = 0x74L // int32; schema=m_iEnemyTaserKills
     }
 
-    /** Read/write view of decodable fields declared directly by CSMatchStats_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSMatchStats_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iEnemy5Ks: Int by int32(CSMatchStats_t.m_iEnemy5Ks)
         var m_iEnemy4Ks: Int by int32(CSMatchStats_t.m_iEnemy4Ks)
@@ -1955,8 +1791,6 @@ object ClientSchema {
         const val m_iEnemiesFlashed: Long = 0x60L // int32; schema=m_iEnemiesFlashed
     }
 
-    /** Read/write view of decodable fields declared directly by CSPerRoundStats_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSPerRoundStats_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iKills: Int by int32(CSPerRoundStats_t.m_iKills)
         var m_iDeaths: Int by int32(CSPerRoundStats_t.m_iDeaths)
@@ -1980,8 +1814,6 @@ object ClientSchema {
         const val m_scriptClassName: Long = 0x30L // CUtlSymbolLarge; schema=m_scriptClassName
     }
 
-    /** Read/write view of decodable fields declared directly by CScriptComponent.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CScriptComponentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_scriptClassName: Long by ptr64(CScriptComponent.m_scriptClassName)
     }
@@ -1992,8 +1824,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseModelEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by CServerOnlyModelEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CServerOnlyModelEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -2005,8 +1835,6 @@ object ClientSchema {
         const val m_pSkeletonInstance: Long = 0x8L // CSkeletonInstance*; schema=m_pSkeletonInstance
     }
 
-    /** Read/write view of decodable fields declared directly by CSkeletonAnimationController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSkeletonAnimationControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pSkeletonInstance: Long by ptr64(CSkeletonAnimationController.m_pSkeletonInstance)
     }
@@ -2017,8 +1845,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_Sprite"
     }
 
-    /** Read/write view of decodable fields declared directly by CSpriteOriented.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSpriteOrientedStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -2038,8 +1864,6 @@ object ClientSchema {
         const val m_RampTimer: Long = 0x1040L // CountdownTimer; schema=m_RampTimer
     }
 
-    /** Read/write view of decodable fields declared directly by CTriggerFan.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CTriggerFanStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vFanOriginOffset: Vector; no safe value decoder was proven. */
         val m_vFanOriginOffsetAddress: Long get() = base + CTriggerFan.m_vFanOriginOffset
@@ -2063,8 +1887,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseModelEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by CWaterSplasher.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CWaterSplasherStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -2078,8 +1900,6 @@ object ClientSchema {
         const val m_ullRegisteredAsItemID: Long = 0x13D0L // uint64; schema=m_ullRegisteredAsItemID
     }
 
-    /** Read/write view of decodable fields declared directly by C_AttributeContainer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_AttributeContainerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Item: C_EconItemView; no safe value decoder was proven. */
         val m_ItemAddress: Long get() = base + C_AttributeContainer.m_Item
@@ -2169,8 +1989,6 @@ object ClientSchema {
         const val m_VisClusters: Long = 0x1220L // C_NetworkUtlVectorBase<uint16>; schema=m_VisClusters
     }
 
-    /** Read/write view of decodable fields declared directly by C_BarnLight.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BarnLightStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bEnabled: Boolean by bool(C_BarnLight.m_bEnabled)
         var m_nColorMode: Int by int32(C_BarnLight.m_nColorMode)
@@ -2293,8 +2111,6 @@ object ClientSchema {
         const val m_szDisplayText: Long = 0xF38L // CUtlSymbolLarge; schema=m_szDisplayText
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseButton.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseButtonStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_glowEntity: UInt by uint32(C_BaseButton.m_glowEntity)
         var m_usable: Boolean by bool(C_BaseButton.m_usable)
@@ -2321,8 +2137,6 @@ object ClientSchema {
         const val m_hSwitchToWeaponAfterThrow: Long = 0x2BD4L // CHandle<C_CSWeaponBase>; schema=m_hSwitchToWeaponAfterThrow
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseCSGrenade.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseCSGrenadeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bClientPredictDelete: Boolean by bool(C_BaseCSGrenade.m_bClientPredictDelete)
         var m_bRedraw: Boolean by bool(C_BaseCSGrenade.m_bRedraw)
@@ -2366,8 +2180,6 @@ object ClientSchema {
         const val m_flTrajectoryTrailEffectCreationTime: Long = 0x11B8L // float32; schema=m_flTrajectoryTrailEffectCreationTime
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseCSGrenadeProjectile.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseCSGrenadeProjectileStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vInitialPosition: Vector; no safe value decoder was proven. */
         val m_vInitialPositionAddress: Long get() = base + C_BaseCSGrenadeProjectile.m_vInitialPosition
@@ -2408,8 +2220,6 @@ object ClientSchema {
         const val m_PanelID: Long = 0xF50L // CUtlSymbolLarge; schema=m_PanelID
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseClientUIEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseClientUIEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bEnabled: Boolean by bool(C_BaseClientUIEntity.m_bEnabled)
         var m_DialogXMLName: Long by ptr64(C_BaseClientUIEntity.m_DialogXMLName)
@@ -2429,8 +2239,6 @@ object ClientSchema {
         const val m_flWaterNextTraceTime: Long = 0x1104L // float32; schema=m_flWaterNextTraceTime
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseCombatCharacter.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseCombatCharacterStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hMyWearables: C_NetworkUtlVectorBase<CHandle<C_EconWearable>>; no safe value decoder was proven. */
         val m_hMyWearablesAddress: Long get() = base + C_BaseCombatCharacter.m_hMyWearables
@@ -2451,8 +2259,6 @@ object ClientSchema {
         const val m_bIsUsable: Long = 0xF30L // bool; schema=m_bIsUsable
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseDoor.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseDoorStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bIsUsable: Boolean by bool(C_BaseDoor.m_bIsUsable)
     }
@@ -2546,8 +2352,6 @@ object ClientSchema {
         const val m_nBloodType: Long = 0x778L // BloodType; schema=m_nBloodType
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_CBodyComponent: Long by ptr64(C_BaseEntity.m_CBodyComponent)
         /** Raw address of m_NetworkTransmitComponent: CNetworkTransmitComponent; no safe value decoder was proven. */
@@ -2675,8 +2479,6 @@ object ClientSchema {
         const val m_hOriginalThrower: Long = 0x1124L // CHandle<C_CSPlayerPawn>; schema=m_hOriginalThrower
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseGrenade.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseGrenadeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bHasWarnedAI: Boolean by bool(C_BaseGrenade.m_bHasWarnedAI)
         var m_bIsSmokeGrenade: Boolean by bool(C_BaseGrenade.m_bIsSmokeGrenade)
@@ -2744,8 +2546,6 @@ object ClientSchema {
         const val m_bvDisabledHitGroups: Long = 0xF20L // uint32[1]; schema=m_bvDisabledHitGroups
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseModelEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseModelEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_CRenderComponent: Long by ptr64(C_BaseModelEntity.m_CRenderComponent)
         /** Embedded reflected value: CHitboxComponent. */
@@ -2820,8 +2620,6 @@ object ClientSchema {
         const val m_bValid: Long = 0x1EL // bool; schema=m_bValid
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseModelEntity::Emphasized_Phoneme.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseModelEntity__Emphasized_PhonemeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_sClassName: Long by ptr64(C_BaseModelEntity__Emphasized_Phoneme.m_sClassName)
         var m_flAmount: Float by float(C_BaseModelEntity__Emphasized_Phoneme.m_flAmount)
@@ -2864,8 +2662,6 @@ object ClientSchema {
         const val m_bIsSwappingToPredictableController: Long = 0x1338L // bool; schema=m_bIsSwappingToPredictableController
     }
 
-    /** Read/write view of decodable fields declared directly by C_BasePlayerPawn.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BasePlayerPawnStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pWeaponServices: Long by ptr64(C_BasePlayerPawn.m_pWeaponServices)
         var m_pItemServices: Long by ptr64(C_BasePlayerPawn.m_pItemServices)
@@ -2920,8 +2716,6 @@ object ClientSchema {
         const val m_pReserveAmmo: Long = 0x2570L // int32[2]; schema=m_pReserveAmmo
     }
 
-    /** Read/write view of decodable fields declared directly by C_BasePlayerWeapon.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BasePlayerWeaponStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nNextPrimaryAttackTick: GameTick_t; no safe value decoder was proven. */
         val m_nNextPrimaryAttackTickAddress: Long get() = base + C_BasePlayerWeapon.m_nNextPrimaryAttackTick
@@ -2941,8 +2735,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseModelEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseToggle.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseToggleStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -2964,8 +2756,6 @@ object ClientSchema {
         const val m_bDisabled: Long = 0xFFCL // bool; schema=m_bDisabled
     }
 
-    /** Read/write view of decodable fields declared directly by C_BaseTrigger.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BaseTriggerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_OnStartTouch: CEntityIOOutput; no safe value decoder was proven. */
         val m_OnStartTouchAddress: Long get() = base + C_BaseTrigger.m_OnStartTouch
@@ -3023,8 +2813,6 @@ object ClientSchema {
         const val m_hLastAttacker: Long = 0x1244L // CHandle<C_BaseEntity>; schema=m_hLastAttacker
     }
 
-    /** Read/write view of decodable fields declared directly by C_BreakableProp.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_BreakablePropStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_CPropDataComponent: CPropDataComponent; no safe value decoder was proven. */
         val m_CPropDataComponentAddress: Long get() = base + C_BreakableProp.m_CPropDataComponent
@@ -3074,8 +2862,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_LateUpdatedAnimating"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CS2HudModelAddon.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CS2HudModelAddonStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3086,8 +2872,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_LateUpdatedAnimating"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CS2HudModelBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CS2HudModelBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3098,8 +2882,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CS2HudModelBase"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CS2HudModelWeapon.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CS2HudModelWeaponStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3110,8 +2892,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_TeamPreviewCharacterPosition"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_EndOfMatchCharacterPosition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_EndOfMatchCharacterPositionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3136,8 +2916,6 @@ object ClientSchema {
         const val m_flDofTiltToGround: Long = 0x800L // float32; schema=m_flDofTiltToGround
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_MapPreviewCameraPath.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_MapPreviewCameraPathStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flZFar: Float by float(C_CSGO_MapPreviewCameraPath.m_flZFar)
         var m_flZNear: Float by float(C_CSGO_MapPreviewCameraPath.m_flZNear)
@@ -3165,8 +2943,6 @@ object ClientSchema {
         const val m_sInitialWeaponState: Long = 0x10F0L // CUtlString; schema=m_sInitialWeaponState
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_PreviewModel.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_PreviewModelStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_defaultAnim: Long by ptr64(C_CSGO_PreviewModel.m_defaultAnim)
         /** Raw address of m_nDefaultAnimLoopMode: AnimLoopMode_t; no safe value decoder was proven. */
@@ -3181,8 +2957,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_PreviewModel"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_PreviewModelAlias_csgo_item_previewmodel.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_PreviewModelAlias_csgo_item_previewmodelStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3195,8 +2969,6 @@ object ClientSchema {
         const val m_flInitialModelScale: Long = 0x42D8L // float32; schema=m_flInitialModelScale
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_PreviewPlayer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_PreviewPlayerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_animgraphCharacterModeString: CGlobalSymbol; no safe value decoder was proven. */
         val m_animgraphCharacterModeStringAddress: Long get() = base + C_CSGO_PreviewPlayer.m_animgraphCharacterModeString
@@ -3209,8 +2981,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_TeamPreviewCharacterPosition"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamIntroCharacterPosition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamIntroCharacterPositionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3221,8 +2991,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_TeamIntroCharacterPosition"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamIntroCounterTerroristPosition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamIntroCounterTerroristPositionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3234,8 +3002,6 @@ object ClientSchema {
         const val m_nVariant: Long = 0x804L // int32; schema=m_nVariant
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamPreviewCamera.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamPreviewCameraStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nVariant: Int by int32(C_CSGO_TeamPreviewCamera.m_nVariant)
     }
@@ -3254,8 +3020,6 @@ object ClientSchema {
         const val m_weaponItem: Long = 0x2E88L // C_EconItemView; schema=m_weaponItem
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamPreviewCharacterPosition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamPreviewCharacterPositionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nVariant: Int by int32(C_CSGO_TeamPreviewCharacterPosition.m_nVariant)
         var m_nRandom: Int by int32(C_CSGO_TeamPreviewCharacterPosition.m_nRandom)
@@ -3276,8 +3040,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_PreviewPlayer"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamPreviewModel.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamPreviewModelStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3288,8 +3050,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_TeamPreviewCamera"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamSelectCamera.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamSelectCameraStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3300,8 +3060,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_TeamPreviewCharacterPosition"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamSelectCharacterPosition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamSelectCharacterPositionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3312,8 +3070,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSGO_TeamSelectCharacterPosition"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGO_TeamSelectTerroristPosition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGO_TeamSelectTerroristPositionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3325,8 +3081,6 @@ object ClientSchema {
         const val m_pGameRules: Long = 0x780L // C_CSGameRules*; schema=m_pGameRules
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSGameRulesProxy.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSGameRulesProxyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pGameRules: Long by ptr64(C_CSGameRulesProxy.m_pGameRules)
     }
@@ -3439,8 +3193,6 @@ object ClientSchema {
         const val m_holdTargetIDTimer: Long = 0x42B8L // CountdownTimer; schema=m_holdTargetIDTimer
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSPlayerPawn.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSPlayerPawnStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pBulletServices: Long by ptr64(C_CSPlayerPawn.m_pBulletServices)
         var m_pHostageServices: Long by ptr64(C_CSPlayerPawn.m_pHostageServices)
@@ -3616,8 +3368,6 @@ object ClientSchema {
         const val m_hOriginalController: Long = 0x13D8L // CHandle<CCSPlayerController>; schema=m_hOriginalController
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSPlayerPawnBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSPlayerPawnBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pPingServices: Long by ptr64(C_CSPlayerPawnBase.m_pPingServices)
         /** Raw address of m_previousPlayerState: CSPlayerState; no safe value decoder was proven. */
@@ -3713,8 +3463,6 @@ object ClientSchema {
         const val m_flLastShakeTime: Long = 0x298CL // GameTime_t; schema=m_flLastShakeTime
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSWeaponBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSWeaponBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_iWeaponGameplayAnimState: WeaponGameplayAnimState; no safe value decoder was proven. */
         val m_iWeaponGameplayAnimStateAddress: Long get() = base + C_CSWeaponBase.m_iWeaponGameplayAnimState
@@ -3803,8 +3551,6 @@ object ClientSchema {
         const val m_nRevolverCylinderIdx: Long = 0x2B58L // int32; schema=m_nRevolverCylinderIdx
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSWeaponBaseGun.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSWeaponBaseGunStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_zoomLevel: Int by int32(C_CSWeaponBaseGun.m_zoomLevel)
         var m_iBurstShotsRemaining: Int by int32(C_CSWeaponBaseGun.m_iBurstShotsRemaining)
@@ -3821,8 +3567,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBase"
     }
 
-    /** Read/write view of decodable fields declared directly by C_CSWeaponBaseShotgun.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_CSWeaponBaseShotgunStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3847,8 +3591,6 @@ object ClientSchema {
         const val m_flScaleTimeEnd: Long = 0x1150L // GameTime_t[10]; schema=m_flScaleTimeEnd
     }
 
-    /** Read/write view of decodable fields declared directly by C_ClientRagdoll.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_ClientRagdollStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bFadeOut: Boolean by bool(C_ClientRagdoll.m_bFadeOut)
         var m_bImportant: Boolean by bool(C_ClientRagdoll.m_bImportant)
@@ -3896,8 +3638,6 @@ object ClientSchema {
         const val m_flFadeDuration: Long = 0x9B8L // float32[1]; schema=m_flFadeDuration
     }
 
-    /** Read/write view of decodable fields declared directly by C_ColorCorrection.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_ColorCorrectionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vecOrigin: Vector; no safe value decoder was proven. */
         val m_vecOriginAddress: Long get() = base + C_ColorCorrection.m_vecOrigin
@@ -3933,8 +3673,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_DEagle.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_DEagleStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -3948,8 +3686,6 @@ object ClientSchema {
         const val m_flTimeParticleEffectSpawn: Long = 0x11E8L // GameTime_t; schema=m_flTimeParticleEffectSpawn
     }
 
-    /** Read/write view of decodable fields declared directly by C_DecoyProjectile.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_DecoyProjectileStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nDecoyShotTick: Int by int32(C_DecoyProjectile.m_nDecoyShotTick)
         var m_nClientLastKnownDecoyShotTick: Int by int32(C_DecoyProjectile.m_nClientLastKnownDecoyShotTick)
@@ -3970,8 +3706,6 @@ object ClientSchema {
         const val m_SpotRadius: Long = 0xF44L // float32; schema=m_SpotRadius
     }
 
-    /** Read/write view of decodable fields declared directly by C_DynamicLight.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_DynamicLightStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Flags: UByte by uint8(C_DynamicLight.m_Flags)
         var m_LightStyle: UByte by uint8(C_DynamicLight.m_LightStyle)
@@ -4011,8 +3745,6 @@ object ClientSchema {
         const val m_vecCachedRenderMaxs: Long = 0x1300L // Vector; schema=m_vecCachedRenderMaxs
     }
 
-    /** Read/write view of decodable fields declared directly by C_DynamicProp.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_DynamicPropStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bUseHitboxesForRenderBox: Boolean by bool(C_DynamicProp.m_bUseHitboxesForRenderBox)
         var m_bUseAnimGraph: Boolean by bool(C_DynamicProp.m_bUseAnimGraph)
@@ -4053,8 +3785,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_DynamicProp"
     }
 
-    /** Read/write view of decodable fields declared directly by C_DynamicPropAlias_cable_dynamic.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_DynamicPropAlias_cable_dynamicStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4085,8 +3815,6 @@ object ClientSchema {
         const val m_vecAttachedModels: Long = 0x2540L // CUtlVector<C_EconEntity::AttachedModelData_t>; schema=m_vecAttachedModels
     }
 
-    /** Read/write view of decodable fields declared directly by C_EconEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EconEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flFlexDelayTime: Float by float(C_EconEntity.m_flFlexDelayTime)
         var m_flFlexDelayedWeight: Long by ptr64(C_EconEntity.m_flFlexDelayedWeight)
@@ -4138,8 +3866,6 @@ object ClientSchema {
         const val m_Entity_bEnabled: Long = 0x860L // bool; schema=m_Entity_bEnabled
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvCubemap.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvCubemapStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Entity_hCubemapTexture: CStrongHandle<InfoForResourceTypeCTextureBase>; no safe value decoder was proven. */
         val m_Entity_hCubemapTextureAddress: Long get() = base + C_EnvCubemap.m_Entity_hCubemapTexture
@@ -4171,8 +3897,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_EnvCubemap"
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvCubemapBox.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvCubemapBoxStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4207,8 +3931,6 @@ object ClientSchema {
         const val m_bFirstTime: Long = 0x879L // bool; schema=m_bFirstTime
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvCubemapFog.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvCubemapFogStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flEndDistance: Float by float(C_EnvCubemapFog.m_flEndDistance)
         var m_flStartDistance: Float by float(C_EnvCubemapFog.m_flStartDistance)
@@ -4256,8 +3978,6 @@ object ClientSchema {
         const val m_bEnabled: Long = 0xF64L // bool; schema=m_bEnabled
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvSky.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvSkyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hSkyMaterial: CStrongHandle<InfoForResourceTypeIMaterial2>; no safe value decoder was proven. */
         val m_hSkyMaterialAddress: Long get() = base + C_EnvSky.m_hSkyMaterial
@@ -4317,8 +4037,6 @@ object ClientSchema {
         const val m_bFirstTime: Long = 0x828L // bool; schema=m_bFirstTime
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvVolumetricFogController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvVolumetricFogControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flScattering: Float by float(C_EnvVolumetricFogController.m_flScattering)
         var m_TintColor: Int by int32(C_EnvVolumetricFogController.m_TintColor)
@@ -4390,8 +4108,6 @@ object ClientSchema {
         const val m_bOverrideNoiseStrength: Long = 0x7C3L // bool; schema=m_bOverrideNoiseStrength
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvVolumetricFogVolume.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvVolumetricFogVolumeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bActive: Boolean by bool(C_EnvVolumetricFogVolume.m_bActive)
         /** Raw address of m_vBoxMins: Vector; no safe value decoder was proven. */
@@ -4435,8 +4151,6 @@ object ClientSchema {
         const val m_hEntOwner: Long = 0x3CL // CHandle<C_BaseEntity>; schema=m_hEntOwner
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvWindShared.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvWindSharedStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_flStartTime: GameTime_t; no safe value decoder was proven. */
         val m_flStartTimeAddress: Long get() = base + C_EnvWindShared.m_flStartTime
@@ -4472,8 +4186,6 @@ object ClientSchema {
         const val m_fWindDirectionVariationMultiplier: Long = 0x7ACL // float32; schema=m_fWindDirectionVariationMultiplier
     }
 
-    /** Read/write view of decodable fields declared directly by C_EnvWindVolume.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_EnvWindVolumeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bActive: Boolean by bool(C_EnvWindVolume.m_bActive)
         /** Raw address of m_vBoxMins: Vector; no safe value decoder was proven. */
@@ -4494,8 +4206,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_Inferno"
     }
 
-    /** Read/write view of decodable fields declared directly by C_FireCrackerBlast.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_FireCrackerBlastStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4506,8 +4216,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseCSGrenade"
     }
 
-    /** Read/write view of decodable fields declared directly by C_Flashbang.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_FlashbangStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4518,8 +4226,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseCSGrenadeProjectile"
     }
 
-    /** Read/write view of decodable fields declared directly by C_FlashbangProjectile.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_FlashbangProjectileStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4533,8 +4239,6 @@ object ClientSchema {
         const val m_iChangedVariables: Long = 0x7ECL // int32; schema=m_iChangedVariables
     }
 
-    /** Read/write view of decodable fields declared directly by C_FogController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_FogControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_fog: fogparams_t; no safe value decoder was proven. */
         val m_fogAddress: Long get() = base + C_FogController.m_fog
@@ -4557,8 +4261,6 @@ object ClientSchema {
         const val m_bHasSlack: Long = 0xF82L // bool; schema=m_bHasSlack
     }
 
-    /** Read/write view of decodable fields declared directly by C_FuncLadder.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_FuncLadderStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vecLadderDir: Vector; no safe value decoder was proven. */
         val m_vecLadderDirAddress: Long get() = base + C_FuncLadder.m_vecLadderDir
@@ -4585,8 +4287,6 @@ object ClientSchema {
         const val m_bGamePaused: Long = 0x38L // bool; schema=m_bGamePaused
     }
 
-    /** Read/write view of decodable fields declared directly by C_GameRules.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_GameRulesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of __m_pChainEntity: CNetworkVarChainer; no safe value decoder was proven. */
         val __m_pChainEntityAddress: Long get() = base + C_GameRules.__m_pChainEntity
@@ -4601,8 +4301,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by C_GameRulesProxy.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_GameRulesProxyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4613,8 +4311,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseCSGrenade"
     }
 
-    /** Read/write view of decodable fields declared directly by C_HEGrenade.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_HEGrenadeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4648,8 +4344,6 @@ object ClientSchema {
         const val m_fNewestAlphaThinkTime: Long = 0x1230L // GameTime_t; schema=m_fNewestAlphaThinkTime
     }
 
-    /** Read/write view of decodable fields declared directly by C_Hostage.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_HostageStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_entitySpottedState: EntitySpottedState_t; no safe value decoder was proven. */
         val m_entitySpottedStateAddress: Long get() = base + C_Hostage.m_entitySpottedState
@@ -4724,8 +4418,6 @@ object ClientSchema {
         const val m_flLastGrassBurnThink: Long = 0x852CL // float32; schema=m_flLastGrassBurnThink
     }
 
-    /** Read/write view of decodable fields declared directly by C_Inferno.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_InfernoStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nfxFireDamageEffect: ParticleIndex_t; no safe value decoder was proven. */
         val m_nfxFireDamageEffectAddress: Long get() = base + C_Inferno.m_nfxFireDamageEffect
@@ -4771,8 +4463,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_PointEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by C_InfoInstructorHintHostageRescueZone.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_InfoInstructorHintHostageRescueZoneStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4784,8 +4474,6 @@ object ClientSchema {
         const val m_pReticleHintTextName: Long = 0x2558L // char[256]; schema=m_pReticleHintTextName
     }
 
-    /** Read/write view of decodable fields declared directly by C_Item.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_ItemStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_pReticleHintTextName: char[256]; no safe value decoder was proven. */
         val m_pReticleHintTextNameAddress: Long get() = base + C_Item.m_pReticleHintTextName
@@ -4799,8 +4487,6 @@ object ClientSchema {
         const val m_KillingPlayer: Long = 0x265CL // CHandle<C_CSPlayerPawn>; schema=m_KillingPlayer
     }
 
-    /** Read/write view of decodable fields declared directly by C_ItemDogtags.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_ItemDogtagsStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_OwningPlayer: UInt by uint32(C_ItemDogtags.m_OwningPlayer)
         var m_KillingPlayer: UInt by uint32(C_ItemDogtags.m_KillingPlayer)
@@ -4812,8 +4498,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_WeaponBaseItem"
     }
 
-    /** Read/write view of decodable fields declared directly by C_Item_Healthshot.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_Item_HealthshotStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4824,8 +4508,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "CBaseAnimGraph"
     }
 
-    /** Read/write view of decodable fields declared directly by C_LateUpdatedAnimating.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_LateUpdatedAnimatingStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4836,8 +4518,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_GameRules"
     }
 
-    /** Read/write view of decodable fields declared directly by C_MultiplayRules.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_MultiplayRulesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -4854,8 +4534,6 @@ object ClientSchema {
         const val m_bIsEnabled: Long = 0x78DL // bool; schema=m_bIsEnabled
     }
 
-    /** Read/write view of decodable fields declared directly by C_PlayerVisibility.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PlayerVisibilityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flVisibilityStrength: Float by float(C_PlayerVisibility.m_flVisibilityStrength)
         var m_flFogDistanceMultiplier: Float by float(C_PlayerVisibility.m_flFogDistanceMultiplier)
@@ -4884,8 +4562,6 @@ object ClientSchema {
         const val m_vecCSSClasses: Long = 0x1110L // C_NetworkUtlVectorBase<CUtlSymbolLarge>; schema=m_vecCSSClasses
     }
 
-    /** Read/write view of decodable fields declared directly by C_PointClientUIHUD.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PointClientUIHUDStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bCheckCSSClasses: Boolean by bool(C_PointClientUIHUD.m_bCheckCSSClasses)
         var m_bIgnoreInput: Boolean by bool(C_PointClientUIHUD.m_bIgnoreInput)
@@ -4938,8 +4614,6 @@ object ClientSchema {
         const val m_nExplicitImageLayout: Long = 0x117CL // int32; schema=m_nExplicitImageLayout
     }
 
-    /** Read/write view of decodable fields declared directly by C_PointClientUIWorldPanel.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PointClientUIWorldPanelStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bForceRecreateNextUpdate: Boolean by bool(C_PointClientUIWorldPanel.m_bForceRecreateNextUpdate)
         var m_bMoveViewToPlayerNextThink: Boolean by bool(C_PointClientUIWorldPanel.m_bMoveViewToPlayerNextThink)
@@ -4981,8 +4655,6 @@ object ClientSchema {
         const val m_messageText: Long = 0x1180L // char[512]; schema=m_messageText
     }
 
-    /** Read/write view of decodable fields declared directly by C_PointClientUIWorldTextPanel.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PointClientUIWorldTextPanelStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_messageText: char[512]; no safe value decoder was proven. */
         val m_messageTextAddress: Long get() = base + C_PointClientUIWorldTextPanel.m_messageText
@@ -5008,8 +4680,6 @@ object ClientSchema {
         const val m_bRestartAfterRestore: Long = 0x113CL // bool; schema=m_bRestartAfterRestore
     }
 
-    /** Read/write view of decodable fields declared directly by C_PointCommentaryNode.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PointCommentaryNodeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bActive: Boolean by bool(C_PointCommentaryNode.m_bActive)
         var m_bWasActive: Boolean by bool(C_PointCommentaryNode.m_bWasActive)
@@ -5035,8 +4705,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by C_PointEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PointEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5059,8 +4727,6 @@ object ClientSchema {
         const val m_bExposureControl: Long = 0x103DL // bool; schema=m_bExposureControl
     }
 
-    /** Read/write view of decodable fields declared directly by C_PostProcessingVolume.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PostProcessingVolumeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hPostSettings: CStrongHandle<InfoForResourceTypeCPostProcessingResource>; no safe value decoder was proven. */
         val m_hPostSettingsAddress: Long get() = base + C_PostProcessingVolume.m_hPostSettings
@@ -5091,8 +4757,6 @@ object ClientSchema {
         const val m_nAvailableSheetSequencesMaxIndex: Long = 0x1030L // int32; schema=m_nAvailableSheetSequencesMaxIndex
     }
 
-    /** Read/write view of decodable fields declared directly by C_Precipitation.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_PrecipitationStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flDensity: Float by float(C_Precipitation.m_flDensity)
         var m_flParticleInnerDist: Float by float(C_Precipitation.m_flParticleInnerDist)
@@ -5117,8 +4781,6 @@ object ClientSchema {
         const val m_hBombPlanter: Long = 0x148L // CHandle<C_CSPlayerPawn>; schema=m_hBombPlanter
     }
 
-    /** Read/write view of decodable fields declared directly by C_RetakeGameRules.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_RetakeGameRulesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nMatchSeed: Int by int32(C_RetakeGameRules.m_nMatchSeed)
         var m_bBlockersPresent: Boolean by bool(C_RetakeGameRules.m_bBlockersPresent)
@@ -5174,8 +4836,6 @@ object ClientSchema {
         const val m_bConstrainBetweenEndpoints: Long = 0x1298L // bool; schema=m_bConstrainBetweenEndpoints
     }
 
-    /** Read/write view of decodable fields declared directly by C_RopeKeyframe.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_RopeKeyframeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_bEndPointAttachmentPositionsDirty: bitfield:1; no safe value decoder was proven. */
         val m_bEndPointAttachmentPositionsDirtyAddress: Long get() = base + C_RopeKeyframe.m_bEndPointAttachmentPositionsDirty
@@ -5243,8 +4903,6 @@ object ClientSchema {
         const val starttime: Long = 0x0L // float32; schema=starttime
     }
 
-    /** Read/write view of decodable fields declared directly by C_SceneEntity::QueuedEvents_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SceneEntity__QueuedEvents_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var starttime: Float by float(C_SceneEntity__QueuedEvents_t.starttime)
     }
@@ -5259,8 +4917,6 @@ object ClientSchema {
         const val m_pNext: Long = 0x818L // C_SkyCamera*; schema=m_pNext
     }
 
-    /** Read/write view of decodable fields declared directly by C_SkyCamera.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SkyCameraStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_skyboxData: sky3dparams_t; no safe value decoder was proven. */
         val m_skyboxDataAddress: Long get() = base + C_SkyCamera.m_skyboxData
@@ -5286,8 +4942,6 @@ object ClientSchema {
         const val m_bSmokeEffectSpawned: Long = 0x1221L // bool; schema=m_bSmokeEffectSpawned
     }
 
-    /** Read/write view of decodable fields declared directly by C_SmokeGrenadeProjectile.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SmokeGrenadeProjectileStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nSmokeEffectTickBegin: Int by int32(C_SmokeGrenadeProjectile.m_nSmokeEffectTickBegin)
         var m_bDidSmokeEffect: Boolean by bool(C_SmokeGrenadeProjectile.m_bDidSmokeEffect)
@@ -5314,8 +4968,6 @@ object ClientSchema {
         const val m_vPos: Long = 0x790L // Vector; schema=m_vPos
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundAreaEntityBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundAreaEntityBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bDisabled: Boolean by bool(C_SoundAreaEntityBase.m_bDisabled)
         var m_bWasEnabled: Boolean by bool(C_SoundAreaEntityBase.m_bWasEnabled)
@@ -5335,8 +4987,6 @@ object ClientSchema {
         const val m_iszParameterName: Long = 0x848L // CUtlSymbolLarge; schema=m_iszParameterName
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundEventConeEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundEventConeEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flEmitterAngle: Float by float(C_SoundEventConeEntity.m_flEmitterAngle)
         var m_flSweetSpotAngle: Float by float(C_SoundEventConeEntity.m_flSweetSpotAngle)
@@ -5366,8 +5016,6 @@ object ClientSchema {
         const val m_nEntityIndexSelection: Long = 0x830L // int32; schema=m_nEntityIndexSelection
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundEventEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundEventEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_bClientSideOnly: bitfield:1; no safe value decoder was proven. */
         val m_bClientSideOnlyAddress: Long get() = base + C_SoundEventEntity.m_bClientSideOnly
@@ -5396,8 +5044,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_SoundEventEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundEventEntityAlias_snd_event_point.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundEventEntityAlias_snd_event_pointStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5408,8 +5054,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_SoundOpvarSetPointEntity"
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundOpvarSetAutoRoomEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundOpvarSetAutoRoomEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5420,8 +5064,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_SoundOpvarSetPointBase"
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundOpvarSetOBBWindEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundOpvarSetOBBWindEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5438,8 +5080,6 @@ object ClientSchema {
         const val m_bFastRefresh: Long = 0x79DL // bool; schema=m_bFastRefresh
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundOpvarSetPointBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundOpvarSetPointBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iszStackName: Long by ptr64(C_SoundOpvarSetPointBase.m_iszStackName)
         var m_iszOperatorName: Long by ptr64(C_SoundOpvarSetPointBase.m_iszOperatorName)
@@ -5455,8 +5095,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_SoundOpvarSetPointBase"
     }
 
-    /** Read/write view of decodable fields declared directly by C_SoundOpvarSetPointEntity.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SoundOpvarSetPointEntityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5469,8 +5107,6 @@ object ClientSchema {
         const val m_Radius: Long = 0xF34L // float32; schema=m_Radius
     }
 
-    /** Read/write view of decodable fields declared directly by C_SpotlightEnd.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SpotlightEndStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flLightScale: Float by float(C_SpotlightEnd.m_flLightScale)
         var m_Radius: Float by float(C_SpotlightEnd.m_Radius)
@@ -5505,8 +5141,6 @@ object ClientSchema {
         const val m_nSpriteHeight: Long = 0xFA4L // int32; schema=m_nSpriteHeight
     }
 
-    /** Read/write view of decodable fields declared directly by C_Sprite.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_SpriteStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hSpriteMaterial: CStrongHandle<InfoForResourceTypeIMaterial2>; no safe value decoder was proven. */
         val m_hSpriteMaterialAddress: Long get() = base + C_Sprite.m_hSpriteMaterial
@@ -5549,8 +5183,6 @@ object ClientSchema {
         const val m_szTeamname: Long = 0x7B4L // char[129]; schema=m_szTeamname
     }
 
-    /** Read/write view of decodable fields declared directly by C_Team.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_TeamStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_aPlayerControllers: C_NetworkUtlVectorBase<CHandle<CBasePlayerController>>; no safe value decoder was proven. */
         val m_aPlayerControllersAddress: Long get() = base + C_Team.m_aPlayerControllers
@@ -5567,8 +5199,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_MultiplayRules"
     }
 
-    /** Read/write view of decodable fields declared directly by C_TeamplayRules.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_TeamplayRulesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5584,8 +5214,6 @@ object ClientSchema {
         const val m_flTonemapEVSmoothingRange: Long = 0x78CL // float32; schema=m_flTonemapEVSmoothingRange
     }
 
-    /** Read/write view of decodable fields declared directly by C_TonemapController2.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_TonemapController2Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flAutoExposureMin: Float by float(C_TonemapController2.m_flAutoExposureMin)
         var m_flAutoExposureMax: Float by float(C_TonemapController2.m_flAutoExposureMax)
@@ -5600,8 +5228,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_BaseTrigger"
     }
 
-    /** Read/write view of decodable fields declared directly by C_TriggerMultiple.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_TriggerMultipleStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5619,8 +5245,6 @@ object ClientSchema {
         const val m_bIsYesNoVote: Long = 0x7AEL // bool; schema=m_bIsYesNoVote
     }
 
-    /** Read/write view of decodable fields declared directly by C_VoteController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_VoteControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_iActiveIssueIndex: Int by int32(C_VoteController.m_iActiveIssueIndex)
         var m_iOnlyTeamToVote: Int by int32(C_VoteController.m_iOnlyTeamToVote)
@@ -5638,8 +5262,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponAWP.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponAWPStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5652,8 +5274,6 @@ object ClientSchema {
         const val m_bRedraw: Long = 0x2B36L // bool; schema=m_bRedraw
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponBaseItem.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponBaseItemStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bSequenceInProgress: Boolean by bool(C_WeaponBaseItem.m_bSequenceInProgress)
         var m_bRedraw: Boolean by bool(C_WeaponBaseItem.m_bRedraw)
@@ -5665,8 +5285,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponElite.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponEliteStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5677,8 +5295,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponFamas.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponFamasStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5689,8 +5305,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponGalilAR.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponGalilARStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5701,8 +5315,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponM4A1Silencer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponM4A1SilencerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5713,8 +5325,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponMAC10.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponMAC10Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5725,8 +5335,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponMag7.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponMag7Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5737,8 +5345,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseShotgun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponNOVA.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponNOVAStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5749,8 +5355,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponRevolver.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponRevolverStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5761,8 +5365,6 @@ object ClientSchema {
         const val PARENT_SCHEMA_NAME: String = "C_CSWeaponBaseGun"
     }
 
-    /** Read/write view of decodable fields declared directly by C_WeaponSSG08.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class C_WeaponSSG08Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5776,8 +5378,6 @@ object ClientSchema {
         const val m_nWorldGroupId: Long = 0x14L // WorldGroupId_t; schema=m_nWorldGroupId
     }
 
-    /** Read/write view of decodable fields declared directly by CountdownTimer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CountdownTimerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_duration: Float by float(CountdownTimer.m_duration)
         /** Raw address of m_timestamp: GameTime_t; no safe value decoder was proven. */
@@ -5792,8 +5392,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "DestructiblePartDamageRequestAPI"
     }
 
-    /** Read/write view of decodable fields declared directly by DestructiblePartDamageRequestAPI.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class DestructiblePartDamageRequestAPIStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5806,8 +5404,6 @@ object ClientSchema {
         const val m_timescale: Long = 0x10L // float32; schema=m_timescale
     }
 
-    /** Read/write view of decodable fields declared directly by EngineCountdownTimer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class EngineCountdownTimerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_duration: Float by float(EngineCountdownTimer.m_duration)
         var m_timestamp: Float by float(EngineCountdownTimer.m_timestamp)
@@ -5821,8 +5417,6 @@ object ClientSchema {
         const val m_Values: Long = 0x34L // Vector4D; schema=m_Values
     }
 
-    /** Read/write view of decodable fields declared directly by EntityRenderAttribute_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class EntityRenderAttribute_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_ID: CUtlStringToken; no safe value decoder was proven. */
         val m_IDAddress: Long get() = base + EntityRenderAttribute_t.m_ID
@@ -5839,8 +5433,6 @@ object ClientSchema {
         const val m_iHealthMax: Long = 0x7B8L // int32; schema=m_iHealthMax
     }
 
-    /** Read/write view of decodable fields declared directly by FilterHealth.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FilterHealthStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bAdrenalineActive: Boolean by bool(FilterHealth.m_bAdrenalineActive)
         var m_iHealthMin: Int by int32(FilterHealth.m_iHealthMin)
@@ -5852,8 +5444,6 @@ object ClientSchema {
         const val SCHEMA_NAME: String = "ISkeletonAnimationController"
     }
 
-    /** Read/write view of decodable fields declared directly by ISkeletonAnimationController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ISkeletonAnimationControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -5865,8 +5455,6 @@ object ClientSchema {
         const val m_nWorldGroupId: Long = 0xCL // WorldGroupId_t; schema=m_nWorldGroupId
     }
 
-    /** Read/write view of decodable fields declared directly by IntervalTimer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IntervalTimerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_timestamp: GameTime_t; no safe value decoder was proven. */
         val m_timestampAddress: Long get() = base + IntervalTimer.m_timestamp
@@ -5880,8 +5468,6 @@ object ClientSchema {
         const val m_Outflows: Long = 0x0L // CUtlVector<PulseNodeDynamicOutflows_t::DynamicOutflow_t>; schema=m_Outflows
     }
 
-    /** Read/write view of decodable fields declared directly by PulseNodeDynamicOutflows_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PulseNodeDynamicOutflows_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Outflows: CUtlVector<PulseNodeDynamicOutflows_t::DynamicOutflow_t>; no safe value decoder was proven. */
         val m_OutflowsAddress: Long get() = base + PulseNodeDynamicOutflows_t.m_Outflows
@@ -5894,8 +5480,6 @@ object ClientSchema {
         const val m_Connection: Long = 0x8L // CPulse_OutflowConnection; schema=m_Connection
     }
 
-    /** Read/write view of decodable fields declared directly by PulseNodeDynamicOutflows_t::DynamicOutflow_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PulseNodeDynamicOutflows_t__DynamicOutflow_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_OutflowID: CGlobalSymbol; no safe value decoder was proven. */
         val m_OutflowIDAddress: Long get() = base + PulseNodeDynamicOutflows_t__DynamicOutflow_t.m_OutflowID
@@ -5910,8 +5494,6 @@ object ClientSchema {
         const val m_Outflows: Long = 0x0L // CUtlVector<OutflowWithRequirements_t>; schema=m_Outflows
     }
 
-    /** Read/write view of decodable fields declared directly by PulseSelectorOutflowList_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PulseSelectorOutflowList_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Outflows: CUtlVector<OutflowWithRequirements_t>; no safe value decoder was proven. */
         val m_OutflowsAddress: Long get() = base + PulseSelectorOutflowList_t.m_Outflows
@@ -5928,8 +5510,6 @@ object ClientSchema {
         const val m_flCyclesPerSecond: Long = 0x14L // float32; schema=m_flCyclesPerSecond
     }
 
-    /** Read/write view of decodable fields declared directly by SequenceHistory_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SequenceHistory_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_hSequence: HSequence; no safe value decoder was proven. */
         val m_hSequenceAddress: Long get() = base + SequenceHistory_t.m_hSequence
@@ -5950,8 +5530,6 @@ object ClientSchema {
         const val unItemDefIdx: Long = 0x34L // uint16; schema=unItemDefIdx
     }
 
-    /** Read/write view of decodable fields declared directly by ServerAuthoritativeWeaponSlot_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ServerAuthoritativeWeaponSlot_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var unClass: UShort by uint16(ServerAuthoritativeWeaponSlot_t.unClass)
         var unSlot: UShort by uint16(ServerAuthoritativeWeaponSlot_t.unSlot)
@@ -5965,8 +5543,6 @@ object ClientSchema {
         const val m_nCount: Long = 0x32L // uint16; schema=m_nCount
     }
 
-    /** Read/write view of decodable fields declared directly by WeaponPurchaseCount_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class WeaponPurchaseCount_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nItemDefIndex: UShort by uint16(WeaponPurchaseCount_t.m_nItemDefIndex)
         var m_nCount: UShort by uint16(WeaponPurchaseCount_t.m_nCount)
@@ -5982,8 +5558,6 @@ object ClientSchema {
         const val soundEventHash: Long = 0x74L // uint32; schema=soundEventHash
     }
 
-    /** Read/write view of decodable fields declared directly by audioparams_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class audioparams_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of localSound: Vector[8]; no safe value decoder was proven. */
         val localSoundAddress: Long get() = base + audioparams_t.localSound
@@ -6011,8 +5585,6 @@ object ClientSchema {
         const val m_SurfacePropStringToken: Long = 0x78L // CUtlStringToken; schema=m_SurfacePropStringToken
     }
 
-    /** Read/write view of decodable fields declared directly by shard_model_desc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class shard_model_desc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nModelID: Int by int32(shard_model_desc_t.m_nModelID)
         /** Raw address of m_hMaterialBase: CStrongHandle<InfoForResourceTypeIMaterial2>; no safe value decoder was proven. */

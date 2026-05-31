@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libschemasystem.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object SchemasystemSchema {
 
     /** Fields declared directly by CExampleSchemaVData_Monomorphic. */
@@ -25,8 +17,6 @@ object SchemasystemSchema {
         const val m_nExample2: Long = 0x4L // int32; schema=m_nExample2
     }
 
-    /** Read/write view of decodable fields declared directly by CExampleSchemaVData_Monomorphic.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CExampleSchemaVData_MonomorphicStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nExample1: Int by int32(CExampleSchemaVData_Monomorphic.m_nExample1)
         var m_nExample2: Int by int32(CExampleSchemaVData_Monomorphic.m_nExample2)
@@ -38,8 +28,6 @@ object SchemasystemSchema {
         const val m_nBase: Long = 0x8L // int32; schema=m_nBase
     }
 
-    /** Read/write view of decodable fields declared directly by CExampleSchemaVData_PolymorphicBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CExampleSchemaVData_PolymorphicBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nBase: Int by int32(CExampleSchemaVData_PolymorphicBase.m_nBase)
     }
@@ -51,8 +39,6 @@ object SchemasystemSchema {
         const val m_nDerivedA: Long = 0xCL // int32; schema=m_nDerivedA
     }
 
-    /** Read/write view of decodable fields declared directly by CExampleSchemaVData_PolymorphicDerivedA.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CExampleSchemaVData_PolymorphicDerivedAStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nDerivedA: Int by int32(CExampleSchemaVData_PolymorphicDerivedA.m_nDerivedA)
     }
@@ -64,8 +50,6 @@ object SchemasystemSchema {
         const val m_nDerivedB: Long = 0xCL // int32; schema=m_nDerivedB
     }
 
-    /** Read/write view of decodable fields declared directly by CExampleSchemaVData_PolymorphicDerivedB.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CExampleSchemaVData_PolymorphicDerivedBStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nDerivedB: Int by int32(CExampleSchemaVData_PolymorphicDerivedB.m_nDerivedB)
     }
@@ -98,8 +82,6 @@ object SchemasystemSchema {
         const val m_KV3: Long = 0x168L // KeyValues3; schema=m_KV3
     }
 
-    /** Read/write view of decodable fields declared directly by CSchemaSystemInternalRegistration.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSchemaSystemInternalRegistrationStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Vector2D: Vector2D; no safe value decoder was proven. */
         val m_Vector2DAddress: Long get() = base + CSchemaSystemInternalRegistration.m_Vector2D
@@ -151,8 +133,6 @@ object SchemasystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCResourceManifestInternal"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCResourceManifestInternal.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCResourceManifestInternalStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -163,8 +143,6 @@ object SchemasystemSchema {
         const val m_Value: Long = 0x0L // uint64; schema=m_Value
     }
 
-    /** Read/write view of decodable fields declared directly by ResourceId_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ResourceId_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Value: ULong by uint64(ResourceId_t.m_Value)
     }

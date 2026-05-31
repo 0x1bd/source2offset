@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for librendersystemvulkan.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object RendersystemvulkanSchema {
 
     /** Fields declared directly by RenderInputLayoutField_t. */
@@ -29,8 +21,6 @@ object RendersystemvulkanSchema {
         const val m_szShaderSemantic: Long = 0x2CL // char[32]; schema=m_szShaderSemantic
     }
 
-    /** Read/write view of decodable fields declared directly by RenderInputLayoutField_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RenderInputLayoutField_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_pSemanticName: char[32]; no safe value decoder was proven. */
         val m_pSemanticNameAddress: Long get() = base + RenderInputLayoutField_t.m_pSemanticName
@@ -59,8 +49,6 @@ object RendersystemvulkanSchema {
         const val m_srgbWriteEnableBits: Long = 0x1DL // uint8; schema=m_srgbWriteEnableBits
     }
 
-    /** Read/write view of decodable fields declared directly by RsBlendStateDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RsBlendStateDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_srcBlendBits: UInt by uint32(RsBlendStateDesc_t.m_srcBlendBits)
         /** Raw address of m_blendOpBits: bitfield:30; no safe value decoder was proven. */
@@ -87,8 +75,6 @@ object RendersystemvulkanSchema {
         const val m_stencilState: Long = 0x2L // RsStencilStateDesc_t; schema=m_stencilState
     }
 
-    /** Read/write view of decodable fields declared directly by RsDepthStencilStateDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RsDepthStencilStateDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_bDepthTestEnable: bitfield:1; no safe value decoder was proven. */
         val m_bDepthTestEnableAddress: Long get() = base + RsDepthStencilStateDesc_t.m_bDepthTestEnable
@@ -113,8 +99,6 @@ object RendersystemvulkanSchema {
         const val m_flSlopeScaledDepthBias: Long = 0xCL // float32; schema=m_flSlopeScaledDepthBias
     }
 
-    /** Read/write view of decodable fields declared directly by RsRasterizerStateDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RsRasterizerStateDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nFillMode: RsFillMode_t; no safe value decoder was proven. */
         val m_nFillModeAddress: Long get() = base + RsRasterizerStateDesc_t.m_nFillMode
@@ -143,8 +127,6 @@ object RendersystemvulkanSchema {
         const val m_nStencilWriteMask: Long = 0x5L // uint8; schema=m_nStencilWriteMask
     }
 
-    /** Read/write view of decodable fields declared directly by RsStencilStateDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RsStencilStateDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_bStencilEnable: bitfield:1; no safe value decoder was proven. */
         val m_bStencilEnableAddress: Long get() = base + RsStencilStateDesc_t.m_bStencilEnable
@@ -174,8 +156,6 @@ object RendersystemvulkanSchema {
         const val m_Value: Long = 0x0L // uint32; schema=m_Value
     }
 
-    /** Read/write view of decodable fields declared directly by SheetSequenceIntegerId_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SheetSequenceIntegerId_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Value: UInt by uint32(SheetSequenceIntegerId_t.m_Value)
     }
@@ -189,8 +169,6 @@ object RendersystemvulkanSchema {
         const val m_nD3DSemanticIndex: Long = 0xC0L // int32; schema=m_nD3DSemanticIndex
     }
 
-    /** Read/write view of decodable fields declared directly by VsInputSignatureElement_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VsInputSignatureElement_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_pName: char[64]; no safe value decoder was proven. */
         val m_pNameAddress: Long get() = base + VsInputSignatureElement_t.m_pName
@@ -208,8 +186,6 @@ object RendersystemvulkanSchema {
         const val m_depth_elems: Long = 0x18L // CUtlVector<VsInputSignatureElement_t>; schema=m_depth_elems
     }
 
-    /** Read/write view of decodable fields declared directly by VsInputSignature_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VsInputSignature_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_elems: CUtlVector<VsInputSignatureElement_t>; no safe value decoder was proven. */
         val m_elemsAddress: Long get() = base + VsInputSignature_t.m_elems

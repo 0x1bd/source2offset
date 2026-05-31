@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libresourcesystem.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object ResourcesystemSchema {
 
     /** Fields declared directly by AABB_t. */
@@ -25,8 +17,6 @@ object ResourcesystemSchema {
         const val m_vMaxBounds: Long = 0xCL // Vector; schema=m_vMaxBounds
     }
 
-    /** Read/write view of decodable fields declared directly by AABB_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class AABB_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vMinBounds: Vector; no safe value decoder was proven. */
         val m_vMinBoundsAddress: Long get() = base + AABB_t.m_vMinBounds
@@ -43,8 +33,6 @@ object ResourcesystemSchema {
         const val m_nMaxTempVarsUsed: Long = 0x48L // int32; schema=m_nMaxTempVarsUsed
     }
 
-    /** Read/write view of decodable fields declared directly by CFuseProgram.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFuseProgramStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_programBuffer: CUtlVector<uint8>; no safe value decoder was proven. */
         val m_programBufferAddress: Long get() = base + CFuseProgram.m_programBuffer
@@ -66,8 +54,6 @@ object ResourcesystemSchema {
         const val m_functionMap: Long = 0x88L // CUtlHashtable<CUtlStringToken,int32>; schema=m_functionMap
     }
 
-    /** Read/write view of decodable fields declared directly by CFuseSymbolTable.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFuseSymbolTableStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_constants: CUtlVector<ConstantInfo_t>; no safe value decoder was proven. */
         val m_constantsAddress: Long get() = base + CFuseSymbolTable.m_constants
@@ -91,8 +77,6 @@ object ResourcesystemSchema {
         const val m_flValue: Long = 0xCL // float32; schema=m_flValue
     }
 
-    /** Read/write view of decodable fields declared directly by ConstantInfo_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ConstantInfo_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(ConstantInfo_t.m_name)
         /** Raw address of m_nameToken: CUtlStringToken; no safe value decoder was proven. */
@@ -109,8 +93,6 @@ object ResourcesystemSchema {
         const val w: Long = 0x30L // fltx4; schema=w
     }
 
-    /** Read/write view of decodable fields declared directly by FourQuaternions.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FourQuaternionsStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of x: fltx4; no safe value decoder was proven. */
         val xAddress: Long get() = base + FourQuaternions.x
@@ -132,8 +114,6 @@ object ResourcesystemSchema {
         const val m_bIsPure: Long = 0x1AL // bool; schema=m_bIsPure
     }
 
-    /** Read/write view of decodable fields declared directly by FunctionInfo_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FunctionInfo_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(FunctionInfo_t.m_name)
         /** Raw address of m_nameToken: CUtlStringToken; no safe value decoder was proven. */
@@ -151,8 +131,6 @@ object ResourcesystemSchema {
         const val m_Value: Long = 0x0L // uint16; schema=m_Value
     }
 
-    /** Read/write view of decodable fields declared directly by FuseFunctionIndex_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FuseFunctionIndex_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Value: UShort by uint16(FuseFunctionIndex_t.m_Value)
     }
@@ -163,8 +141,6 @@ object ResourcesystemSchema {
         const val m_Value: Long = 0x0L // uint16; schema=m_Value
     }
 
-    /** Read/write view of decodable fields declared directly by FuseVariableIndex_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FuseVariableIndex_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Value: UShort by uint16(FuseVariableIndex_t.m_Value)
     }
@@ -174,8 +150,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCAnimData"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCAnimData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCAnimDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -185,8 +159,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCAnimationGroup"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCAnimationGroup.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCAnimationGroupStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -196,8 +168,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCCSGOEconItem"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCCSGOEconItem.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCCSGOEconItemStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -207,8 +177,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCChoreoSceneResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCChoreoSceneResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCChoreoSceneResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -218,8 +186,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCCompositeMaterialKit"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCCompositeMaterialKit.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCCompositeMaterialKitStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -229,8 +195,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCDOTANovelsList"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCDOTANovelsList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCDOTANovelsListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -240,8 +204,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCDOTAPatchNotesList"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCDOTAPatchNotesList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCDOTAPatchNotesListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -251,8 +213,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCDotaItemDefinitionResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCDotaItemDefinitionResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCDotaItemDefinitionResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -262,8 +222,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCEntityLump"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCEntityLump.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCEntityLumpStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -273,8 +231,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCGcExportableExternalData"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCGcExportableExternalData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCGcExportableExternalDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -284,8 +240,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCJavaScriptResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCJavaScriptResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCJavaScriptResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -295,8 +249,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCModel"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCModel.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCModelStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -306,8 +258,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCMorphSetData"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCMorphSetData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCMorphSetDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -317,8 +267,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCNmClip"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCNmClip.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCNmClipStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -328,8 +276,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCNmGraphDefinition"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCNmGraphDefinition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCNmGraphDefinitionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -339,8 +285,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCNmSkeleton"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCNmSkeleton.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCNmSkeletonStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -350,8 +294,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCPanoramaDynamicImages"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCPanoramaDynamicImages.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCPanoramaDynamicImagesStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -361,8 +303,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCPanoramaLayout"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCPanoramaLayout.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCPanoramaLayoutStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -372,8 +312,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCPanoramaStyle"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCPanoramaStyle.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCPanoramaStyleStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -383,8 +321,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCPhysAggregateData"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCPhysAggregateData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCPhysAggregateDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -394,8 +330,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCPostProcessingResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCPostProcessingResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCPostProcessingResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -405,8 +339,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCRenderMesh"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCRenderMesh.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCRenderMeshStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -416,8 +348,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCResponseRulesList"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCResponseRulesList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCResponseRulesListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -427,8 +357,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCSequenceGroupData"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCSequenceGroupData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCSequenceGroupDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -438,8 +366,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCSmartProp"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCSmartProp.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCSmartPropStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -449,8 +375,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCSurfaceGraph"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCSurfaceGraph.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCSurfaceGraphStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -460,8 +384,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCTestResourceData"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCTestResourceData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCTestResourceDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -471,8 +393,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCTextureBase"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCTextureBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCTextureBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -482,8 +402,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCTypeScriptResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCTypeScriptResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCTypeScriptResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -493,8 +411,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVDataItemDefs"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVDataItemDefs.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVDataItemDefsStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -504,8 +420,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVDataResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVDataResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVDataResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -515,8 +429,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVMixListResource"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVMixListResource.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVMixListResourceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -526,8 +438,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVPhysXSurfacePropertiesList"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVPhysXSurfacePropertiesList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVPhysXSurfacePropertiesListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -537,8 +447,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVSoundEventScriptList"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVSoundEventScriptList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVSoundEventScriptListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -548,8 +456,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVSoundStackScriptList"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVSoundStackScriptList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVSoundStackScriptListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -559,8 +465,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVoiceContainerBase"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVoiceContainerBase.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVoiceContainerBaseStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -570,8 +474,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCVoxelVisibility"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCVoxelVisibility.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCVoxelVisibilityStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -581,8 +483,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeCWorldNode"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeCWorldNode.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeCWorldNodeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -592,8 +492,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeIAnimGraphModelBinding"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeIAnimGraphModelBinding.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeIAnimGraphModelBindingStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -603,8 +501,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeIMaterial2"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeIMaterial2.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeIMaterial2Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -614,8 +510,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeIParticleSnapshot"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeIParticleSnapshot.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeIParticleSnapshotStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -625,8 +519,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeIParticleSystemDefinition"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeIParticleSystemDefinition.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeIParticleSystemDefinitionStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -636,8 +528,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeIPulseGraphDef"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeIPulseGraphDef.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeIPulseGraphDefStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -647,8 +537,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeIVectorGraphic"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeIVectorGraphic.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeIVectorGraphicStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -658,8 +546,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeManifestTestResource_t"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeManifestTestResource_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeManifestTestResource_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -669,8 +555,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeProceduralTestResource_t"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeProceduralTestResource_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeProceduralTestResource_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -680,8 +564,6 @@ object ResourcesystemSchema {
         const val SCHEMA_NAME: String = "InfoForResourceTypeWorld_t"
     }
 
-    /** Read/write view of decodable fields declared directly by InfoForResourceTypeWorld_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class InfoForResourceTypeWorld_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -693,8 +575,6 @@ object ResourcesystemSchema {
         const val m_child: Long = 0x8L // CStrongHandle<InfoForResourceTypeManifestTestResource_t>; schema=m_child
     }
 
-    /** Read/write view of decodable fields declared directly by ManifestTestResource_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ManifestTestResource_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(ManifestTestResource_t.m_name)
         /** Raw address of m_child: CStrongHandle<InfoForResourceTypeManifestTestResource_t>; no safe value decoder was proven. */
@@ -708,8 +588,6 @@ object ResourcesystemSchema {
         const val m_nPackedMax: Long = 0x4L // uint32; schema=m_nPackedMax
     }
 
-    /** Read/write view of decodable fields declared directly by PackedAABB_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PackedAABB_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nPackedMin: UInt by uint32(PackedAABB_t.m_nPackedMin)
         var m_nPackedMax: UInt by uint32(PackedAABB_t.m_nPackedMax)
@@ -726,8 +604,6 @@ object ResourcesystemSchema {
         const val m_eAccess: Long = 0x10L // FuseVariableAccess_t; schema=m_eAccess
     }
 
-    /** Read/write view of decodable fields declared directly by VariableInfo_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VariableInfo_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_name: Long by ptr64(VariableInfo_t.m_name)
         /** Raw address of m_nameToken: CUtlStringToken; no safe value decoder was proven. */

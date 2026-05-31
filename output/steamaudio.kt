@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libsteamaudio.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object SteamaudioSchema {
 
     /** Fields declared directly by CSteamAudioAmbisonicsField. */
@@ -24,8 +16,6 @@ object SteamaudioSchema {
         const val m_field: Long = 0x0L // CUtlVector<float32>; schema=m_field
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioAmbisonicsField.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioAmbisonicsFieldStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_field: CUtlVector<float32>; no safe value decoder was proven. */
         val m_fieldAddress: Long get() = base + CSteamAudioAmbisonicsField.m_field
@@ -43,8 +33,6 @@ object SteamaudioSchema {
         const val m_movables: Long = 0x80L // CSteamAudioMovableBakedData<CSteamAudioBakedDimensionsData>; schema=m_movables
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioBakedDimensionsData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioBakedDimensionsDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: SteamAudioCustomDataDimensionsSettings_t. */
         val m_settings: SteamaudioSchema.SteamAudioCustomDataDimensionsSettings_tStruct
@@ -72,8 +60,6 @@ object SteamaudioSchema {
         const val m_vecMaterialWeights: Long = 0x20L // CUtlVector<float32>; schema=m_vecMaterialWeights
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioBakedMaterialsData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioBakedMaterialsDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: CSteamAudioProbeData. */
         val m_probes: SteamaudioSchema.CSteamAudioProbeDataStruct
@@ -94,8 +80,6 @@ object SteamaudioSchema {
         const val m_vecReflectionRatio: Long = 0x48L // CUtlVector<float32>; schema=m_vecReflectionRatio
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioBakedOcclusionData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioBakedOcclusionDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: SteamAudioCustomDataOcclusionSettings_t. */
         val m_settings: SteamaudioSchema.SteamAudioCustomDataOcclusionSettings_tStruct
@@ -119,8 +103,6 @@ object SteamaudioSchema {
         const val m_movables: Long = 0x10L // CSteamAudioMovableBakedData<CSteamAudioBakedPathingData>; schema=m_movables
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioBakedPathingData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioBakedPathingDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nBands: Int by int32(CSteamAudioBakedPathingData.m_nBands)
         /** Embedded reflected value: CSteamAudioProbeData. */
@@ -147,8 +129,6 @@ object SteamaudioSchema {
         const val m_movables: Long = 0x180L // CSteamAudioMovableBakedData<CSteamAudioBakedReverbData>; schema=m_movables
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioBakedReverbData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioBakedReverbDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nBands: Int by int32(CSteamAudioBakedReverbData.m_nBands)
         /** Embedded reflected value: CSteamAudioSceneData. */
@@ -197,8 +177,6 @@ object SteamaudioSchema {
         const val m_pCompressedData: Long = 0x58L // IPLCompressedEnergyFields; schema=m_pCompressedData
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioCompressedReverb.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioCompressedReverbStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nChannels: Int by int32(CSteamAudioCompressedReverb.m_nChannels)
         var m_nBands: Int by int32(CSteamAudioCompressedReverb.m_nBands)
@@ -220,8 +198,6 @@ object SteamaudioSchema {
         const val m_pProbeBatch: Long = 0x0L // IPLProbeBatch; schema=m_pProbeBatch
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioProbeData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioProbeDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_pProbeBatch: IPLProbeBatch; no safe value decoder was proven. */
         val m_pProbeBatchAddress: Long get() = base + CSteamAudioProbeData.m_pProbeBatch
@@ -239,8 +215,6 @@ object SteamaudioSchema {
         const val m_vecProbes: Long = 0x40L // CUtlVector<Vector>; schema=m_vecProbes
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioProbeGrid.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioProbeGridStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: AABB_t. */
         val m_aabb: ResourcesystemSchema.AABB_tStruct
@@ -264,8 +238,6 @@ object SteamaudioSchema {
         const val m_vecProbeIndices: Long = 0x30L // CUtlVector<int32>; schema=m_vecProbeIndices
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioProbeLineSegment.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioProbeLineSegmentStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vStart: Vector; no safe value decoder was proven. */
         val m_vStartAddress: Long get() = base + CSteamAudioProbeLineSegment.m_vStart
@@ -284,8 +256,6 @@ object SteamaudioSchema {
         const val m_pStaticMesh: Long = 0x8L // IPLStaticMesh; schema=m_pStaticMesh
     }
 
-    /** Read/write view of decodable fields declared directly by CSteamAudioSceneData.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CSteamAudioSceneDataStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_pScene: IPLScene; no safe value decoder was proven. */
         val m_pSceneAddress: Long get() = base + CSteamAudioSceneData.m_pScene
@@ -303,8 +273,6 @@ object SteamaudioSchema {
         const val m_flInsideThreshold: Long = 0x10L // float32; schema=m_flInsideThreshold
     }
 
-    /** Read/write view of decodable fields declared directly by SteamAudioCustomDataDimensionsSettings_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SteamAudioCustomDataDimensionsSettings_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nAmbisonicsOrderOutsideField: Int by int32(SteamAudioCustomDataDimensionsSettings_t.m_nAmbisonicsOrderOutsideField)
         var m_nAmbisonicsOrderInsideSizeField: Int by int32(SteamAudioCustomDataDimensionsSettings_t.m_nAmbisonicsOrderInsideSizeField)
@@ -322,8 +290,6 @@ object SteamaudioSchema {
         const val m_nReflectionBounces: Long = 0x8L // int32; schema=m_nReflectionBounces
     }
 
-    /** Read/write view of decodable fields declared directly by SteamAudioCustomDataOcclusionSettings_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SteamAudioCustomDataOcclusionSettings_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bEnablePathing: Boolean by bool(SteamAudioCustomDataOcclusionSettings_t.m_bEnablePathing)
         var m_bEnableReflections: Boolean by bool(SteamAudioCustomDataOcclusionSettings_t.m_bEnableReflections)
@@ -340,8 +306,6 @@ object SteamaudioSchema {
         const val m_flProbePathRange: Long = 0xCL // float32; schema=m_flProbePathRange
     }
 
-    /** Read/write view of decodable fields declared directly by SteamAudioPathSettings_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SteamAudioPathSettings_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nNumVisSamples: Int by int32(SteamAudioPathSettings_t.m_nNumVisSamples)
         var m_flProbeVisRadius: Float by float(SteamAudioPathSettings_t.m_flProbeVisRadius)
@@ -357,8 +321,6 @@ object SteamaudioSchema {
         const val m_flDepthThreshold: Long = 0x8L // float32; schema=m_flDepthThreshold
     }
 
-    /** Read/write view of decodable fields declared directly by SteamAudioReverbClusteringSettings_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SteamAudioReverbClusteringSettings_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bEnableClustering: Boolean by bool(SteamAudioReverbClusteringSettings_t.m_bEnableClustering)
         var m_nCubeMapResolution: Int by int32(SteamAudioReverbClusteringSettings_t.m_nCubeMapResolution)
@@ -372,8 +334,6 @@ object SteamaudioSchema {
         const val m_flQuality: Long = 0x4L // float32; schema=m_flQuality
     }
 
-    /** Read/write view of decodable fields declared directly by SteamAudioReverbCompressionSettings_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SteamAudioReverbCompressionSettings_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_bEnableCompression: Boolean by bool(SteamAudioReverbCompressionSettings_t.m_bEnableCompression)
         var m_flQuality: Float by float(SteamAudioReverbCompressionSettings_t.m_flQuality)
@@ -389,8 +349,6 @@ object SteamaudioSchema {
         const val m_bExportScene: Long = 0x10L // bool; schema=m_bExportScene
     }
 
-    /** Read/write view of decodable fields declared directly by SteamAudioReverbSettings_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class SteamAudioReverbSettings_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nNumRays: Int by int32(SteamAudioReverbSettings_t.m_nNumRays)
         var m_nNumBounces: Int by int32(SteamAudioReverbSettings_t.m_nNumBounces)

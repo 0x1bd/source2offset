@@ -7,9 +7,6 @@ package org.kvxd.source2offset.offsets
 
 import org.kvxd.unsafeKt.UnsafeKt
 
-/** Native-Linux private/global targets with confidence and provenance recorded in offsets.json.
- *  Constants preserve familiar dw* names where native semantics correspond; generated helpers enforce each access mode.
- *  Pointer-slot helpers dereference moduleBase + RVA; direct-address helpers do not. */
 object Offsets {
     object Client {
         const val CGameEntitySystem_m_EntityClasses: Long = 0xAA0L
@@ -17,6 +14,57 @@ object Offsets {
 
         const val CGameEntitySystem_m_EntityList: Long = 0x10L
         fun CGameEntitySystem_m_EntityListAddress(objectAddress: Long): Long = objectAddress + CGameEntitySystem_m_EntityList
+
+        const val buttons_attack: Long = 0x4670C50L
+        fun buttons_attackAddress(moduleBase: Long): Long = moduleBase + buttons_attack
+
+        const val buttons_attack2: Long = 0x4670BB0L
+        fun buttons_attack2Address(moduleBase: Long): Long = moduleBase + buttons_attack2
+
+        const val buttons_back: Long = 0x4670830L
+        fun buttons_backAddress(moduleBase: Long): Long = moduleBase + buttons_back
+
+        const val buttons_duck: Long = 0x4670390L
+        fun buttons_duckAddress(moduleBase: Long): Long = moduleBase + buttons_duck
+
+        const val buttons_forward: Long = 0x46708D0L
+        fun buttons_forwardAddress(moduleBase: Long): Long = moduleBase + buttons_forward
+
+        const val buttons_jump: Long = 0x4670430L
+        fun buttons_jumpAddress(moduleBase: Long): Long = moduleBase + buttons_jump
+
+        const val buttons_left: Long = 0x4670790L
+        fun buttons_leftAddress(moduleBase: Long): Long = moduleBase + buttons_left
+
+        const val buttons_lookatweapon: Long = 0x46918B0L
+        fun buttons_lookatweaponAddress(moduleBase: Long): Long = moduleBase + buttons_lookatweapon
+
+        const val buttons_reload: Long = 0x4670CF0L
+        fun buttons_reloadAddress(moduleBase: Long): Long = moduleBase + buttons_reload
+
+        const val buttons_right: Long = 0x46706F0L
+        fun buttons_rightAddress(moduleBase: Long): Long = moduleBase + buttons_right
+
+        const val buttons_showscores: Long = 0x46919F0L
+        fun buttons_showscoresAddress(moduleBase: Long): Long = moduleBase + buttons_showscores
+
+        const val buttons_sprint: Long = 0x4670D90L
+        fun buttons_sprintAddress(moduleBase: Long): Long = moduleBase + buttons_sprint
+
+        const val buttons_turnleft: Long = 0x4670B10L
+        fun buttons_turnleftAddress(moduleBase: Long): Long = moduleBase + buttons_turnleft
+
+        const val buttons_turnright: Long = 0x4670A70L
+        fun buttons_turnrightAddress(moduleBase: Long): Long = moduleBase + buttons_turnright
+
+        const val buttons_use: Long = 0x46704D0L
+        fun buttons_useAddress(moduleBase: Long): Long = moduleBase + buttons_use
+
+        const val buttons_zoom: Long = 0x4691950L
+        fun buttons_zoomAddress(moduleBase: Long): Long = moduleBase + buttons_zoom
+
+        const val dwCSGOInput: Long = 0x4690BE0L
+        fun dwCSGOInputAddress(moduleBase: Long): Long = moduleBase + dwCSGOInput
 
         const val dwGameEntitySystem: Long = 0x465A6D0L
         fun dwGameEntitySystemSlotAddress(moduleBase: Long): Long = moduleBase + dwGameEntitySystem

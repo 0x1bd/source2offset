@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libnetworksystem.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object NetworksystemSchema {
 
     /** Fields declared directly by ChangeAccessorFieldPathIndex_t. */
@@ -24,8 +16,6 @@ object NetworksystemSchema {
         const val m_Value: Long = 0x0L // int32; schema=m_Value
     }
 
-    /** Read/write view of decodable fields declared directly by ChangeAccessorFieldPathIndex_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class ChangeAccessorFieldPathIndex_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Value: Int by int32(ChangeAccessorFieldPathIndex_t.m_Value)
     }

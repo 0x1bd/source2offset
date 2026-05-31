@@ -7,8 +7,6 @@ package org.kvxd.source2offset.offsets
 
 import org.kvxd.unsafeKt.UnsafeKt
 
-/** Runtime access paths verified through live Linux RTTI at generation time.
- *  These are named-interface relationships, not guessed private dw* globals. */
 object RuntimeRoots {
     object GameEntitySystem {
         const val SOURCE_MODULE: String = "libengine2.so"

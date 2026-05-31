@@ -8,14 +8,6 @@ package org.kvxd.source2offset.offsets
 import org.kvxd.unsafeKt.UnsafeKt
 import org.kvxd.unsafeKt.mem.Struct
 
-/**
- * Reflected schema data for libvphysics2.so.
- *
- * Offset namespaces contain fields declared directly on each reflected class.
- * Struct wrappers deliberately do not inherit: the dump proves parent relationships,
- * but does not assume a universal native base-subobject displacement rule.
- * Fields with unknown value layout retain an Address accessor instead of an unsafe decoder.
- */
 object Vphysics2Schema {
 
     /** Fields declared directly by CFeIndexedJiggleBone. */
@@ -26,8 +18,6 @@ object Vphysics2Schema {
         const val m_jiggleBone: Long = 0x8L // CFeJiggleBone; schema=m_jiggleBone
     }
 
-    /** Read/write view of decodable fields declared directly by CFeIndexedJiggleBone.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFeIndexedJiggleBoneStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nNode: UInt by uint32(CFeIndexedJiggleBone.m_nNode)
         var m_nJiggleParent: UInt by uint32(CFeIndexedJiggleBone.m_nJiggleParent)
@@ -76,8 +66,6 @@ object Vphysics2Schema {
         const val m_nCollisionMask: Long = 0x98L // uint16; schema=m_nCollisionMask
     }
 
-    /** Read/write view of decodable fields declared directly by CFeJiggleBone.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFeJiggleBoneStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nFlags: UInt by uint32(CFeJiggleBone.m_nFlags)
         var m_flLength: Float by float(CFeJiggleBone.m_flLength)
@@ -130,8 +118,6 @@ object Vphysics2Schema {
         const val m_GoalDamping: Long = 0x70L // CUtlVector<float32>; schema=m_GoalDamping
     }
 
-    /** Read/write view of decodable fields declared directly by CFeMorphLayer.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFeMorphLayerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Name: Long by ptr64(CFeMorphLayer.m_Name)
         var m_nNameHash: UInt by uint32(CFeMorphLayer.m_nNameHash)
@@ -156,8 +142,6 @@ object Vphysics2Schema {
         const val m_jiggleBone: Long = 0x34L // CFeJiggleBone; schema=m_jiggleBone
     }
 
-    /** Read/write view of decodable fields declared directly by CFeNamedJiggleBone.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFeNamedJiggleBoneStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_strParentBone: Long by ptr64(CFeNamedJiggleBone.m_strParentBone)
         /** Raw address of m_transform: CTransform; no safe value decoder was proven. */
@@ -174,8 +158,6 @@ object Vphysics2Schema {
         const val m_Array: Long = 0x0L // CUtlVector<FeVertexMapBuild_t*>; schema=m_Array
     }
 
-    /** Read/write view of decodable fields declared directly by CFeVertexMapBuildArray.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CFeVertexMapBuildArrayStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Array: Long by ptr64(CFeVertexMapBuildArray.m_Array)
     }
@@ -186,8 +168,6 @@ object Vphysics2Schema {
         const val m_verts: Long = 0x30L // CUtlLeanVectorFixedGrowable<Vector,8>; schema=m_verts
     }
 
-    /** Read/write view of decodable fields declared directly by CGenericShapeProxy.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CGenericShapeProxyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_verts: CUtlLeanVectorFixedGrowable<Vector,8>; no safe value decoder was proven. */
         val m_vertsAddress: Long get() = base + CGenericShapeProxy.m_verts
@@ -200,8 +180,6 @@ object Vphysics2Schema {
         const val m_Nodes: Long = 0x18L // CUtlVector<uint32>; schema=m_Nodes
     }
 
-    /** Read/write view of decodable fields declared directly by CRegionSVM.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CRegionSVMStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Planes: CUtlVector<RnPlane_t>; no safe value decoder was proven. */
         val m_PlanesAddress: Long get() = base + CRegionSVM.m_Planes
@@ -220,8 +198,6 @@ object Vphysics2Schema {
         const val m_pHull: Long = 0x28L // RnHull_t*; schema=m_pHull
     }
 
-    /** Read/write view of decodable fields declared directly by CastSphereSATParams_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CastSphereSATParams_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vRayStart: Vector; no safe value decoder was proven. */
         val m_vRayStartAddress: Long get() = base + CastSphereSATParams_t.m_vRayStart
@@ -244,8 +220,6 @@ object Vphysics2Schema {
         const val m_bNotPickable: Long = 0x38L // bool; schema=m_bNotPickable
     }
 
-    /** Read/write view of decodable fields declared directly by CollisionDetailLayerInfo_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CollisionDetailLayerInfo_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_sDescription: Long by ptr64(CollisionDetailLayerInfo_t.m_sDescription)
         var m_sFriendlyName: Long by ptr64(CollisionDetailLayerInfo_t.m_sFriendlyName)
@@ -263,8 +237,6 @@ object Vphysics2Schema {
         const val m_sNameString: Long = 0x8L // CUtlString; schema=m_sNameString
     }
 
-    /** Read/write view of decodable fields declared directly by CollisionDetailLayerInfo_t::Name_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CollisionDetailLayerInfo_t__Name_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nNameToken: CUtlStringToken; no safe value decoder was proven. */
         val m_nNameTokenAddress: Long get() = base + CollisionDetailLayerInfo_t__Name_t.m_nNameToken
@@ -280,8 +252,6 @@ object Vphysics2Schema {
         const val m_flYZ: Long = 0x14L // float32; schema=m_flYZ
     }
 
-    /** Read/write view of decodable fields declared directly by CovMatrix3.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class CovMatrix3Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vDiag: Vector; no safe value decoder was proven. */
         val m_vDiagAddress: Long get() = base + CovMatrix3.m_vDiag
@@ -296,8 +266,6 @@ object Vphysics2Schema {
         const val m_flSupport: Long = 0x0L // float32[26]; schema=m_flSupport
     }
 
-    /** Read/write view of decodable fields declared directly by Dop26_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class Dop26_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_flSupport: float32[26]; no safe value decoder was proven. */
         val m_flSupportAddress: Long get() = base + Dop26_t.m_flSupport
@@ -311,8 +279,6 @@ object Vphysics2Schema {
         const val flRelaxationFactor: Long = 0x8L // float32; schema=flRelaxationFactor
     }
 
-    /** Read/write view of decodable fields declared directly by FeAnimStrayRadius_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeAnimStrayRadius_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeAnimStrayRadius_t.nNode
@@ -327,8 +293,6 @@ object Vphysics2Schema {
         const val m_nCollisionMask: Long = 0x4L // uint32; schema=m_nCollisionMask
     }
 
-    /** Read/write view of decodable fields declared directly by FeAntiTunnelGroupBuild_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeAntiTunnelGroupBuild_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nVertexMapHash: UInt by uint32(FeAntiTunnelGroupBuild_t.m_nVertexMapHash)
         var m_nCollisionMask: UInt by uint32(FeAntiTunnelGroupBuild_t.m_nCollisionMask)
@@ -346,8 +310,6 @@ object Vphysics2Schema {
         const val targetNodes: Long = 0x18L // CUtlVector<uint16>; schema=targetNodes
     }
 
-    /** Read/write view of decodable fields declared directly by FeAntiTunnelProbeBuild_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeAntiTunnelProbeBuild_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flWeight: Float by float(FeAntiTunnelProbeBuild_t.flWeight)
         var flActivationDistance: Float by float(FeAntiTunnelProbeBuild_t.flActivationDistance)
@@ -372,8 +334,6 @@ object Vphysics2Schema {
         const val flBias: Long = 0x18L // float32; schema=flBias
     }
 
-    /** Read/write view of decodable fields declared directly by FeAntiTunnelProbe_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeAntiTunnelProbe_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flWeight: Float by float(FeAntiTunnelProbe_t.flWeight)
         var nFlags: UInt by uint32(FeAntiTunnelProbe_t.nFlags)
@@ -395,8 +355,6 @@ object Vphysics2Schema {
         const val nNode: Long = 0x1CL // uint16[6]; schema=nNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeAxialEdgeBend_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeAxialEdgeBend_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var te: Float by float(FeAxialEdgeBend_t.te)
         var tv: Float by float(FeAxialEdgeBend_t.tv)
@@ -415,8 +373,6 @@ object Vphysics2Schema {
         const val nNode: Long = 0x8L // uint16[6]; schema=nNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeBandBendLimit_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeBandBendLimit_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flDistMin: Float by float(FeBandBendLimit_t.flDistMin)
         var flDistMax: Float by float(FeBandBendLimit_t.flDistMax)
@@ -435,8 +391,6 @@ object Vphysics2Schema {
         const val nFlags: Long = 0x32L // uint16; schema=nFlags
     }
 
-    /** Read/write view of decodable fields declared directly by FeBoxRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeBoxRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of tmFrame2: CTransform; no safe value decoder was proven. */
         val tmFrame2Address: Long get() = base + FeBoxRigid_t.tmFrame2
@@ -457,8 +411,6 @@ object Vphysics2Schema {
         const val m_nAntitunnelGroupBits: Long = 0x3CL // uint32; schema=m_nAntitunnelGroupBits
     }
 
-    /** Read/write view of decodable fields declared directly by FeBuildBoxRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeBuildBoxRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nPriority: Int by int32(FeBuildBoxRigid_t.m_nPriority)
         var m_nVertexMapHash: UInt by uint32(FeBuildBoxRigid_t.m_nVertexMapHash)
@@ -474,8 +426,6 @@ object Vphysics2Schema {
         const val m_nAntitunnelGroupBits: Long = 0x54L // uint32; schema=m_nAntitunnelGroupBits
     }
 
-    /** Read/write view of decodable fields declared directly by FeBuildSDFRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeBuildSDFRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nPriority: Int by int32(FeBuildSDFRigid_t.m_nPriority)
         var m_nVertexMapHash: UInt by uint32(FeBuildSDFRigid_t.m_nVertexMapHash)
@@ -491,8 +441,6 @@ object Vphysics2Schema {
         const val m_nAntitunnelGroupBits: Long = 0x20L // uint32; schema=m_nAntitunnelGroupBits
     }
 
-    /** Read/write view of decodable fields declared directly by FeBuildSphereRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeBuildSphereRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nPriority: Int by int32(FeBuildSphereRigid_t.m_nPriority)
         var m_nVertexMapHash: UInt by uint32(FeBuildSphereRigid_t.m_nVertexMapHash)
@@ -508,8 +456,6 @@ object Vphysics2Schema {
         const val m_nAntitunnelGroupBits: Long = 0x30L // uint32; schema=m_nAntitunnelGroupBits
     }
 
-    /** Read/write view of decodable fields declared directly by FeBuildTaperedCapsuleRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeBuildTaperedCapsuleRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nPriority: Int by int32(FeBuildTaperedCapsuleRigid_t.m_nPriority)
         var m_nVertexMapHash: UInt by uint32(FeBuildTaperedCapsuleRigid_t.m_nVertexMapHash)
@@ -525,8 +471,6 @@ object Vphysics2Schema {
         const val flStrength: Long = 0x14L // float32; schema=flStrength
     }
 
-    /** Read/write view of decodable fields declared directly by FeCollisionPlane_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeCollisionPlane_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nCtrlParent: UShort by uint16(FeCollisionPlane_t.nCtrlParent)
         var nChildNode: UShort by uint16(FeCollisionPlane_t.nChildNode)
@@ -544,8 +488,6 @@ object Vphysics2Schema {
         const val nCtrlChild: Long = 0xEL // uint16; schema=nCtrlChild
     }
 
-    /** Read/write view of decodable fields declared directly by FeCtrlOffset_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeCtrlOffset_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of vOffset: Vector; no safe value decoder was proven. */
         val vOffsetAddress: Long get() = base + FeCtrlOffset_t.vOffset
@@ -560,8 +502,6 @@ object Vphysics2Schema {
         const val nCtrlChild: Long = 0x2L // uint16; schema=nCtrlChild
     }
 
-    /** Read/write view of decodable fields declared directly by FeCtrlOsOffset_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeCtrlOsOffset_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nCtrlParent: UShort by uint16(FeCtrlOsOffset_t.nCtrlParent)
         var nCtrlChild: UShort by uint16(FeCtrlOsOffset_t.nCtrlChild)
@@ -576,8 +516,6 @@ object Vphysics2Schema {
         const val flAlpha: Long = 0x10L // float32; schema=flAlpha
     }
 
-    /** Read/write view of decodable fields declared directly by FeCtrlSoftOffset_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeCtrlSoftOffset_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nCtrlParent: UShort by uint16(FeCtrlSoftOffset_t.nCtrlParent)
         var nCtrlChild: UShort by uint16(FeCtrlSoftOffset_t.nCtrlChild)
@@ -593,8 +531,6 @@ object Vphysics2Schema {
         const val m_nChild: Long = 0x2L // uint16; schema=m_nChild
     }
 
-    /** Read/write view of decodable fields declared directly by FeDynKinLink_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeDynKinLink_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nParent: UShort by uint16(FeDynKinLink_t.m_nParent)
         var m_nChild: UShort by uint16(FeDynKinLink_t.m_nChild)
@@ -608,8 +544,6 @@ object Vphysics2Schema {
         const val nVirtElem: Long = 0xCL // uint16[2]; schema=nVirtElem
     }
 
-    /** Read/write view of decodable fields declared directly by FeEdgeDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeEdgeDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nEdge: uint16[2]; no safe value decoder was proven. */
         val nEdgeAddress: Long get() = base + FeEdgeDesc_t.nEdge
@@ -628,8 +562,6 @@ object Vphysics2Schema {
         const val m_Params: Long = 0x10L // KeyValues3; schema=m_Params
     }
 
-    /** Read/write view of decodable fields declared directly by FeEffectDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeEffectDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var sName: Long by ptr64(FeEffectDesc_t.sName)
         var nNameHash: UInt by uint32(FeEffectDesc_t.nNameHash)
@@ -646,8 +578,6 @@ object Vphysics2Schema {
         const val nMatrixNode: Long = 0x8L // uint32; schema=nMatrixNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeFitInfluence_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeFitInfluence_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nVertexNode: UInt by uint32(FeFitInfluence_t.nVertexNode)
         var flWeight: Float by float(FeFitInfluence_t.flWeight)
@@ -664,8 +594,6 @@ object Vphysics2Schema {
         const val nBeginDynamic: Long = 0x30L // uint16; schema=nBeginDynamic
     }
 
-    /** Read/write view of decodable fields declared directly by FeFitMatrix_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeFitMatrix_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of bone: CTransform; no safe value decoder was proven. */
         val boneAddress: Long get() = base + FeFitMatrix_t.bone
@@ -684,8 +612,6 @@ object Vphysics2Schema {
         const val nDummy: Long = 0x6L // uint16; schema=nDummy
     }
 
-    /** Read/write view of decodable fields declared directly by FeFitWeight_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeFitWeight_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flWeight: Float by float(FeFitWeight_t.flWeight)
         var nNode: UShort by uint16(FeFitWeight_t.nNode)
@@ -700,8 +626,6 @@ object Vphysics2Schema {
         const val flWeight: Long = 0x4L // float32; schema=flWeight
     }
 
-    /** Read/write view of decodable fields declared directly by FeFollowNode_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeFollowNode_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nParentNode: UShort by uint16(FeFollowNode_t.nParentNode)
         var nChildNode: UShort by uint16(FeFollowNode_t.nChildNode)
@@ -717,8 +641,6 @@ object Vphysics2Schema {
         const val flLimitCCW: Long = 0x14L // float32; schema=flLimitCCW
     }
 
-    /** Read/write view of decodable fields declared directly by FeHingeLimitBuild_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeHingeLimitBuild_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[6]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeHingeLimitBuild_t.nNode
@@ -738,8 +660,6 @@ object Vphysics2Schema {
         const val flAngleExtents: Long = 0x1CL // float32; schema=flAngleExtents
     }
 
-    /** Read/write view of decodable fields declared directly by FeHingeLimit_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeHingeLimit_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[6]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeHingeLimit_t.nNode
@@ -759,8 +679,6 @@ object Vphysics2Schema {
         const val nReserved: Long = 0x16L // uint16; schema=nReserved
     }
 
-    /** Read/write view of decodable fields declared directly by FeKelagerBend2_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeKelagerBend2_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of flWeight: float32[3]; no safe value decoder was proven. */
         val flWeightAddress: Long get() = base + FeKelagerBend2_t.flWeight
@@ -780,8 +698,6 @@ object Vphysics2Schema {
         const val m_nEndIdx: Long = 0x28L // uint32[4]; schema=m_nEndIdx
     }
 
-    /** Read/write view of decodable fields declared directly by FeModelSelfCollisionLayer_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeModelSelfCollisionLayer_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Name: Long by ptr64(FeModelSelfCollisionLayer_t.m_Name)
         /** Raw address of m_Nodes: CUtlVector<uint16>; no safe value decoder was proven. */
@@ -805,8 +721,6 @@ object Vphysics2Schema {
         const val m_nFlags: Long = 0x88L // uint32; schema=m_nFlags
     }
 
-    /** Read/write view of decodable fields declared directly by FeMorphLayerDepr_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeMorphLayerDepr_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Name: Long by ptr64(FeMorphLayerDepr_t.m_Name)
         var m_nNameHash: UInt by uint32(FeMorphLayerDepr_t.m_nNameHash)
@@ -835,8 +749,6 @@ object Vphysics2Schema {
         const val qAdjust: Long = 0x10L // QuaternionStorage; schema=qAdjust
     }
 
-    /** Read/write view of decodable fields declared directly by FeNodeBase_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeNodeBase_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nNode: UShort by uint16(FeNodeBase_t.nNode)
         /** Raw address of nDummy: uint16[3]; no safe value decoder was proven. */
@@ -858,8 +770,6 @@ object Vphysics2Schema {
         const val flGravity: Long = 0xCL // float32; schema=flGravity
     }
 
-    /** Read/write view of decodable fields declared directly by FeNodeIntegrator_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeNodeIntegrator_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flPointDamping: Float by float(FeNodeIntegrator_t.flPointDamping)
         var flAnimationForceAttraction: Float by float(FeNodeIntegrator_t.flAnimationForceAttraction)
@@ -875,8 +785,6 @@ object Vphysics2Schema {
         const val nTargetNode: Long = 0xEL // uint16; schema=nTargetNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeNodeReverseOffset_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeNodeReverseOffset_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of vOffset: Vector; no safe value decoder was proven. */
         val vOffsetAddress: Long get() = base + FeNodeReverseOffset_t.vOffset
@@ -893,8 +801,6 @@ object Vphysics2Schema {
         const val nNode: Long = 0x1CL // uint16[2]; schema=nNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeNodeStrayBox_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeNodeStrayBox_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of vMin: Vector; no safe value decoder was proven. */
         val vMinAddress: Long get() = base + FeNodeStrayBox_t.vMin
@@ -914,8 +820,6 @@ object Vphysics2Schema {
         const val nNodeY1: Long = 0x6L // uint16; schema=nNodeY1
     }
 
-    /** Read/write view of decodable fields declared directly by FeNodeWindBase_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeNodeWindBase_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nNodeX0: UShort by uint16(FeNodeWindBase_t.nNodeX0)
         var nNodeX1: UShort by uint16(FeNodeWindBase_t.nNodeX1)
@@ -930,8 +834,6 @@ object Vphysics2Schema {
         const val m_flWeight: Long = 0x8L // float32; schema=m_flWeight
     }
 
-    /** Read/write view of decodable fields declared directly by FeProxyVertexMap_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeProxyVertexMap_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Name: Long by ptr64(FeProxyVertexMap_t.m_Name)
         var m_flWeight: Float by float(FeProxyVertexMap_t.m_flWeight)
@@ -945,8 +847,6 @@ object Vphysics2Schema {
         const val vShape: Long = 0xCL // Vector4D[4]; schema=vShape
     }
 
-    /** Read/write view of decodable fields declared directly by FeQuad_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeQuad_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeQuad_t.nNode
@@ -965,8 +865,6 @@ object Vphysics2Schema {
         const val m_nCollisionPlaneIndex: Long = 0x8L // uint16; schema=m_nCollisionPlaneIndex
     }
 
-    /** Read/write view of decodable fields declared directly by FeRigidColliderIndices_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeRigidColliderIndices_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nTaperedCapsuleRigidIndex: UShort by uint16(FeRigidColliderIndices_t.m_nTaperedCapsuleRigidIndex)
         var m_nSphereRigidIndex: UShort by uint16(FeRigidColliderIndices_t.m_nSphereRigidIndex)
@@ -985,8 +883,6 @@ object Vphysics2Schema {
         const val flRelaxationFactor: Long = 0x10L // float32; schema=flRelaxationFactor
     }
 
-    /** Read/write view of decodable fields declared directly by FeRodConstraint_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeRodConstraint_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeRodConstraint_t.nNode
@@ -1012,8 +908,6 @@ object Vphysics2Schema {
         const val m_nDepth: Long = 0x48L // int32; schema=m_nDepth
     }
 
-    /** Read/write view of decodable fields declared directly by FeSDFRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSDFRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of vLocalMin: Vector; no safe value decoder was proven. */
         val vLocalMinAddress: Long get() = base + FeSDFRigid_t.vLocalMin
@@ -1039,8 +933,6 @@ object Vphysics2Schema {
         const val flRelaxationFactor: Long = 0x20L // fltx4; schema=flRelaxationFactor
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdAnimStrayRadius_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdAnimStrayRadius_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4][2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdAnimStrayRadius_t.nNode
@@ -1062,8 +954,6 @@ object Vphysics2Schema {
         const val qAdjust: Long = 0x30L // FourQuaternions; schema=qAdjust
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdNodeBase_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdNodeBase_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdNodeBase_t.nNode
@@ -1091,8 +981,6 @@ object Vphysics2Schema {
         const val f4Weights: Long = 0xF0L // fltx4[4]; schema=f4Weights
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdQuad_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdQuad_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4][4]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdQuad_t.nNode
@@ -1112,8 +1000,6 @@ object Vphysics2Schema {
         const val f4RelaxationFactor: Long = 0x20L // fltx4; schema=f4RelaxationFactor
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdRodConstraintAnim_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdRodConstraintAnim_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4][2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdRodConstraintAnim_t.nNode
@@ -1133,8 +1019,6 @@ object Vphysics2Schema {
         const val f4RelaxationFactor: Long = 0x40L // fltx4; schema=f4RelaxationFactor
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdRodConstraint_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdRodConstraint_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4][2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdRodConstraint_t.nNode
@@ -1158,8 +1042,6 @@ object Vphysics2Schema {
         const val flNodeWeight0: Long = 0x40L // fltx4; schema=flNodeWeight0
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdSpringIntegrator_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdSpringIntegrator_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[4][2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdSpringIntegrator_t.nNode
@@ -1183,8 +1065,6 @@ object Vphysics2Schema {
         const val v2: Long = 0x60L // FourVectors2D; schema=v2
     }
 
-    /** Read/write view of decodable fields declared directly by FeSimdTri_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSimdTri_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint32[4][3]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSimdTri_t.nNode
@@ -1206,8 +1086,6 @@ object Vphysics2Schema {
         const val flAlpha: Long = 0x4L // float32; schema=flAlpha
     }
 
-    /** Read/write view of decodable fields declared directly by FeSoftParent_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSoftParent_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nParent: Int by int32(FeSoftParent_t.nParent)
         var flAlpha: Float by float(FeSoftParent_t.flAlpha)
@@ -1219,8 +1097,6 @@ object Vphysics2Schema {
         const val nNode: Long = 0x0L // uint16[2]; schema=nNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeSourceEdge_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSourceEdge_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSourceEdge_t.nNode
@@ -1236,8 +1112,6 @@ object Vphysics2Schema {
         const val nFlags: Long = 0x16L // uint16; schema=nFlags
     }
 
-    /** Read/write view of decodable fields declared directly by FeSphereRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSphereRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of vSphere: fltx4; no safe value decoder was proven. */
         val vSphereAddress: Long get() = base + FeSphereRigid_t.vSphere
@@ -1257,8 +1131,6 @@ object Vphysics2Schema {
         const val flNodeWeight0: Long = 0x10L // float32; schema=flNodeWeight0
     }
 
-    /** Read/write view of decodable fields declared directly by FeSpringIntegrator_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeSpringIntegrator_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeSpringIntegrator_t.nNode
@@ -1277,8 +1149,6 @@ object Vphysics2Schema {
         const val nNode: Long = 0x14L // uint16[3]; schema=nNode
     }
 
-    /** Read/write view of decodable fields declared directly by FeStiffHingeBuild_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeStiffHingeBuild_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flMaxAngle: Float by float(FeStiffHingeBuild_t.flMaxAngle)
         var flStrength: Float by float(FeStiffHingeBuild_t.flStrength)
@@ -1298,8 +1168,6 @@ object Vphysics2Schema {
         const val nFlags: Long = 0x26L // uint16; schema=nFlags
     }
 
-    /** Read/write view of decodable fields declared directly by FeTaperedCapsuleRigid_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeTaperedCapsuleRigid_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of vSphere: fltx4[2]; no safe value decoder was proven. */
         val vSphereAddress: Long get() = base + FeTaperedCapsuleRigid_t.vSphere
@@ -1318,8 +1186,6 @@ object Vphysics2Schema {
         const val flRadius: Long = 0x8L // float32[2]; schema=flRadius
     }
 
-    /** Read/write view of decodable fields declared directly by FeTaperedCapsuleStretch_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeTaperedCapsuleStretch_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[2]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeTaperedCapsuleStretch_t.nNode
@@ -1335,8 +1201,6 @@ object Vphysics2Schema {
         const val nChild: Long = 0x0L // uint16[2]; schema=nChild
     }
 
-    /** Read/write view of decodable fields declared directly by FeTreeChildren_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeTreeChildren_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nChild: uint16[2]; no safe value decoder was proven. */
         val nChildAddress: Long get() = base + FeTreeChildren_t.nChild
@@ -1352,8 +1216,6 @@ object Vphysics2Schema {
         const val v2: Long = 0x14L // Vector2D; schema=v2
     }
 
-    /** Read/write view of decodable fields declared directly by FeTri_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeTri_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of nNode: uint16[3]; no safe value decoder was proven. */
         val nNodeAddress: Long get() = base + FeTri_t.nNode
@@ -1373,8 +1235,6 @@ object Vphysics2Schema {
         const val flSwingRelax: Long = 0x8L // float32; schema=flSwingRelax
     }
 
-    /** Read/write view of decodable fields declared directly by FeTwistConstraint_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeTwistConstraint_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nNodeOrient: UShort by uint16(FeTwistConstraint_t.nNodeOrient)
         var nNodeEnd: UShort by uint16(FeTwistConstraint_t.nNodeEnd)
@@ -1393,8 +1253,6 @@ object Vphysics2Schema {
         const val m_Weights: Long = 0x18L // CUtlVector<float32>; schema=m_Weights
     }
 
-    /** Read/write view of decodable fields declared directly by FeVertexMapBuild_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeVertexMapBuild_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_VertexMapName: Long by ptr64(FeVertexMapBuild_t.m_VertexMapName)
         var m_nNameHash: UInt by uint32(FeVertexMapBuild_t.m_nNameHash)
@@ -1422,8 +1280,6 @@ object Vphysics2Schema {
         const val nNodeListCount: Long = 0x32L // uint16; schema=nNodeListCount
     }
 
-    /** Read/write view of decodable fields declared directly by FeVertexMapDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeVertexMapDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var sName: Long by ptr64(FeVertexMapDesc_t.sName)
         var nNameHash: UInt by uint32(FeVertexMapDesc_t.nNameHash)
@@ -1447,8 +1303,6 @@ object Vphysics2Schema {
         const val nWeight: Long = 0x2L // uint16; schema=nWeight
     }
 
-    /** Read/write view of decodable fields declared directly by FeWeightedNode_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeWeightedNode_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var nNode: UShort by uint16(FeWeightedNode_t.nNode)
         var nWeight: UShort by uint16(FeWeightedNode_t.nWeight)
@@ -1463,8 +1317,6 @@ object Vphysics2Schema {
         const val nListEnd: Long = 0xAL // uint16; schema=nListEnd
     }
 
-    /** Read/write view of decodable fields declared directly by FeWorldCollisionParams_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FeWorldCollisionParams_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flWorldFriction: Float by float(FeWorldCollisionParams_t.flWorldFriction)
         var flGroundFriction: Float by float(FeWorldCollisionParams_t.flGroundFriction)
@@ -1481,8 +1333,6 @@ object Vphysics2Schema {
         const val m_flYZ: Long = 0x50L // fltx4; schema=m_flYZ
     }
 
-    /** Read/write view of decodable fields declared directly by FourCovMatrices3.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FourCovMatrices3Struct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vDiag: FourVectors; no safe value decoder was proven. */
         val m_vDiagAddress: Long get() = base + FourCovMatrices3.m_vDiag
@@ -1501,8 +1351,6 @@ object Vphysics2Schema {
         const val y: Long = 0x10L // fltx4; schema=y
     }
 
-    /** Read/write view of decodable fields declared directly by FourVectors2D.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class FourVectors2DStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of x: fltx4; no safe value decoder was proven. */
         val xAddress: Long get() = base + FourVectors2D.x
@@ -1518,8 +1366,6 @@ object Vphysics2Schema {
         const val m_bIsAxisAligned: Long = 0x10L // bool; schema=m_bIsAxisAligned
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysAggregateInstance.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysAggregateInstanceStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_pSkeleton: Long by ptr64(IPhysAggregateInstance.m_pSkeleton)
         var m_bIsAxisAligned: Boolean by bool(IPhysAggregateInstance.m_bIsAxisAligned)
@@ -1530,8 +1376,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsBody"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsBody.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsBodyStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1541,8 +1385,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsBodyList"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsBodyList.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsBodyListStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1552,8 +1394,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsJoint"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsJoint.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsJointStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1563,8 +1403,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsMotionController"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsMotionController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsMotionControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1574,8 +1412,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsParticleRope"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsParticleRope.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsParticleRopeStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1585,8 +1421,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsPlayerController"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsPlayerController.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsPlayerControllerStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1596,8 +1430,6 @@ object Vphysics2Schema {
         const val SCHEMA_NAME: String = "IPhysicsRagdollControl"
     }
 
-    /** Read/write view of decodable fields declared directly by IPhysicsRagdollControl.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class IPhysicsRagdollControlStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         // No directly declared reflected fields.
     }
@@ -1619,8 +1451,6 @@ object Vphysics2Schema {
         const val m_nNode: Long = 0x40L // uint16[4]; schema=m_nNode
     }
 
-    /** Read/write view of decodable fields declared directly by OldFeEdge_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class OldFeEdge_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_flK: float32[3]; no safe value decoder was proven. */
         val m_flKAddress: Long get() = base + OldFeEdge_t.m_flK
@@ -1754,8 +1584,6 @@ object Vphysics2Schema {
         const val m_nQuadVelocitySmoothIterations: Long = 0x6DEL // uint16; schema=m_nQuadVelocitySmoothIterations
     }
 
-    /** Read/write view of decodable fields declared directly by PhysFeModelDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PhysFeModelDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_CtrlHash: CUtlVector<uint32>; no safe value decoder was proven. */
         val m_CtrlHashAddress: Long get() = base + PhysFeModelDesc_t.m_CtrlHash
@@ -1943,8 +1771,6 @@ object Vphysics2Schema {
         const val m_Value: Long = 0x0L // uint32; schema=m_Value
     }
 
-    /** Read/write view of decodable fields declared directly by PhysicsParticleId_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class PhysicsParticleId_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_Value: UInt by uint32(PhysicsParticleId_t.m_Value)
     }
@@ -1962,8 +1788,6 @@ object Vphysics2Schema {
         const val m_nTargetIndex: Long = 0xEL // uint16; schema=m_nTargetIndex
     }
 
-    /** Read/write view of decodable fields declared directly by RnBlendVertex_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnBlendVertex_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nWeight0: UShort by uint16(RnBlendVertex_t.m_nWeight0)
         var m_nIndex0: UShort by uint16(RnBlendVertex_t.m_nIndex0)
@@ -2016,8 +1840,6 @@ object Vphysics2Schema {
         const val m_nDynamicContinuousContactBehavior: Long = 0xDAL // DynamicContinuousContactBehavior_t; schema=m_nDynamicContinuousContactBehavior
     }
 
-    /** Read/write view of decodable fields declared directly by RnBodyDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnBodyDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_sDebugName: Long by ptr64(RnBodyDesc_t.m_sDebugName)
         /** Raw address of m_vPosition: Vector; no safe value decoder was proven. */
@@ -2074,8 +1896,6 @@ object Vphysics2Schema {
         const val m_Capsule: Long = 0x18L // RnCapsule_t; schema=m_Capsule
     }
 
-    /** Read/write view of decodable fields declared directly by RnCapsuleDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnCapsuleDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: RnCapsule_t. */
         val m_Capsule: Vphysics2Schema.RnCapsule_tStruct
@@ -2089,8 +1909,6 @@ object Vphysics2Schema {
         const val m_flRadius: Long = 0x18L // float32; schema=m_flRadius
     }
 
-    /** Read/write view of decodable fields declared directly by RnCapsule_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnCapsule_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vCenter: Vector[2]; no safe value decoder was proven. */
         val m_vCenterAddress: Long get() = base + RnCapsule_t.m_vCenter
@@ -2103,8 +1921,6 @@ object Vphysics2Schema {
         const val m_nEdge: Long = 0x0L // uint8; schema=m_nEdge
     }
 
-    /** Read/write view of decodable fields declared directly by RnFace_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnFace_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nEdge: UByte by uint8(RnFace_t.m_nEdge)
     }
@@ -2118,8 +1934,6 @@ object Vphysics2Schema {
         const val m_nFace: Long = 0x3L // uint8; schema=m_nFace
     }
 
-    /** Read/write view of decodable fields declared directly by RnHalfEdge_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnHalfEdge_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nNext: UByte by uint8(RnHalfEdge_t.m_nNext)
         var m_nTwin: UByte by uint8(RnHalfEdge_t.m_nTwin)
@@ -2134,8 +1948,6 @@ object Vphysics2Schema {
         const val m_Hull: Long = 0x18L // RnHull_t; schema=m_Hull
     }
 
-    /** Read/write view of decodable fields declared directly by RnHullDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnHullDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: RnHull_t. */
         val m_Hull: Vphysics2Schema.RnHull_tStruct
@@ -2161,8 +1973,6 @@ object Vphysics2Schema {
         const val m_pRegionSVM: Long = 0xF0L // CRegionSVM*; schema=m_pRegionSVM
     }
 
-    /** Read/write view of decodable fields declared directly by RnHull_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnHull_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vCentroid: Vector; no safe value decoder was proven. */
         val m_vCentroidAddress: Long get() = base + RnHull_t.m_vCentroid
@@ -2197,8 +2007,6 @@ object Vphysics2Schema {
         const val m_Mesh: Long = 0x18L // RnMesh_t; schema=m_Mesh
     }
 
-    /** Read/write view of decodable fields declared directly by RnMeshDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnMeshDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Embedded reflected value: RnMesh_t. */
         val m_Mesh: Vphysics2Schema.RnMesh_tStruct
@@ -2221,8 +2029,6 @@ object Vphysics2Schema {
         const val m_nDebugFlags: Long = 0xB8L // uint32; schema=m_nDebugFlags
     }
 
-    /** Read/write view of decodable fields declared directly by RnMesh_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnMesh_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vMin: Vector; no safe value decoder was proven. */
         val m_vMinAddress: Long get() = base + RnMesh_t.m_vMin
@@ -2255,8 +2061,6 @@ object Vphysics2Schema {
         const val m_nTriangleOffset: Long = 0x1CL // uint32; schema=m_nTriangleOffset
     }
 
-    /** Read/write view of decodable fields declared directly by RnNode_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnNode_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vMin: Vector; no safe value decoder was proven. */
         val m_vMinAddress: Long get() = base + RnNode_t.m_vMin
@@ -2273,8 +2077,6 @@ object Vphysics2Schema {
         const val m_flOffset: Long = 0xCL // float32; schema=m_flOffset
     }
 
-    /** Read/write view of decodable fields declared directly by RnPlane_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnPlane_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vNormal: Vector; no safe value decoder was proven. */
         val m_vNormalAddress: Long get() = base + RnPlane_t.m_vNormal
@@ -2292,8 +2094,6 @@ object Vphysics2Schema {
         const val m_nToolMaterialHash: Long = 0x14L // uint32; schema=m_nToolMaterialHash
     }
 
-    /** Read/write view of decodable fields declared directly by RnShapeDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnShapeDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nCollisionAttributeIndex: UInt by uint32(RnShapeDesc_t.m_nCollisionAttributeIndex)
         var m_nSurfacePropertyIndex: UInt by uint32(RnShapeDesc_t.m_nSurfacePropertyIndex)
@@ -2311,8 +2111,6 @@ object Vphysics2Schema {
         const val m_nParticle: Long = 0x1CL // uint16[2]; schema=m_nParticle
     }
 
-    /** Read/write view of decodable fields declared directly by RnSoftbodyCapsule_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnSoftbodyCapsule_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vCenter: Vector[2]; no safe value decoder was proven. */
         val m_vCenterAddress: Long get() = base + RnSoftbodyCapsule_t.m_vCenter
@@ -2327,8 +2125,6 @@ object Vphysics2Schema {
         const val m_flMassInv: Long = 0x0L // float32; schema=m_flMassInv
     }
 
-    /** Read/write view of decodable fields declared directly by RnSoftbodyParticle_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnSoftbodyParticle_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flMassInv: Float by float(RnSoftbodyParticle_t.m_flMassInv)
     }
@@ -2340,8 +2136,6 @@ object Vphysics2Schema {
         const val m_flLength: Long = 0x4L // float32; schema=m_flLength
     }
 
-    /** Read/write view of decodable fields declared directly by RnSoftbodySpring_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnSoftbodySpring_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nParticle: uint16[2]; no safe value decoder was proven. */
         val m_nParticleAddress: Long get() = base + RnSoftbodySpring_t.m_nParticle
@@ -2355,8 +2149,6 @@ object Vphysics2Schema {
         const val m_Sphere: Long = 0x18L // SphereBase_t<float32>; schema=m_Sphere
     }
 
-    /** Read/write view of decodable fields declared directly by RnSphereDesc_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnSphereDesc_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_Sphere: SphereBase_t<float32>; no safe value decoder was proven. */
         val m_SphereAddress: Long get() = base + RnSphereDesc_t.m_Sphere
@@ -2368,8 +2160,6 @@ object Vphysics2Schema {
         const val m_nIndex: Long = 0x0L // int32[3]; schema=m_nIndex
     }
 
-    /** Read/write view of decodable fields declared directly by RnTriangle_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnTriangle_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nIndex: int32[3]; no safe value decoder was proven. */
         val m_nIndexAddress: Long get() = base + RnTriangle_t.m_nIndex
@@ -2381,8 +2171,6 @@ object Vphysics2Schema {
         const val m_nEdge: Long = 0x0L // uint8; schema=m_nEdge
     }
 
-    /** Read/write view of decodable fields declared directly by RnVertex_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnVertex_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nEdge: UByte by uint8(RnVertex_t.m_nEdge)
     }
@@ -2393,8 +2181,6 @@ object Vphysics2Schema {
         const val m_nIndex: Long = 0x0L // int32[3]; schema=m_nIndex
     }
 
-    /** Read/write view of decodable fields declared directly by RnWing_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class RnWing_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_nIndex: int32[3]; no safe value decoder was proven. */
         val m_nIndexAddress: Long get() = base + RnWing_t.m_nIndex
@@ -2406,8 +2192,6 @@ object Vphysics2Schema {
         const val m_vPosition: Long = 0x0L // Vector; schema=m_vPosition
     }
 
-    /** Read/write view of decodable fields declared directly by VertexPositionColor_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VertexPositionColor_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vPosition: Vector; no safe value decoder was proven. */
         val m_vPositionAddress: Long get() = base + VertexPositionColor_t.m_vPosition
@@ -2420,8 +2204,6 @@ object Vphysics2Schema {
         const val m_vNormal: Long = 0xCL // Vector; schema=m_vNormal
     }
 
-    /** Read/write view of decodable fields declared directly by VertexPositionNormal_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class VertexPositionNormal_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of m_vPosition: Vector; no safe value decoder was proven. */
         val m_vPositionAddress: Long get() = base + VertexPositionNormal_t.m_vPosition
@@ -2438,8 +2220,6 @@ object Vphysics2Schema {
         const val flMotorMaxTorque: Long = 0xCL // float32; schema=flMotorMaxTorque
     }
 
-    /** Read/write view of decodable fields declared directly by constraint_axislimit_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class constraint_axislimit_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var flMinRotation: Float by float(constraint_axislimit_t.flMinRotation)
         var flMaxRotation: Float by float(constraint_axislimit_t.flMaxRotation)
@@ -2457,8 +2237,6 @@ object Vphysics2Schema {
         const val isActive: Long = 0x14L // bool; schema=isActive
     }
 
-    /** Read/write view of decodable fields declared directly by constraint_breakableparams_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class constraint_breakableparams_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var strength: Float by float(constraint_breakableparams_t.strength)
         var forceLimit: Float by float(constraint_breakableparams_t.forceLimit)
@@ -2477,8 +2255,6 @@ object Vphysics2Schema {
         const val constraint: Long = 0x28L // constraint_breakableparams_t; schema=constraint
     }
 
-    /** Read/write view of decodable fields declared directly by constraint_hingeparams_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class constraint_hingeparams_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         /** Raw address of worldPosition: Vector; no safe value decoder was proven. */
         val worldPositionAddress: Long get() = base + constraint_hingeparams_t.worldPosition
@@ -2499,8 +2275,6 @@ object Vphysics2Schema {
         const val m_nOldPointer: Long = 0xE0L // uint64; schema=m_nOldPointer
     }
 
-    /** Read/write view of decodable fields declared directly by vphysics_save_cphysicsbody_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class vphysics_save_cphysicsbody_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_nOldPointer: ULong by uint64(vphysics_save_cphysicsbody_t.m_nOldPointer)
     }
@@ -2520,8 +2294,6 @@ object Vphysics2Schema {
         const val m_nBodyCount: Long = 0x34L // int32; schema=m_nBodyCount
     }
 
-    /** Read/write view of decodable fields declared directly by vphysics_save_ragdoll_control_t.
-     *  Non-decodable fields expose their in-object address without guessing layout. */
     class vphysics_save_ragdoll_control_tStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
         var m_flMinSpringFrequency: Float by float(vphysics_save_ragdoll_control_t.m_flMinSpringFrequency)
         var m_flMaxSpringFrequency: Float by float(vphysics_save_ragdoll_control_t.m_flMaxSpringFrequency)
