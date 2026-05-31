@@ -32,4 +32,13 @@ object HostSchema {
         val m_hTestAddress: Long get() = base + EmptyTestScript.m_hTest
     }
 
+    /** Fields declared directly by k_EGCMsgWebAPIJobRequest. */
+    object k_EGCMsgWebAPIJobRequest {
+        const val SCHEMA_NAME: String = "k_EGCMsgWebAPIJobRequest"
+    }
+
+    class k_EGCMsgWebAPIJobRequestStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
+        // No directly declared reflected fields.
+    }
+
 }

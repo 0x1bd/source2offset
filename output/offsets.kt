@@ -100,4 +100,11 @@ object Offsets {
 
     }
 
+    object Sdl3 {
+        const val sdlKeyboardFocus: Long = 0x2E5A60L
+        fun sdlKeyboardFocusSlotAddress(moduleBase: Long): Long = moduleBase + sdlKeyboardFocus
+        fun resolveSdlKeyboardFocus(moduleBase: Long, mem: UnsafeKt): Long = mem.readLong(sdlKeyboardFocusSlotAddress(moduleBase))
+
+    }
+
 }

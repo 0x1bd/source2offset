@@ -112,5 +112,11 @@
       "rva": 73933504,
       "access": "direct_address_rva"
     }
+  },
+  "sdl3": {
+    "sdlKeyboardFocus": {
+      "rva": 3037792,
+      "access": "pointer_slot_rva"
+    }
   }
 }

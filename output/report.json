@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-05-31T01:19:51Z",
+  "timestamp": "2026-05-31T22:48:11Z",
   "schemaScopes": 18,
-  "schemaClasses": 993,
+  "schemaClasses": 994,
   "schemaFields": 5533,
   "namedInterfaces": 5,
   "rttiRuntimeRoots": 1,
-  "offsets": 28
+  "offsets": 29
 }

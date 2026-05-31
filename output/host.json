@@ -21,6 +21,10 @@
             "type": "CAnimScriptParam<float32>"
           }
         }
+      },
+      "k_EGCMsgWebAPIJobRequest": {
+        "fieldsAreDeclaredDirectlyOnThisClass": true,
+        "fields": {}
       }
     },
     "enums": {}
