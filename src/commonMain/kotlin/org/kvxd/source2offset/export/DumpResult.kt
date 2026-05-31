@@ -9,5 +9,4 @@ data class DumpResult(
     val schemas: List<ModuleSchemaDump>,
     val symbols: Map<String, List<ElfSymbolEntry>>,
     val runtimeRoots: List<RuntimeRootEntry>,
-    val capabilities: List<CapabilityMessage>,
 )

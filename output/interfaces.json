@@ -2,41 +2,31 @@
   "client": {
     "Source2ClientPrediction001": {
       "rva": 73904128,
-      "addressAtDumpTime": 139979691372544,
-      "semantics": "direct_interface_instance_rva",
-      "provenance": "live_CreateInterface_call"
+      "addressAtDumpTime": 139979691372544
     }
   },
   "engine2": {
     "GameResourceServiceClientV001": {
       "rva": 10238752,
-      "addressAtDumpTime": 139983819914016,
-      "semantics": "direct_interface_instance_rva",
-      "provenance": "live_CreateInterface_call"
+      "addressAtDumpTime": 139983819914016
     }
   },
   "inputsystem": {
     "InputSystemVersion001": {
       "rva": 520160,
-      "addressAtDumpTime": 139983506264032,
-      "semantics": "direct_interface_instance_rva",
-      "provenance": "live_CreateInterface_call"
+      "addressAtDumpTime": 139983506264032
     }
   },
   "schemasystem": {
     "SchemaSystem_001": {
       "rva": 744864,
-      "addressAtDumpTime": 139983474101664,
-      "semantics": "direct_interface_instance_rva",
-      "provenance": "live_CreateInterface_call"
+      "addressAtDumpTime": 139983474101664
     }
   },
   "soundsystem": {
     "SoundSystem001": {
       "rva": 7715328,
-      "addressAtDumpTime": 139980457753088,
-      "semantics": "direct_interface_instance_rva",
-      "provenance": "live_CreateInterface_call"
+      "addressAtDumpTime": 139980457753088
     }
   }
 }

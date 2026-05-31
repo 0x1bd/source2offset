@@ -11,6 +11,7 @@ actual fun findProcessPid(name: String): Int? {
         "Counter-Strike Global Offensive/game/bin/linuxsteamrt64/cs2",
         "Counter-Strike Global Offensive/game/csgo/bin/linuxsteamrt64/libclient.so",
         "game/bin/linuxsteamrt64/libengine2.so",
+        "game/bin/linuxsteamrt64/libSDL3.so.0",
     ).forEach { candidates += findPidsByMapsKeyword(it) }
 
     candidates.firstOrNull { pid ->

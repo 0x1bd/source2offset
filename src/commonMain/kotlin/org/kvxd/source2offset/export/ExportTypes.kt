@@ -33,21 +33,14 @@ data class OffsetEntry(
     val rva: Long,
     val access: String,
     val discovery: String,
-    val validation: String,
-    val confidence: String,
     val note: String = "",
-)
-
-data class CapabilityMessage(
-    val level: String,
-    val feature: String,
-    val message: String,
 )
 
 fun normaliseModuleName(name: String): String {
     var n = name.lowercase()
     if (n.startsWith("lib")) n = n.substring(3)
-    if (n.endsWith(".so")) n = n.substringBeforeLast(".so")
+    val soIndex = n.indexOf(".so")
+    if (soIndex >= 0) n = n.substring(0, soIndex)
     if (n.endsWith(".dll")) n = n.substringBeforeLast(".dll")
     return n.replace(Regex("[^a-z0-9_]"), "_")
 }

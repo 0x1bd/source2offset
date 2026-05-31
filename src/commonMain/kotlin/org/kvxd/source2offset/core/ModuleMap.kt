@@ -77,7 +77,10 @@ fun List<Module>.filterGameModules(gameDir: String? = null): Pair<String?, List<
     }
 
     if (root == null) return null to emptyList()
-    return root to filter { it.path.startsWith(root) && it.name.endsWith(".so") }
+    return root to filter { it.path.startsWith(root) && it.name.isSharedObjectName() }
 }
 
 fun Long.hexAddress(): String = "0x${toULong().toString(16)}"
+
+private fun String.isSharedObjectName(): Boolean =
+    endsWith(".so") || contains(".so.")

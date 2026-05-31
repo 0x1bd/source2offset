@@ -1,11 +1,5 @@
 package org.kvxd.source2offset.cli
 
-import com.github.ajalt.clikt.core.CliktCommand
-import com.github.ajalt.clikt.core.main
-import com.github.ajalt.clikt.parameters.options.default
-import com.github.ajalt.clikt.parameters.options.flag
-import com.github.ajalt.clikt.parameters.options.multiple
-import com.github.ajalt.clikt.parameters.options.option
 import okio.FileSystem
 import okio.Path.Companion.toPath
 import org.kvxd.source2offset.core.MemReader
@@ -26,39 +20,108 @@ expect fun findProcessPid(name: String): Int?
 expect fun currentIsoTimestamp(): String
 expect fun readFileBytes(path: String): ByteArray
 
-class Source2OffsetCmd : CliktCommand(name = "source2offset") {
-    private val gameDir by option("--game-dir", help = "Optional CS2 game directory override.")
-    private val outputDir by option(
-        "--output-dir",
-        help = "Output directory. Relative paths are resolved from the directory where the executable is run.",
-    ).default("output")
-    private val requestedInterfaces by option(
-        "--interface",
-        help = "Additional named interface to resolve as <module-keyword>:<interface-name>.",
-    ).multiple()
-    private val noDefaultInterfaces by option(
-        "--no-default-interfaces",
-        help = "Do not request built-in interface roots automatically.",
-    ).flag(default = false)
-    private val symbols by option(
-        "--symbols",
-        help = "Write diagnostic symbols.kt/json for retained ELF names in core modules. Disabled by default.",
-    ).flag(default = false)
-    private val allSymbols by option(
-        "--all-symbols",
-        help = "Write diagnostic symbols.kt/json for every bundled CS2 .so. Implies --symbols.",
-    ).flag(default = false)
-    private val metadataOnly by option(
-        "--metadata-only",
-        help = "Disable validated private/global dw* analysis; emit only interfaces, schemas and RTTI roots.",
-    ).flag(default = false)
-    private val requireSchema by option(
-        "--require-schema",
-        help = "Mark the run as unsuccessful unless reflected schema fields were dumped successfully. Diagnostic output files are still written.",
-    ).flag(default = false)
+private data class CliOptions(
+    val gameDir: String? = null,
+    val outputDir: String = "output",
+    val requestedInterfaces: List<String> = emptyList(),
+    val noDefaultInterfaces: Boolean = false,
+    val symbols: Boolean = false,
+    val allSymbols: Boolean = false,
+    val metadataOnly: Boolean = false,
+    val requireSchema: Boolean = false,
+)
 
-    override fun run() {
-        println("source2offset — native Linux Source 2 metadata and validated offset dumper")
+private class Source2OffsetCmd(private val options: CliOptions) {
+    constructor(args: Array<String>) : this(parseArgs(args))
+
+    companion object {
+        private fun parseArgs(args: Array<String>): CliOptions {
+            var gameDir: String? = null
+            var outputDir = "output"
+            val requestedInterfaces = mutableListOf<String>()
+            var noDefaultInterfaces = false
+            var symbols = false
+            var allSymbols = false
+            var metadataOnly = false
+            var requireSchema = false
+
+            fun valueAt(index: Int, option: String): String {
+                require(index + 1 < args.size) { "Missing value for $option" }
+                return args[index + 1]
+            }
+
+            var i = 0
+            while (i < args.size) {
+                val arg = args[i]
+                val split = arg.indexOf('=')
+                val name = if (split >= 0) arg.substring(0, split) else arg
+                val inlineValue = if (split >= 0) arg.substring(split + 1) else null
+
+                when (name) {
+                    "--game-dir" -> {
+                        gameDir = inlineValue ?: valueAt(i, name)
+                        if (inlineValue == null) i++
+                    }
+
+                    "--output-dir" -> {
+                        outputDir = inlineValue ?: valueAt(i, name)
+                        if (inlineValue == null) i++
+                    }
+
+                    "--interface" -> {
+                        requestedInterfaces += inlineValue ?: valueAt(i, name)
+                        if (inlineValue == null) i++
+                    }
+
+                    "--no-default-interfaces" -> noDefaultInterfaces = true
+                    "--symbols" -> symbols = true
+                    "--all-symbols" -> allSymbols = true
+                    "--metadata-only" -> metadataOnly = true
+                    "--require-schema" -> requireSchema = true
+                    "--help", "-h" -> {
+                        printUsage()
+                        throw ExitRequested
+                    }
+
+                    else -> error("Unknown argument: $arg")
+                }
+                i++
+            }
+
+            return CliOptions(
+                gameDir = gameDir,
+                outputDir = outputDir,
+                requestedInterfaces = requestedInterfaces,
+                noDefaultInterfaces = noDefaultInterfaces,
+                symbols = symbols,
+                allSymbols = allSymbols,
+                metadataOnly = metadataOnly,
+                requireSchema = requireSchema,
+            )
+        }
+
+        private fun printUsage() {
+            println(
+                """
+                Usage: source2offset [options]
+
+                Options:
+                  --game-dir <path>             Optional CS2 game directory override.
+                  --output-dir <path>           Output directory. Defaults to output.
+                  --interface <module:name>     Additional named interface to resolve.
+                  --no-default-interfaces       Do not request built-in interface roots.
+                  --symbols                     Write symbols.kt/json for core modules.
+                  --all-symbols                 Write symbols.kt/json for every CS2 module.
+                  --metadata-only               Emit only interfaces, schemas and RTTI roots.
+                  --require-schema              Print an error if no schema fields were dumped.
+                  --help                        Show this help.
+                """.trimIndent()
+            )
+        }
+    }
+
+    fun run() {
+        println("source2offset")
         println()
 
         val pid = findProcessPid("cs2") ?: run {
@@ -72,10 +135,10 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
             return
         }
         val modules = parseModuleMap(pid)
-        val (detectedGameDir, gameModules) = modules.filterGameModules(gameDir)
+        val (detectedGameDir, gameModules) = modules.filterGameModules(options.gameDir)
         if (gameModules.isEmpty()) {
             println("ERROR: no native CS2 ELF modules found in the process mappings.")
-            println("Game directory candidate: ${detectedGameDir ?: gameDir ?: "none"}")
+            println("Game directory candidate: ${detectedGameDir ?: options.gameDir ?: "none"}")
             return
         }
         println("Game directory: $detectedGameDir")
@@ -88,7 +151,7 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
         val requests = buildRequests()
         println("Resolving named interfaces through live CreateInterface calls...")
         val interfaces = LiveInterfaceResolver(gameModules, ::readFileBytes)
-            .resolve(pid, requests) { println(it) }
+            .resolve(pid, requests, ::printIssue)
         println("Resolved interfaces: ${interfaces.size}/${requests.size}")
         println()
 
@@ -97,25 +160,14 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
             return
         }
 
-        val exportSymbols = symbols || allSymbols
+        val exportSymbols = options.symbols || options.allSymbols
         val modulesForSymbols = when {
-            allSymbols -> gameModules
-            symbols -> coreSymbolModules(gameModules)
+            options.allSymbols -> gameModules
+            options.symbols -> coreSymbolModules(gameModules)
             else -> emptyList()
         }
-        if (symbols && !allSymbols) {
-            println(
-                "Diagnostic symbol export restricted to core modules: " +
-                        modulesForSymbols.joinToString { it.name } +
-                        " (use --all-symbols for all ${gameModules.size} bundled modules)"
-            )
-        } else if (!exportSymbols) {
-            println("Diagnostic ELF symbol export disabled (pass --symbols only when investigating retained names).")
-        }
-        if (metadataOnly) {
-            println("Private/global dw* analysis disabled by --metadata-only.")
-        } else {
-            println("Validated private/global dw* analysis enabled.")
+        if (options.symbols && !options.allSymbols) {
+            println("Symbols: ${modulesForSymbols.joinToString { it.name }}")
         }
 
         val result = try {
@@ -124,12 +176,13 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
                 gameModules = gameModules,
                 modulesForSymbols = modulesForSymbols,
                 includeSymbols = exportSymbols,
-                includePrivateOffsets = !metadataOnly,
+                includePrivateOffsets = !options.metadataOnly,
                 mappings = mappings,
                 resolvedInterfaces = interfaces,
                 readFile = ::readFileBytes,
                 timestamp = currentIsoTimestamp(),
-                log = { println(it) },
+                log = ::printIssue,
+                progress = { println(it) },
             ).run()
         } finally {
             handle.close()
@@ -138,7 +191,7 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
         writeOutputs(result)
         printSummary(result)
 
-        if (requireSchema && result.schemas.isEmpty()) {
+        if (options.requireSchema && result.schemas.isEmpty()) {
             println()
             println("ERROR: --require-schema was specified, but no live schema output was produced.")
             println("Diagnostic interfaces, offsets, runtime roots and report files were still written.")
@@ -146,7 +199,7 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
     }
 
     private fun writeOutputs(result: DumpResult) {
-        val out = outputDir.toPath()
+        val out = options.outputDir.toPath()
         FileSystem.SYSTEM.createDirectories(out)
         FileSystem.SYSTEM.write(out.resolve("interfaces.json")) { writeUtf8(JsonExporter.buildInterfacesJson(result)) }
         FileSystem.SYSTEM.write(out.resolve("offsets.json")) { writeUtf8(JsonExporter.buildOffsetsJson(result)) }
@@ -171,25 +224,23 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
         println()
         println("Dump complete: ${result.timestamp}")
         println("  Interfaces : ${result.interfaces.values.sumOf { it.size }}")
-        println("  Offsets    : ${result.offsets.values.sumOf { it.size }} validated entry/entries")
+        println("  Offsets    : ${result.offsets.values.sumOf { it.size }}")
         println("  Schemas    : ${result.schemas.size} scope(s), ${result.schemas.sumOf { it.classes.size }} class(es)")
         println("  Fields     : ${result.schemas.sumOf { scope -> scope.classes.sumOf { it.fields.size } }}")
         println("  RTTI roots : ${result.runtimeRoots.size}")
         println("  Symbols    : ${if (result.symbols.isEmpty()) "not written" else "${result.symbols.values.sumOf { it.size }} diagnostic entries"}")
-        println("  Output     : $outputDir (relative to your current working directory)")
-        println()
-        result.capabilities.forEach { println("[${it.level}] ${it.feature}: ${it.message}") }
+        println("  Output     : ${options.outputDir} (relative to your current working directory)")
     }
 
     private fun buildRequests(): List<InterfaceRequest> {
-        val defaults = if (noDefaultInterfaces) emptyList() else listOf(
+        val defaults = if (options.noDefaultInterfaces) emptyList() else listOf(
             InterfaceRequest("schemasystem", "SchemaSystem_001"),
             InterfaceRequest("engine2", "GameResourceServiceClientV001"),
             InterfaceRequest("client", "Source2ClientPrediction001"),
             InterfaceRequest("inputsystem", "InputSystemVersion001"),
             InterfaceRequest("soundsystem", "SoundSystem001"),
         )
-        val extras = requestedInterfaces.mapNotNull { spec ->
+        val extras = options.requestedInterfaces.mapNotNull { spec ->
             val separator = spec.indexOf(':')
             if (separator <= 0 || separator == spec.lastIndex) {
                 println("WARN: ignoring malformed --interface '$spec'; expected <module-keyword>:<interface-name>")
@@ -205,6 +256,23 @@ class Source2OffsetCmd : CliktCommand(name = "source2offset") {
         val core = setOf("libclient.so", "libengine2.so", "libschemasystem.so")
         return modules.filter { it.name in core }
     }
+
+    private fun printIssue(message: String) {
+        if (message.startsWith("WARN:") || message.startsWith("ERROR:")) {
+            println(message)
+        }
+    }
 }
 
-fun main(args: Array<String>) = Source2OffsetCmd().main(args)
+private object ExitRequested : RuntimeException()
+
+fun main(args: Array<String>) {
+    try {
+        Source2OffsetCmd(args).run()
+    } catch (_: ExitRequested) {
+    } catch (error: IllegalArgumentException) {
+        println("ERROR: ${error.message}")
+    } catch (error: IllegalStateException) {
+        println("ERROR: ${error.message}")
+    }
+}

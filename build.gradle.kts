@@ -24,9 +24,6 @@ kotlin {
                 compilerOptions {
                     // Suppress expect/actual classes Beta warning
                     freeCompilerArgs.add("-Xexpect-actual-classes")
-                    // Fix duplicate symbol issues in linking because of clikt
-                    freeCompilerArgs.add("-linker-options")
-                    freeCompilerArgs.add("-z muldefs")
                 }
             }
         }
@@ -35,7 +32,6 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
-            implementation("com.github.ajalt.clikt:clikt:5.1.0")
             implementation("com.squareup.okio:okio:3.17.0")
         }
         commonTest.dependencies {

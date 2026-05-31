@@ -18,8 +18,6 @@ object JsonExporter {
                         putJsonObject(entry.name) {
                             put("rva", entry.rva)
                             put("addressAtDumpTime", entry.address)
-                            put("semantics", "direct_interface_instance_rva")
-                            put("provenance", "live_CreateInterface_call")
                         }
                     }
                 }
@@ -35,10 +33,6 @@ object JsonExporter {
                         putJsonObject(entry.name) {
                             put("rva", entry.rva)
                             put("access", entry.access)
-                            put("discovery", entry.discovery)
-                            put("validation", entry.validation)
-                            put("confidence", entry.confidence)
-                            if (entry.note.isNotBlank()) put("note", entry.note)
                         }
                     }
                 }
@@ -58,7 +52,6 @@ object JsonExporter {
                             put("kind", entry.kind)
                             put("binding", entry.binding)
                             put("table", entry.table)
-                            put("provenance", "retained_ELF_symbol_name")
                         }
                     }
                 }
@@ -78,7 +71,6 @@ object JsonExporter {
                         put("memberOffset", root.memberOffset)
                         put("verifiedTargetType", root.targetType)
                         put("targetAddressAtDumpTime", root.targetAddress)
-                        put("provenance", "live_itanium_RTTI_verified_relationship")
                     }
                 }
             }
@@ -88,21 +80,12 @@ object JsonExporter {
     fun buildReportJson(result: DumpResult): String = json.encodeToString(
         buildJsonObject {
             put("timestamp", result.timestamp)
-            putJsonArray("capabilities") {
-                for (item in result.capabilities) {
-                    addJsonObject {
-                        put("level", item.level)
-                        put("feature", item.feature)
-                        put("message", item.message)
-                    }
-                }
-            }
             put("schemaScopes", result.schemas.size)
             put("schemaClasses", result.schemas.sumOf { it.classes.size })
             put("schemaFields", result.schemas.sumOf { scope -> scope.classes.sumOf { it.fields.size } })
             put("namedInterfaces", result.interfaces.values.sumOf { it.size })
             put("rttiRuntimeRoots", result.runtimeRoots.size)
-            put("validatedOffsets", result.offsets.values.sumOf { it.size })
+            put("offsets", result.offsets.values.sumOf { it.size })
         }
     )
 

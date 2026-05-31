@@ -4,7 +4,6 @@ import org.kvxd.source2offset.core.MemReader
 import org.kvxd.source2offset.core.Module
 import org.kvxd.source2offset.elf.ElfParser
 import org.kvxd.source2offset.engine.rtti.RttiInspector
-import org.kvxd.source2offset.export.CapabilityMessage
 import org.kvxd.source2offset.export.InterfaceEntry
 import org.kvxd.source2offset.export.OffsetEntry
 import org.kvxd.source2offset.export.RuntimeRootEntry
@@ -12,7 +11,6 @@ import org.kvxd.source2offset.export.normaliseModuleName
 
 data class OffsetDiscoveryResult(
     val offsets: Map<String, List<OffsetEntry>>,
-    val messages: List<CapabilityMessage>,
 )
 
 @Suppress("UNUSED_PARAMETER")
@@ -23,14 +21,13 @@ class NativeOffsetDumper(
     private val readFile: (String) -> ByteArray,
 ) {
     private val entries = mutableListOf<OffsetEntry>()
-    private val messages = mutableListOf<CapabilityMessage>()
 
     fun dump(
         interfaces: List<InterfaceEntry>,
         runtimeRoots: List<RuntimeRootEntry>,
         log: (String) -> Unit = {},
     ): OffsetDiscoveryResult {
-        log("Discovering native Linux global offsets with Osiris-style patterns...")
+        log("Dumping raw offsets...")
 
         globalRules.forEach { resolveGlobal(it, log) }
         resolveButtons(log)
@@ -40,27 +37,7 @@ class NativeOffsetDumper(
             .groupBy { normaliseModuleName(it.moduleName) }
             .mapValues { (_, values) -> values.sortedBy { it.name } }
 
-        messages += CapabilityMessage(
-            if (grouped.isEmpty()) "warning" else "ok",
-            "global_offsets",
-            if (grouped.isEmpty()) {
-                "No reviewed native Linux pattern matched uniquely in this run."
-            } else {
-                "Emitted ${grouped.values.sumOf { it.size }} native Linux target(s) from unique patterns and validated live KeyButton state objects."
-            },
-        )
-        messages += CapabilityMessage(
-            "provenance",
-            "osiris_linux_patterns",
-            "Patterns are adapted from Osiris Linux MemoryPatterns (MIT); schema-reflected fields are still emitted from live SchemaSystem rather than duplicated here.",
-        )
-        messages += CapabilityMessage(
-            "unavailable",
-            "dwLocalPlayerPawn",
-            "Osiris Linux does not define a local-pawn global pattern, and the historical a2x Linux dwLocalPlayerPawn rule does not match this supplied libclient.so. Derive the local pawn from dwLocalPlayerController + reflected m_hPlayerPawn through CGameEntitySystem.",
-        )
-
-        return OffsetDiscoveryResult(grouped, messages)
+        return OffsetDiscoveryResult(grouped)
     }
 
     private fun resolveGlobal(rule: GlobalRule, log: (String) -> Unit) {
@@ -69,11 +46,6 @@ class NativeOffsetDumper(
         val elf = runCatching { ElfParser(image) }.getOrNull() ?: return
         val hits = BytePattern(rule.pattern).findAll(image)
         if (hits.size != 1) {
-            messages += CapabilityMessage(
-                "unavailable",
-                rule.name,
-                "Pattern in ${module.name} matched ${hits.size} location(s); expected one.",
-            )
             return
         }
 
@@ -86,6 +58,13 @@ class NativeOffsetDumper(
 
             is Extraction.I8 -> image[hits.single() + extraction.valueOffset].toLong() and 0xFF
             is Extraction.I32 -> readI32(image, hits.single() + extraction.valueOffset).toLong()
+            is Extraction.CallTargetRipRelative -> {
+                val callDisplacement = readI32(image, hits.single() + extraction.callDisplacementOffset)
+                val targetRva = instructionRva + extraction.callDisplacementOffset + 4 + callDisplacement
+                val targetFileOffset = elf.rvaToFileOffset(targetRva)?.toInt() ?: return
+                val targetDisplacement = readI32(image, targetFileOffset + extraction.targetDisplacementOffset)
+                targetRva + extraction.targetDisplacementOffset + extraction.targetBytesAfterDisplacement + targetDisplacement
+            }
         }
 
         emit(
@@ -95,8 +74,6 @@ class NativeOffsetDumper(
                 rva = rva,
                 access = rule.access,
                 discovery = "osiris_linux_pattern",
-                validation = "unique_pattern_match",
-                confidence = "signature",
                 note = rule.note,
             ),
             log,
@@ -108,18 +85,13 @@ class NativeOffsetDumper(
         val image = runCatching { readFile(module.path) }.getOrNull() ?: return
         val hits = BytePattern(rule.pattern).findAll(image)
         if (hits.size != 1) {
-            messages += CapabilityMessage(
-                "unavailable",
-                rule.name,
-                "Pattern in ${module.name} matched ${hits.size} location(s); expected one.",
-            )
             return
         }
 
         val offset = when (val extraction = rule.extraction) {
             is Extraction.I8 -> image[hits.single() + extraction.valueOffset].toLong() and 0xFF
             is Extraction.I32 -> readI32(image, hits.single() + extraction.valueOffset).toLong()
-            is Extraction.RipRelative -> return
+            is Extraction.RipRelative, is Extraction.CallTargetRipRelative -> return
         }
 
         emit(
@@ -129,8 +101,6 @@ class NativeOffsetDumper(
                 rva = offset,
                 access = "member_offset",
                 discovery = "osiris_linux_pattern",
-                validation = "unique_pattern_match",
-                confidence = "signature",
                 note = rule.note,
             ),
             log,
@@ -152,22 +122,11 @@ class NativeOffsetDumper(
             ?.rva
 
         if (csgoInputRva == null) {
-            messages += CapabilityMessage(
-                "unavailable",
-                "buttons",
-                "dwCSGOInput was not emitted, so live KeyButton state discovery could not run.",
-            )
             return
         }
 
         val csgoInput = client.base + csgoInputRva
 
-        /*
-         * Do not compare button RVAs against client.size.
-         *
-         * KeyButton objects live in writable mapped/BSS storage, which may be
-         * beyond the file-backed size reported by Module.size.
-         */
         val candidates = mutableMapOf<String, MutableList<ButtonCandidate>>()
         val encountered = mutableSetOf<String>()
 
@@ -199,24 +158,12 @@ class NativeOffsetDumper(
             val stateRva = stateAddress - client.base
 
             if (stateRva < 0L) {
-                messages += CapabilityMessage(
-                    "rejected",
-                    "buttons_$buttonName",
-                    "Live KeyButton.state for '$buttonName' resolved below the libclient.so base: " +
-                            "stateAddress=0x${stateAddress.toULong().toString(16)}, " +
-                            "clientBase=0x${client.base.toULong().toString(16)}.",
-                )
                 continue
             }
 
             val state = runCatching {
                 mem.readU32(stateAddress)
             }.getOrElse {
-                messages += CapabilityMessage(
-                    "rejected",
-                    "buttons_$buttonName",
-                    "Live KeyButton.state for '$buttonName' was not readable.",
-                )
                 continue
             }
 
@@ -237,23 +184,9 @@ class NativeOffsetDumper(
                 .distinctBy { it.stateRva }
 
             when {
-                matches.isEmpty() && buttonName !in encountered -> {
-                    messages += CapabilityMessage(
-                        "unavailable",
-                        "buttons_$buttonName",
-                        "No live KeyButton named '$buttonName' was reachable from dwCSGOInput in this run.",
-                    )
-                }
+                matches.isEmpty() && buttonName !in encountered -> Unit
 
-                matches.size > 1 -> {
-                    messages += CapabilityMessage(
-                        "rejected",
-                        "buttons_$buttonName",
-                        "Multiple distinct KeyButton.state RVAs were found for '$buttonName': " +
-                                matches.joinToString { "0x${it.stateRva.toULong().toString(16)}" } +
-                                ".",
-                    )
-                }
+                matches.size > 1 -> Unit
 
                 matches.size == 1 -> {
                     val match = matches.single()
@@ -265,9 +198,6 @@ class NativeOffsetDumper(
                             rva = match.stateRva,
                             access = "direct_address_rva",
                             discovery = "live_ccsgoinput_keybutton_state",
-                            validation = "CCSGOInput slot ${match.slot} points to readable KeyButton '${match.rawName}'; " +
-                                    "state field at +0x30 read successfully.",
-                            confidence = "validated",
                             note = "a2x-compatible KeyButton.state RVA. " +
                                     "This is a 32-bit state field; write the complete state value.",
                         ),
@@ -305,6 +235,11 @@ class NativeOffsetDumper(
         data class RipRelative(val displacementOffset: Int, val bytesAfterDisplacement: Int = 4) : Extraction
         data class I8(val valueOffset: Int) : Extraction
         data class I32(val valueOffset: Int) : Extraction
+        data class CallTargetRipRelative(
+            val callDisplacementOffset: Int,
+            val targetDisplacementOffset: Int,
+            val targetBytesAfterDisplacement: Int = 4,
+        ) : Extraction
     }
 
     private data class GlobalRule(
@@ -415,6 +350,30 @@ class NativeOffsetDumper(
                 access = "direct_address_rva",
                 extraction = Extraction.RipRelative(3),
                 note = "Linux CCSGOInput direct global object, verified through CreateMove vtable method.",
+            ),
+            GlobalRule(
+                name = "sdlKeyboardFocus",
+                moduleName = "libSDL3.so.0",
+                pattern =
+                    "48 83 3D ?? ?? ?? ?? 00 " + // CMP qword ptr [video_device],0
+                            "74 ?? " +
+                            "53 " +
+                            "89 FB " +
+                            "40 84 FF " +
+                            "74 ?? " +
+                            "E8 ?? ?? ?? ?? " +    // CALL SDL_GetKeyboardFocus implementation
+                            "48 85 C0 " +
+                            "74 ?? " +
+                            "88 1D ?? ?? ?? ?? " +
+                            "31 FF " +
+                            "5B " +
+                            "E9",
+                access = "pointer_slot_rva",
+                extraction = Extraction.CallTargetRipRelative(
+                    callDisplacementOffset = 19,
+                    targetDisplacementOffset = 3,
+                ),
+                note = "Bundled SDL3 keyboard-focus window pointer. Null when the CS2 Wayland window has no keyboard focus.",
             ),
         )
 
