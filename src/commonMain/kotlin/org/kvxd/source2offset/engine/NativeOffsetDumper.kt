@@ -33,6 +33,7 @@ class NativeOffsetDumper(
         log("Discovering native Linux global offsets with Osiris-style patterns...")
 
         globalRules.forEach { resolveGlobal(it, log) }
+        resolveButtons(log)
         memberRules.forEach { resolveMember(it, log) }
 
         val grouped = entries
@@ -134,6 +135,118 @@ class NativeOffsetDumper(
             ),
             log,
         )
+    }
+
+    private fun resolveButtons(log: (String) -> Unit) {
+        val client = modules.firstOrNull { it.name == "libclient.so" } ?: return
+
+        val csgoInputRva = entries
+            .firstOrNull { it.moduleName == client.name && it.name == "dwCSGOInput" }
+            ?.rva
+
+        if (csgoInputRva == null) {
+            messages += CapabilityMessage(
+                "unavailable",
+                "buttons",
+                "dwCSGOInput was not emitted, so live KeyButton state discovery could not run.",
+            )
+            return
+        }
+
+        val csgoInput = client.base + csgoInputRva
+        val discovered = mutableMapOf<String, Long>()
+
+        for (slot in 0 until CCSGO_INPUT_BUTTON_SLOT_COUNT) {
+            val buttonObject = runCatching {
+                mem.readPtr(
+                    csgoInput + CCSGO_INPUT_BUTTON_POINTERS + slot * POINTER_SIZE,
+                )
+            }.getOrNull() ?: continue
+
+            if (buttonObject == 0L) continue
+
+            val namePointer = runCatching {
+                mem.readPtr(buttonObject + KEY_BUTTON_NAME_POINTER)
+            }.getOrNull() ?: continue
+
+            if (namePointer == 0L) continue
+
+            val rawName = runCatching {
+                mem.readString(namePointer, 64)
+            }.getOrNull() ?: continue
+
+            val buttonName = normaliseButtonName(rawName) ?: continue
+            if (buttonName !in SUPPORTED_BUTTON_NAMES) continue
+
+            val stateAddress = buttonObject + KEY_BUTTON_STATE
+            val stateRva = stateAddress - client.base
+
+            if (stateRva < 0L || stateRva >= client.size.toByte()) {
+                messages += CapabilityMessage(
+                    "rejected",
+                    "buttons_$buttonName",
+                    "Live button object for '$buttonName' resolved outside libclient.so static storage.",
+                )
+                continue
+            }
+
+            val readable = runCatching {
+                mem.readU32(stateAddress)
+            }.isSuccess
+
+            if (!readable) {
+                messages += CapabilityMessage(
+                    "rejected",
+                    "buttons_$buttonName",
+                    "Live KeyButton.state for '$buttonName' was not readable.",
+                )
+                continue
+            }
+
+            val previous = discovered.put(buttonName, stateRva)
+            if (previous != null && previous != stateRva) {
+                messages += CapabilityMessage(
+                    "rejected",
+                    "buttons_$buttonName",
+                    "Multiple distinct KeyButton.state RVAs were found for '$buttonName'.",
+                )
+                continue
+            }
+
+            emit(
+                OffsetEntry(
+                    name = "buttons_$buttonName",
+                    moduleName = client.name,
+                    rva = stateRva,
+                    access = "direct_address_rva",
+                    discovery = "live_ccsgoinput_keybutton_state",
+                    validation = "CCSGOInput slot $slot points to a readable KeyButton named '$rawName'; emitted state field at +0x30.",
+                    confidence = "validated",
+                    note = "a2x-compatible KeyButton.state RVA. This is a 32-bit state field.",
+                ),
+                log,
+            )
+        }
+
+        for (expectedName in SUPPORTED_BUTTON_NAMES) {
+            if (expectedName !in discovered) {
+                messages += CapabilityMessage(
+                    "unavailable",
+                    "buttons_$expectedName",
+                    "No validated live KeyButton named '$expectedName' was reachable from dwCSGOInput in this run.",
+                )
+            }
+        }
+    }
+
+    private fun normaliseButtonName(rawName: String): String? {
+        val normalised = rawName
+            .trim()
+            .trimStart('+')
+            .lowercase()
+            .replace(Regex("[^a-z0-9_]"), "")
+
+        return normalised.takeIf { it.isNotEmpty() }
     }
 
     private fun emit(entry: OffsetEntry, log: (String) -> Unit) {
@@ -246,6 +359,24 @@ class NativeOffsetDumper(
                 "80 BF ?? ?? ?? ?? 00 0F 84 ?? ?? ?? ?? 48 8D 05 ?? ?? ?? ?? 8B 10",
                 "direct_address_rva", Extraction.RipRelative(16), "Osiris PlantedC4sPointer (vector storage).",
             ),
+            GlobalRule(
+                name = "dwCSGOInput",
+                moduleName = "libclient.so",
+                pattern =
+                    "4C 8D 3D ?? ?? ?? ?? " +        // LEA R15,[g_CCSGOInput]
+                            "E8 ?? ?? ?? ?? " +       // CALL FUN_01ad5da0
+                            "48 89 C7 " +             // MOV RDI,RAX
+                            "48 85 C0 " +             // TEST RAX,RAX
+                            "0F 84 ?? ?? ?? ?? " +    // JZ ...
+                            "48 8B 00 " +             // MOV RAX,[RAX]
+                            "FF 50 08 " +             // CALL [RAX + 0x8]
+                            "BA 01 00 00 00 " +       // MOV EDX,1
+                            "84 C0 " +                // TEST AL,AL
+                            "0F 84 ?? ?? ?? ??",      // JZ ...
+                access = "direct_address_rva",
+                extraction = Extraction.RipRelative(3),
+                note = "Linux CCSGOInput direct global object, verified through CreateMove vtable method.",
+            ),
         )
 
         private val memberRules = listOf(
@@ -259,6 +390,32 @@ class NativeOffsetDumper(
                 "49 8B 8F ?? ?? ?? ?? 0F B7",
                 Extraction.I32(3), "Osiris OffsetToEntityClasses.",
             ),
+        )
+
+        private const val CCSGO_INPUT_BUTTON_POINTERS = 0x10L
+        private const val CCSGO_INPUT_BUTTON_SLOT_COUNT = 64
+        private const val POINTER_SIZE = 0x8L
+
+        private const val KEY_BUTTON_NAME_POINTER = 0x08L
+        private const val KEY_BUTTON_STATE = 0x30L
+
+        private val SUPPORTED_BUTTON_NAMES = linkedSetOf(
+            "attack",
+            "attack2",
+            "back",
+            "duck",
+            "forward",
+            "jump",
+            "left",
+            "lookatweapon",
+            "reload",
+            "right",
+            "showscores",
+            "sprint",
+            "turnleft",
+            "turnright",
+            "use",
+            "zoom",
         )
     }
 }
