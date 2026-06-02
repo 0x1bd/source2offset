@@ -9,107 +9,107 @@
       "access": "member_offset"
     },
     "buttons_attack": {
-      "rva": 73862224,
+      "rva": 73865552,
       "access": "direct_address_rva"
     },
     "buttons_attack2": {
-      "rva": 73862064,
+      "rva": 73865392,
       "access": "direct_address_rva"
     },
     "buttons_back": {
-      "rva": 73861168,
+      "rva": 73864496,
       "access": "direct_address_rva"
     },
     "buttons_duck": {
-      "rva": 73859984,
+      "rva": 73863312,
       "access": "direct_address_rva"
     },
     "buttons_forward": {
-      "rva": 73861328,
+      "rva": 73864656,
       "access": "direct_address_rva"
     },
     "buttons_jump": {
-      "rva": 73860144,
+      "rva": 73863472,
       "access": "direct_address_rva"
     },
     "buttons_left": {
-      "rva": 73861008,
+      "rva": 73864336,
       "access": "direct_address_rva"
     },
     "buttons_lookatweapon": {
-      "rva": 73996464,
+      "rva": 73999792,
       "access": "direct_address_rva"
     },
     "buttons_reload": {
-      "rva": 73862384,
+      "rva": 73865712,
       "access": "direct_address_rva"
     },
     "buttons_right": {
-      "rva": 73860848,
+      "rva": 73864176,
       "access": "direct_address_rva"
     },
     "buttons_showscores": {
-      "rva": 73996784,
+      "rva": 74000112,
       "access": "direct_address_rva"
     },
     "buttons_sprint": {
-      "rva": 73862544,
+      "rva": 73865872,
       "access": "direct_address_rva"
     },
     "buttons_turnleft": {
-      "rva": 73861904,
+      "rva": 73865232,
       "access": "direct_address_rva"
     },
     "buttons_turnright": {
-      "rva": 73861744,
+      "rva": 73865072,
       "access": "direct_address_rva"
     },
     "buttons_use": {
-      "rva": 73860304,
+      "rva": 73863632,
       "access": "direct_address_rva"
     },
     "buttons_zoom": {
-      "rva": 73996624,
+      "rva": 73999952,
       "access": "direct_address_rva"
     },
     "dwCSGOInput": {
-      "rva": 73993184,
+      "rva": 73996512,
       "access": "direct_address_rva"
     },
     "dwGameEntitySystem": {
-      "rva": 73770704,
+      "rva": 73774032,
       "access": "pointer_slot_rva"
     },
     "dwGameRules": {
-      "rva": 73899600,
+      "rva": 73902928,
       "access": "pointer_slot_rva"
     },
     "dwGlobalVars": {
-      "rva": 71427928,
+      "rva": 71431320,
       "access": "pointer_slot_rva"
     },
     "dwLocalPlayerController": {
-      "rva": 73705400,
+      "rva": 73708728,
       "access": "pointer_slot_rva"
     },
     "dwPlantedC4s": {
-      "rva": 73962848,
+      "rva": 73966176,
       "access": "direct_address_rva"
     },
     "dwViewMatrix": {
-      "rva": 73933504,
+      "rva": 73936832,
       "access": "direct_address_rva"
     },
     "dwViewRender": {
-      "rva": 73933776,
+      "rva": 73937104,
       "access": "pointer_slot_rva"
     },
     "dwViewToProjectionMatrix": {
-      "rva": 73933568,
+      "rva": 73936896,
       "access": "direct_address_rva"
     },
     "dwWorldToProjectionMatrix": {
-      "rva": 73933504,
+      "rva": 73936832,
       "access": "direct_address_rva"
     }
   },

@@ -15,87 +15,87 @@ object Offsets {
         const val CGameEntitySystem_m_EntityList: Long = 0x10L
         fun CGameEntitySystem_m_EntityListAddress(objectAddress: Long): Long = objectAddress + CGameEntitySystem_m_EntityList
 
-        const val buttons_attack: Long = 0x4670C50L
+        const val buttons_attack: Long = 0x4671950L
         fun buttons_attackAddress(moduleBase: Long): Long = moduleBase + buttons_attack
 
-        const val buttons_attack2: Long = 0x4670BB0L
+        const val buttons_attack2: Long = 0x46718B0L
         fun buttons_attack2Address(moduleBase: Long): Long = moduleBase + buttons_attack2
 
-        const val buttons_back: Long = 0x4670830L
+        const val buttons_back: Long = 0x4671530L
         fun buttons_backAddress(moduleBase: Long): Long = moduleBase + buttons_back
 
-        const val buttons_duck: Long = 0x4670390L
+        const val buttons_duck: Long = 0x4671090L
         fun buttons_duckAddress(moduleBase: Long): Long = moduleBase + buttons_duck
 
-        const val buttons_forward: Long = 0x46708D0L
+        const val buttons_forward: Long = 0x46715D0L
         fun buttons_forwardAddress(moduleBase: Long): Long = moduleBase + buttons_forward
 
-        const val buttons_jump: Long = 0x4670430L
+        const val buttons_jump: Long = 0x4671130L
         fun buttons_jumpAddress(moduleBase: Long): Long = moduleBase + buttons_jump
 
-        const val buttons_left: Long = 0x4670790L
+        const val buttons_left: Long = 0x4671490L
         fun buttons_leftAddress(moduleBase: Long): Long = moduleBase + buttons_left
 
-        const val buttons_lookatweapon: Long = 0x46918B0L
+        const val buttons_lookatweapon: Long = 0x46925B0L
         fun buttons_lookatweaponAddress(moduleBase: Long): Long = moduleBase + buttons_lookatweapon
 
-        const val buttons_reload: Long = 0x4670CF0L
+        const val buttons_reload: Long = 0x46719F0L
         fun buttons_reloadAddress(moduleBase: Long): Long = moduleBase + buttons_reload
 
-        const val buttons_right: Long = 0x46706F0L
+        const val buttons_right: Long = 0x46713F0L
         fun buttons_rightAddress(moduleBase: Long): Long = moduleBase + buttons_right
 
-        const val buttons_showscores: Long = 0x46919F0L
+        const val buttons_showscores: Long = 0x46926F0L
         fun buttons_showscoresAddress(moduleBase: Long): Long = moduleBase + buttons_showscores
 
-        const val buttons_sprint: Long = 0x4670D90L
+        const val buttons_sprint: Long = 0x4671A90L
         fun buttons_sprintAddress(moduleBase: Long): Long = moduleBase + buttons_sprint
 
-        const val buttons_turnleft: Long = 0x4670B10L
+        const val buttons_turnleft: Long = 0x4671810L
         fun buttons_turnleftAddress(moduleBase: Long): Long = moduleBase + buttons_turnleft
 
-        const val buttons_turnright: Long = 0x4670A70L
+        const val buttons_turnright: Long = 0x4671770L
         fun buttons_turnrightAddress(moduleBase: Long): Long = moduleBase + buttons_turnright
 
-        const val buttons_use: Long = 0x46704D0L
+        const val buttons_use: Long = 0x46711D0L
         fun buttons_useAddress(moduleBase: Long): Long = moduleBase + buttons_use
 
-        const val buttons_zoom: Long = 0x4691950L
+        const val buttons_zoom: Long = 0x4692650L
         fun buttons_zoomAddress(moduleBase: Long): Long = moduleBase + buttons_zoom
 
-        const val dwCSGOInput: Long = 0x4690BE0L
+        const val dwCSGOInput: Long = 0x46918E0L
         fun dwCSGOInputAddress(moduleBase: Long): Long = moduleBase + dwCSGOInput
 
-        const val dwGameEntitySystem: Long = 0x465A6D0L
+        const val dwGameEntitySystem: Long = 0x465B3D0L
         fun dwGameEntitySystemSlotAddress(moduleBase: Long): Long = moduleBase + dwGameEntitySystem
         fun resolveDwGameEntitySystem(moduleBase: Long, mem: UnsafeKt): Long = mem.readLong(dwGameEntitySystemSlotAddress(moduleBase))
 
-        const val dwGameRules: Long = 0x4679E50L
+        const val dwGameRules: Long = 0x467AB50L
         fun dwGameRulesSlotAddress(moduleBase: Long): Long = moduleBase + dwGameRules
         fun resolveDwGameRules(moduleBase: Long, mem: UnsafeKt): Long = mem.readLong(dwGameRulesSlotAddress(moduleBase))
 
-        const val dwGlobalVars: Long = 0x441E758L
+        const val dwGlobalVars: Long = 0x441F498L
         fun dwGlobalVarsSlotAddress(moduleBase: Long): Long = moduleBase + dwGlobalVars
         fun resolveDwGlobalVars(moduleBase: Long, mem: UnsafeKt): Long = mem.readLong(dwGlobalVarsSlotAddress(moduleBase))
 
-        const val dwLocalPlayerController: Long = 0x464A7B8L
+        const val dwLocalPlayerController: Long = 0x464B4B8L
         fun dwLocalPlayerControllerSlotAddress(moduleBase: Long): Long = moduleBase + dwLocalPlayerController
         fun resolveDwLocalPlayerController(moduleBase: Long, mem: UnsafeKt): Long = mem.readLong(dwLocalPlayerControllerSlotAddress(moduleBase))
 
-        const val dwPlantedC4s: Long = 0x4689560L
+        const val dwPlantedC4s: Long = 0x468A260L
         fun dwPlantedC4sAddress(moduleBase: Long): Long = moduleBase + dwPlantedC4s
 
-        const val dwViewMatrix: Long = 0x46822C0L
+        const val dwViewMatrix: Long = 0x4682FC0L
         fun dwViewMatrixAddress(moduleBase: Long): Long = moduleBase + dwViewMatrix
 
-        const val dwViewRender: Long = 0x46823D0L
+        const val dwViewRender: Long = 0x46830D0L
         fun dwViewRenderSlotAddress(moduleBase: Long): Long = moduleBase + dwViewRender
         fun resolveDwViewRender(moduleBase: Long, mem: UnsafeKt): Long = mem.readLong(dwViewRenderSlotAddress(moduleBase))
 
-        const val dwViewToProjectionMatrix: Long = 0x4682300L
+        const val dwViewToProjectionMatrix: Long = 0x4683000L
         fun dwViewToProjectionMatrixAddress(moduleBase: Long): Long = moduleBase + dwViewToProjectionMatrix
 
-        const val dwWorldToProjectionMatrix: Long = 0x46822C0L
+        const val dwWorldToProjectionMatrix: Long = 0x4682FC0L
         fun dwWorldToProjectionMatrixAddress(moduleBase: Long): Long = moduleBase + dwWorldToProjectionMatrix
 
     }

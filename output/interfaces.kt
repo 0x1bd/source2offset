@@ -6,7 +6,7 @@
 package org.kvxd.source2offset.offsets
 
 object client_Interfaces {
-    const val Source2ClientPrediction001: Long = 0x467B000L
+    const val Source2ClientPrediction001: Long = 0x467BD00L
 }
 
 object engine2_Interfaces {
