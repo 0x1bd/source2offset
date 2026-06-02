@@ -9,11 +9,3635 @@ import org.kvxd.unsafeKt.UnsafeKt
 
 object Offsets {
     object Client {
+        const val ActiveModelConfig_t_m_AssociatedEntities: Long = 0x40L
+        fun ActiveModelConfig_t_m_AssociatedEntitiesAddress(objectAddress: Long): Long = objectAddress + ActiveModelConfig_t_m_AssociatedEntities
+
+        const val ActiveModelConfig_t_m_AssociatedEntityNames: Long = 0x58L
+        fun ActiveModelConfig_t_m_AssociatedEntityNamesAddress(objectAddress: Long): Long = objectAddress + ActiveModelConfig_t_m_AssociatedEntityNames
+
+        const val ActiveModelConfig_t_m_Name: Long = 0x38L
+        fun ActiveModelConfig_t_m_NameAddress(objectAddress: Long): Long = objectAddress + ActiveModelConfig_t_m_Name
+
+        const val AnimGraph2SerializedPoseRecipeSlot_t_m_topology: Long = 0x30L
+        fun AnimGraph2SerializedPoseRecipeSlot_t_m_topologyAddress(objectAddress: Long): Long = objectAddress + AnimGraph2SerializedPoseRecipeSlot_t_m_topology
+
+        const val CAttributeManager_m_ProviderType: Long = 0x2CL
+        fun CAttributeManager_m_ProviderTypeAddress(objectAddress: Long): Long = objectAddress + CAttributeManager_m_ProviderType
+
+        const val CAttributeManager_m_hOuter: Long = 0x24L
+        fun CAttributeManager_m_hOuterAddress(objectAddress: Long): Long = objectAddress + CAttributeManager_m_hOuter
+
+        const val CAttributeManager_m_iReapplyProvisionParity: Long = 0x20L
+        fun CAttributeManager_m_iReapplyProvisionParityAddress(objectAddress: Long): Long = objectAddress + CAttributeManager_m_iReapplyProvisionParity
+
+        const val CBaseAnimGraphController_m_SerializePoseRecipeAG2Dynamic: Long = 0x3F0L
+        fun CBaseAnimGraphController_m_SerializePoseRecipeAG2DynamicAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_SerializePoseRecipeAG2Dynamic
+
+        const val CBaseAnimGraphController_m_SerializePoseRecipeAG2Slots: Long = 0x388L
+        fun CBaseAnimGraphController_m_SerializePoseRecipeAG2SlotsAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_SerializePoseRecipeAG2Slots
+
+        const val CBaseAnimGraphController_m_flSeqFixedCycle: Long = 0xC8L
+        fun CBaseAnimGraphController_m_flSeqFixedCycleAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_flSeqFixedCycle
+
+        const val CBaseAnimGraphController_m_flSeqStartTime: Long = 0xC4L
+        fun CBaseAnimGraphController_m_flSeqStartTimeAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_flSeqStartTime
+
+        const val CBaseAnimGraphController_m_hGraphDefinitionAG2: Long = 0x380L
+        fun CBaseAnimGraphController_m_hGraphDefinitionAG2Address(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_hGraphDefinitionAG2
+
+        const val CBaseAnimGraphController_m_nAnimLoopMode: Long = 0xCCL
+        fun CBaseAnimGraphController_m_nAnimLoopModeAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nAnimLoopMode
+
+        const val CBaseAnimGraphController_m_nAnimationAlgorithm: Long = 0x18L
+        fun CBaseAnimGraphController_m_nAnimationAlgorithmAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nAnimationAlgorithm
+
+        const val CBaseAnimGraphController_m_nSecondarySkeletonMasterCount: Long = 0x50L
+        fun CBaseAnimGraphController_m_nSecondarySkeletonMasterCountAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nSecondarySkeletonMasterCount
+
+        const val CBaseAnimGraphController_m_nSerializePoseRecipeAG2ActiveSlot: Long = 0x408L
+        fun CBaseAnimGraphController_m_nSerializePoseRecipeAG2ActiveSlotAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nSerializePoseRecipeAG2ActiveSlot
+
+        const val CBaseAnimGraphController_m_nSerializePoseRecipeVersionAG2: Long = 0x40CL
+        fun CBaseAnimGraphController_m_nSerializePoseRecipeVersionAG2Address(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nSerializePoseRecipeVersionAG2
+
+        const val CBaseAnimGraphController_m_nServerGraphInstanceIteration: Long = 0x410L
+        fun CBaseAnimGraphController_m_nServerGraphInstanceIterationAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nServerGraphInstanceIteration
+
+        const val CBaseAnimGraphController_m_nServerSerializationContextIteration: Long = 0x414L
+        fun CBaseAnimGraphController_m_nServerSerializationContextIterationAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_nServerSerializationContextIteration
+
+        const val CBaseAnimGraphController_m_primaryGraphId: Long = 0x418L
+        fun CBaseAnimGraphController_m_primaryGraphIdAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_primaryGraphId
+
+        const val CBaseAnimGraphController_m_vecExternalClipIds: Long = 0x438L
+        fun CBaseAnimGraphController_m_vecExternalClipIdsAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_vecExternalClipIds
+
+        const val CBaseAnimGraphController_m_vecExternalGraphIds: Long = 0x420L
+        fun CBaseAnimGraphController_m_vecExternalGraphIdsAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_vecExternalGraphIds
+
+        const val CBaseAnimGraphController_m_vecSecondarySkeletonSlotIDs: Long = 0x20L
+        fun CBaseAnimGraphController_m_vecSecondarySkeletonSlotIDsAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_vecSecondarySkeletonSlotIDs
+
+        const val CBaseAnimGraphController_m_vecSecondarySkeletons: Long = 0x38L
+        fun CBaseAnimGraphController_m_vecSecondarySkeletonsAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraphController_m_vecSecondarySkeletons
+
+        const val CBaseAnimGraph_m_RagdollPose: Long = 0x1030L
+        fun CBaseAnimGraph_m_RagdollPoseAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_RagdollPose
+
+        const val CBaseAnimGraph_m_bAnimGraphUpdateEnabled: Long = 0xFF8L
+        fun CBaseAnimGraph_m_bAnimGraphUpdateEnabledAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_bAnimGraphUpdateEnabled
+
+        const val CBaseAnimGraph_m_bInitiallyPopulateInterpHistory: Long = 0xFE8L
+        fun CBaseAnimGraph_m_bInitiallyPopulateInterpHistoryAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_bInitiallyPopulateInterpHistory
+
+        const val CBaseAnimGraph_m_bRagdollClientSide: Long = 0x1079L
+        fun CBaseAnimGraph_m_bRagdollClientSideAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_bRagdollClientSide
+
+        const val CBaseAnimGraph_m_bRagdollEnabled: Long = 0x1078L
+        fun CBaseAnimGraph_m_bRagdollEnabledAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_bRagdollEnabled
+
+        const val CBaseAnimGraph_m_nForceBone: Long = 0x1008L
+        fun CBaseAnimGraph_m_nForceBoneAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_nForceBone
+
+        const val CBaseAnimGraph_m_vecForce: Long = 0xFFCL
+        fun CBaseAnimGraph_m_vecForceAddress(objectAddress: Long): Long = objectAddress + CBaseAnimGraph_m_vecForce
+
+        const val CBasePlayerController_m_bKnownTeamMismatch: Long = 0x840L
+        fun CBasePlayerController_m_bKnownTeamMismatchAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_bKnownTeamMismatch
+
+        const val CBasePlayerController_m_bNoClipEnabled: Long = 0x909L
+        fun CBasePlayerController_m_bNoClipEnabledAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_bNoClipEnabled
+
+        const val CBasePlayerController_m_hPawn: Long = 0x83CL
+        fun CBasePlayerController_m_hPawnAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_hPawn
+
+        const val CBasePlayerController_m_iConnected: Long = 0x86CL
+        fun CBasePlayerController_m_iConnectedAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_iConnected
+
+        const val CBasePlayerController_m_iDesiredFOV: Long = 0x90CL
+        fun CBasePlayerController_m_iDesiredFOVAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_iDesiredFOV
+
+        const val CBasePlayerController_m_iMostConnected: Long = 0x870L
+        fun CBasePlayerController_m_iMostConnectedAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_iMostConnected
+
+        const val CBasePlayerController_m_iszPlayerName: Long = 0x874L
+        fun CBasePlayerController_m_iszPlayerNameAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_iszPlayerName
+
+        const val CBasePlayerController_m_nTickBase: Long = 0x838L
+        fun CBasePlayerController_m_nTickBaseAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_nTickBase
+
+        const val CBasePlayerController_m_steamID: Long = 0x900L
+        fun CBasePlayerController_m_steamIDAddress(objectAddress: Long): Long = objectAddress + CBasePlayerController_m_steamID
+
+        const val CBodyComponentBaseAnimGraph_m_animationController: Long = 0x4F0L
+        fun CBodyComponentBaseAnimGraph_m_animationControllerAddress(objectAddress: Long): Long = objectAddress + CBodyComponentBaseAnimGraph_m_animationController
+
+        const val CBodyComponentPoint_m_sceneNode: Long = 0x80L
+        fun CBodyComponentPoint_m_sceneNodeAddress(objectAddress: Long): Long = objectAddress + CBodyComponentPoint_m_sceneNode
+
+        const val CBodyComponentSkeletonInstance_m_skeletonInstance: Long = 0x80L
+        fun CBodyComponentSkeletonInstance_m_skeletonInstanceAddress(objectAddress: Long): Long = objectAddress + CBodyComponentSkeletonInstance_m_skeletonInstance
+
+        const val CBombTarget_m_bBombPlantedHere: Long = 0xFFDL
+        fun CBombTarget_m_bBombPlantedHereAddress(objectAddress: Long): Long = objectAddress + CBombTarget_m_bBombPlantedHere
+
+        const val CCSGameModeRules_ArmsRace_m_WeaponSequence: Long = 0x30L
+        fun CCSGameModeRules_ArmsRace_m_WeaponSequenceAddress(objectAddress: Long): Long = objectAddress + CCSGameModeRules_ArmsRace_m_WeaponSequence
+
+        const val CCSGameModeRules_Deathmatch_m_flDMBonusStartTime: Long = 0x30L
+        fun CCSGameModeRules_Deathmatch_m_flDMBonusStartTimeAddress(objectAddress: Long): Long = objectAddress + CCSGameModeRules_Deathmatch_m_flDMBonusStartTime
+
+        const val CCSGameModeRules_Deathmatch_m_flDMBonusTimeLength: Long = 0x34L
+        fun CCSGameModeRules_Deathmatch_m_flDMBonusTimeLengthAddress(objectAddress: Long): Long = objectAddress + CCSGameModeRules_Deathmatch_m_flDMBonusTimeLength
+
+        const val CCSGameModeRules_Deathmatch_m_sDMBonusWeapon: Long = 0x38L
+        fun CCSGameModeRules_Deathmatch_m_sDMBonusWeaponAddress(objectAddress: Long): Long = objectAddress + CCSGameModeRules_Deathmatch_m_sDMBonusWeapon
+
+        const val CCSPlayerBase_CameraServices_m_flFOVRate: Long = 0x2A4L
+        fun CCSPlayerBase_CameraServices_m_flFOVRateAddress(objectAddress: Long): Long = objectAddress + CCSPlayerBase_CameraServices_m_flFOVRate
+
+        const val CCSPlayerBase_CameraServices_m_flFOVTime: Long = 0x2A0L
+        fun CCSPlayerBase_CameraServices_m_flFOVTimeAddress(objectAddress: Long): Long = objectAddress + CCSPlayerBase_CameraServices_m_flFOVTime
+
+        const val CCSPlayerBase_CameraServices_m_hZoomOwner: Long = 0x2A8L
+        fun CCSPlayerBase_CameraServices_m_hZoomOwnerAddress(objectAddress: Long): Long = objectAddress + CCSPlayerBase_CameraServices_m_hZoomOwner
+
+        const val CCSPlayerBase_CameraServices_m_iFOV: Long = 0x298L
+        fun CCSPlayerBase_CameraServices_m_iFOVAddress(objectAddress: Long): Long = objectAddress + CCSPlayerBase_CameraServices_m_iFOV
+
+        const val CCSPlayerBase_CameraServices_m_iFOVStart: Long = 0x29CL
+        fun CCSPlayerBase_CameraServices_m_iFOVStartAddress(objectAddress: Long): Long = objectAddress + CCSPlayerBase_CameraServices_m_iFOVStart
+
+        const val CCSPlayerController_ActionTrackingServices_m_flTotalRoundDamageDealt: Long = 0x128L
+        fun CCSPlayerController_ActionTrackingServices_m_flTotalRoundDamageDealtAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_ActionTrackingServices_m_flTotalRoundDamageDealt
+
+        const val CCSPlayerController_ActionTrackingServices_m_iNumRoundKills: Long = 0x120L
+        fun CCSPlayerController_ActionTrackingServices_m_iNumRoundKillsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_ActionTrackingServices_m_iNumRoundKills
+
+        const val CCSPlayerController_ActionTrackingServices_m_iNumRoundKillsHeadshots: Long = 0x124L
+        fun CCSPlayerController_ActionTrackingServices_m_iNumRoundKillsHeadshotsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_ActionTrackingServices_m_iNumRoundKillsHeadshots
+
+        const val CCSPlayerController_ActionTrackingServices_m_matchStats: Long = 0xA8L
+        fun CCSPlayerController_ActionTrackingServices_m_matchStatsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_ActionTrackingServices_m_matchStats
+
+        const val CCSPlayerController_ActionTrackingServices_m_perRoundStats: Long = 0x40L
+        fun CCSPlayerController_ActionTrackingServices_m_perRoundStatsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_ActionTrackingServices_m_perRoundStats
+
+        const val CCSPlayerController_DamageServices_m_DamageList: Long = 0x48L
+        fun CCSPlayerController_DamageServices_m_DamageListAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_DamageServices_m_DamageList
+
+        const val CCSPlayerController_DamageServices_m_nSendUpdate: Long = 0x40L
+        fun CCSPlayerController_DamageServices_m_nSendUpdateAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_DamageServices_m_nSendUpdate
+
+        const val CCSPlayerController_InGameMoneyServices_m_iAccount: Long = 0x40L
+        fun CCSPlayerController_InGameMoneyServices_m_iAccountAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InGameMoneyServices_m_iAccount
+
+        const val CCSPlayerController_InGameMoneyServices_m_iCashSpentThisRound: Long = 0x4CL
+        fun CCSPlayerController_InGameMoneyServices_m_iCashSpentThisRoundAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InGameMoneyServices_m_iCashSpentThisRound
+
+        const val CCSPlayerController_InGameMoneyServices_m_iStartAccount: Long = 0x44L
+        fun CCSPlayerController_InGameMoneyServices_m_iStartAccountAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InGameMoneyServices_m_iStartAccount
+
+        const val CCSPlayerController_InGameMoneyServices_m_iTotalCashSpent: Long = 0x48L
+        fun CCSPlayerController_InGameMoneyServices_m_iTotalCashSpentAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InGameMoneyServices_m_iTotalCashSpent
+
+        const val CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsFriendly: Long = 0x80L
+        fun CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsFriendlyAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsFriendly
+
+        const val CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsLeader: Long = 0x78L
+        fun CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsLeaderAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsLeader
+
+        const val CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsTeacher: Long = 0x7CL
+        fun CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsTeacherAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsTeacher
+
+        const val CCSPlayerController_InventoryServices_m_nPersonaDataPublicLevel: Long = 0x74L
+        fun CCSPlayerController_InventoryServices_m_nPersonaDataPublicLevelAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_nPersonaDataPublicLevel
+
+        const val CCSPlayerController_InventoryServices_m_nPersonaDataXpTrailLevel: Long = 0x84L
+        fun CCSPlayerController_InventoryServices_m_nPersonaDataXpTrailLevelAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_nPersonaDataXpTrailLevel
+
+        const val CCSPlayerController_InventoryServices_m_rank: Long = 0x5CL
+        fun CCSPlayerController_InventoryServices_m_rankAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_rank
+
+        const val CCSPlayerController_InventoryServices_m_unMusicID: Long = 0x58L
+        fun CCSPlayerController_InventoryServices_m_unMusicIDAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_unMusicID
+
+        const val CCSPlayerController_InventoryServices_m_vecServerAuthoritativeWeaponSlots: Long = 0x88L
+        fun CCSPlayerController_InventoryServices_m_vecServerAuthoritativeWeaponSlotsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_InventoryServices_m_vecServerAuthoritativeWeaponSlots
+
+        const val CCSPlayerController_m_bCanControlObservedBot: Long = 0xA88L
+        fun CCSPlayerController_m_bCanControlObservedBotAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bCanControlObservedBot
+
+        const val CCSPlayerController_m_bControllingBot: Long = 0xA80L
+        fun CCSPlayerController_m_bControllingBotAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bControllingBot
+
+        const val CCSPlayerController_m_bEverPlayedOnTeam: Long = 0x9CCL
+        fun CCSPlayerController_m_bEverPlayedOnTeamAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bEverPlayedOnTeam
+
+        const val CCSPlayerController_m_bFireBulletsSeedSynchronized: Long = 0xAD5L
+        fun CCSPlayerController_m_bFireBulletsSeedSynchronizedAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bFireBulletsSeedSynchronized
+
+        const val CCSPlayerController_m_bHasCommunicationAbuseMute: Long = 0x9ACL
+        fun CCSPlayerController_m_bHasCommunicationAbuseMuteAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bHasCommunicationAbuseMute
+
+        const val CCSPlayerController_m_bHasControlledBotThisRound: Long = 0xA81L
+        fun CCSPlayerController_m_bHasControlledBotThisRoundAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bHasControlledBotThisRound
+
+        const val CCSPlayerController_m_bMvpNoMusic: Long = 0xAC2L
+        fun CCSPlayerController_m_bMvpNoMusicAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bMvpNoMusic
+
+        const val CCSPlayerController_m_bPawnHasDefuser: Long = 0xAA0L
+        fun CCSPlayerController_m_bPawnHasDefuserAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bPawnHasDefuser
+
+        const val CCSPlayerController_m_bPawnHasHelmet: Long = 0xAA1L
+        fun CCSPlayerController_m_bPawnHasHelmetAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bPawnHasHelmet
+
+        const val CCSPlayerController_m_bPawnIsAlive: Long = 0xA94L
+        fun CCSPlayerController_m_bPawnIsAliveAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_bPawnIsAlive
+
+        const val CCSPlayerController_m_eMvpReason: Long = 0xAC4L
+        fun CCSPlayerController_m_eMvpReasonAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_eMvpReason
+
+        const val CCSPlayerController_m_flForceTeamTime: Long = 0x9C4L
+        fun CCSPlayerController_m_flForceTeamTimeAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_flForceTeamTime
+
+        const val CCSPlayerController_m_hObserverPawn: Long = 0xA90L
+        fun CCSPlayerController_m_hObserverPawnAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_hObserverPawn
+
+        const val CCSPlayerController_m_hPlayerPawn: Long = 0xA8CL
+        fun CCSPlayerController_m_hPlayerPawnAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_hPlayerPawn
+
+        const val CCSPlayerController_m_iCoachingTeam: Long = 0x9E8L
+        fun CCSPlayerController_m_iCoachingTeamAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCoachingTeam
+
+        const val CCSPlayerController_m_iCompTeammateColor: Long = 0x9C8L
+        fun CCSPlayerController_m_iCompTeammateColorAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompTeammateColor
+
+        const val CCSPlayerController_m_iCompetitiveRankType: Long = 0xA08L
+        fun CCSPlayerController_m_iCompetitiveRankTypeAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompetitiveRankType
+
+        const val CCSPlayerController_m_iCompetitiveRanking: Long = 0xA00L
+        fun CCSPlayerController_m_iCompetitiveRankingAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompetitiveRanking
+
+        const val CCSPlayerController_m_iCompetitiveRankingPredicted_Loss: Long = 0xA10L
+        fun CCSPlayerController_m_iCompetitiveRankingPredicted_LossAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompetitiveRankingPredicted_Loss
+
+        const val CCSPlayerController_m_iCompetitiveRankingPredicted_Tie: Long = 0xA14L
+        fun CCSPlayerController_m_iCompetitiveRankingPredicted_TieAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompetitiveRankingPredicted_Tie
+
+        const val CCSPlayerController_m_iCompetitiveRankingPredicted_Win: Long = 0xA0CL
+        fun CCSPlayerController_m_iCompetitiveRankingPredicted_WinAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompetitiveRankingPredicted_Win
+
+        const val CCSPlayerController_m_iCompetitiveWins: Long = 0xA04L
+        fun CCSPlayerController_m_iCompetitiveWinsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iCompetitiveWins
+
+        const val CCSPlayerController_m_iMVPs: Long = 0xAD0L
+        fun CCSPlayerController_m_iMVPsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iMVPs
+
+        const val CCSPlayerController_m_iMusicKitID: Long = 0xAC8L
+        fun CCSPlayerController_m_iMusicKitIDAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iMusicKitID
+
+        const val CCSPlayerController_m_iMusicKitMVPs: Long = 0xACCL
+        fun CCSPlayerController_m_iMusicKitMVPsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iMusicKitMVPs
+
+        const val CCSPlayerController_m_iPawnArmor: Long = 0xA9CL
+        fun CCSPlayerController_m_iPawnArmorAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPawnArmor
+
+        const val CCSPlayerController_m_iPawnBotDifficulty: Long = 0xAACL
+        fun CCSPlayerController_m_iPawnBotDifficultyAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPawnBotDifficulty
+
+        const val CCSPlayerController_m_iPawnHealth: Long = 0xA98L
+        fun CCSPlayerController_m_iPawnHealthAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPawnHealth
+
+        const val CCSPlayerController_m_iPawnLifetimeEnd: Long = 0xAA8L
+        fun CCSPlayerController_m_iPawnLifetimeEndAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPawnLifetimeEnd
+
+        const val CCSPlayerController_m_iPawnLifetimeStart: Long = 0xAA4L
+        fun CCSPlayerController_m_iPawnLifetimeStartAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPawnLifetimeStart
+
+        const val CCSPlayerController_m_iPendingTeamNum: Long = 0x9C0L
+        fun CCSPlayerController_m_iPendingTeamNumAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPendingTeamNum
+
+        const val CCSPlayerController_m_iPing: Long = 0x9A8L
+        fun CCSPlayerController_m_iPingAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_iPing
+
+        const val CCSPlayerController_m_nDisconnectionTick: Long = 0xA70L
+        fun CCSPlayerController_m_nDisconnectionTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nDisconnectionTick
+
+        const val CCSPlayerController_m_nEndMatchNextMapVote: Long = 0xA18L
+        fun CCSPlayerController_m_nEndMatchNextMapVoteAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nEndMatchNextMapVote
+
+        const val CCSPlayerController_m_nFirstKill: Long = 0xAC0L
+        fun CCSPlayerController_m_nFirstKillAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nFirstKill
+
+        const val CCSPlayerController_m_nKillCount: Long = 0xAC1L
+        fun CCSPlayerController_m_nKillCountAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nKillCount
+
+        const val CCSPlayerController_m_nPawnCharacterDefIndex: Long = 0xAA2L
+        fun CCSPlayerController_m_nPawnCharacterDefIndexAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nPawnCharacterDefIndex
+
+        const val CCSPlayerController_m_nPlayerDominated: Long = 0x9F0L
+        fun CCSPlayerController_m_nPlayerDominatedAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nPlayerDominated
+
+        const val CCSPlayerController_m_nPlayerDominatingMe: Long = 0x9F8L
+        fun CCSPlayerController_m_nPlayerDominatingMeAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nPlayerDominatingMe
+
+        const val CCSPlayerController_m_nQuestProgressReason: Long = 0xA24L
+        fun CCSPlayerController_m_nQuestProgressReasonAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_nQuestProgressReason
+
+        const val CCSPlayerController_m_recentKillQueue: Long = 0xAB8L
+        fun CCSPlayerController_m_recentKillQueueAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_recentKillQueue
+
+        const val CCSPlayerController_m_rtActiveMissionPeriod: Long = 0xA20L
+        fun CCSPlayerController_m_rtActiveMissionPeriodAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_rtActiveMissionPeriod
+
+        const val CCSPlayerController_m_szClan: Long = 0x9D8L
+        fun CCSPlayerController_m_szClanAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_szClan
+
+        const val CCSPlayerController_m_szCrosshairCodes: Long = 0x9B8L
+        fun CCSPlayerController_m_szCrosshairCodesAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_szCrosshairCodes
+
+        const val CCSPlayerController_m_uiCommunicationMuteFlags: Long = 0x9B0L
+        fun CCSPlayerController_m_uiCommunicationMuteFlagsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_uiCommunicationMuteFlags
+
+        const val CCSPlayerController_m_unActiveQuestId: Long = 0xA1CL
+        fun CCSPlayerController_m_unActiveQuestIdAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_unActiveQuestId
+
+        const val CCSPlayerController_m_unPlayerTvControlFlags: Long = 0xA28L
+        fun CCSPlayerController_m_unPlayerTvControlFlagsAddress(objectAddress: Long): Long = objectAddress + CCSPlayerController_m_unPlayerTvControlFlags
+
+        const val CCSPlayerLegacyJump_m_bOldJumpPressed: Long = 0x10L
+        fun CCSPlayerLegacyJump_m_bOldJumpPressedAddress(objectAddress: Long): Long = objectAddress + CCSPlayerLegacyJump_m_bOldJumpPressed
+
+        const val CCSPlayerModernJump_m_flLastActualJumpPressFrac: Long = 0x14L
+        fun CCSPlayerModernJump_m_flLastActualJumpPressFracAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_flLastActualJumpPressFrac
+
+        const val CCSPlayerModernJump_m_flLastLandedFrac: Long = 0x24L
+        fun CCSPlayerModernJump_m_flLastLandedFracAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_flLastLandedFrac
+
+        const val CCSPlayerModernJump_m_flLastLandedVelocityX: Long = 0x28L
+        fun CCSPlayerModernJump_m_flLastLandedVelocityXAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_flLastLandedVelocityX
+
+        const val CCSPlayerModernJump_m_flLastLandedVelocityY: Long = 0x2CL
+        fun CCSPlayerModernJump_m_flLastLandedVelocityYAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_flLastLandedVelocityY
+
+        const val CCSPlayerModernJump_m_flLastLandedVelocityZ: Long = 0x30L
+        fun CCSPlayerModernJump_m_flLastLandedVelocityZAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_flLastLandedVelocityZ
+
+        const val CCSPlayerModernJump_m_flLastUsableJumpPressFrac: Long = 0x1CL
+        fun CCSPlayerModernJump_m_flLastUsableJumpPressFracAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_flLastUsableJumpPressFrac
+
+        const val CCSPlayerModernJump_m_nLastActualJumpPressTick: Long = 0x10L
+        fun CCSPlayerModernJump_m_nLastActualJumpPressTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_nLastActualJumpPressTick
+
+        const val CCSPlayerModernJump_m_nLastLandedTick: Long = 0x20L
+        fun CCSPlayerModernJump_m_nLastLandedTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_nLastLandedTick
+
+        const val CCSPlayerModernJump_m_nLastUsableJumpPressTick: Long = 0x18L
+        fun CCSPlayerModernJump_m_nLastUsableJumpPressTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayerModernJump_m_nLastUsableJumpPressTick
+
+        const val CCSPlayer_ActionTrackingServices_m_bIsRescuing: Long = 0x4CL
+        fun CCSPlayer_ActionTrackingServices_m_bIsRescuingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_ActionTrackingServices_m_bIsRescuing
+
+        const val CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisMatch: Long = 0x50L
+        fun CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisMatchAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisMatch
+
+        const val CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisRound: Long = 0xC0L
+        fun CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisRoundAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisRound
+
+        const val CCSPlayer_AimPunchServices_m_predictableBaseAngle: Long = 0x50L
+        fun CCSPlayer_AimPunchServices_m_predictableBaseAngleAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_AimPunchServices_m_predictableBaseAngle
+
+        const val CCSPlayer_AimPunchServices_m_predictableBaseAngleVel: Long = 0x5CL
+        fun CCSPlayer_AimPunchServices_m_predictableBaseAngleVelAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_AimPunchServices_m_predictableBaseAngleVel
+
+        const val CCSPlayer_AimPunchServices_m_predictableBaseTick: Long = 0x48L
+        fun CCSPlayer_AimPunchServices_m_predictableBaseTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_AimPunchServices_m_predictableBaseTick
+
+        const val CCSPlayer_AimPunchServices_m_predictableBaseTickInterpAmount: Long = 0x4CL
+        fun CCSPlayer_AimPunchServices_m_predictableBaseTickInterpAmountAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_AimPunchServices_m_predictableBaseTickInterpAmount
+
+        const val CCSPlayer_AimPunchServices_m_unpredictableBaseAngle: Long = 0xA4L
+        fun CCSPlayer_AimPunchServices_m_unpredictableBaseAngleAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_AimPunchServices_m_unpredictableBaseAngle
+
+        const val CCSPlayer_AimPunchServices_m_unpredictableBaseTick: Long = 0xA0L
+        fun CCSPlayer_AimPunchServices_m_unpredictableBaseTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_AimPunchServices_m_unpredictableBaseTick
+
+        const val CCSPlayer_BulletServices_m_totalHitsOnServer: Long = 0x48L
+        fun CCSPlayer_BulletServices_m_totalHitsOnServerAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_BulletServices_m_totalHitsOnServer
+
+        const val CCSPlayer_BuyServices_m_vecSellbackPurchaseEntries: Long = 0x48L
+        fun CCSPlayer_BuyServices_m_vecSellbackPurchaseEntriesAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_BuyServices_m_vecSellbackPurchaseEntries
+
+        const val CCSPlayer_HostageServices_m_hCarriedHostage: Long = 0x48L
+        fun CCSPlayer_HostageServices_m_hCarriedHostageAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_HostageServices_m_hCarriedHostage
+
+        const val CCSPlayer_HostageServices_m_hCarriedHostageProp: Long = 0x4CL
+        fun CCSPlayer_HostageServices_m_hCarriedHostagePropAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_HostageServices_m_hCarriedHostageProp
+
+        const val CCSPlayer_ItemServices_m_bHasDefuser: Long = 0x48L
+        fun CCSPlayer_ItemServices_m_bHasDefuserAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_ItemServices_m_bHasDefuser
+
+        const val CCSPlayer_ItemServices_m_bHasHelmet: Long = 0x49L
+        fun CCSPlayer_ItemServices_m_bHasHelmetAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_ItemServices_m_bHasHelmet
+
+        const val CCSPlayer_MovementServices_m_LegacyJump: Long = 0x6B8L
+        fun CCSPlayer_MovementServices_m_LegacyJumpAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_LegacyJump
+
+        const val CCSPlayer_MovementServices_m_ModernJump: Long = 0x6D0L
+        fun CCSPlayer_MovementServices_m_ModernJumpAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_ModernJump
+
+        const val CCSPlayer_MovementServices_m_bDesiresDuck: Long = 0x415L
+        fun CCSPlayer_MovementServices_m_bDesiresDuckAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bDesiresDuck
+
+        const val CCSPlayer_MovementServices_m_bDuckOverride: Long = 0x414L
+        fun CCSPlayer_MovementServices_m_bDuckOverrideAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bDuckOverride
+
+        const val CCSPlayer_MovementServices_m_bDucked: Long = 0x408L
+        fun CCSPlayer_MovementServices_m_bDuckedAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bDucked
+
+        const val CCSPlayer_MovementServices_m_bDucking: Long = 0x416L
+        fun CCSPlayer_MovementServices_m_bDuckingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bDucking
+
+        const val CCSPlayer_MovementServices_m_bHasEverProcessedCommand: Long = 0xFD8L
+        fun CCSPlayer_MovementServices_m_bHasEverProcessedCommandAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bHasEverProcessedCommand
+
+        const val CCSPlayer_MovementServices_m_bJumpApexPending: Long = 0x714L
+        fun CCSPlayer_MovementServices_m_bJumpApexPendingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bJumpApexPending
+
+        const val CCSPlayer_MovementServices_m_bUseFrictionStashedSpeed: Long = 0x690L
+        fun CCSPlayer_MovementServices_m_bUseFrictionStashedSpeedAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bUseFrictionStashedSpeed
+
+        const val CCSPlayer_MovementServices_m_bUsingGroundTopologyOffset: Long = 0x3F0L
+        fun CCSPlayer_MovementServices_m_bUsingGroundTopologyOffsetAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bUsingGroundTopologyOffset
+
+        const val CCSPlayer_MovementServices_m_bWasSurfing: Long = 0x71CL
+        fun CCSPlayer_MovementServices_m_bWasSurfingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_bWasSurfing
+
+        const val CCSPlayer_MovementServices_m_fStashGrenadeParameterWhen: Long = 0x684L
+        fun CCSPlayer_MovementServices_m_fStashGrenadeParameterWhenAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_fStashGrenadeParameterWhen
+
+        const val CCSPlayer_MovementServices_m_flBombPlantViewOffset: Long = 0x424L
+        fun CCSPlayer_MovementServices_m_flBombPlantViewOffsetAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flBombPlantViewOffset
+
+        const val CCSPlayer_MovementServices_m_flDuckAmount: Long = 0x40CL
+        fun CCSPlayer_MovementServices_m_flDuckAmountAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flDuckAmount
+
+        const val CCSPlayer_MovementServices_m_flDuckRootOffset: Long = 0x418L
+        fun CCSPlayer_MovementServices_m_flDuckRootOffsetAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flDuckRootOffset
+
+        const val CCSPlayer_MovementServices_m_flDuckSpeed: Long = 0x410L
+        fun CCSPlayer_MovementServices_m_flDuckSpeedAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flDuckSpeed
+
+        const val CCSPlayer_MovementServices_m_flDuckViewOffset: Long = 0x41CL
+        fun CCSPlayer_MovementServices_m_flDuckViewOffsetAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flDuckViewOffset
+
+        const val CCSPlayer_MovementServices_m_flFrictionStashedSpeed: Long = 0x698L
+        fun CCSPlayer_MovementServices_m_flFrictionStashedSpeedAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flFrictionStashedSpeed
+
+        const val CCSPlayer_MovementServices_m_flLastDuckTime: Long = 0x420L
+        fun CCSPlayer_MovementServices_m_flLastDuckTimeAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flLastDuckTime
+
+        const val CCSPlayer_MovementServices_m_flLastJumpFrac: Long = 0x70CL
+        fun CCSPlayer_MovementServices_m_flLastJumpFracAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flLastJumpFrac
+
+        const val CCSPlayer_MovementServices_m_flLastJumpVelocityZ: Long = 0x710L
+        fun CCSPlayer_MovementServices_m_flLastJumpVelocityZAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flLastJumpVelocityZ
+
+        const val CCSPlayer_MovementServices_m_flStamina: Long = 0x69CL
+        fun CCSPlayer_MovementServices_m_flStaminaAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flStamina
+
+        const val CCSPlayer_MovementServices_m_flUseFrictionStashedSpeedUntilFrac: Long = 0x694L
+        fun CCSPlayer_MovementServices_m_flUseFrictionStashedSpeedUntilFracAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flUseFrictionStashedSpeedUntilFrac
+
+        const val CCSPlayer_MovementServices_m_flUsingGroundTopologyOffsetTransitionSmoothing: Long = 0x3F4L
+        fun CCSPlayer_MovementServices_m_flUsingGroundTopologyOffsetTransitionSmoothingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_flUsingGroundTopologyOffsetTransitionSmoothing
+
+        const val CCSPlayer_MovementServices_m_nButtonDownMaskPrev: Long = 0x688L
+        fun CCSPlayer_MovementServices_m_nButtonDownMaskPrevAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_nButtonDownMaskPrev
+
+        const val CCSPlayer_MovementServices_m_nGameCodeHasMovedPlayerAfterCommand: Long = 0x680L
+        fun CCSPlayer_MovementServices_m_nGameCodeHasMovedPlayerAfterCommandAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_nGameCodeHasMovedPlayerAfterCommand
+
+        const val CCSPlayer_MovementServices_m_nLadderSurfacePropIndex: Long = 0x404L
+        fun CCSPlayer_MovementServices_m_nLadderSurfacePropIndexAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_nLadderSurfacePropIndex
+
+        const val CCSPlayer_MovementServices_m_nLastJumpTick: Long = 0x708L
+        fun CCSPlayer_MovementServices_m_nLastJumpTickAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_MovementServices_m_nLastJumpTick
+
+        const val CCSPlayer_PingServices_m_hPlayerPing: Long = 0x48L
+        fun CCSPlayer_PingServices_m_hPlayerPingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_PingServices_m_hPlayerPing
+
+        const val CCSPlayer_WeaponServices_m_bBlockInspectUntilNextGraphUpdate: Long = 0x15A0L
+        fun CCSPlayer_WeaponServices_m_bBlockInspectUntilNextGraphUpdateAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_WeaponServices_m_bBlockInspectUntilNextGraphUpdate
+
+        const val CCSPlayer_WeaponServices_m_networkAnimTiming: Long = 0x1588L
+        fun CCSPlayer_WeaponServices_m_networkAnimTimingAddress(objectAddress: Long): Long = objectAddress + CCSPlayer_WeaponServices_m_networkAnimTiming
+
+        const val CCitadelSoundOpvarSetOBB_m_nAABBDirection: Long = 0x7E0L
+        fun CCitadelSoundOpvarSetOBB_m_nAABBDirectionAddress(objectAddress: Long): Long = objectAddress + CCitadelSoundOpvarSetOBB_m_nAABBDirection
+
+        const val CCitadelSoundOpvarSetOBB_m_vDistanceInnerMaxs: Long = 0x7BCL
+        fun CCitadelSoundOpvarSetOBB_m_vDistanceInnerMaxsAddress(objectAddress: Long): Long = objectAddress + CCitadelSoundOpvarSetOBB_m_vDistanceInnerMaxs
+
+        const val CCitadelSoundOpvarSetOBB_m_vDistanceInnerMins: Long = 0x7B0L
+        fun CCitadelSoundOpvarSetOBB_m_vDistanceInnerMinsAddress(objectAddress: Long): Long = objectAddress + CCitadelSoundOpvarSetOBB_m_vDistanceInnerMins
+
+        const val CCitadelSoundOpvarSetOBB_m_vDistanceOuterMaxs: Long = 0x7D4L
+        fun CCitadelSoundOpvarSetOBB_m_vDistanceOuterMaxsAddress(objectAddress: Long): Long = objectAddress + CCitadelSoundOpvarSetOBB_m_vDistanceOuterMaxs
+
+        const val CCitadelSoundOpvarSetOBB_m_vDistanceOuterMins: Long = 0x7C8L
+        fun CCitadelSoundOpvarSetOBB_m_vDistanceOuterMinsAddress(objectAddress: Long): Long = objectAddress + CCitadelSoundOpvarSetOBB_m_vDistanceOuterMins
+
+        const val CCollisionProperty_m_CollisionGroup: Long = 0x5EL
+        fun CCollisionProperty_m_CollisionGroupAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_CollisionGroup
+
+        const val CCollisionProperty_m_collisionAttribute: Long = 0x10L
+        fun CCollisionProperty_m_collisionAttributeAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_collisionAttribute
+
+        const val CCollisionProperty_m_flCapsuleRadius: Long = 0xACL
+        fun CCollisionProperty_m_flCapsuleRadiusAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_flCapsuleRadius
+
+        const val CCollisionProperty_m_nEnablePhysics: Long = 0x5FL
+        fun CCollisionProperty_m_nEnablePhysicsAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_nEnablePhysics
+
+        const val CCollisionProperty_m_nSurroundType: Long = 0x5DL
+        fun CCollisionProperty_m_nSurroundTypeAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_nSurroundType
+
+        const val CCollisionProperty_m_vCapsuleCenter1: Long = 0x94L
+        fun CCollisionProperty_m_vCapsuleCenter1Address(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_vCapsuleCenter1
+
+        const val CCollisionProperty_m_vCapsuleCenter2: Long = 0xA0L
+        fun CCollisionProperty_m_vCapsuleCenter2Address(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_vCapsuleCenter2
+
+        const val CCollisionProperty_m_vecSpecifiedSurroundingMaxs: Long = 0x70L
+        fun CCollisionProperty_m_vecSpecifiedSurroundingMaxsAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_vecSpecifiedSurroundingMaxs
+
+        const val CCollisionProperty_m_vecSpecifiedSurroundingMins: Long = 0x64L
+        fun CCollisionProperty_m_vecSpecifiedSurroundingMinsAddress(objectAddress: Long): Long = objectAddress + CCollisionProperty_m_vecSpecifiedSurroundingMins
+
+        const val CDamageRecord_m_DamagerXuid: Long = 0x50L
+        fun CDamageRecord_m_DamagerXuidAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_DamagerXuid
+
+        const val CDamageRecord_m_PlayerDamager: Long = 0x30L
+        fun CDamageRecord_m_PlayerDamagerAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_PlayerDamager
+
+        const val CDamageRecord_m_PlayerRecipient: Long = 0x34L
+        fun CDamageRecord_m_PlayerRecipientAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_PlayerRecipient
+
+        const val CDamageRecord_m_RecipientXuid: Long = 0x58L
+        fun CDamageRecord_m_RecipientXuidAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_RecipientXuid
+
+        const val CDamageRecord_m_bIsOtherEnemy: Long = 0x74L
+        fun CDamageRecord_m_bIsOtherEnemyAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_bIsOtherEnemy
+
+        const val CDamageRecord_m_flActualHealthRemoved: Long = 0x68L
+        fun CDamageRecord_m_flActualHealthRemovedAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_flActualHealthRemoved
+
+        const val CDamageRecord_m_hPlayerControllerDamager: Long = 0x38L
+        fun CDamageRecord_m_hPlayerControllerDamagerAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_hPlayerControllerDamager
+
+        const val CDamageRecord_m_hPlayerControllerRecipient: Long = 0x3CL
+        fun CDamageRecord_m_hPlayerControllerRecipientAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_hPlayerControllerRecipient
+
+        const val CDamageRecord_m_iLastBulletUpdate: Long = 0x70L
+        fun CDamageRecord_m_iLastBulletUpdateAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_iLastBulletUpdate
+
+        const val CDamageRecord_m_iNumHits: Long = 0x6CL
+        fun CDamageRecord_m_iNumHitsAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_iNumHits
+
+        const val CDamageRecord_m_killType: Long = 0x75L
+        fun CDamageRecord_m_killTypeAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_killType
+
+        const val CDamageRecord_m_szPlayerDamagerName: Long = 0x40L
+        fun CDamageRecord_m_szPlayerDamagerNameAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_szPlayerDamagerName
+
+        const val CDamageRecord_m_szPlayerRecipientName: Long = 0x48L
+        fun CDamageRecord_m_szPlayerRecipientNameAddress(objectAddress: Long): Long = objectAddress + CDamageRecord_m_szPlayerRecipientName
+
+        const val CEconItemAttribute_m_bSetBonus: Long = 0x40L
+        fun CEconItemAttribute_m_bSetBonusAddress(objectAddress: Long): Long = objectAddress + CEconItemAttribute_m_bSetBonus
+
+        const val CEconItemAttribute_m_flInitialValue: Long = 0x38L
+        fun CEconItemAttribute_m_flInitialValueAddress(objectAddress: Long): Long = objectAddress + CEconItemAttribute_m_flInitialValue
+
+        const val CEconItemAttribute_m_flValue: Long = 0x34L
+        fun CEconItemAttribute_m_flValueAddress(objectAddress: Long): Long = objectAddress + CEconItemAttribute_m_flValue
+
+        const val CEconItemAttribute_m_iAttributeDefinitionIndex: Long = 0x30L
+        fun CEconItemAttribute_m_iAttributeDefinitionIndexAddress(objectAddress: Long): Long = objectAddress + CEconItemAttribute_m_iAttributeDefinitionIndex
+
+        const val CEconItemAttribute_m_nRefundableCurrency: Long = 0x3CL
+        fun CEconItemAttribute_m_nRefundableCurrencyAddress(objectAddress: Long): Long = objectAddress + CEconItemAttribute_m_nRefundableCurrency
+
+        const val CEntityIdentity_m_nameStringTableIndex: Long = 0x14L
+        fun CEntityIdentity_m_nameStringTableIndexAddress(objectAddress: Long): Long = objectAddress + CEntityIdentity_m_nameStringTableIndex
+
         const val CGameEntitySystem_m_EntityClasses: Long = 0xAA0L
         fun CGameEntitySystem_m_EntityClassesAddress(objectAddress: Long): Long = objectAddress + CGameEntitySystem_m_EntityClasses
 
         const val CGameEntitySystem_m_EntityList: Long = 0x10L
         fun CGameEntitySystem_m_EntityListAddress(objectAddress: Long): Long = objectAddress + CGameEntitySystem_m_EntityList
+
+        const val CGameSceneNode_m_hParent: Long = 0x70L
+        fun CGameSceneNode_m_hParentAddress(objectAddress: Long): Long = objectAddress + CGameSceneNode_m_hParent
+
+        const val CGameSceneNode_m_hierarchyAttachName: Long = 0x128L
+        fun CGameSceneNode_m_hierarchyAttachNameAddress(objectAddress: Long): Long = objectAddress + CGameSceneNode_m_hierarchyAttachName
+
+        const val CGlowProperty_m_bEligibleForScreenHighlight: Long = 0x50L
+        fun CGlowProperty_m_bEligibleForScreenHighlightAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_bEligibleForScreenHighlight
+
+        const val CGlowProperty_m_bFlashing: Long = 0x44L
+        fun CGlowProperty_m_bFlashingAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_bFlashing
+
+        const val CGlowProperty_m_flGlowStartTime: Long = 0x4CL
+        fun CGlowProperty_m_flGlowStartTimeAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_flGlowStartTime
+
+        const val CGlowProperty_m_flGlowTime: Long = 0x48L
+        fun CGlowProperty_m_flGlowTimeAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_flGlowTime
+
+        const val CGlowProperty_m_glowColorOverride: Long = 0x40L
+        fun CGlowProperty_m_glowColorOverrideAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_glowColorOverride
+
+        const val CGlowProperty_m_iGlowTeam: Long = 0x34L
+        fun CGlowProperty_m_iGlowTeamAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_iGlowTeam
+
+        const val CGlowProperty_m_iGlowType: Long = 0x30L
+        fun CGlowProperty_m_iGlowTypeAddress(objectAddress: Long): Long = objectAddress + CGlowProperty_m_iGlowType
+
+        const val CInfoFan_m_FanForceCurveString: Long = 0x7D0L
+        fun CInfoFan_m_FanForceCurveStringAddress(objectAddress: Long): Long = objectAddress + CInfoFan_m_FanForceCurveString
+
+        const val CInfoFan_m_fFanForceMaxRadius: Long = 0x7C0L
+        fun CInfoFan_m_fFanForceMaxRadiusAddress(objectAddress: Long): Long = objectAddress + CInfoFan_m_fFanForceMaxRadius
+
+        const val CInfoFan_m_fFanForceMinRadius: Long = 0x7C4L
+        fun CInfoFan_m_fFanForceMinRadiusAddress(objectAddress: Long): Long = objectAddress + CInfoFan_m_fFanForceMinRadius
+
+        const val CInfoFan_m_flCurveDistRange: Long = 0x7C8L
+        fun CInfoFan_m_flCurveDistRangeAddress(objectAddress: Long): Long = objectAddress + CInfoFan_m_flCurveDistRange
+
+        const val CInfoOffscreenPanoramaTexture_m_RenderAttrName: Long = 0x798L
+        fun CInfoOffscreenPanoramaTexture_m_RenderAttrNameAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_RenderAttrName
+
+        const val CInfoOffscreenPanoramaTexture_m_TargetEntities: Long = 0x7A0L
+        fun CInfoOffscreenPanoramaTexture_m_TargetEntitiesAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_TargetEntities
+
+        const val CInfoOffscreenPanoramaTexture_m_nResolutionX: Long = 0x780L
+        fun CInfoOffscreenPanoramaTexture_m_nResolutionXAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_nResolutionX
+
+        const val CInfoOffscreenPanoramaTexture_m_nResolutionY: Long = 0x784L
+        fun CInfoOffscreenPanoramaTexture_m_nResolutionYAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_nResolutionY
+
+        const val CInfoOffscreenPanoramaTexture_m_nTargetChangeCount: Long = 0x7B8L
+        fun CInfoOffscreenPanoramaTexture_m_nTargetChangeCountAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_nTargetChangeCount
+
+        const val CInfoOffscreenPanoramaTexture_m_szLayoutFileName: Long = 0x790L
+        fun CInfoOffscreenPanoramaTexture_m_szLayoutFileNameAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_szLayoutFileName
+
+        const val CInfoOffscreenPanoramaTexture_m_szPanelType: Long = 0x788L
+        fun CInfoOffscreenPanoramaTexture_m_szPanelTypeAddress(objectAddress: Long): Long = objectAddress + CInfoOffscreenPanoramaTexture_m_szPanelType
+
+        const val CInfoWorldLayer_m_bEntitiesSpawned: Long = 0x7A9L
+        fun CInfoWorldLayer_m_bEntitiesSpawnedAddress(objectAddress: Long): Long = objectAddress + CInfoWorldLayer_m_bEntitiesSpawned
+
+        const val CInfoWorldLayer_m_bWorldLayerVisible: Long = 0x7A8L
+        fun CInfoWorldLayer_m_bWorldLayerVisibleAddress(objectAddress: Long): Long = objectAddress + CInfoWorldLayer_m_bWorldLayerVisible
+
+        const val CInfoWorldLayer_m_layerName: Long = 0x7A0L
+        fun CInfoWorldLayer_m_layerNameAddress(objectAddress: Long): Long = objectAddress + CInfoWorldLayer_m_layerName
+
+        const val CInfoWorldLayer_m_worldName: Long = 0x798L
+        fun CInfoWorldLayer_m_worldNameAddress(objectAddress: Long): Long = objectAddress + CInfoWorldLayer_m_worldName
+
+        const val CLightComponent_m_Pattern: Long = 0xD8L
+        fun CLightComponent_m_PatternAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_Pattern
+
+        const val CLightComponent_m_SecondaryColor: Long = 0x79L
+        fun CLightComponent_m_SecondaryColorAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_SecondaryColor
+
+        const val CLightComponent_m_SkyAmbientBounce: Long = 0x198L
+        fun CLightComponent_m_SkyAmbientBounceAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_SkyAmbientBounce
+
+        const val CLightComponent_m_SkyColor: Long = 0x190L
+        fun CLightComponent_m_SkyColorAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_SkyColor
+
+        const val CLightComponent_m_bAllowSSTGeneration: Long = 0x121L
+        fun CLightComponent_m_bAllowSSTGenerationAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bAllowSSTGeneration
+
+        const val CLightComponent_m_bFlicker: Long = 0x141L
+        fun CLightComponent_m_bFlickerAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bFlicker
+
+        const val CLightComponent_m_bMixedShadows: Long = 0x19DL
+        fun CLightComponent_m_bMixedShadowsAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bMixedShadows
+
+        const val CLightComponent_m_bRenderDiffuse: Long = 0xC0L
+        fun CLightComponent_m_bRenderDiffuseAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bRenderDiffuse
+
+        const val CLightComponent_m_bRenderTransmissive: Long = 0xC8L
+        fun CLightComponent_m_bRenderTransmissiveAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bRenderTransmissive
+
+        const val CLightComponent_m_bUseSecondaryColor: Long = 0x19CL
+        fun CLightComponent_m_bUseSecondaryColorAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bUseSecondaryColor
+
+        const val CLightComponent_m_bUsesBakedShadowing: Long = 0x10CL
+        fun CLightComponent_m_bUsesBakedShadowingAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_bUsesBakedShadowing
+
+        const val CLightComponent_m_flAttenuation0: Long = 0x94L
+        fun CLightComponent_m_flAttenuation0Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flAttenuation0
+
+        const val CLightComponent_m_flAttenuation1: Long = 0x98L
+        fun CLightComponent_m_flAttenuation1Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flAttenuation1
+
+        const val CLightComponent_m_flAttenuation2: Long = 0x9CL
+        fun CLightComponent_m_flAttenuation2Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flAttenuation2
+
+        const val CLightComponent_m_flBrightnessMult: Long = 0x88L
+        fun CLightComponent_m_flBrightnessMultAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flBrightnessMult
+
+        const val CLightComponent_m_flCapsuleLength: Long = 0x1A4L
+        fun CLightComponent_m_flCapsuleLengthAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flCapsuleLength
+
+        const val CLightComponent_m_flFadeMaxDist: Long = 0x134L
+        fun CLightComponent_m_flFadeMaxDistAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flFadeMaxDist
+
+        const val CLightComponent_m_flFadeMinDist: Long = 0x130L
+        fun CLightComponent_m_flFadeMinDistAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flFadeMinDist
+
+        const val CLightComponent_m_flFalloff: Long = 0x90L
+        fun CLightComponent_m_flFalloffAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flFalloff
+
+        const val CLightComponent_m_flFogContributionStength: Long = 0x188L
+        fun CLightComponent_m_flFogContributionStengthAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flFogContributionStength
+
+        const val CLightComponent_m_flNearClipPlane: Long = 0x18CL
+        fun CLightComponent_m_flNearClipPlaneAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flNearClipPlane
+
+        const val CLightComponent_m_flOrthoLightHeight: Long = 0xD0L
+        fun CLightComponent_m_flOrthoLightHeightAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flOrthoLightHeight
+
+        const val CLightComponent_m_flOrthoLightWidth: Long = 0xCCL
+        fun CLightComponent_m_flOrthoLightWidthAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flOrthoLightWidth
+
+        const val CLightComponent_m_flPhi: Long = 0xA4L
+        fun CLightComponent_m_flPhiAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flPhi
+
+        const val CLightComponent_m_flPrecomputedMaxRange: Long = 0x180L
+        fun CLightComponent_m_flPrecomputedMaxRangeAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flPrecomputedMaxRange
+
+        const val CLightComponent_m_flShadowCascadeCrossFade: Long = 0xE4L
+        fun CLightComponent_m_flShadowCascadeCrossFadeAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowCascadeCrossFade
+
+        const val CLightComponent_m_flShadowCascadeDistance0: Long = 0xECL
+        fun CLightComponent_m_flShadowCascadeDistance0Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowCascadeDistance0
+
+        const val CLightComponent_m_flShadowCascadeDistance1: Long = 0xF0L
+        fun CLightComponent_m_flShadowCascadeDistance1Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowCascadeDistance1
+
+        const val CLightComponent_m_flShadowCascadeDistance2: Long = 0xF4L
+        fun CLightComponent_m_flShadowCascadeDistance2Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowCascadeDistance2
+
+        const val CLightComponent_m_flShadowCascadeDistance3: Long = 0xF8L
+        fun CLightComponent_m_flShadowCascadeDistance3Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowCascadeDistance3
+
+        const val CLightComponent_m_flShadowCascadeDistanceFade: Long = 0xE8L
+        fun CLightComponent_m_flShadowCascadeDistanceFadeAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowCascadeDistanceFade
+
+        const val CLightComponent_m_flShadowFadeMaxDist: Long = 0x13CL
+        fun CLightComponent_m_flShadowFadeMaxDistAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowFadeMaxDist
+
+        const val CLightComponent_m_flShadowFadeMinDist: Long = 0x138L
+        fun CLightComponent_m_flShadowFadeMinDistAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flShadowFadeMinDist
+
+        const val CLightComponent_m_flSkyIntensity: Long = 0x194L
+        fun CLightComponent_m_flSkyIntensityAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flSkyIntensity
+
+        const val CLightComponent_m_flTheta: Long = 0xA0L
+        fun CLightComponent_m_flThetaAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_flTheta
+
+        const val CLightComponent_m_nCascadeRenderStaticObjects: Long = 0xE0L
+        fun CLightComponent_m_nCascadeRenderStaticObjectsAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nCascadeRenderStaticObjects
+
+        const val CLightComponent_m_nCascades: Long = 0xB0L
+        fun CLightComponent_m_nCascadesAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nCascades
+
+        const val CLightComponent_m_nFogLightingMode: Long = 0x184L
+        fun CLightComponent_m_nFogLightingModeAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nFogLightingMode
+
+        const val CLightComponent_m_nRenderSpecular: Long = 0xC4L
+        fun CLightComponent_m_nRenderSpecularAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nRenderSpecular
+
+        const val CLightComponent_m_nShadowCascadeResolution0: Long = 0xFCL
+        fun CLightComponent_m_nShadowCascadeResolution0Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_nShadowCascadeResolution0
+
+        const val CLightComponent_m_nShadowCascadeResolution1: Long = 0x100L
+        fun CLightComponent_m_nShadowCascadeResolution1Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_nShadowCascadeResolution1
+
+        const val CLightComponent_m_nShadowCascadeResolution2: Long = 0x104L
+        fun CLightComponent_m_nShadowCascadeResolution2Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_nShadowCascadeResolution2
+
+        const val CLightComponent_m_nShadowCascadeResolution3: Long = 0x108L
+        fun CLightComponent_m_nShadowCascadeResolution3Address(objectAddress: Long): Long = objectAddress + CLightComponent_m_nShadowCascadeResolution3
+
+        const val CLightComponent_m_nShadowHeight: Long = 0xBCL
+        fun CLightComponent_m_nShadowHeightAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nShadowHeight
+
+        const val CLightComponent_m_nShadowWidth: Long = 0xB8L
+        fun CLightComponent_m_nShadowWidthAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nShadowWidth
+
+        const val CLightComponent_m_nStyle: Long = 0xD4L
+        fun CLightComponent_m_nStyleAddress(objectAddress: Long): Long = objectAddress + CLightComponent_m_nStyle
+
+        const val CModelState_m_MeshGroupMask: Long = 0x1C8L
+        fun CModelState_m_MeshGroupMaskAddress(objectAddress: Long): Long = objectAddress + CModelState_m_MeshGroupMask
+
+        const val CModelState_m_bClientClothCreationSuppressed: Long = 0x110L
+        fun CModelState_m_bClientClothCreationSuppressedAddress(objectAddress: Long): Long = objectAddress + CModelState_m_bClientClothCreationSuppressed
+
+        const val CModelState_m_flRootBoneOffset_x: Long = 0xE8L
+        fun CModelState_m_flRootBoneOffset_xAddress(objectAddress: Long): Long = objectAddress + CModelState_m_flRootBoneOffset_x
+
+        const val CModelState_m_flRootBoneOffset_y: Long = 0xECL
+        fun CModelState_m_flRootBoneOffset_yAddress(objectAddress: Long): Long = objectAddress + CModelState_m_flRootBoneOffset_y
+
+        const val CModelState_m_flRootBoneOffset_z: Long = 0xF0L
+        fun CModelState_m_flRootBoneOffset_zAddress(objectAddress: Long): Long = objectAddress + CModelState_m_flRootBoneOffset_z
+
+        const val CModelState_m_hModel: Long = 0xA0L
+        fun CModelState_m_hModelAddress(objectAddress: Long): Long = objectAddress + CModelState_m_hModel
+
+        const val CModelState_m_nAnimStateNoInterpSerialNumber: Long = 0x1C0L
+        fun CModelState_m_nAnimStateNoInterpSerialNumberAddress(objectAddress: Long): Long = objectAddress + CModelState_m_nAnimStateNoInterpSerialNumber
+
+        const val CModelState_m_nBodyGroupChoices: Long = 0x228L
+        fun CModelState_m_nBodyGroupChoicesAddress(objectAddress: Long): Long = objectAddress + CModelState_m_nBodyGroupChoices
+
+        const val CModelState_m_nIdealMotionType: Long = 0x272L
+        fun CModelState_m_nIdealMotionTypeAddress(objectAddress: Long): Long = objectAddress + CModelState_m_nIdealMotionType
+
+        const val CModelState_m_nRootBoneOffsetResetSerialNumber: Long = 0xF4L
+        fun CModelState_m_nRootBoneOffsetResetSerialNumberAddress(objectAddress: Long): Long = objectAddress + CModelState_m_nRootBoneOffsetResetSerialNumber
+
+        const val CNetworkedSequenceOperation_m_flPrevCycle: Long = 0x500L
+        fun CNetworkedSequenceOperation_m_flPrevCycleAddress(objectAddress: Long): Long = objectAddress + CNetworkedSequenceOperation_m_flPrevCycle
+
+        const val CPathNode_m_strParentPathUniqueID: Long = 0x798L
+        fun CPathNode_m_strParentPathUniqueIDAddress(objectAddress: Long): Long = objectAddress + CPathNode_m_strParentPathUniqueID
+
+        const val CPathNode_m_strPathNodeParameter: Long = 0x7A0L
+        fun CPathNode_m_strPathNodeParameterAddress(objectAddress: Long): Long = objectAddress + CPathNode_m_strPathNodeParameter
+
+        const val CPathSimple_m_pathString: Long = 0x880L
+        fun CPathSimple_m_pathStringAddress(objectAddress: Long): Long = objectAddress + CPathSimple_m_pathString
+
+        const val CPathWithDynamicNodes_m_vecPathNodes: Long = 0x890L
+        fun CPathWithDynamicNodes_m_vecPathNodesAddress(objectAddress: Long): Long = objectAddress + CPathWithDynamicNodes_m_vecPathNodes
+
+        const val CPathWithDynamicNodes_m_xInitialPathWorldToLocal: Long = 0x8B0L
+        fun CPathWithDynamicNodes_m_xInitialPathWorldToLocalAddress(objectAddress: Long): Long = objectAddress + CPathWithDynamicNodes_m_xInitialPathWorldToLocal
+
+        const val CPlayer_CameraServices_m_PlayerFog: Long = 0x60L
+        fun CPlayer_CameraServices_m_PlayerFogAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_PlayerFog
+
+        const val CPlayer_CameraServices_m_PostProcessingVolumes: Long = 0x128L
+        fun CPlayer_CameraServices_m_PostProcessingVolumesAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_PostProcessingVolumes
+
+        const val CPlayer_CameraServices_m_audio: Long = 0xB0L
+        fun CPlayer_CameraServices_m_audioAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_audio
+
+        const val CPlayer_CameraServices_m_flCsViewPunchAngleTickRatio: Long = 0x58L
+        fun CPlayer_CameraServices_m_flCsViewPunchAngleTickRatioAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_flCsViewPunchAngleTickRatio
+
+        const val CPlayer_CameraServices_m_hColorCorrectionCtrl: Long = 0xA0L
+        fun CPlayer_CameraServices_m_hColorCorrectionCtrlAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_hColorCorrectionCtrl
+
+        const val CPlayer_CameraServices_m_hTonemapController: Long = 0xA8L
+        fun CPlayer_CameraServices_m_hTonemapControllerAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_hTonemapController
+
+        const val CPlayer_CameraServices_m_hViewEntity: Long = 0xA4L
+        fun CPlayer_CameraServices_m_hViewEntityAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_hViewEntity
+
+        const val CPlayer_CameraServices_m_nCsViewPunchAngleTick: Long = 0x54L
+        fun CPlayer_CameraServices_m_nCsViewPunchAngleTickAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_nCsViewPunchAngleTick
+
+        const val CPlayer_CameraServices_m_vecCsViewPunchAngle: Long = 0x48L
+        fun CPlayer_CameraServices_m_vecCsViewPunchAngleAddress(objectAddress: Long): Long = objectAddress + CPlayer_CameraServices_m_vecCsViewPunchAngle
+
+        const val CPlayer_MovementServices_Humanoid_m_flFallVelocity: Long = 0x25CL
+        fun CPlayer_MovementServices_Humanoid_m_flFallVelocityAddress(objectAddress: Long): Long = objectAddress + CPlayer_MovementServices_Humanoid_m_flFallVelocity
+
+        const val CPlayer_MovementServices_m_arrForceSubtickMoveWhen: Long = 0x1B0L
+        fun CPlayer_MovementServices_m_arrForceSubtickMoveWhenAddress(objectAddress: Long): Long = objectAddress + CPlayer_MovementServices_m_arrForceSubtickMoveWhen
+
+        const val CPlayer_MovementServices_m_flMaxspeed: Long = 0x1ACL
+        fun CPlayer_MovementServices_m_flMaxspeedAddress(objectAddress: Long): Long = objectAddress + CPlayer_MovementServices_m_flMaxspeed
+
+        const val CPlayer_MovementServices_m_nToggleButtonDownMask: Long = 0x190L
+        fun CPlayer_MovementServices_m_nToggleButtonDownMaskAddress(objectAddress: Long): Long = objectAddress + CPlayer_MovementServices_m_nToggleButtonDownMask
+
+        const val CPlayer_ObserverServices_m_hObserverTarget: Long = 0x4CL
+        fun CPlayer_ObserverServices_m_hObserverTargetAddress(objectAddress: Long): Long = objectAddress + CPlayer_ObserverServices_m_hObserverTarget
+
+        const val CPlayer_ObserverServices_m_iObserverMode: Long = 0x48L
+        fun CPlayer_ObserverServices_m_iObserverModeAddress(objectAddress: Long): Long = objectAddress + CPlayer_ObserverServices_m_iObserverMode
+
+        const val CPlayer_WeaponServices_m_hActiveWeapon: Long = 0x60L
+        fun CPlayer_WeaponServices_m_hActiveWeaponAddress(objectAddress: Long): Long = objectAddress + CPlayer_WeaponServices_m_hActiveWeapon
+
+        const val CPlayer_WeaponServices_m_hLastWeapon: Long = 0x64L
+        fun CPlayer_WeaponServices_m_hLastWeaponAddress(objectAddress: Long): Long = objectAddress + CPlayer_WeaponServices_m_hLastWeapon
+
+        const val CPlayer_WeaponServices_m_hMyWeapons: Long = 0x48L
+        fun CPlayer_WeaponServices_m_hMyWeaponsAddress(objectAddress: Long): Long = objectAddress + CPlayer_WeaponServices_m_hMyWeapons
+
+        const val CPlayer_WeaponServices_m_iAmmo: Long = 0x68L
+        fun CPlayer_WeaponServices_m_iAmmoAddress(objectAddress: Long): Long = objectAddress + CPlayer_WeaponServices_m_iAmmo
+
+        const val CPulseGameBlackboard_m_strGraphName: Long = 0x788L
+        fun CPulseGameBlackboard_m_strGraphNameAddress(objectAddress: Long): Long = objectAddress + CPulseGameBlackboard_m_strGraphName
+
+        const val CPulseGameBlackboard_m_strStateBlob: Long = 0x790L
+        fun CPulseGameBlackboard_m_strStateBlobAddress(objectAddress: Long): Long = objectAddress + CPulseGameBlackboard_m_strStateBlob
+
+        const val CRagdollManager_m_iCurrentMaxRagdollCount: Long = 0x77CL
+        fun CRagdollManager_m_iCurrentMaxRagdollCountAddress(objectAddress: Long): Long = objectAddress + CRagdollManager_m_iCurrentMaxRagdollCount
+
+        const val CSMatchStats_t_m_iEnemy3Ks: Long = 0x6CL
+        fun CSMatchStats_t_m_iEnemy3KsAddress(objectAddress: Long): Long = objectAddress + CSMatchStats_t_m_iEnemy3Ks
+
+        const val CSMatchStats_t_m_iEnemy4Ks: Long = 0x68L
+        fun CSMatchStats_t_m_iEnemy4KsAddress(objectAddress: Long): Long = objectAddress + CSMatchStats_t_m_iEnemy4Ks
+
+        const val CSMatchStats_t_m_iEnemy5Ks: Long = 0x64L
+        fun CSMatchStats_t_m_iEnemy5KsAddress(objectAddress: Long): Long = objectAddress + CSMatchStats_t_m_iEnemy5Ks
+
+        const val CSMatchStats_t_m_iEnemyKnifeKills: Long = 0x70L
+        fun CSMatchStats_t_m_iEnemyKnifeKillsAddress(objectAddress: Long): Long = objectAddress + CSMatchStats_t_m_iEnemyKnifeKills
+
+        const val CSMatchStats_t_m_iEnemyTaserKills: Long = 0x74L
+        fun CSMatchStats_t_m_iEnemyTaserKillsAddress(objectAddress: Long): Long = objectAddress + CSMatchStats_t_m_iEnemyTaserKills
+
+        const val CSPerRoundStats_t_m_iAssists: Long = 0x38L
+        fun CSPerRoundStats_t_m_iAssistsAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iAssists
+
+        const val CSPerRoundStats_t_m_iCashEarned: Long = 0x58L
+        fun CSPerRoundStats_t_m_iCashEarnedAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iCashEarned
+
+        const val CSPerRoundStats_t_m_iDeaths: Long = 0x34L
+        fun CSPerRoundStats_t_m_iDeathsAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iDeaths
+
+        const val CSPerRoundStats_t_m_iEnemiesFlashed: Long = 0x60L
+        fun CSPerRoundStats_t_m_iEnemiesFlashedAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iEnemiesFlashed
+
+        const val CSPerRoundStats_t_m_iEquipmentValue: Long = 0x40L
+        fun CSPerRoundStats_t_m_iEquipmentValueAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iEquipmentValue
+
+        const val CSPerRoundStats_t_m_iHeadShotKills: Long = 0x50L
+        fun CSPerRoundStats_t_m_iHeadShotKillsAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iHeadShotKills
+
+        const val CSPerRoundStats_t_m_iKillReward: Long = 0x48L
+        fun CSPerRoundStats_t_m_iKillRewardAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iKillReward
+
+        const val CSPerRoundStats_t_m_iKills: Long = 0x30L
+        fun CSPerRoundStats_t_m_iKillsAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iKills
+
+        const val CSPerRoundStats_t_m_iLiveTime: Long = 0x4CL
+        fun CSPerRoundStats_t_m_iLiveTimeAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iLiveTime
+
+        const val CSPerRoundStats_t_m_iMoneySaved: Long = 0x44L
+        fun CSPerRoundStats_t_m_iMoneySavedAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iMoneySaved
+
+        const val CSPerRoundStats_t_m_iObjective: Long = 0x54L
+        fun CSPerRoundStats_t_m_iObjectiveAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iObjective
+
+        const val CSPerRoundStats_t_m_iUtilityDamage: Long = 0x5CL
+        fun CSPerRoundStats_t_m_iUtilityDamageAddress(objectAddress: Long): Long = objectAddress + CSPerRoundStats_t_m_iUtilityDamage
+
+        const val CSkeletonInstance_m_bUseParentRenderBounds: Long = 0x3D0L
+        fun CSkeletonInstance_m_bUseParentRenderBoundsAddress(objectAddress: Long): Long = objectAddress + CSkeletonInstance_m_bUseParentRenderBounds
+
+        const val CSkeletonInstance_m_materialGroup: Long = 0x3D4L
+        fun CSkeletonInstance_m_materialGroupAddress(objectAddress: Long): Long = objectAddress + CSkeletonInstance_m_materialGroup
+
+        const val CSkeletonInstance_m_modelState: Long = 0x150L
+        fun CSkeletonInstance_m_modelStateAddress(objectAddress: Long): Long = objectAddress + CSkeletonInstance_m_modelState
+
+        const val CSkeletonInstance_m_nHitboxSet: Long = 0x3D8L
+        fun CSkeletonInstance_m_nHitboxSetAddress(objectAddress: Long): Long = objectAddress + CSkeletonInstance_m_nHitboxSet
+
+        const val CTriggerFan_m_RampTimer: Long = 0x1040L
+        fun CTriggerFan_m_RampTimerAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_RampTimer
+
+        const val CTriggerFan_m_bFalloff: Long = 0x1038L
+        fun CTriggerFan_m_bFalloffAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_bFalloff
+
+        const val CTriggerFan_m_bPushAwayFromInfoTarget: Long = 0x1019L
+        fun CTriggerFan_m_bPushAwayFromInfoTargetAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_bPushAwayFromInfoTarget
+
+        const val CTriggerFan_m_bPushTowardsInfoTarget: Long = 0x1018L
+        fun CTriggerFan_m_bPushTowardsInfoTargetAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_bPushTowardsInfoTarget
+
+        const val CTriggerFan_m_flForce: Long = 0x1034L
+        fun CTriggerFan_m_flForceAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_flForce
+
+        const val CTriggerFan_m_hInfoFan: Long = 0x1030L
+        fun CTriggerFan_m_hInfoFanAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_hInfoFan
+
+        const val CTriggerFan_m_qNoiseDelta: Long = 0x1020L
+        fun CTriggerFan_m_qNoiseDeltaAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_qNoiseDelta
+
+        const val CTriggerFan_m_vDirection: Long = 0x100CL
+        fun CTriggerFan_m_vDirectionAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_vDirection
+
+        const val CTriggerFan_m_vFanOriginOffset: Long = 0x1000L
+        fun CTriggerFan_m_vFanOriginOffsetAddress(objectAddress: Long): Long = objectAddress + CTriggerFan_m_vFanOriginOffset
+
+        const val C_AttributeContainer_m_Item: Long = 0x50L
+        fun C_AttributeContainer_m_ItemAddress(objectAddress: Long): Long = objectAddress + C_AttributeContainer_m_Item
+
+        const val C_BarnLight_m_LightStyleEvents: Long = 0xF90L
+        fun C_BarnLight_m_LightStyleEventsAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_LightStyleEvents
+
+        const val C_BarnLight_m_LightStyleString: Long = 0xF68L
+        fun C_BarnLight_m_LightStyleStringAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_LightStyleString
+
+        const val C_BarnLight_m_LightStyleTargets: Long = 0xFA8L
+        fun C_BarnLight_m_LightStyleTargetsAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_LightStyleTargets
+
+        const val C_BarnLight_m_QueuedLightStyleStrings: Long = 0xF78L
+        fun C_BarnLight_m_QueuedLightStyleStringsAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_QueuedLightStyleStrings
+
+        const val C_BarnLight_m_VisClusters: Long = 0x1220L
+        fun C_BarnLight_m_VisClustersAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_VisClusters
+
+        const val C_BarnLight_m_bContactShadow: Long = 0x1078L
+        fun C_BarnLight_m_bContactShadowAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_bContactShadow
+
+        const val C_BarnLight_m_bForceShadowsEnabled: Long = 0x1079L
+        fun C_BarnLight_m_bForceShadowsEnabledAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_bForceShadowsEnabled
+
+        const val C_BarnLight_m_fAlternateColorBrightness: Long = 0x1094L
+        fun C_BarnLight_m_fAlternateColorBrightnessAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_fAlternateColorBrightness
+
+        const val C_BarnLight_m_flBakeSpecularToCubemapsScale: Long = 0x1068L
+        fun C_BarnLight_m_flBakeSpecularToCubemapsScaleAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flBakeSpecularToCubemapsScale
+
+        const val C_BarnLight_m_flColorTemperature: Long = 0xF3CL
+        fun C_BarnLight_m_flColorTemperatureAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flColorTemperature
+
+        const val C_BarnLight_m_flFadeSizeEnd: Long = 0x10ACL
+        fun C_BarnLight_m_flFadeSizeEndAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flFadeSizeEnd
+
+        const val C_BarnLight_m_flFadeSizeStart: Long = 0x10A8L
+        fun C_BarnLight_m_flFadeSizeStartAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flFadeSizeStart
+
+        const val C_BarnLight_m_flFogScale: Long = 0x10A4L
+        fun C_BarnLight_m_flFogScaleAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flFogScale
+
+        const val C_BarnLight_m_flLuminaireAnisotropy: Long = 0xF60L
+        fun C_BarnLight_m_flLuminaireAnisotropyAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flLuminaireAnisotropy
+
+        const val C_BarnLight_m_flLuminaireSize: Long = 0xF5CL
+        fun C_BarnLight_m_flLuminaireSizeAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flLuminaireSize
+
+        const val C_BarnLight_m_flShadowFadeSizeEnd: Long = 0x10B4L
+        fun C_BarnLight_m_flShadowFadeSizeEndAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flShadowFadeSizeEnd
+
+        const val C_BarnLight_m_flShadowFadeSizeStart: Long = 0x10B0L
+        fun C_BarnLight_m_flShadowFadeSizeStartAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flShadowFadeSizeStart
+
+        const val C_BarnLight_m_flShape: Long = 0x1028L
+        fun C_BarnLight_m_flShapeAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flShape
+
+        const val C_BarnLight_m_flSkirt: Long = 0x1034L
+        fun C_BarnLight_m_flSkirtAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flSkirt
+
+        const val C_BarnLight_m_flSkirtNear: Long = 0x1038L
+        fun C_BarnLight_m_flSkirtNearAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flSkirtNear
+
+        const val C_BarnLight_m_flSoftX: Long = 0x102CL
+        fun C_BarnLight_m_flSoftXAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flSoftX
+
+        const val C_BarnLight_m_flSoftY: Long = 0x1030L
+        fun C_BarnLight_m_flSoftYAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_flSoftY
+
+        const val C_BarnLight_m_nBakeSpecularToCubemaps: Long = 0x1058L
+        fun C_BarnLight_m_nBakeSpecularToCubemapsAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nBakeSpecularToCubemaps
+
+        const val C_BarnLight_m_nColorMode: Long = 0xF34L
+        fun C_BarnLight_m_nColorModeAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nColorMode
+
+        const val C_BarnLight_m_nFog: Long = 0x1098L
+        fun C_BarnLight_m_nFogAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nFog
+
+        const val C_BarnLight_m_nFogShadows: Long = 0x10A0L
+        fun C_BarnLight_m_nFogShadowsAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nFogShadows
+
+        const val C_BarnLight_m_nLuminaireShape: Long = 0xF58L
+        fun C_BarnLight_m_nLuminaireShapeAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nLuminaireShape
+
+        const val C_BarnLight_m_nPrecomputedSubFrusta: Long = 0x10F8L
+        fun C_BarnLight_m_nPrecomputedSubFrustaAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nPrecomputedSubFrusta
+
+        const val C_BarnLight_m_nShadowMapSize: Long = 0x1070L
+        fun C_BarnLight_m_nShadowMapSizeAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_nShadowMapSize
+
+        const val C_BarnLight_m_vAlternateColor: Long = 0x1088L
+        fun C_BarnLight_m_vAlternateColorAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vAlternateColor
+
+        const val C_BarnLight_m_vBakeSpecularToCubemapsSize: Long = 0x105CL
+        fun C_BarnLight_m_vBakeSpecularToCubemapsSizeAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vBakeSpecularToCubemapsSize
+
+        const val C_BarnLight_m_vPrecomputedOBBAngles0: Long = 0x1108L
+        fun C_BarnLight_m_vPrecomputedOBBAngles0Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBAngles0
+
+        const val C_BarnLight_m_vPrecomputedOBBAngles1: Long = 0x112CL
+        fun C_BarnLight_m_vPrecomputedOBBAngles1Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBAngles1
+
+        const val C_BarnLight_m_vPrecomputedOBBAngles2: Long = 0x1150L
+        fun C_BarnLight_m_vPrecomputedOBBAngles2Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBAngles2
+
+        const val C_BarnLight_m_vPrecomputedOBBAngles3: Long = 0x1174L
+        fun C_BarnLight_m_vPrecomputedOBBAngles3Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBAngles3
+
+        const val C_BarnLight_m_vPrecomputedOBBAngles4: Long = 0x1198L
+        fun C_BarnLight_m_vPrecomputedOBBAngles4Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBAngles4
+
+        const val C_BarnLight_m_vPrecomputedOBBAngles5: Long = 0x11BCL
+        fun C_BarnLight_m_vPrecomputedOBBAngles5Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBAngles5
+
+        const val C_BarnLight_m_vPrecomputedOBBExtent0: Long = 0x1114L
+        fun C_BarnLight_m_vPrecomputedOBBExtent0Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBExtent0
+
+        const val C_BarnLight_m_vPrecomputedOBBExtent1: Long = 0x1138L
+        fun C_BarnLight_m_vPrecomputedOBBExtent1Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBExtent1
+
+        const val C_BarnLight_m_vPrecomputedOBBExtent2: Long = 0x115CL
+        fun C_BarnLight_m_vPrecomputedOBBExtent2Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBExtent2
+
+        const val C_BarnLight_m_vPrecomputedOBBExtent3: Long = 0x1180L
+        fun C_BarnLight_m_vPrecomputedOBBExtent3Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBExtent3
+
+        const val C_BarnLight_m_vPrecomputedOBBExtent4: Long = 0x11A4L
+        fun C_BarnLight_m_vPrecomputedOBBExtent4Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBExtent4
+
+        const val C_BarnLight_m_vPrecomputedOBBExtent5: Long = 0x11C8L
+        fun C_BarnLight_m_vPrecomputedOBBExtent5Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBExtent5
+
+        const val C_BarnLight_m_vPrecomputedOBBOrigin0: Long = 0x10FCL
+        fun C_BarnLight_m_vPrecomputedOBBOrigin0Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBOrigin0
+
+        const val C_BarnLight_m_vPrecomputedOBBOrigin1: Long = 0x1120L
+        fun C_BarnLight_m_vPrecomputedOBBOrigin1Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBOrigin1
+
+        const val C_BarnLight_m_vPrecomputedOBBOrigin2: Long = 0x1144L
+        fun C_BarnLight_m_vPrecomputedOBBOrigin2Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBOrigin2
+
+        const val C_BarnLight_m_vPrecomputedOBBOrigin3: Long = 0x1168L
+        fun C_BarnLight_m_vPrecomputedOBBOrigin3Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBOrigin3
+
+        const val C_BarnLight_m_vPrecomputedOBBOrigin4: Long = 0x118CL
+        fun C_BarnLight_m_vPrecomputedOBBOrigin4Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBOrigin4
+
+        const val C_BarnLight_m_vPrecomputedOBBOrigin5: Long = 0x11B0L
+        fun C_BarnLight_m_vPrecomputedOBBOrigin5Address(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vPrecomputedOBBOrigin5
+
+        const val C_BarnLight_m_vShear: Long = 0x104CL
+        fun C_BarnLight_m_vShearAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vShear
+
+        const val C_BarnLight_m_vSizeParams: Long = 0x103CL
+        fun C_BarnLight_m_vSizeParamsAddress(objectAddress: Long): Long = objectAddress + C_BarnLight_m_vSizeParams
+
+        const val C_BaseButton_m_glowEntity: Long = 0xF30L
+        fun C_BaseButton_m_glowEntityAddress(objectAddress: Long): Long = objectAddress + C_BaseButton_m_glowEntity
+
+        const val C_BaseButton_m_szDisplayText: Long = 0xF38L
+        fun C_BaseButton_m_szDisplayTextAddress(objectAddress: Long): Long = objectAddress + C_BaseButton_m_szDisplayText
+
+        const val C_BaseButton_m_usable: Long = 0xF34L
+        fun C_BaseButton_m_usableAddress(objectAddress: Long): Long = objectAddress + C_BaseButton_m_usable
+
+        const val C_BaseCSGrenadeProjectile_m_nBounces: Long = 0x1140L
+        fun C_BaseCSGrenadeProjectile_m_nBouncesAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenadeProjectile_m_nBounces
+
+        const val C_BaseCSGrenadeProjectile_m_nExplodeEffectIndex: Long = 0x1148L
+        fun C_BaseCSGrenadeProjectile_m_nExplodeEffectIndexAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenadeProjectile_m_nExplodeEffectIndex
+
+        const val C_BaseCSGrenadeProjectile_m_nExplodeEffectTickBegin: Long = 0x1150L
+        fun C_BaseCSGrenadeProjectile_m_nExplodeEffectTickBeginAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenadeProjectile_m_nExplodeEffectTickBegin
+
+        const val C_BaseCSGrenadeProjectile_m_vInitialPosition: Long = 0x1128L
+        fun C_BaseCSGrenadeProjectile_m_vInitialPositionAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenadeProjectile_m_vInitialPosition
+
+        const val C_BaseCSGrenadeProjectile_m_vInitialVelocity: Long = 0x1134L
+        fun C_BaseCSGrenadeProjectile_m_vInitialVelocityAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenadeProjectile_m_vInitialVelocity
+
+        const val C_BaseCSGrenadeProjectile_m_vecExplodeEffectOrigin: Long = 0x1154L
+        fun C_BaseCSGrenadeProjectile_m_vecExplodeEffectOriginAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenadeProjectile_m_vecExplodeEffectOrigin
+
+        const val C_BaseCSGrenade_m_bIsHeldByPlayer: Long = 0x2B37L
+        fun C_BaseCSGrenade_m_bIsHeldByPlayerAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_bIsHeldByPlayer
+
+        const val C_BaseCSGrenade_m_bJumpThrow: Long = 0x2B39L
+        fun C_BaseCSGrenade_m_bJumpThrowAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_bJumpThrow
+
+        const val C_BaseCSGrenade_m_bJustPulledPin: Long = 0x2BC8L
+        fun C_BaseCSGrenade_m_bJustPulledPinAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_bJustPulledPin
+
+        const val C_BaseCSGrenade_m_bPinPulled: Long = 0x2B38L
+        fun C_BaseCSGrenade_m_bPinPulledAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_bPinPulled
+
+        const val C_BaseCSGrenade_m_bRedraw: Long = 0x2B36L
+        fun C_BaseCSGrenade_m_bRedrawAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_bRedraw
+
+        const val C_BaseCSGrenade_m_bThrowAnimating: Long = 0x2B3AL
+        fun C_BaseCSGrenade_m_bThrowAnimatingAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_bThrowAnimating
+
+        const val C_BaseCSGrenade_m_fDropTime: Long = 0x2BC0L
+        fun C_BaseCSGrenade_m_fDropTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_fDropTime
+
+        const val C_BaseCSGrenade_m_fPinPullTime: Long = 0x2BC4L
+        fun C_BaseCSGrenade_m_fPinPullTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_fPinPullTime
+
+        const val C_BaseCSGrenade_m_fThrowTime: Long = 0x2B3CL
+        fun C_BaseCSGrenade_m_fThrowTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_fThrowTime
+
+        const val C_BaseCSGrenade_m_flNextHoldFrac: Long = 0x2BD0L
+        fun C_BaseCSGrenade_m_flNextHoldFracAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_flNextHoldFrac
+
+        const val C_BaseCSGrenade_m_hSwitchToWeaponAfterThrow: Long = 0x2BD4L
+        fun C_BaseCSGrenade_m_hSwitchToWeaponAfterThrowAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_hSwitchToWeaponAfterThrow
+
+        const val C_BaseCSGrenade_m_nNextHoldTick: Long = 0x2BCCL
+        fun C_BaseCSGrenade_m_nNextHoldTickAddress(objectAddress: Long): Long = objectAddress + C_BaseCSGrenade_m_nNextHoldTick
+
+        const val C_BaseClientUIEntity_m_DialogXMLName: Long = 0xF40L
+        fun C_BaseClientUIEntity_m_DialogXMLNameAddress(objectAddress: Long): Long = objectAddress + C_BaseClientUIEntity_m_DialogXMLName
+
+        const val C_BaseClientUIEntity_m_PanelClassName: Long = 0xF48L
+        fun C_BaseClientUIEntity_m_PanelClassNameAddress(objectAddress: Long): Long = objectAddress + C_BaseClientUIEntity_m_PanelClassName
+
+        const val C_BaseClientUIEntity_m_PanelID: Long = 0xF50L
+        fun C_BaseClientUIEntity_m_PanelIDAddress(objectAddress: Long): Long = objectAddress + C_BaseClientUIEntity_m_PanelID
+
+        const val C_BaseCombatCharacter_m_hMyWearables: Long = 0x10E0L
+        fun C_BaseCombatCharacter_m_hMyWearablesAddress(objectAddress: Long): Long = objectAddress + C_BaseCombatCharacter_m_hMyWearables
+
+        const val C_BaseDoor_m_bIsUsable: Long = 0xF30L
+        fun C_BaseDoor_m_bIsUsableAddress(objectAddress: Long): Long = objectAddress + C_BaseDoor_m_bIsUsable
+
+        const val C_BaseEntity_m_MoveType: Long = 0x69DL
+        fun C_BaseEntity_m_MoveTypeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_MoveType
+
+        const val C_BaseEntity_m_bAnimatedEveryTick: Long = 0x6C0L
+        fun C_BaseEntity_m_bAnimatedEveryTickAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_bAnimatedEveryTick
+
+        const val C_BaseEntity_m_bClientSideRagdoll: Long = 0x55AL
+        fun C_BaseEntity_m_bClientSideRagdollAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_bClientSideRagdoll
+
+        const val C_BaseEntity_m_bGravityDisabled: Long = 0x6C1L
+        fun C_BaseEntity_m_bGravityDisabledAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_bGravityDisabled
+
+        const val C_BaseEntity_m_bTakesDamage: Long = 0x4C5L
+        fun C_BaseEntity_m_bTakesDamageAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_bTakesDamage
+
+        const val C_BaseEntity_m_fEffects: Long = 0x6A4L
+        fun C_BaseEntity_m_fEffectsAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_fEffects
+
+        const val C_BaseEntity_m_flAnimTime: Long = 0x524L
+        fun C_BaseEntity_m_flAnimTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flAnimTime
+
+        const val C_BaseEntity_m_flCreateTime: Long = 0x550L
+        fun C_BaseEntity_m_flCreateTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flCreateTime
+
+        const val C_BaseEntity_m_flElasticity: Long = 0x6B4L
+        fun C_BaseEntity_m_flElasticityAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flElasticity
+
+        const val C_BaseEntity_m_flFriction: Long = 0x6B0L
+        fun C_BaseEntity_m_flFrictionAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flFriction
+
+        const val C_BaseEntity_m_flGravityScale: Long = 0x6B8L
+        fun C_BaseEntity_m_flGravityScaleAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flGravityScale
+
+        const val C_BaseEntity_m_flNavIgnoreUntilTime: Long = 0x6C4L
+        fun C_BaseEntity_m_flNavIgnoreUntilTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flNavIgnoreUntilTime
+
+        const val C_BaseEntity_m_flSimulationTime: Long = 0x528L
+        fun C_BaseEntity_m_flSimulationTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flSimulationTime
+
+        const val C_BaseEntity_m_flTimeScale: Long = 0x6BCL
+        fun C_BaseEntity_m_flTimeScaleAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flTimeScale
+
+        const val C_BaseEntity_m_flWaterLevel: Long = 0x6A0L
+        fun C_BaseEntity_m_flWaterLevelAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_flWaterLevel
+
+        const val C_BaseEntity_m_iHealth: Long = 0x4BCL
+        fun C_BaseEntity_m_iHealthAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_iHealth
+
+        const val C_BaseEntity_m_iMaxHealth: Long = 0x4B8L
+        fun C_BaseEntity_m_iMaxHealthAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_iMaxHealth
+
+        const val C_BaseEntity_m_iTeamNum: Long = 0x55BL
+        fun C_BaseEntity_m_iTeamNumAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_iTeamNum
+
+        const val C_BaseEntity_m_lifeState: Long = 0x4C4L
+        fun C_BaseEntity_m_lifeStateAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_lifeState
+
+        const val C_BaseEntity_m_nBloodType: Long = 0x778L
+        fun C_BaseEntity_m_nBloodTypeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_nBloodType
+
+        const val C_BaseEntity_m_nGroundBodyIndex: Long = 0x6ACL
+        fun C_BaseEntity_m_nGroundBodyIndexAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_nGroundBodyIndex
+
+        const val C_BaseEntity_m_nPlatformType: Long = 0x4D0L
+        fun C_BaseEntity_m_nPlatformTypeAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_nPlatformType
+
+        const val C_BaseEntity_m_nSubclassID: Long = 0x4F0L
+        fun C_BaseEntity_m_nSubclassIDAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_nSubclassID
+
+        const val C_BaseEntity_m_spawnflags: Long = 0x55CL
+        fun C_BaseEntity_m_spawnflagsAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_spawnflags
+
+        const val C_BaseEntity_m_ubInterpolationFrame: Long = 0x4D1L
+        fun C_BaseEntity_m_ubInterpolationFrameAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_ubInterpolationFrame
+
+        const val C_BaseEntity_m_vecBaseVelocity: Long = 0x688L
+        fun C_BaseEntity_m_vecBaseVelocityAddress(objectAddress: Long): Long = objectAddress + C_BaseEntity_m_vecBaseVelocity
+
+        const val C_BaseGrenade_m_DmgRadius: Long = 0x10E4L
+        fun C_BaseGrenade_m_DmgRadiusAddress(objectAddress: Long): Long = objectAddress + C_BaseGrenade_m_DmgRadius
+
+        const val C_BaseGrenade_m_bIsLive: Long = 0x10E2L
+        fun C_BaseGrenade_m_bIsLiveAddress(objectAddress: Long): Long = objectAddress + C_BaseGrenade_m_bIsLive
+
+        const val C_BaseGrenade_m_flDetonateTime: Long = 0x10E8L
+        fun C_BaseGrenade_m_flDetonateTimeAddress(objectAddress: Long): Long = objectAddress + C_BaseGrenade_m_flDetonateTime
+
+        const val C_BaseGrenade_m_hThrower: Long = 0x1108L
+        fun C_BaseGrenade_m_hThrowerAddress(objectAddress: Long): Long = objectAddress + C_BaseGrenade_m_hThrower
+
+        const val C_BaseModelEntity_m_Glow: Long = 0xD58L
+        fun C_BaseModelEntity_m_GlowAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_Glow
+
+        const val C_BaseModelEntity_m_bNoInterpolate: Long = 0xCA1L
+        fun C_BaseModelEntity_m_bNoInterpolateAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_bNoInterpolate
+
+        const val C_BaseModelEntity_m_bvDisabledHitGroups: Long = 0xF20L
+        fun C_BaseModelEntity_m_bvDisabledHitGroupsAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_bvDisabledHitGroups
+
+        const val C_BaseModelEntity_m_clrRender: Long = 0xC18L
+        fun C_BaseModelEntity_m_clrRenderAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_clrRender
+
+        const val C_BaseModelEntity_m_fadeMaxDist: Long = 0xDB8L
+        fun C_BaseModelEntity_m_fadeMaxDistAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_fadeMaxDist
+
+        const val C_BaseModelEntity_m_fadeMinDist: Long = 0xDB4L
+        fun C_BaseModelEntity_m_fadeMinDistAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_fadeMinDist
+
+        const val C_BaseModelEntity_m_flGlowBackfaceMult: Long = 0xDB0L
+        fun C_BaseModelEntity_m_flGlowBackfaceMultAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_flGlowBackfaceMult
+
+        const val C_BaseModelEntity_m_flShadowStrength: Long = 0xDC0L
+        fun C_BaseModelEntity_m_flShadowStrengthAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_flShadowStrength
+
+        const val C_BaseModelEntity_m_nObjectCulling: Long = 0xDC4L
+        fun C_BaseModelEntity_m_nObjectCullingAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_nObjectCulling
+
+        const val C_BaseModelEntity_m_vecRenderAttributes: Long = 0xC20L
+        fun C_BaseModelEntity_m_vecRenderAttributesAddress(objectAddress: Long): Long = objectAddress + C_BaseModelEntity_m_vecRenderAttributes
+
+        const val C_BasePlayerPawn_m_ServerViewAngleChanges: Long = 0x11B8L
+        fun C_BasePlayerPawn_m_ServerViewAngleChangesAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerPawn_m_ServerViewAngleChanges
+
+        const val C_BasePlayerPawn_m_flDeathTime: Long = 0x12D0L
+        fun C_BasePlayerPawn_m_flDeathTimeAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerPawn_m_flDeathTime
+
+        const val C_BasePlayerPawn_m_hController: Long = 0x1330L
+        fun C_BasePlayerPawn_m_hControllerAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerPawn_m_hController
+
+        const val C_BasePlayerPawn_m_hDefaultController: Long = 0x1334L
+        fun C_BasePlayerPawn_m_hDefaultControllerAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerPawn_m_hDefaultController
+
+        const val C_BasePlayerPawn_m_iHideHUD: Long = 0x1238L
+        fun C_BasePlayerPawn_m_iHideHUDAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerPawn_m_iHideHUD
+
+        const val C_BasePlayerPawn_m_skybox3d: Long = 0x1240L
+        fun C_BasePlayerPawn_m_skybox3dAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerPawn_m_skybox3d
+
+        const val C_BasePlayerWeapon_m_flNextPrimaryAttackTickRatio: Long = 0x255CL
+        fun C_BasePlayerWeapon_m_flNextPrimaryAttackTickRatioAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_flNextPrimaryAttackTickRatio
+
+        const val C_BasePlayerWeapon_m_flNextSecondaryAttackTickRatio: Long = 0x2564L
+        fun C_BasePlayerWeapon_m_flNextSecondaryAttackTickRatioAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_flNextSecondaryAttackTickRatio
+
+        const val C_BasePlayerWeapon_m_iClip1: Long = 0x2568L
+        fun C_BasePlayerWeapon_m_iClip1Address(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_iClip1
+
+        const val C_BasePlayerWeapon_m_iClip2: Long = 0x256CL
+        fun C_BasePlayerWeapon_m_iClip2Address(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_iClip2
+
+        const val C_BasePlayerWeapon_m_nNextPrimaryAttackTick: Long = 0x2558L
+        fun C_BasePlayerWeapon_m_nNextPrimaryAttackTickAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_nNextPrimaryAttackTick
+
+        const val C_BasePlayerWeapon_m_nNextSecondaryAttackTick: Long = 0x2560L
+        fun C_BasePlayerWeapon_m_nNextSecondaryAttackTickAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_nNextSecondaryAttackTick
+
+        const val C_BasePlayerWeapon_m_pReserveAmmo: Long = 0x2570L
+        fun C_BasePlayerWeapon_m_pReserveAmmoAddress(objectAddress: Long): Long = objectAddress + C_BasePlayerWeapon_m_pReserveAmmo
+
+        const val C_BasePropDoor_m_bLocked: Long = 0x1321L
+        fun C_BasePropDoor_m_bLockedAddress(objectAddress: Long): Long = objectAddress + C_BasePropDoor_m_bLocked
+
+        const val C_BasePropDoor_m_bNoNPCs: Long = 0x1322L
+        fun C_BasePropDoor_m_bNoNPCsAddress(objectAddress: Long): Long = objectAddress + C_BasePropDoor_m_bNoNPCs
+
+        const val C_BasePropDoor_m_closedAngles: Long = 0x1330L
+        fun C_BasePropDoor_m_closedAnglesAddress(objectAddress: Long): Long = objectAddress + C_BasePropDoor_m_closedAngles
+
+        const val C_BasePropDoor_m_closedPosition: Long = 0x1324L
+        fun C_BasePropDoor_m_closedPositionAddress(objectAddress: Long): Long = objectAddress + C_BasePropDoor_m_closedPosition
+
+        const val C_Beam_m_bTurnedOff: Long = 0xFD8L
+        fun C_Beam_m_bTurnedOffAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_bTurnedOff
+
+        const val C_Beam_m_fAmplitude: Long = 0xFC4L
+        fun C_Beam_m_fAmplitudeAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fAmplitude
+
+        const val C_Beam_m_fEndWidth: Long = 0xFB8L
+        fun C_Beam_m_fEndWidthAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fEndWidth
+
+        const val C_Beam_m_fFadeLength: Long = 0xFBCL
+        fun C_Beam_m_fFadeLengthAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fFadeLength
+
+        const val C_Beam_m_fHaloScale: Long = 0xFC0L
+        fun C_Beam_m_fHaloScaleAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fHaloScale
+
+        const val C_Beam_m_fSpeed: Long = 0xFCCL
+        fun C_Beam_m_fSpeedAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fSpeed
+
+        const val C_Beam_m_fStartFrame: Long = 0xFC8L
+        fun C_Beam_m_fStartFrameAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fStartFrame
+
+        const val C_Beam_m_fWidth: Long = 0xFB4L
+        fun C_Beam_m_fWidthAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_fWidth
+
+        const val C_Beam_m_hAttachEntity: Long = 0xF80L
+        fun C_Beam_m_hAttachEntityAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_hAttachEntity
+
+        const val C_Beam_m_hBaseMaterial: Long = 0xF68L
+        fun C_Beam_m_hBaseMaterialAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_hBaseMaterial
+
+        const val C_Beam_m_nAttachIndex: Long = 0xFA8L
+        fun C_Beam_m_nAttachIndexAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_nAttachIndex
+
+        const val C_Beam_m_nBeamFlags: Long = 0xF7CL
+        fun C_Beam_m_nBeamFlagsAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_nBeamFlags
+
+        const val C_Beam_m_nBeamType: Long = 0xF78L
+        fun C_Beam_m_nBeamTypeAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_nBeamType
+
+        const val C_Beam_m_nClipStyle: Long = 0xFD4L
+        fun C_Beam_m_nClipStyleAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_nClipStyle
+
+        const val C_Beam_m_nHaloIndex: Long = 0xF70L
+        fun C_Beam_m_nHaloIndexAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_nHaloIndex
+
+        const val C_Beam_m_nNumBeamEnts: Long = 0xF40L
+        fun C_Beam_m_nNumBeamEntsAddress(objectAddress: Long): Long = objectAddress + C_Beam_m_nNumBeamEnts
+
+        const val C_C4_m_bBombPlacedAnimation: Long = 0x2B48L
+        fun C_C4_m_bBombPlacedAnimationAddress(objectAddress: Long): Long = objectAddress + C_C4_m_bBombPlacedAnimation
+
+        const val C_C4_m_bIsPlantingViaUse: Long = 0x2B49L
+        fun C_C4_m_bIsPlantingViaUseAddress(objectAddress: Long): Long = objectAddress + C_C4_m_bIsPlantingViaUse
+
+        const val C_C4_m_bStartedArming: Long = 0x2B40L
+        fun C_C4_m_bStartedArmingAddress(objectAddress: Long): Long = objectAddress + C_C4_m_bStartedArming
+
+        const val C_C4_m_fArmedTime: Long = 0x2B44L
+        fun C_C4_m_fArmedTimeAddress(objectAddress: Long): Long = objectAddress + C_C4_m_fArmedTime
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_agentItem: Long = 0x798L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_agentItemAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_agentItem
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_glovesItem: Long = 0x1B10L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_glovesItemAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_glovesItem
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_nOrdinal: Long = 0x784L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_nOrdinalAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_nOrdinal
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_nRandom: Long = 0x780L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_nRandomAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_nRandom
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_sWeaponName: Long = 0x788L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_sWeaponNameAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_sWeaponName
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_weaponItem: Long = 0x2E88L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_weaponItemAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_weaponItem
+
+        const val C_CSGO_TeamPreviewCharacterPosition_m_xuid: Long = 0x790L
+        fun C_CSGO_TeamPreviewCharacterPosition_m_xuidAddress(objectAddress: Long): Long = objectAddress + C_CSGO_TeamPreviewCharacterPosition_m_xuid
+
+        const val C_CSGameRules_m_MatchDevice: Long = 0xA4L
+        fun C_CSGameRules_m_MatchDeviceAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_MatchDevice
+
+        const val C_CSGameRules_m_MinimapVerticalSectionHeights: Long = 0xC30L
+        fun C_CSGameRules_m_MinimapVerticalSectionHeightsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_MinimapVerticalSectionHeights
+
+        const val C_CSGameRules_m_RetakeRules: Long = 0xD98L
+        fun C_CSGameRules_m_RetakeRulesAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_RetakeRules
+
+        const val C_CSGameRules_m_TeamRespawnWaveTimes: Long = 0xB18L
+        fun C_CSGameRules_m_TeamRespawnWaveTimesAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_TeamRespawnWaveTimes
+
+        const val C_CSGameRules_m_arrProhibitedItemIndices: Long = 0x8C0L
+        fun C_CSGameRules_m_arrProhibitedItemIndicesAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_arrProhibitedItemIndices
+
+        const val C_CSGameRules_m_arrTournamentActiveCasterAccounts: Long = 0x988L
+        fun C_CSGameRules_m_arrTournamentActiveCasterAccountsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_arrTournamentActiveCasterAccounts
+
+        const val C_CSGameRules_m_bAnyHostageReached: Long = 0x90L
+        fun C_CSGameRules_m_bAnyHostageReachedAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bAnyHostageReached
+
+        const val C_CSGameRules_m_bBombDropped: Long = 0x9A0L
+        fun C_CSGameRules_m_bBombDroppedAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bBombDropped
+
+        const val C_CSGameRules_m_bCTCantBuy: Long = 0x9ADL
+        fun C_CSGameRules_m_bCTCantBuyAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bCTCantBuy
+
+        const val C_CSGameRules_m_bCTTimeOutActive: Long = 0x45L
+        fun C_CSGameRules_m_bCTTimeOutActiveAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bCTTimeOutActive
+
+        const val C_CSGameRules_m_bFreezePeriod: Long = 0x39L
+        fun C_CSGameRules_m_bFreezePeriodAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bFreezePeriod
+
+        const val C_CSGameRules_m_bGameRestart: Long = 0x70L
+        fun C_CSGameRules_m_bGameRestartAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bGameRestart
+
+        const val C_CSGameRules_m_bHasMatchStarted: Long = 0xA8L
+        fun C_CSGameRules_m_bHasMatchStartedAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bHasMatchStarted
+
+        const val C_CSGameRules_m_bIsDroppingItems: Long = 0x8BCL
+        fun C_CSGameRules_m_bIsDroppingItemsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bIsDroppingItems
+
+        const val C_CSGameRules_m_bIsHltvActive: Long = 0x8BEL
+        fun C_CSGameRules_m_bIsHltvActiveAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bIsHltvActive
+
+        const val C_CSGameRules_m_bIsQuestEligible: Long = 0x8BDL
+        fun C_CSGameRules_m_bIsQuestEligibleAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bIsQuestEligible
+
+        const val C_CSGameRules_m_bIsQueuedMatchmaking: Long = 0x94L
+        fun C_CSGameRules_m_bIsQueuedMatchmakingAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bIsQueuedMatchmaking
+
+        const val C_CSGameRules_m_bIsValveDS: Long = 0x9CL
+        fun C_CSGameRules_m_bIsValveDSAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bIsValveDS
+
+        const val C_CSGameRules_m_bLogoMap: Long = 0x9DL
+        fun C_CSGameRules_m_bLogoMapAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bLogoMap
+
+        const val C_CSGameRules_m_bMapHasBombTarget: Long = 0x91L
+        fun C_CSGameRules_m_bMapHasBombTargetAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bMapHasBombTarget
+
+        const val C_CSGameRules_m_bMapHasBuyZone: Long = 0x93L
+        fun C_CSGameRules_m_bMapHasBuyZoneAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bMapHasBuyZone
+
+        const val C_CSGameRules_m_bMapHasRescueZone: Long = 0x92L
+        fun C_CSGameRules_m_bMapHasRescueZoneAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bMapHasRescueZone
+
+        const val C_CSGameRules_m_bMatchWaitingForResume: Long = 0x59L
+        fun C_CSGameRules_m_bMatchWaitingForResumeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bMatchWaitingForResume
+
+        const val C_CSGameRules_m_bPlayAllStepSoundsOnServer: Long = 0x9EL
+        fun C_CSGameRules_m_bPlayAllStepSoundsOnServerAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bPlayAllStepSoundsOnServer
+
+        const val C_CSGameRules_m_bRoundEndNoMusic: Long = 0xF34L
+        fun C_CSGameRules_m_bRoundEndNoMusicAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bRoundEndNoMusic
+
+        const val C_CSGameRules_m_bRoundEndShowTimerDefend: Long = 0xF08L
+        fun C_CSGameRules_m_bRoundEndShowTimerDefendAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bRoundEndShowTimerDefend
+
+        const val C_CSGameRules_m_bTCantBuy: Long = 0x9ACL
+        fun C_CSGameRules_m_bTCantBuyAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bTCantBuy
+
+        const val C_CSGameRules_m_bTeamIntroPeriod: Long = 0xEFCL
+        fun C_CSGameRules_m_bTeamIntroPeriodAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bTeamIntroPeriod
+
+        const val C_CSGameRules_m_bTechnicalTimeOut: Long = 0x58L
+        fun C_CSGameRules_m_bTechnicalTimeOutAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bTechnicalTimeOut
+
+        const val C_CSGameRules_m_bTerroristTimeOutActive: Long = 0x44L
+        fun C_CSGameRules_m_bTerroristTimeOutActiveAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bTerroristTimeOutActive
+
+        const val C_CSGameRules_m_bWarmupPeriod: Long = 0x3AL
+        fun C_CSGameRules_m_bWarmupPeriodAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_bWarmupPeriod
+
+        const val C_CSGameRules_m_eRoundEndReason: Long = 0xF04L
+        fun C_CSGameRules_m_eRoundEndReasonAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_eRoundEndReason
+
+        const val C_CSGameRules_m_eRoundWinReason: Long = 0x9A8L
+        fun C_CSGameRules_m_eRoundWinReasonAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_eRoundWinReason
+
+        const val C_CSGameRules_m_fMatchStartTime: Long = 0x64L
+        fun C_CSGameRules_m_fMatchStartTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_fMatchStartTime
+
+        const val C_CSGameRules_m_fRoundStartTime: Long = 0x68L
+        fun C_CSGameRules_m_fRoundStartTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_fRoundStartTime
+
+        const val C_CSGameRules_m_fWarmupPeriodEnd: Long = 0x3CL
+        fun C_CSGameRules_m_fWarmupPeriodEndAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_fWarmupPeriodEnd
+
+        const val C_CSGameRules_m_fWarmupPeriodStart: Long = 0x40L
+        fun C_CSGameRules_m_fWarmupPeriodStartAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_fWarmupPeriodStart
+
+        const val C_CSGameRules_m_flCMMItemDropRevealEndTime: Long = 0x8B8L
+        fun C_CSGameRules_m_flCMMItemDropRevealEndTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flCMMItemDropRevealEndTime
+
+        const val C_CSGameRules_m_flCMMItemDropRevealStartTime: Long = 0x8B4L
+        fun C_CSGameRules_m_flCMMItemDropRevealStartTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flCMMItemDropRevealStartTime
+
+        const val C_CSGameRules_m_flCTTimeOutRemaining: Long = 0x4CL
+        fun C_CSGameRules_m_flCTTimeOutRemainingAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flCTTimeOutRemaining
+
+        const val C_CSGameRules_m_flGameStartTime: Long = 0x74L
+        fun C_CSGameRules_m_flGameStartTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flGameStartTime
+
+        const val C_CSGameRules_m_flNextRespawnWave: Long = 0xB98L
+        fun C_CSGameRules_m_flNextRespawnWaveAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flNextRespawnWave
+
+        const val C_CSGameRules_m_flRestartRoundTime: Long = 0x6CL
+        fun C_CSGameRules_m_flRestartRoundTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flRestartRoundTime
+
+        const val C_CSGameRules_m_flTerroristTimeOutRemaining: Long = 0x48L
+        fun C_CSGameRules_m_flTerroristTimeOutRemainingAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_flTerroristTimeOutRemaining
+
+        const val C_CSGameRules_m_gamePhase: Long = 0x7CL
+        fun C_CSGameRules_m_gamePhaseAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_gamePhase
+
+        const val C_CSGameRules_m_iFreezeTime: Long = 0x5CL
+        fun C_CSGameRules_m_iFreezeTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iFreezeTime
+
+        const val C_CSGameRules_m_iHostagesRemaining: Long = 0x8CL
+        fun C_CSGameRules_m_iHostagesRemainingAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iHostagesRemaining
+
+        const val C_CSGameRules_m_iMatchStats_PlayersAlive_CT: Long = 0xA28L
+        fun C_CSGameRules_m_iMatchStats_PlayersAlive_CTAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iMatchStats_PlayersAlive_CT
+
+        const val C_CSGameRules_m_iMatchStats_PlayersAlive_T: Long = 0xAA0L
+        fun C_CSGameRules_m_iMatchStats_PlayersAlive_TAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iMatchStats_PlayersAlive_T
+
+        const val C_CSGameRules_m_iMatchStats_RoundResults: Long = 0x9B0L
+        fun C_CSGameRules_m_iMatchStats_RoundResultsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iMatchStats_RoundResults
+
+        const val C_CSGameRules_m_iNumConsecutiveCTLoses: Long = 0xCACL
+        fun C_CSGameRules_m_iNumConsecutiveCTLosesAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iNumConsecutiveCTLoses
+
+        const val C_CSGameRules_m_iNumConsecutiveTerroristLoses: Long = 0xCB0L
+        fun C_CSGameRules_m_iNumConsecutiveTerroristLosesAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iNumConsecutiveTerroristLoses
+
+        const val C_CSGameRules_m_iRoundEndFunFactData1: Long = 0xF1CL
+        fun C_CSGameRules_m_iRoundEndFunFactData1Address(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndFunFactData1
+
+        const val C_CSGameRules_m_iRoundEndFunFactData2: Long = 0xF20L
+        fun C_CSGameRules_m_iRoundEndFunFactData2Address(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndFunFactData2
+
+        const val C_CSGameRules_m_iRoundEndFunFactData3: Long = 0xF24L
+        fun C_CSGameRules_m_iRoundEndFunFactData3Address(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndFunFactData3
+
+        const val C_CSGameRules_m_iRoundEndFunFactPlayerSlot: Long = 0xF18L
+        fun C_CSGameRules_m_iRoundEndFunFactPlayerSlotAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndFunFactPlayerSlot
+
+        const val C_CSGameRules_m_iRoundEndLegacy: Long = 0xF38L
+        fun C_CSGameRules_m_iRoundEndLegacyAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndLegacy
+
+        const val C_CSGameRules_m_iRoundEndPlayerCount: Long = 0xF30L
+        fun C_CSGameRules_m_iRoundEndPlayerCountAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndPlayerCount
+
+        const val C_CSGameRules_m_iRoundEndTimerTime: Long = 0xF0CL
+        fun C_CSGameRules_m_iRoundEndTimerTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndTimerTime
+
+        const val C_CSGameRules_m_iRoundEndWinnerTeam: Long = 0xF00L
+        fun C_CSGameRules_m_iRoundEndWinnerTeamAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundEndWinnerTeam
+
+        const val C_CSGameRules_m_iRoundStartRoundNumber: Long = 0xF40L
+        fun C_CSGameRules_m_iRoundStartRoundNumberAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundStartRoundNumber
+
+        const val C_CSGameRules_m_iRoundTime: Long = 0x60L
+        fun C_CSGameRules_m_iRoundTimeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundTime
+
+        const val C_CSGameRules_m_iRoundWinStatus: Long = 0x9A4L
+        fun C_CSGameRules_m_iRoundWinStatusAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iRoundWinStatus
+
+        const val C_CSGameRules_m_iSpectatorSlotCount: Long = 0xA0L
+        fun C_CSGameRules_m_iSpectatorSlotCountAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_iSpectatorSlotCount
+
+        const val C_CSGameRules_m_nCTTeamIntroVariant: Long = 0xEF8L
+        fun C_CSGameRules_m_nCTTeamIntroVariantAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nCTTeamIntroVariant
+
+        const val C_CSGameRules_m_nCTTimeOuts: Long = 0x54L
+        fun C_CSGameRules_m_nCTTimeOutsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nCTTimeOuts
+
+        const val C_CSGameRules_m_nEndMatchMapGroupVoteOptions: Long = 0xC80L
+        fun C_CSGameRules_m_nEndMatchMapGroupVoteOptionsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nEndMatchMapGroupVoteOptions
+
+        const val C_CSGameRules_m_nEndMatchMapGroupVoteTypes: Long = 0xC58L
+        fun C_CSGameRules_m_nEndMatchMapGroupVoteTypesAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nEndMatchMapGroupVoteTypes
+
+        const val C_CSGameRules_m_nEndMatchMapVoteWinner: Long = 0xCA8L
+        fun C_CSGameRules_m_nEndMatchMapVoteWinnerAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nEndMatchMapVoteWinner
+
+        const val C_CSGameRules_m_nHalloweenMaskListSeed: Long = 0x99CL
+        fun C_CSGameRules_m_nHalloweenMaskListSeedAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nHalloweenMaskListSeed
+
+        const val C_CSGameRules_m_nMatchAbortedEarlyReason: Long = 0xD70L
+        fun C_CSGameRules_m_nMatchAbortedEarlyReasonAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nMatchAbortedEarlyReason
+
+        const val C_CSGameRules_m_nMatchEndCount: Long = 0xEF0L
+        fun C_CSGameRules_m_nMatchEndCountAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nMatchEndCount
+
+        const val C_CSGameRules_m_nNextMapInMapgroup: Long = 0xACL
+        fun C_CSGameRules_m_nNextMapInMapgroupAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nNextMapInMapgroup
+
+        const val C_CSGameRules_m_nOvertimePlaying: Long = 0x88L
+        fun C_CSGameRules_m_nOvertimePlayingAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nOvertimePlaying
+
+        const val C_CSGameRules_m_nQueuedMatchmakingMode: Long = 0x98L
+        fun C_CSGameRules_m_nQueuedMatchmakingModeAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nQueuedMatchmakingMode
+
+        const val C_CSGameRules_m_nRoundEndCount: Long = 0xF3CL
+        fun C_CSGameRules_m_nRoundEndCountAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nRoundEndCount
+
+        const val C_CSGameRules_m_nRoundStartCount: Long = 0xF44L
+        fun C_CSGameRules_m_nRoundStartCountAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nRoundStartCount
+
+        const val C_CSGameRules_m_nRoundsPlayedThisPhase: Long = 0x84L
+        fun C_CSGameRules_m_nRoundsPlayedThisPhaseAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nRoundsPlayedThisPhase
+
+        const val C_CSGameRules_m_nTTeamIntroVariant: Long = 0xEF4L
+        fun C_CSGameRules_m_nTTeamIntroVariantAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nTTeamIntroVariant
+
+        const val C_CSGameRules_m_nTerroristTimeOuts: Long = 0x50L
+        fun C_CSGameRules_m_nTerroristTimeOutsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nTerroristTimeOuts
+
+        const val C_CSGameRules_m_nTournamentPredictionsPct: Long = 0x8B0L
+        fun C_CSGameRules_m_nTournamentPredictionsPctAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_nTournamentPredictionsPct
+
+        const val C_CSGameRules_m_numBestOfMaps: Long = 0x998L
+        fun C_CSGameRules_m_numBestOfMapsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_numBestOfMaps
+
+        const val C_CSGameRules_m_sRoundEndFunFactToken: Long = 0xF10L
+        fun C_CSGameRules_m_sRoundEndFunFactTokenAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_sRoundEndFunFactToken
+
+        const val C_CSGameRules_m_sRoundEndMessage: Long = 0xF28L
+        fun C_CSGameRules_m_sRoundEndMessageAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_sRoundEndMessage
+
+        const val C_CSGameRules_m_szMatchStatTxt: Long = 0x4B0L
+        fun C_CSGameRules_m_szMatchStatTxtAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_szMatchStatTxt
+
+        const val C_CSGameRules_m_szTournamentEventName: Long = 0xB0L
+        fun C_CSGameRules_m_szTournamentEventNameAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_szTournamentEventName
+
+        const val C_CSGameRules_m_szTournamentEventStage: Long = 0x2B0L
+        fun C_CSGameRules_m_szTournamentEventStageAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_szTournamentEventStage
+
+        const val C_CSGameRules_m_szTournamentPredictionsTxt: Long = 0x6B0L
+        fun C_CSGameRules_m_szTournamentPredictionsTxtAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_szTournamentPredictionsTxt
+
+        const val C_CSGameRules_m_timeUntilNextPhaseStarts: Long = 0x78L
+        fun C_CSGameRules_m_timeUntilNextPhaseStartsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_timeUntilNextPhaseStarts
+
+        const val C_CSGameRules_m_totalRoundsPlayed: Long = 0x80L
+        fun C_CSGameRules_m_totalRoundsPlayedAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_totalRoundsPlayed
+
+        const val C_CSGameRules_m_vMinimapMaxs: Long = 0xC24L
+        fun C_CSGameRules_m_vMinimapMaxsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_vMinimapMaxs
+
+        const val C_CSGameRules_m_vMinimapMins: Long = 0xC18L
+        fun C_CSGameRules_m_vMinimapMinsAddress(objectAddress: Long): Long = objectAddress + C_CSGameRules_m_vMinimapMins
+
+        const val C_CSPlayerPawnBase_m_bHasMovedSinceSpawn: Long = 0x1360L
+        fun C_CSPlayerPawnBase_m_bHasMovedSinceSpawnAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_bHasMovedSinceSpawn
+
+        const val C_CSPlayerPawnBase_m_flFlashDuration: Long = 0x1388L
+        fun C_CSPlayerPawnBase_m_flFlashDurationAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_flFlashDuration
+
+        const val C_CSPlayerPawnBase_m_flFlashMaxAlpha: Long = 0x1384L
+        fun C_CSPlayerPawnBase_m_flFlashMaxAlphaAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_flFlashMaxAlpha
+
+        const val C_CSPlayerPawnBase_m_flProgressBarStartTime: Long = 0x136CL
+        fun C_CSPlayerPawnBase_m_flProgressBarStartTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_flProgressBarStartTime
+
+        const val C_CSPlayerPawnBase_m_hOriginalController: Long = 0x13D8L
+        fun C_CSPlayerPawnBase_m_hOriginalControllerAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_hOriginalController
+
+        const val C_CSPlayerPawnBase_m_iPlayerState: Long = 0x135CL
+        fun C_CSPlayerPawnBase_m_iPlayerStateAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_iPlayerState
+
+        const val C_CSPlayerPawnBase_m_iProgressBarDuration: Long = 0x1368L
+        fun C_CSPlayerPawnBase_m_iProgressBarDurationAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawnBase_m_iProgressBarDuration
+
+        const val C_CSPlayerPawn_m_ArmorValue: Long = 0x2B0CL
+        fun C_CSPlayerPawn_m_ArmorValueAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_ArmorValue
+
+        const val C_CSPlayerPawn_m_EconGloves: Long = 0x15E0L
+        fun C_CSPlayerPawn_m_EconGlovesAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_EconGloves
+
+        const val C_CSPlayerPawn_m_GunGameImmunityColor: Long = 0x2A58L
+        fun C_CSPlayerPawn_m_GunGameImmunityColorAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_GunGameImmunityColor
+
+        const val C_CSPlayerPawn_m_RetakesMVPBoostExtraUtility: Long = 0x15D8L
+        fun C_CSPlayerPawn_m_RetakesMVPBoostExtraUtilityAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_RetakesMVPBoostExtraUtility
+
+        const val C_CSPlayerPawn_m_bGunGameImmunity: Long = 0x40C8L
+        fun C_CSPlayerPawn_m_bGunGameImmunityAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bGunGameImmunity
+
+        const val C_CSPlayerPawn_m_bHasFemaleVoice: Long = 0x1430L
+        fun C_CSPlayerPawn_m_bHasFemaleVoiceAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bHasFemaleVoice
+
+        const val C_CSPlayerPawn_m_bInBombZone: Long = 0x1469L
+        fun C_CSPlayerPawn_m_bInBombZoneAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bInBombZone
+
+        const val C_CSPlayerPawn_m_bInBuyZone: Long = 0x1460L
+        fun C_CSPlayerPawn_m_bInBuyZoneAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bInBuyZone
+
+        const val C_CSPlayerPawn_m_bInHostageRescueZone: Long = 0x1468L
+        fun C_CSPlayerPawn_m_bInHostageRescueZoneAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bInHostageRescueZone
+
+        const val C_CSPlayerPawn_m_bInNoDefuseArea: Long = 0x2AECL
+        fun C_CSPlayerPawn_m_bInNoDefuseAreaAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bInNoDefuseArea
+
+        const val C_CSPlayerPawn_m_bIsBuyMenuOpen: Long = 0x146AL
+        fun C_CSPlayerPawn_m_bIsBuyMenuOpenAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bIsBuyMenuOpen
+
+        const val C_CSPlayerPawn_m_bIsGrabbingHostage: Long = 0x2AE3L
+        fun C_CSPlayerPawn_m_bIsGrabbingHostageAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bIsGrabbingHostage
+
+        const val C_CSPlayerPawn_m_bIsScoped: Long = 0x2AE0L
+        fun C_CSPlayerPawn_m_bIsScopedAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bIsScoped
+
+        const val C_CSPlayerPawn_m_bKilledByHeadshot: Long = 0x2B09L
+        fun C_CSPlayerPawn_m_bKilledByHeadshotAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bKilledByHeadshot
+
+        const val C_CSPlayerPawn_m_bLeftHanded: Long = 0x29F8L
+        fun C_CSPlayerPawn_m_bLeftHandedAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bLeftHanded
+
+        const val C_CSPlayerPawn_m_bRagdollDamageHeadshot: Long = 0x29B8L
+        fun C_CSPlayerPawn_m_bRagdollDamageHeadshotAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bRagdollDamageHeadshot
+
+        const val C_CSPlayerPawn_m_bResumeZoom: Long = 0x2AE1L
+        fun C_CSPlayerPawn_m_bResumeZoomAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bResumeZoom
+
+        const val C_CSPlayerPawn_m_bRetakesHasDefuseKit: Long = 0x15D0L
+        fun C_CSPlayerPawn_m_bRetakesHasDefuseKitAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bRetakesHasDefuseKit
+
+        const val C_CSPlayerPawn_m_bRetakesMVPLastRound: Long = 0x15D1L
+        fun C_CSPlayerPawn_m_bRetakesMVPLastRoundAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bRetakesMVPLastRound
+
+        const val C_CSPlayerPawn_m_bWaitForNoAttack: Long = 0x2B00L
+        fun C_CSPlayerPawn_m_bWaitForNoAttackAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_bWaitForNoAttack
+
+        const val C_CSPlayerPawn_m_fImmuneToGunGameDamageTime: Long = 0x40C4L
+        fun C_CSPlayerPawn_m_fImmuneToGunGameDamageTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_fImmuneToGunGameDamageTime
+
+        const val C_CSPlayerPawn_m_fMolotovDamageTime: Long = 0x40D0L
+        fun C_CSPlayerPawn_m_fMolotovDamageTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_fMolotovDamageTime
+
+        const val C_CSPlayerPawn_m_fSwitchedHandednessTime: Long = 0x29FCL
+        fun C_CSPlayerPawn_m_fSwitchedHandednessTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_fSwitchedHandednessTime
+
+        const val C_CSPlayerPawn_m_flEmitSoundTime: Long = 0x2AE8L
+        fun C_CSPlayerPawn_m_flEmitSoundTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flEmitSoundTime
+
+        const val C_CSPlayerPawn_m_flFlinchStack: Long = 0x2AF8L
+        fun C_CSPlayerPawn_m_flFlinchStackAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flFlinchStack
+
+        const val C_CSPlayerPawn_m_flHealthShotBoostExpirationTime: Long = 0x1428L
+        fun C_CSPlayerPawn_m_flHealthShotBoostExpirationTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flHealthShotBoostExpirationTime
+
+        const val C_CSPlayerPawn_m_flNextSprayDecalTime: Long = 0x1470L
+        fun C_CSPlayerPawn_m_flNextSprayDecalTimeAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flNextSprayDecalTime
+
+        const val C_CSPlayerPawn_m_flTimeOfLastInjury: Long = 0x146CL
+        fun C_CSPlayerPawn_m_flTimeOfLastInjuryAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flTimeOfLastInjury
+
+        const val C_CSPlayerPawn_m_flVelocityModifier: Long = 0x2AFCL
+        fun C_CSPlayerPawn_m_flVelocityModifierAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flVelocityModifier
+
+        const val C_CSPlayerPawn_m_flViewmodelFOV: Long = 0x2A0CL
+        fun C_CSPlayerPawn_m_flViewmodelFOVAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flViewmodelFOV
+
+        const val C_CSPlayerPawn_m_flViewmodelOffsetX: Long = 0x2A00L
+        fun C_CSPlayerPawn_m_flViewmodelOffsetXAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flViewmodelOffsetX
+
+        const val C_CSPlayerPawn_m_flViewmodelOffsetY: Long = 0x2A04L
+        fun C_CSPlayerPawn_m_flViewmodelOffsetYAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flViewmodelOffsetY
+
+        const val C_CSPlayerPawn_m_flViewmodelOffsetZ: Long = 0x2A08L
+        fun C_CSPlayerPawn_m_flViewmodelOffsetZAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_flViewmodelOffsetZ
+
+        const val C_CSPlayerPawn_m_iBlockingUseActionInProgress: Long = 0x2AE4L
+        fun C_CSPlayerPawn_m_iBlockingUseActionInProgressAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_iBlockingUseActionInProgress
+
+        const val C_CSPlayerPawn_m_iRetakesMVPBoostItem: Long = 0x15D4L
+        fun C_CSPlayerPawn_m_iRetakesMVPBoostItemAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_iRetakesMVPBoostItem
+
+        const val C_CSPlayerPawn_m_iRetakesOffering: Long = 0x15C8L
+        fun C_CSPlayerPawn_m_iRetakesOfferingAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_iRetakesOffering
+
+        const val C_CSPlayerPawn_m_iRetakesOfferingCard: Long = 0x15CCL
+        fun C_CSPlayerPawn_m_iRetakesOfferingCardAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_iRetakesOfferingCard
+
+        const val C_CSPlayerPawn_m_iShotsFired: Long = 0x2AF4L
+        fun C_CSPlayerPawn_m_iShotsFiredAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_iShotsFired
+
+        const val C_CSPlayerPawn_m_nEconGlovesChanged: Long = 0x2958L
+        fun C_CSPlayerPawn_m_nEconGlovesChangedAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_nEconGlovesChanged
+
+        const val C_CSPlayerPawn_m_nLastKillerIndex: Long = 0x2B18L
+        fun C_CSPlayerPawn_m_nLastKillerIndexAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_nLastKillerIndex
+
+        const val C_CSPlayerPawn_m_nRagdollDamageBone: Long = 0x295CL
+        fun C_CSPlayerPawn_m_nRagdollDamageBoneAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_nRagdollDamageBone
+
+        const val C_CSPlayerPawn_m_nWhichBombZone: Long = 0x2AF0L
+        fun C_CSPlayerPawn_m_nWhichBombZoneAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_nWhichBombZone
+
+        const val C_CSPlayerPawn_m_qDeathEyeAngles: Long = 0x29ECL
+        fun C_CSPlayerPawn_m_qDeathEyeAnglesAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_qDeathEyeAngles
+
+        const val C_CSPlayerPawn_m_szLastPlaceName: Long = 0x143CL
+        fun C_CSPlayerPawn_m_szLastPlaceNameAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_szLastPlaceName
+
+        const val C_CSPlayerPawn_m_szRagdollDamageWeaponName: Long = 0x2978L
+        fun C_CSPlayerPawn_m_szRagdollDamageWeaponNameAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_szRagdollDamageWeaponName
+
+        const val C_CSPlayerPawn_m_unCurrentEquipmentValue: Long = 0x2B10L
+        fun C_CSPlayerPawn_m_unCurrentEquipmentValueAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_unCurrentEquipmentValue
+
+        const val C_CSPlayerPawn_m_unFreezetimeEndEquipmentValue: Long = 0x2B14L
+        fun C_CSPlayerPawn_m_unFreezetimeEndEquipmentValueAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_unFreezetimeEndEquipmentValue
+
+        const val C_CSPlayerPawn_m_unRoundStartEquipmentValue: Long = 0x2B12L
+        fun C_CSPlayerPawn_m_unRoundStartEquipmentValueAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_unRoundStartEquipmentValue
+
+        const val C_CSPlayerPawn_m_vRagdollDamageForce: Long = 0x2960L
+        fun C_CSPlayerPawn_m_vRagdollDamageForceAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_vRagdollDamageForce
+
+        const val C_CSPlayerPawn_m_vRagdollDamagePosition: Long = 0x296CL
+        fun C_CSPlayerPawn_m_vRagdollDamagePositionAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_vRagdollDamagePosition
+
+        const val C_CSPlayerPawn_m_vRagdollServerOrigin: Long = 0x29BCL
+        fun C_CSPlayerPawn_m_vRagdollServerOriginAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_vRagdollServerOrigin
+
+        const val C_CSPlayerPawn_m_vecPlayerPatchEconIndices: Long = 0x2A10L
+        fun C_CSPlayerPawn_m_vecPlayerPatchEconIndicesAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerPawn_m_vecPlayerPatchEconIndices
+
+        const val C_CSPlayerResource_m_bEndMatchNextMapAllVoted: Long = 0x80CL
+        fun C_CSPlayerResource_m_bEndMatchNextMapAllVotedAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_bEndMatchNextMapAllVoted
+
+        const val C_CSPlayerResource_m_bHostageAlive: Long = 0x77CL
+        fun C_CSPlayerResource_m_bHostageAliveAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_bHostageAlive
+
+        const val C_CSPlayerResource_m_bombsiteCenterA: Long = 0x7C4L
+        fun C_CSPlayerResource_m_bombsiteCenterAAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_bombsiteCenterA
+
+        const val C_CSPlayerResource_m_bombsiteCenterB: Long = 0x7D0L
+        fun C_CSPlayerResource_m_bombsiteCenterBAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_bombsiteCenterB
+
+        const val C_CSPlayerResource_m_hostageRescueX: Long = 0x7DCL
+        fun C_CSPlayerResource_m_hostageRescueXAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_hostageRescueX
+
+        const val C_CSPlayerResource_m_hostageRescueY: Long = 0x7ECL
+        fun C_CSPlayerResource_m_hostageRescueYAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_hostageRescueY
+
+        const val C_CSPlayerResource_m_hostageRescueZ: Long = 0x7FCL
+        fun C_CSPlayerResource_m_hostageRescueZAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_hostageRescueZ
+
+        const val C_CSPlayerResource_m_iHostageEntityIDs: Long = 0x794L
+        fun C_CSPlayerResource_m_iHostageEntityIDsAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_iHostageEntityIDs
+
+        const val C_CSPlayerResource_m_isHostageFollowingSomeone: Long = 0x788L
+        fun C_CSPlayerResource_m_isHostageFollowingSomeoneAddress(objectAddress: Long): Long = objectAddress + C_CSPlayerResource_m_isHostageFollowingSomeone
+
+        const val C_CSTeam_m_bSurrendered: Long = 0xA3CL
+        fun C_CSTeam_m_bSurrenderedAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_bSurrendered
+
+        const val C_CSTeam_m_iClanID: Long = 0xAD0L
+        fun C_CSTeam_m_iClanIDAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_iClanID
+
+        const val C_CSTeam_m_numMapVictories: Long = 0xA38L
+        fun C_CSTeam_m_numMapVictoriesAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_numMapVictories
+
+        const val C_CSTeam_m_scoreFirstHalf: Long = 0xA40L
+        fun C_CSTeam_m_scoreFirstHalfAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_scoreFirstHalf
+
+        const val C_CSTeam_m_scoreOvertime: Long = 0xA48L
+        fun C_CSTeam_m_scoreOvertimeAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_scoreOvertime
+
+        const val C_CSTeam_m_scoreSecondHalf: Long = 0xA44L
+        fun C_CSTeam_m_scoreSecondHalfAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_scoreSecondHalf
+
+        const val C_CSTeam_m_szClanTeamname: Long = 0xA4CL
+        fun C_CSTeam_m_szClanTeamnameAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_szClanTeamname
+
+        const val C_CSTeam_m_szTeamFlagImage: Long = 0xAD4L
+        fun C_CSTeam_m_szTeamFlagImageAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_szTeamFlagImage
+
+        const val C_CSTeam_m_szTeamLogoImage: Long = 0xADCL
+        fun C_CSTeam_m_szTeamLogoImageAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_szTeamLogoImage
+
+        const val C_CSTeam_m_szTeamMatchStat: Long = 0x835L
+        fun C_CSTeam_m_szTeamMatchStatAddress(objectAddress: Long): Long = objectAddress + C_CSTeam_m_szTeamMatchStat
+
+        const val C_CSWeaponBaseGun_m_bNeedsBoltAction: Long = 0x2B55L
+        fun C_CSWeaponBaseGun_m_bNeedsBoltActionAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBaseGun_m_bNeedsBoltAction
+
+        const val C_CSWeaponBaseGun_m_iBurstShotsRemaining: Long = 0x2B3CL
+        fun C_CSWeaponBaseGun_m_iBurstShotsRemainingAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBaseGun_m_iBurstShotsRemaining
+
+        const val C_CSWeaponBaseGun_m_nRevolverCylinderIdx: Long = 0x2B58L
+        fun C_CSWeaponBaseGun_m_nRevolverCylinderIdxAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBaseGun_m_nRevolverCylinderIdx
+
+        const val C_CSWeaponBaseGun_m_zoomLevel: Long = 0x2B38L
+        fun C_CSWeaponBaseGun_m_zoomLevelAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBaseGun_m_zoomLevel
+
+        const val C_CSWeaponBase_m_bBurstMode: Long = 0x2674L
+        fun C_CSWeaponBase_m_bBurstModeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bBurstMode
+
+        const val C_CSWeaponBase_m_bCanBePickedUp: Long = 0x2758L
+        fun C_CSWeaponBase_m_bCanBePickedUpAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bCanBePickedUp
+
+        const val C_CSWeaponBase_m_bDroppedNearBuyZone: Long = 0x26A8L
+        fun C_CSWeaponBase_m_bDroppedNearBuyZoneAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bDroppedNearBuyZone
+
+        const val C_CSWeaponBase_m_bInReload: Long = 0x2684L
+        fun C_CSWeaponBase_m_bInReloadAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bInReload
+
+        const val C_CSWeaponBase_m_bInspectPending: Long = 0x25F4L
+        fun C_CSWeaponBase_m_bInspectPendingAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bInspectPending
+
+        const val C_CSWeaponBase_m_bInspectShouldLoop: Long = 0x25F5L
+        fun C_CSWeaponBase_m_bInspectShouldLoopAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bInspectShouldLoop
+
+        const val C_CSWeaponBase_m_bIsHauledBack: Long = 0x2694L
+        fun C_CSWeaponBase_m_bIsHauledBackAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bIsHauledBack
+
+        const val C_CSWeaponBase_m_bSilencerOn: Long = 0x2695L
+        fun C_CSWeaponBase_m_bSilencerOnAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bSilencerOn
+
+        const val C_CSWeaponBase_m_bWasActiveWeaponWhenDropped: Long = 0x2768L
+        fun C_CSWeaponBase_m_bWasActiveWeaponWhenDroppedAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_bWasActiveWeaponWhenDropped
+
+        const val C_CSWeaponBase_m_fAccuracyPenalty: Long = 0x2660L
+        fun C_CSWeaponBase_m_fAccuracyPenaltyAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_fAccuracyPenalty
+
+        const val C_CSWeaponBase_m_fLastShotTime: Long = 0x2790L
+        fun C_CSWeaponBase_m_fLastShotTimeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_fLastShotTime
+
+        const val C_CSWeaponBase_m_flDroppedAtTime: Long = 0x268CL
+        fun C_CSWeaponBase_m_flDroppedAtTimeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flDroppedAtTime
+
+        const val C_CSWeaponBase_m_flInspectCancelCompleteTime: Long = 0x25F0L
+        fun C_CSWeaponBase_m_flInspectCancelCompleteTimeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flInspectCancelCompleteTime
+
+        const val C_CSWeaponBase_m_flLastShakeTime: Long = 0x298CL
+        fun C_CSWeaponBase_m_flLastShakeTimeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flLastShakeTime
+
+        const val C_CSWeaponBase_m_flPostponeFireReadyFrac: Long = 0x2680L
+        fun C_CSWeaponBase_m_flPostponeFireReadyFracAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flPostponeFireReadyFrac
+
+        const val C_CSWeaponBase_m_flRecoilIndex: Long = 0x2670L
+        fun C_CSWeaponBase_m_flRecoilIndexAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flRecoilIndex
+
+        const val C_CSWeaponBase_m_flTimeSilencerSwitchComplete: Long = 0x2698L
+        fun C_CSWeaponBase_m_flTimeSilencerSwitchCompleteAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flTimeSilencerSwitchComplete
+
+        const val C_CSWeaponBase_m_flWatTickOffset: Long = 0x2978L
+        fun C_CSWeaponBase_m_flWatTickOffsetAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flWatTickOffset
+
+        const val C_CSWeaponBase_m_flWeaponActionPlaybackRate: Long = 0x269CL
+        fun C_CSWeaponBase_m_flWeaponActionPlaybackRateAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flWeaponActionPlaybackRate
+
+        const val C_CSWeaponBase_m_flWeaponGameplayAnimStateTimestamp: Long = 0x25ECL
+        fun C_CSWeaponBase_m_flWeaponGameplayAnimStateTimestampAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_flWeaponGameplayAnimStateTimestamp
+
+        const val C_CSWeaponBase_m_hPrevOwner: Long = 0x2760L
+        fun C_CSWeaponBase_m_hPrevOwnerAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_hPrevOwner
+
+        const val C_CSWeaponBase_m_iIronSightMode: Long = 0x28A0L
+        fun C_CSWeaponBase_m_iIronSightModeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_iIronSightMode
+
+        const val C_CSWeaponBase_m_iMostRecentTeamNumber: Long = 0x26A4L
+        fun C_CSWeaponBase_m_iMostRecentTeamNumberAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_iMostRecentTeamNumber
+
+        const val C_CSWeaponBase_m_iOriginalTeamNumber: Long = 0x26A0L
+        fun C_CSWeaponBase_m_iOriginalTeamNumberAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_iOriginalTeamNumber
+
+        const val C_CSWeaponBase_m_iRecoilIndex: Long = 0x266CL
+        fun C_CSWeaponBase_m_iRecoilIndexAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_iRecoilIndex
+
+        const val C_CSWeaponBase_m_iWeaponGameplayAnimState: Long = 0x25E8L
+        fun C_CSWeaponBase_m_iWeaponGameplayAnimStateAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_iWeaponGameplayAnimState
+
+        const val C_CSWeaponBase_m_nDeployTick: Long = 0x2688L
+        fun C_CSWeaponBase_m_nDeployTickAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_nDeployTick
+
+        const val C_CSWeaponBase_m_nDropTick: Long = 0x2764L
+        fun C_CSWeaponBase_m_nDropTickAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_nDropTick
+
+        const val C_CSWeaponBase_m_nPostponeFireReadyTicks: Long = 0x267CL
+        fun C_CSWeaponBase_m_nPostponeFireReadyTicksAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_nPostponeFireReadyTicks
+
+        const val C_CSWeaponBase_m_nextPrevOwnerUseTime: Long = 0x275CL
+        fun C_CSWeaponBase_m_nextPrevOwnerUseTimeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_nextPrevOwnerUseTime
+
+        const val C_CSWeaponBase_m_weaponMode: Long = 0x2648L
+        fun C_CSWeaponBase_m_weaponModeAddress(objectAddress: Long): Long = objectAddress + C_CSWeaponBase_m_weaponMode
+
+        const val C_ColorCorrectionVolume_m_FadeDuration: Long = 0x1018L
+        fun C_ColorCorrectionVolume_m_FadeDurationAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrectionVolume_m_FadeDuration
+
+        const val C_ColorCorrectionVolume_m_MaxWeight: Long = 0x1014L
+        fun C_ColorCorrectionVolume_m_MaxWeightAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrectionVolume_m_MaxWeight
+
+        const val C_ColorCorrectionVolume_m_Weight: Long = 0x101CL
+        fun C_ColorCorrectionVolume_m_WeightAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrectionVolume_m_Weight
+
+        const val C_ColorCorrectionVolume_m_lookupFilename: Long = 0x1020L
+        fun C_ColorCorrectionVolume_m_lookupFilenameAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrectionVolume_m_lookupFilename
+
+        const val C_ColorCorrection_m_MaxFalloff: Long = 0x78CL
+        fun C_ColorCorrection_m_MaxFalloffAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_MaxFalloff
+
+        const val C_ColorCorrection_m_MinFalloff: Long = 0x788L
+        fun C_ColorCorrection_m_MinFalloffAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_MinFalloff
+
+        const val C_ColorCorrection_m_bExclusive: Long = 0x9A3L
+        fun C_ColorCorrection_m_bExclusiveAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_bExclusive
+
+        const val C_ColorCorrection_m_flCurWeight: Long = 0x79CL
+        fun C_ColorCorrection_m_flCurWeightAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_flCurWeight
+
+        const val C_ColorCorrection_m_flFadeInDuration: Long = 0x790L
+        fun C_ColorCorrection_m_flFadeInDurationAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_flFadeInDuration
+
+        const val C_ColorCorrection_m_flFadeOutDuration: Long = 0x794L
+        fun C_ColorCorrection_m_flFadeOutDurationAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_flFadeOutDuration
+
+        const val C_ColorCorrection_m_flMaxWeight: Long = 0x798L
+        fun C_ColorCorrection_m_flMaxWeightAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_flMaxWeight
+
+        const val C_ColorCorrection_m_netlookupFilename: Long = 0x7A0L
+        fun C_ColorCorrection_m_netlookupFilenameAddress(objectAddress: Long): Long = objectAddress + C_ColorCorrection_m_netlookupFilename
+
+        const val C_DecoyProjectile_m_nDecoyShotTick: Long = 0x11BCL
+        fun C_DecoyProjectile_m_nDecoyShotTickAddress(objectAddress: Long): Long = objectAddress + C_DecoyProjectile_m_nDecoyShotTick
+
+        const val C_DynamicLight_m_Exponent: Long = 0xF38L
+        fun C_DynamicLight_m_ExponentAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_Exponent
+
+        const val C_DynamicLight_m_Flags: Long = 0xF30L
+        fun C_DynamicLight_m_FlagsAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_Flags
+
+        const val C_DynamicLight_m_InnerAngle: Long = 0xF3CL
+        fun C_DynamicLight_m_InnerAngleAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_InnerAngle
+
+        const val C_DynamicLight_m_LightStyle: Long = 0xF31L
+        fun C_DynamicLight_m_LightStyleAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_LightStyle
+
+        const val C_DynamicLight_m_OuterAngle: Long = 0xF40L
+        fun C_DynamicLight_m_OuterAngleAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_OuterAngle
+
+        const val C_DynamicLight_m_Radius: Long = 0xF34L
+        fun C_DynamicLight_m_RadiusAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_Radius
+
+        const val C_DynamicLight_m_SpotRadius: Long = 0xF44L
+        fun C_DynamicLight_m_SpotRadiusAddress(objectAddress: Long): Long = objectAddress + C_DynamicLight_m_SpotRadius
+
+        const val C_DynamicProp_m_bUseAnimGraph: Long = 0x1249L
+        fun C_DynamicProp_m_bUseAnimGraphAddress(objectAddress: Long): Long = objectAddress + C_DynamicProp_m_bUseAnimGraph
+
+        const val C_DynamicProp_m_bUseHitboxesForRenderBox: Long = 0x1248L
+        fun C_DynamicProp_m_bUseHitboxesForRenderBoxAddress(objectAddress: Long): Long = objectAddress + C_DynamicProp_m_bUseHitboxesForRenderBox
+
+        const val C_EconEntity_m_OriginalOwnerXuidHigh: Long = 0x24E4L
+        fun C_EconEntity_m_OriginalOwnerXuidHighAddress(objectAddress: Long): Long = objectAddress + C_EconEntity_m_OriginalOwnerXuidHigh
+
+        const val C_EconEntity_m_OriginalOwnerXuidLow: Long = 0x24E0L
+        fun C_EconEntity_m_OriginalOwnerXuidLowAddress(objectAddress: Long): Long = objectAddress + C_EconEntity_m_OriginalOwnerXuidLow
+
+        const val C_EconEntity_m_flFallbackWear: Long = 0x24F0L
+        fun C_EconEntity_m_flFallbackWearAddress(objectAddress: Long): Long = objectAddress + C_EconEntity_m_flFallbackWear
+
+        const val C_EconEntity_m_nFallbackPaintKit: Long = 0x24E8L
+        fun C_EconEntity_m_nFallbackPaintKitAddress(objectAddress: Long): Long = objectAddress + C_EconEntity_m_nFallbackPaintKit
+
+        const val C_EconEntity_m_nFallbackSeed: Long = 0x24ECL
+        fun C_EconEntity_m_nFallbackSeedAddress(objectAddress: Long): Long = objectAddress + C_EconEntity_m_nFallbackSeed
+
+        const val C_EconEntity_m_nFallbackStatTrak: Long = 0x24F4L
+        fun C_EconEntity_m_nFallbackStatTrakAddress(objectAddress: Long): Long = objectAddress + C_EconEntity_m_nFallbackStatTrak
+
+        const val C_EconItemView_m_AttributeList: Long = 0x1110L
+        fun C_EconItemView_m_AttributeListAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_AttributeList
+
+        const val C_EconItemView_m_NetworkedDynamicAttributes: Long = 0x1188L
+        fun C_EconItemView_m_NetworkedDynamicAttributesAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_NetworkedDynamicAttributes
+
+        const val C_EconItemView_m_bInitialized: Long = 0x10F0L
+        fun C_EconItemView_m_bInitializedAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_bInitialized
+
+        const val C_EconItemView_m_iAccountID: Long = 0x10E0L
+        fun C_EconItemView_m_iAccountIDAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iAccountID
+
+        const val C_EconItemView_m_iEntityLevel: Long = 0x10C8L
+        fun C_EconItemView_m_iEntityLevelAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iEntityLevel
+
+        const val C_EconItemView_m_iEntityQuality: Long = 0x10C4L
+        fun C_EconItemView_m_iEntityQualityAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iEntityQuality
+
+        const val C_EconItemView_m_iInventoryPosition: Long = 0x10E4L
+        fun C_EconItemView_m_iInventoryPositionAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iInventoryPosition
+
+        const val C_EconItemView_m_iItemDefinitionIndex: Long = 0x10C2L
+        fun C_EconItemView_m_iItemDefinitionIndexAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iItemDefinitionIndex
+
+        const val C_EconItemView_m_iItemIDHigh: Long = 0x10D8L
+        fun C_EconItemView_m_iItemIDHighAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iItemIDHigh
+
+        const val C_EconItemView_m_iItemIDLow: Long = 0x10DCL
+        fun C_EconItemView_m_iItemIDLowAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_iItemIDLow
+
+        const val C_EconItemView_m_szCustomName: Long = 0x1200L
+        fun C_EconItemView_m_szCustomNameAddress(objectAddress: Long): Long = objectAddress + C_EconItemView_m_szCustomName
+
+        const val C_EntityDissolve_m_flFadeInLength: Long = 0xF40L
+        fun C_EntityDissolve_m_flFadeInLengthAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_flFadeInLength
+
+        const val C_EntityDissolve_m_flFadeOutLength: Long = 0xF50L
+        fun C_EntityDissolve_m_flFadeOutLengthAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_flFadeOutLength
+
+        const val C_EntityDissolve_m_flFadeOutModelLength: Long = 0xF48L
+        fun C_EntityDissolve_m_flFadeOutModelLengthAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_flFadeOutModelLength
+
+        const val C_EntityDissolve_m_flFadeOutModelStart: Long = 0xF44L
+        fun C_EntityDissolve_m_flFadeOutModelStartAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_flFadeOutModelStart
+
+        const val C_EntityDissolve_m_flFadeOutStart: Long = 0xF4CL
+        fun C_EntityDissolve_m_flFadeOutStartAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_flFadeOutStart
+
+        const val C_EntityDissolve_m_nMagnitude: Long = 0xF68L
+        fun C_EntityDissolve_m_nMagnitudeAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_nMagnitude
+
+        const val C_EntityDissolve_m_vDissolverOrigin: Long = 0xF5CL
+        fun C_EntityDissolve_m_vDissolverOriginAddress(objectAddress: Long): Long = objectAddress + C_EntityDissolve_m_vDissolverOrigin
+
+        const val C_EntityFlame_m_bCheapEffect: Long = 0x7A4L
+        fun C_EntityFlame_m_bCheapEffectAddress(objectAddress: Long): Long = objectAddress + C_EntityFlame_m_bCheapEffect
+
+        const val C_EntityFlame_m_hEntAttached: Long = 0x77CL
+        fun C_EntityFlame_m_hEntAttachedAddress(objectAddress: Long): Long = objectAddress + C_EntityFlame_m_hEntAttached
+
+        const val C_EnvCombinedLightProbeVolume_m_Entity_Color: Long = 0x17F8L
+        fun C_EnvCombinedLightProbeVolume_m_Entity_ColorAddress(objectAddress: Long): Long = objectAddress + C_EnvCombinedLightProbeVolume_m_Entity_Color
+
+        const val C_EnvCombinedLightProbeVolume_m_Entity_flBrightness: Long = 0x17FCL
+        fun C_EnvCombinedLightProbeVolume_m_Entity_flBrightnessAddress(objectAddress: Long): Long = objectAddress + C_EnvCombinedLightProbeVolume_m_Entity_flBrightness
+
+        const val C_EnvCubemapFog_m_DistanceFogCurveString: Long = 0x7D0L
+        fun C_EnvCubemapFog_m_DistanceFogCurveStringAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_DistanceFogCurveString
+
+        const val C_EnvCubemapFog_m_HeightFogCurveString: Long = 0x7D8L
+        fun C_EnvCubemapFog_m_HeightFogCurveStringAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_HeightFogCurveString
+
+        const val C_EnvCubemapFog_m_bHasHeightFogEnd: Long = 0x878L
+        fun C_EnvCubemapFog_m_bHasHeightFogEndAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_bHasHeightFogEnd
+
+        const val C_EnvCubemapFog_m_flEndDistance: Long = 0x77CL
+        fun C_EnvCubemapFog_m_flEndDistanceAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flEndDistance
+
+        const val C_EnvCubemapFog_m_flFogHeightEnd: Long = 0x790L
+        fun C_EnvCubemapFog_m_flFogHeightEndAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flFogHeightEnd
+
+        const val C_EnvCubemapFog_m_flFogHeightExponent: Long = 0x798L
+        fun C_EnvCubemapFog_m_flFogHeightExponentAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flFogHeightExponent
+
+        const val C_EnvCubemapFog_m_flFogHeightStart: Long = 0x794L
+        fun C_EnvCubemapFog_m_flFogHeightStartAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flFogHeightStart
+
+        const val C_EnvCubemapFog_m_flFogHeightWidth: Long = 0x78CL
+        fun C_EnvCubemapFog_m_flFogHeightWidthAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flFogHeightWidth
+
+        const val C_EnvCubemapFog_m_flLODBias: Long = 0x79CL
+        fun C_EnvCubemapFog_m_flLODBiasAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flLODBias
+
+        const val C_EnvCubemapFog_m_flStartDistance: Long = 0x780L
+        fun C_EnvCubemapFog_m_flStartDistanceAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_flStartDistance
+
+        const val C_EnvCubemapFog_m_hFogCubemapTexture: Long = 0x870L
+        fun C_EnvCubemapFog_m_hFogCubemapTextureAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_hFogCubemapTexture
+
+        const val C_EnvCubemapFog_m_iszSkyEntity: Long = 0x7B8L
+        fun C_EnvCubemapFog_m_iszSkyEntityAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_iszSkyEntity
+
+        const val C_EnvCubemapFog_m_nCubemapSourceType: Long = 0x7A8L
+        fun C_EnvCubemapFog_m_nCubemapSourceTypeAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_nCubemapSourceType
+
+        const val C_EnvCubemapFog_m_nDistanceFogType: Long = 0x7CCL
+        fun C_EnvCubemapFog_m_nDistanceFogTypeAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_nDistanceFogType
+
+        const val C_EnvCubemapFog_m_nFogHeightBlendMode: Long = 0x7C4L
+        fun C_EnvCubemapFog_m_nFogHeightBlendModeAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_nFogHeightBlendMode
+
+        const val C_EnvCubemapFog_m_nFogHeightCoordinateSpace: Long = 0x7C8L
+        fun C_EnvCubemapFog_m_nFogHeightCoordinateSpaceAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_nFogHeightCoordinateSpace
+
+        const val C_EnvCubemapFog_m_nHeightFogType: Long = 0x7C0L
+        fun C_EnvCubemapFog_m_nHeightFogTypeAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemapFog_m_nHeightFogType
+
+        const val C_EnvCubemap_m_Entity_bCopyDiffuseFromDefaultCubemap: Long = 0x850L
+        fun C_EnvCubemap_m_Entity_bCopyDiffuseFromDefaultCubemapAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_bCopyDiffuseFromDefaultCubemap
+
+        const val C_EnvCubemap_m_Entity_bDefaultEnvMap: Long = 0x84DL
+        fun C_EnvCubemap_m_Entity_bDefaultEnvMapAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_bDefaultEnvMap
+
+        const val C_EnvCubemap_m_Entity_bDefaultSpecEnvMap: Long = 0x84EL
+        fun C_EnvCubemap_m_Entity_bDefaultSpecEnvMapAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_bDefaultSpecEnvMap
+
+        const val C_EnvCubemap_m_Entity_bIndoorCubeMap: Long = 0x84FL
+        fun C_EnvCubemap_m_Entity_bIndoorCubeMapAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_bIndoorCubeMap
+
+        const val C_EnvCubemap_m_Entity_flDiffuseScale: Long = 0x848L
+        fun C_EnvCubemap_m_Entity_flDiffuseScaleAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_flDiffuseScale
+
+        const val C_EnvCubemap_m_Entity_flInfluenceRadius: Long = 0x80CL
+        fun C_EnvCubemap_m_Entity_flInfluenceRadiusAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_flInfluenceRadius
+
+        const val C_EnvCubemap_m_Entity_vBoxProjectMaxs: Long = 0x81CL
+        fun C_EnvCubemap_m_Entity_vBoxProjectMaxsAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_vBoxProjectMaxs
+
+        const val C_EnvCubemap_m_Entity_vBoxProjectMins: Long = 0x810L
+        fun C_EnvCubemap_m_Entity_vBoxProjectMinsAddress(objectAddress: Long): Long = objectAddress + C_EnvCubemap_m_Entity_vBoxProjectMins
+
+        const val C_EnvDecal_m_bProjectOnCharacters: Long = 0xF49L
+        fun C_EnvDecal_m_bProjectOnCharactersAddress(objectAddress: Long): Long = objectAddress + C_EnvDecal_m_bProjectOnCharacters
+
+        const val C_EnvDecal_m_bProjectOnWater: Long = 0xF4AL
+        fun C_EnvDecal_m_bProjectOnWaterAddress(objectAddress: Long): Long = objectAddress + C_EnvDecal_m_bProjectOnWater
+
+        const val C_EnvDecal_m_bProjectOnWorld: Long = 0xF48L
+        fun C_EnvDecal_m_bProjectOnWorldAddress(objectAddress: Long): Long = objectAddress + C_EnvDecal_m_bProjectOnWorld
+
+        const val C_EnvDecal_m_flDepthSortBias: Long = 0xF4CL
+        fun C_EnvDecal_m_flDepthSortBiasAddress(objectAddress: Long): Long = objectAddress + C_EnvDecal_m_flDepthSortBias
+
+        const val C_EnvDecal_m_hDecalMaterial: Long = 0xF30L
+        fun C_EnvDecal_m_hDecalMaterialAddress(objectAddress: Long): Long = objectAddress + C_EnvDecal_m_hDecalMaterial
+
+        const val C_EnvDecal_m_nRenderOrder: Long = 0xF44L
+        fun C_EnvDecal_m_nRenderOrderAddress(objectAddress: Long): Long = objectAddress + C_EnvDecal_m_nRenderOrder
+
+        const val C_EnvDetailController_m_flFadeEndDist: Long = 0x780L
+        fun C_EnvDetailController_m_flFadeEndDistAddress(objectAddress: Long): Long = objectAddress + C_EnvDetailController_m_flFadeEndDist
+
+        const val C_EnvDetailController_m_flFadeStartDist: Long = 0x77CL
+        fun C_EnvDetailController_m_flFadeStartDistAddress(objectAddress: Long): Long = objectAddress + C_EnvDetailController_m_flFadeStartDist
+
+        const val C_EnvParticleGlow_m_flAlphaScale: Long = 0x14E0L
+        fun C_EnvParticleGlow_m_flAlphaScaleAddress(objectAddress: Long): Long = objectAddress + C_EnvParticleGlow_m_flAlphaScale
+
+        const val C_EnvParticleGlow_m_flRadiusScale: Long = 0x14E4L
+        fun C_EnvParticleGlow_m_flRadiusScaleAddress(objectAddress: Long): Long = objectAddress + C_EnvParticleGlow_m_flRadiusScale
+
+        const val C_EnvParticleGlow_m_flSelfIllumScale: Long = 0x14E8L
+        fun C_EnvParticleGlow_m_flSelfIllumScaleAddress(objectAddress: Long): Long = objectAddress + C_EnvParticleGlow_m_flSelfIllumScale
+
+        const val C_EnvParticleGlow_m_hTextureOverride: Long = 0x14F0L
+        fun C_EnvParticleGlow_m_hTextureOverrideAddress(objectAddress: Long): Long = objectAddress + C_EnvParticleGlow_m_hTextureOverride
+
+        const val C_EnvSky_m_flFogMaxEnd: Long = 0xF60L
+        fun C_EnvSky_m_flFogMaxEndAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_flFogMaxEnd
+
+        const val C_EnvSky_m_flFogMaxStart: Long = 0xF5CL
+        fun C_EnvSky_m_flFogMaxStartAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_flFogMaxStart
+
+        const val C_EnvSky_m_flFogMinEnd: Long = 0xF58L
+        fun C_EnvSky_m_flFogMinEndAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_flFogMinEnd
+
+        const val C_EnvSky_m_flFogMinStart: Long = 0xF54L
+        fun C_EnvSky_m_flFogMinStartAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_flFogMinStart
+
+        const val C_EnvSky_m_hSkyMaterialLightingOnly: Long = 0xF38L
+        fun C_EnvSky_m_hSkyMaterialLightingOnlyAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_hSkyMaterialLightingOnly
+
+        const val C_EnvSky_m_nFogType: Long = 0xF50L
+        fun C_EnvSky_m_nFogTypeAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_nFogType
+
+        const val C_EnvSky_m_vTintColor: Long = 0xF41L
+        fun C_EnvSky_m_vTintColorAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_vTintColor
+
+        const val C_EnvSky_m_vTintColorLightingOnly: Long = 0xF45L
+        fun C_EnvSky_m_vTintColorLightingOnlyAddress(objectAddress: Long): Long = objectAddress + C_EnvSky_m_vTintColorLightingOnly
+
+        const val C_EnvVolumetricFogController_m_bEnableIndirect: Long = 0x7F1L
+        fun C_EnvVolumetricFogController_m_bEnableIndirectAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_bEnableIndirect
+
+        const val C_EnvVolumetricFogController_m_fFirstVolumeSliceThickness: Long = 0x7A0L
+        fun C_EnvVolumetricFogController_m_fFirstVolumeSliceThicknessAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_fFirstVolumeSliceThickness
+
+        const val C_EnvVolumetricFogController_m_fNoiseSpeed: Long = 0x804L
+        fun C_EnvVolumetricFogController_m_fNoiseSpeedAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_fNoiseSpeed
+
+        const val C_EnvVolumetricFogController_m_fWindSpeed: Long = 0x818L
+        fun C_EnvVolumetricFogController_m_fWindSpeedAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_fWindSpeed
+
+        const val C_EnvVolumetricFogController_m_flAnisotropy: Long = 0x784L
+        fun C_EnvVolumetricFogController_m_flAnisotropyAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flAnisotropy
+
+        const val C_EnvVolumetricFogController_m_flDefaultAnisotropy: Long = 0x7E4L
+        fun C_EnvVolumetricFogController_m_flDefaultAnisotropyAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flDefaultAnisotropy
+
+        const val C_EnvVolumetricFogController_m_flDefaultDrawDistance: Long = 0x7ECL
+        fun C_EnvVolumetricFogController_m_flDefaultDrawDistanceAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flDefaultDrawDistance
+
+        const val C_EnvVolumetricFogController_m_flDefaultScattering: Long = 0x7E8L
+        fun C_EnvVolumetricFogController_m_flDefaultScatteringAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flDefaultScattering
+
+        const val C_EnvVolumetricFogController_m_flDrawDistance: Long = 0x78CL
+        fun C_EnvVolumetricFogController_m_flDrawDistanceAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flDrawDistance
+
+        const val C_EnvVolumetricFogController_m_flFadeInEnd: Long = 0x794L
+        fun C_EnvVolumetricFogController_m_flFadeInEndAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flFadeInEnd
+
+        const val C_EnvVolumetricFogController_m_flFadeSpeed: Long = 0x788L
+        fun C_EnvVolumetricFogController_m_flFadeSpeedAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flFadeSpeed
+
+        const val C_EnvVolumetricFogController_m_flIndirectStrength: Long = 0x798L
+        fun C_EnvVolumetricFogController_m_flIndirectStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flIndirectStrength
+
+        const val C_EnvVolumetricFogController_m_flScattering: Long = 0x77CL
+        fun C_EnvVolumetricFogController_m_flScatteringAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flScattering
+
+        const val C_EnvVolumetricFogController_m_flStartAnisoTime: Long = 0x7CCL
+        fun C_EnvVolumetricFogController_m_flStartAnisoTimeAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flStartAnisoTime
+
+        const val C_EnvVolumetricFogController_m_flStartAnisotropy: Long = 0x7D8L
+        fun C_EnvVolumetricFogController_m_flStartAnisotropyAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flStartAnisotropy
+
+        const val C_EnvVolumetricFogController_m_flStartDrawDistance: Long = 0x7E0L
+        fun C_EnvVolumetricFogController_m_flStartDrawDistanceAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flStartDrawDistance
+
+        const val C_EnvVolumetricFogController_m_flStartDrawDistanceTime: Long = 0x7D4L
+        fun C_EnvVolumetricFogController_m_flStartDrawDistanceTimeAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flStartDrawDistanceTime
+
+        const val C_EnvVolumetricFogController_m_flStartScatterTime: Long = 0x7D0L
+        fun C_EnvVolumetricFogController_m_flStartScatterTimeAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flStartScatterTime
+
+        const val C_EnvVolumetricFogController_m_flStartScattering: Long = 0x7DCL
+        fun C_EnvVolumetricFogController_m_flStartScatteringAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_flStartScattering
+
+        const val C_EnvVolumetricFogController_m_hFogIndirectTexture: Long = 0x7F8L
+        fun C_EnvVolumetricFogController_m_hFogIndirectTextureAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_hFogIndirectTexture
+
+        const val C_EnvVolumetricFogController_m_nForceRefreshCount: Long = 0x800L
+        fun C_EnvVolumetricFogController_m_nForceRefreshCountAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_nForceRefreshCount
+
+        const val C_EnvVolumetricFogController_m_nIndirectTextureDimX: Long = 0x7A4L
+        fun C_EnvVolumetricFogController_m_nIndirectTextureDimXAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_nIndirectTextureDimX
+
+        const val C_EnvVolumetricFogController_m_nIndirectTextureDimY: Long = 0x7A8L
+        fun C_EnvVolumetricFogController_m_nIndirectTextureDimYAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_nIndirectTextureDimY
+
+        const val C_EnvVolumetricFogController_m_nIndirectTextureDimZ: Long = 0x7ACL
+        fun C_EnvVolumetricFogController_m_nIndirectTextureDimZAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_nIndirectTextureDimZ
+
+        const val C_EnvVolumetricFogController_m_nVolumeDepth: Long = 0x79CL
+        fun C_EnvVolumetricFogController_m_nVolumeDepthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_nVolumeDepth
+
+        const val C_EnvVolumetricFogController_m_vNoiseScale: Long = 0x80CL
+        fun C_EnvVolumetricFogController_m_vNoiseScaleAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_vNoiseScale
+
+        const val C_EnvVolumetricFogController_m_vWindDirection: Long = 0x81CL
+        fun C_EnvVolumetricFogController_m_vWindDirectionAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogController_m_vWindDirection
+
+        const val C_EnvVolumetricFogVolume_m_bIndirectUseLPVs: Long = 0x799L
+        fun C_EnvVolumetricFogVolume_m_bIndirectUseLPVsAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_bIndirectUseLPVs
+
+        const val C_EnvVolumetricFogVolume_m_bOverrideIndirectLightStrength: Long = 0x7C1L
+        fun C_EnvVolumetricFogVolume_m_bOverrideIndirectLightStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_bOverrideIndirectLightStrength
+
+        const val C_EnvVolumetricFogVolume_m_bOverrideNoiseStrength: Long = 0x7C3L
+        fun C_EnvVolumetricFogVolume_m_bOverrideNoiseStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_bOverrideNoiseStrength
+
+        const val C_EnvVolumetricFogVolume_m_bOverrideSunLightStrength: Long = 0x7C2L
+        fun C_EnvVolumetricFogVolume_m_bOverrideSunLightStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_bOverrideSunLightStrength
+
+        const val C_EnvVolumetricFogVolume_m_bOverrideTintColor: Long = 0x7C0L
+        fun C_EnvVolumetricFogVolume_m_bOverrideTintColorAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_bOverrideTintColor
+
+        const val C_EnvVolumetricFogVolume_m_fHeightFogEdgeWidth: Long = 0x7ACL
+        fun C_EnvVolumetricFogVolume_m_fHeightFogEdgeWidthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_fHeightFogEdgeWidth
+
+        const val C_EnvVolumetricFogVolume_m_fIndirectLightStrength: Long = 0x7B0L
+        fun C_EnvVolumetricFogVolume_m_fIndirectLightStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_fIndirectLightStrength
+
+        const val C_EnvVolumetricFogVolume_m_fSunLightStrength: Long = 0x7B4L
+        fun C_EnvVolumetricFogVolume_m_fSunLightStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_fSunLightStrength
+
+        const val C_EnvVolumetricFogVolume_m_flFalloffExponent: Long = 0x7A4L
+        fun C_EnvVolumetricFogVolume_m_flFalloffExponentAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_flFalloffExponent
+
+        const val C_EnvVolumetricFogVolume_m_flHeightFogDepth: Long = 0x7A8L
+        fun C_EnvVolumetricFogVolume_m_flHeightFogDepthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_flHeightFogDepth
+
+        const val C_EnvVolumetricFogVolume_m_flStrength: Long = 0x79CL
+        fun C_EnvVolumetricFogVolume_m_flStrengthAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_flStrength
+
+        const val C_EnvVolumetricFogVolume_m_nFalloffShape: Long = 0x7A0L
+        fun C_EnvVolumetricFogVolume_m_nFalloffShapeAddress(objectAddress: Long): Long = objectAddress + C_EnvVolumetricFogVolume_m_nFalloffShape
+
+        const val C_EnvWindClientside_m_EnvWindShared: Long = 0x780L
+        fun C_EnvWindClientside_m_EnvWindSharedAddress(objectAddress: Long): Long = objectAddress + C_EnvWindClientside_m_EnvWindShared
+
+        const val C_EnvWindController_m_EnvWindShared: Long = 0x780L
+        fun C_EnvWindController_m_EnvWindSharedAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_EnvWindShared
+
+        const val C_EnvWindController_m_fDirectionVariation: Long = 0x878L
+        fun C_EnvWindController_m_fDirectionVariationAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_fDirectionVariation
+
+        const val C_EnvWindController_m_fSpeedVariation: Long = 0x87CL
+        fun C_EnvWindController_m_fSpeedVariationAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_fSpeedVariation
+
+        const val C_EnvWindController_m_fTurbulence: Long = 0x880L
+        fun C_EnvWindController_m_fTurbulenceAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_fTurbulence
+
+        const val C_EnvWindController_m_fVolumeHalfExtentXY: Long = 0x884L
+        fun C_EnvWindController_m_fVolumeHalfExtentXYAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_fVolumeHalfExtentXY
+
+        const val C_EnvWindController_m_fVolumeHalfExtentZ: Long = 0x888L
+        fun C_EnvWindController_m_fVolumeHalfExtentZAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_fVolumeHalfExtentZ
+
+        const val C_EnvWindController_m_nClipmapLevels: Long = 0x894L
+        fun C_EnvWindController_m_nClipmapLevelsAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_nClipmapLevels
+
+        const val C_EnvWindController_m_nVolumeResolutionXY: Long = 0x88CL
+        fun C_EnvWindController_m_nVolumeResolutionXYAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_nVolumeResolutionXY
+
+        const val C_EnvWindController_m_nVolumeResolutionZ: Long = 0x890L
+        fun C_EnvWindController_m_nVolumeResolutionZAddress(objectAddress: Long): Long = objectAddress + C_EnvWindController_m_nVolumeResolutionZ
+
+        const val C_EnvWindShared_m_flGustDuration: Long = 0x24L
+        fun C_EnvWindShared_m_flGustDurationAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_flGustDuration
+
+        const val C_EnvWindShared_m_flInitialWindSpeed: Long = 0x2CL
+        fun C_EnvWindShared_m_flInitialWindSpeedAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_flInitialWindSpeed
+
+        const val C_EnvWindShared_m_flMaxGustDelay: Long = 0x20L
+        fun C_EnvWindShared_m_flMaxGustDelayAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_flMaxGustDelay
+
+        const val C_EnvWindShared_m_flMinGustDelay: Long = 0x1CL
+        fun C_EnvWindShared_m_flMinGustDelayAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_flMinGustDelay
+
+        const val C_EnvWindShared_m_iGustDirChange: Long = 0x28L
+        fun C_EnvWindShared_m_iGustDirChangeAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_iGustDirChange
+
+        const val C_EnvWindShared_m_iInitialWindDir: Long = 0x2AL
+        fun C_EnvWindShared_m_iInitialWindDirAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_iInitialWindDir
+
+        const val C_EnvWindShared_m_iMaxGust: Long = 0x1AL
+        fun C_EnvWindShared_m_iMaxGustAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_iMaxGust
+
+        const val C_EnvWindShared_m_iMaxWind: Long = 0x12L
+        fun C_EnvWindShared_m_iMaxWindAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_iMaxWind
+
+        const val C_EnvWindShared_m_iMinGust: Long = 0x18L
+        fun C_EnvWindShared_m_iMinGustAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_iMinGust
+
+        const val C_EnvWindShared_m_iMinWind: Long = 0x10L
+        fun C_EnvWindShared_m_iMinWindAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_iMinWind
+
+        const val C_EnvWindShared_m_location: Long = 0x30L
+        fun C_EnvWindShared_m_locationAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_location
+
+        const val C_EnvWindShared_m_windRadius: Long = 0x14L
+        fun C_EnvWindShared_m_windRadiusAddress(objectAddress: Long): Long = objectAddress + C_EnvWindShared_m_windRadius
+
+        const val C_EnvWindVolume_m_fWindDirectionVariationMultiplier: Long = 0x7ACL
+        fun C_EnvWindVolume_m_fWindDirectionVariationMultiplierAddress(objectAddress: Long): Long = objectAddress + C_EnvWindVolume_m_fWindDirectionVariationMultiplier
+
+        const val C_EnvWindVolume_m_fWindSpeedMultiplier: Long = 0x7A0L
+        fun C_EnvWindVolume_m_fWindSpeedMultiplierAddress(objectAddress: Long): Long = objectAddress + C_EnvWindVolume_m_fWindSpeedMultiplier
+
+        const val C_EnvWindVolume_m_fWindSpeedVariationMultiplier: Long = 0x7A8L
+        fun C_EnvWindVolume_m_fWindSpeedVariationMultiplierAddress(objectAddress: Long): Long = objectAddress + C_EnvWindVolume_m_fWindSpeedVariationMultiplier
+
+        const val C_EnvWindVolume_m_fWindTurbulenceMultiplier: Long = 0x7A4L
+        fun C_EnvWindVolume_m_fWindTurbulenceMultiplierAddress(objectAddress: Long): Long = objectAddress + C_EnvWindVolume_m_fWindTurbulenceMultiplier
+
+        const val C_EnvWindVolume_m_nShape: Long = 0x79CL
+        fun C_EnvWindVolume_m_nShapeAddress(objectAddress: Long): Long = objectAddress + C_EnvWindVolume_m_nShape
+
+        const val C_EnvWind_m_EnvWindShared: Long = 0x780L
+        fun C_EnvWind_m_EnvWindSharedAddress(objectAddress: Long): Long = objectAddress + C_EnvWind_m_EnvWindShared
+
+        const val C_Fish_m_angle: Long = 0x1170L
+        fun C_Fish_m_angleAddress(objectAddress: Long): Long = objectAddress + C_Fish_m_angle
+
+        const val C_Fish_m_poolOrigin: Long = 0x1150L
+        fun C_Fish_m_poolOriginAddress(objectAddress: Long): Long = objectAddress + C_Fish_m_poolOrigin
+
+        const val C_Fish_m_waterLevel: Long = 0x115CL
+        fun C_Fish_m_waterLevelAddress(objectAddress: Long): Long = objectAddress + C_Fish_m_waterLevel
+
+        const val C_FogController_m_fog: Long = 0x780L
+        fun C_FogController_m_fogAddress(objectAddress: Long): Long = objectAddress + C_FogController_m_fog
+
+        const val C_FootstepControl_m_destination: Long = 0x1008L
+        fun C_FootstepControl_m_destinationAddress(objectAddress: Long): Long = objectAddress + C_FootstepControl_m_destination
+
+        const val C_FootstepControl_m_source: Long = 0x1000L
+        fun C_FootstepControl_m_sourceAddress(objectAddress: Long): Long = objectAddress + C_FootstepControl_m_source
+
+        const val C_FuncConveyor_m_flTargetSpeed: Long = 0xF44L
+        fun C_FuncConveyor_m_flTargetSpeedAddress(objectAddress: Long): Long = objectAddress + C_FuncConveyor_m_flTargetSpeed
+
+        const val C_FuncConveyor_m_flTransitionStartSpeed: Long = 0xF50L
+        fun C_FuncConveyor_m_flTransitionStartSpeedAddress(objectAddress: Long): Long = objectAddress + C_FuncConveyor_m_flTransitionStartSpeed
+
+        const val C_FuncConveyor_m_hConveyorModels: Long = 0xF58L
+        fun C_FuncConveyor_m_hConveyorModelsAddress(objectAddress: Long): Long = objectAddress + C_FuncConveyor_m_hConveyorModels
+
+        const val C_FuncConveyor_m_nTransitionDurationTicks: Long = 0xF4CL
+        fun C_FuncConveyor_m_nTransitionDurationTicksAddress(objectAddress: Long): Long = objectAddress + C_FuncConveyor_m_nTransitionDurationTicks
+
+        const val C_FuncConveyor_m_nTransitionStartTick: Long = 0xF48L
+        fun C_FuncConveyor_m_nTransitionStartTickAddress(objectAddress: Long): Long = objectAddress + C_FuncConveyor_m_nTransitionStartTick
+
+        const val C_FuncConveyor_m_vecMoveDirEntitySpace: Long = 0xF38L
+        fun C_FuncConveyor_m_vecMoveDirEntitySpaceAddress(objectAddress: Long): Long = objectAddress + C_FuncConveyor_m_vecMoveDirEntitySpace
+
+        const val C_FuncElectrifiedVolume_m_EffectName: Long = 0xF38L
+        fun C_FuncElectrifiedVolume_m_EffectNameAddress(objectAddress: Long): Long = objectAddress + C_FuncElectrifiedVolume_m_EffectName
+
+        const val C_FuncElectrifiedVolume_m_bState: Long = 0xF40L
+        fun C_FuncElectrifiedVolume_m_bStateAddress(objectAddress: Long): Long = objectAddress + C_FuncElectrifiedVolume_m_bState
+
+        const val C_FuncLadder_m_bFakeLadder: Long = 0xF81L
+        fun C_FuncLadder_m_bFakeLadderAddress(objectAddress: Long): Long = objectAddress + C_FuncLadder_m_bFakeLadder
+
+        const val C_FuncLadder_m_flAutoRideSpeed: Long = 0xF7CL
+        fun C_FuncLadder_m_flAutoRideSpeedAddress(objectAddress: Long): Long = objectAddress + C_FuncLadder_m_flAutoRideSpeed
+
+        const val C_FuncLadder_m_vecLadderDir: Long = 0xF30L
+        fun C_FuncLadder_m_vecLadderDirAddress(objectAddress: Long): Long = objectAddress + C_FuncLadder_m_vecLadderDir
+
+        const val C_FuncLadder_m_vecPlayerMountPositionBottom: Long = 0xF70L
+        fun C_FuncLadder_m_vecPlayerMountPositionBottomAddress(objectAddress: Long): Long = objectAddress + C_FuncLadder_m_vecPlayerMountPositionBottom
+
+        const val C_FuncLadder_m_vecPlayerMountPositionTop: Long = 0xF64L
+        fun C_FuncLadder_m_vecPlayerMountPositionTopAddress(objectAddress: Long): Long = objectAddress + C_FuncLadder_m_vecPlayerMountPositionTop
+
+        const val C_FuncMonitor_m_bDraw3DSkybox: Long = 0xF4DL
+        fun C_FuncMonitor_m_bDraw3DSkyboxAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_bDraw3DSkybox
+
+        const val C_FuncMonitor_m_bRenderShadows: Long = 0xF3CL
+        fun C_FuncMonitor_m_bRenderShadowsAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_bRenderShadows
+
+        const val C_FuncMonitor_m_bUseUniqueColorTarget: Long = 0xF3DL
+        fun C_FuncMonitor_m_bUseUniqueColorTargetAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_bUseUniqueColorTarget
+
+        const val C_FuncMonitor_m_brushModelName: Long = 0xF40L
+        fun C_FuncMonitor_m_brushModelNameAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_brushModelName
+
+        const val C_FuncMonitor_m_hTargetCamera: Long = 0xF48L
+        fun C_FuncMonitor_m_hTargetCameraAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_hTargetCamera
+
+        const val C_FuncMonitor_m_nResolutionEnum: Long = 0xF38L
+        fun C_FuncMonitor_m_nResolutionEnumAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_nResolutionEnum
+
+        const val C_FuncMonitor_m_targetCamera: Long = 0xF30L
+        fun C_FuncMonitor_m_targetCameraAddress(objectAddress: Long): Long = objectAddress + C_FuncMonitor_m_targetCamera
+
+        const val C_GameRules_m_bGamePaused: Long = 0x38L
+        fun C_GameRules_m_bGamePausedAddress(objectAddress: Long): Long = objectAddress + C_GameRules_m_bGamePaused
+
+        const val C_GameRules_m_nPauseStartTick: Long = 0x34L
+        fun C_GameRules_m_nPauseStartTickAddress(objectAddress: Long): Long = objectAddress + C_GameRules_m_nPauseStartTick
+
+        const val C_GameRules_m_nTotalPausedTicks: Long = 0x30L
+        fun C_GameRules_m_nTotalPausedTicksAddress(objectAddress: Long): Long = objectAddress + C_GameRules_m_nTotalPausedTicks
+
+        const val C_GradientFog_m_flFogEndDistance: Long = 0x78CL
+        fun C_GradientFog_m_flFogEndDistanceAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_flFogEndDistance
+
+        const val C_GradientFog_m_flFogEndHeight: Long = 0x798L
+        fun C_GradientFog_m_flFogEndHeightAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_flFogEndHeight
+
+        const val C_GradientFog_m_flFogStartDistance: Long = 0x788L
+        fun C_GradientFog_m_flFogStartDistanceAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_flFogStartDistance
+
+        const val C_GradientFog_m_flFogStartHeight: Long = 0x794L
+        fun C_GradientFog_m_flFogStartHeightAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_flFogStartHeight
+
+        const val C_GradientFog_m_flFogVerticalExponent: Long = 0x7A8L
+        fun C_GradientFog_m_flFogVerticalExponentAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_flFogVerticalExponent
+
+        const val C_GradientFog_m_fogColor: Long = 0x7ACL
+        fun C_GradientFog_m_fogColorAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_fogColor
+
+        const val C_GradientFog_m_hGradientFogTexture: Long = 0x780L
+        fun C_GradientFog_m_hGradientFogTextureAddress(objectAddress: Long): Long = objectAddress + C_GradientFog_m_hGradientFogTexture
+
+        const val C_HandleTest_m_bSendHandle: Long = 0x780L
+        fun C_HandleTest_m_bSendHandleAddress(objectAddress: Long): Long = objectAddress + C_HandleTest_m_bSendHandle
+
+        const val C_Hostage_m_bHandsHaveBeenCut: Long = 0x11B4L
+        fun C_Hostage_m_bHandsHaveBeenCutAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_bHandsHaveBeenCut
+
+        const val C_Hostage_m_flDropStartTime: Long = 0x11D4L
+        fun C_Hostage_m_flDropStartTimeAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_flDropStartTime
+
+        const val C_Hostage_m_flGrabSuccessTime: Long = 0x11D0L
+        fun C_Hostage_m_flGrabSuccessTimeAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_flGrabSuccessTime
+
+        const val C_Hostage_m_flRescueStartTime: Long = 0x11CCL
+        fun C_Hostage_m_flRescueStartTimeAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_flRescueStartTime
+
+        const val C_Hostage_m_hHostageGrabber: Long = 0x11B8L
+        fun C_Hostage_m_hHostageGrabberAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_hHostageGrabber
+
+        const val C_Hostage_m_isRescued: Long = 0x11ACL
+        fun C_Hostage_m_isRescuedAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_isRescued
+
+        const val C_Hostage_m_nHostageState: Long = 0x11B0L
+        fun C_Hostage_m_nHostageStateAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_nHostageState
+
+        const val C_Hostage_m_reuseTimer: Long = 0x1188L
+        fun C_Hostage_m_reuseTimerAddress(objectAddress: Long): Long = objectAddress + C_Hostage_m_reuseTimer
+
+        const val C_Inferno_m_BurnNormal: Long = 0x15E0L
+        fun C_Inferno_m_BurnNormalAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_BurnNormal
+
+        const val C_Inferno_m_bFireIsBurning: Long = 0x15A0L
+        fun C_Inferno_m_bFireIsBurningAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_bFireIsBurning
+
+        const val C_Inferno_m_bInPostEffectTime: Long = 0x18ECL
+        fun C_Inferno_m_bInPostEffectTimeAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_bInPostEffectTime
+
+        const val C_Inferno_m_fireCount: Long = 0x18E0L
+        fun C_Inferno_m_fireCountAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_fireCount
+
+        const val C_Inferno_m_fireParentPositions: Long = 0x12A0L
+        fun C_Inferno_m_fireParentPositionsAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_fireParentPositions
+
+        const val C_Inferno_m_firePositions: Long = 0xFA0L
+        fun C_Inferno_m_firePositionsAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_firePositions
+
+        const val C_Inferno_m_nFireEffectTickBegin: Long = 0x18F4L
+        fun C_Inferno_m_nFireEffectTickBeginAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_nFireEffectTickBegin
+
+        const val C_Inferno_m_nFireLifetime: Long = 0x18E8L
+        fun C_Inferno_m_nFireLifetimeAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_nFireLifetime
+
+        const val C_Inferno_m_nInfernoType: Long = 0x18E4L
+        fun C_Inferno_m_nInfernoTypeAddress(objectAddress: Long): Long = objectAddress + C_Inferno_m_nInfernoType
+
+        const val C_InfoVisibilityBox_m_vBoxSize: Long = 0x784L
+        fun C_InfoVisibilityBox_m_vBoxSizeAddress(objectAddress: Long): Long = objectAddress + C_InfoVisibilityBox_m_vBoxSize
+
+        const val C_ItemDogtags_m_KillingPlayer: Long = 0x265CL
+        fun C_ItemDogtags_m_KillingPlayerAddress(objectAddress: Long): Long = objectAddress + C_ItemDogtags_m_KillingPlayer
+
+        const val C_ItemDogtags_m_OwningPlayer: Long = 0x2658L
+        fun C_ItemDogtags_m_OwningPlayerAddress(objectAddress: Long): Long = objectAddress + C_ItemDogtags_m_OwningPlayer
+
+        const val C_Knife_m_bFirstAttack: Long = 0x2B35L
+        fun C_Knife_m_bFirstAttackAddress(objectAddress: Long): Long = objectAddress + C_Knife_m_bFirstAttack
+
+        const val C_MapVetoPickController_m_nAccountIDs: Long = 0x8B0L
+        fun C_MapVetoPickController_m_nAccountIDsAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nAccountIDs
+
+        const val C_MapVetoPickController_m_nCurrentPhase: Long = 0x10B0L
+        fun C_MapVetoPickController_m_nCurrentPhaseAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nCurrentPhase
+
+        const val C_MapVetoPickController_m_nDraftType: Long = 0x78CL
+        fun C_MapVetoPickController_m_nDraftTypeAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nDraftType
+
+        const val C_MapVetoPickController_m_nMapId0: Long = 0x9B0L
+        fun C_MapVetoPickController_m_nMapId0Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nMapId0
+
+        const val C_MapVetoPickController_m_nMapId1: Long = 0xAB0L
+        fun C_MapVetoPickController_m_nMapId1Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nMapId1
+
+        const val C_MapVetoPickController_m_nMapId2: Long = 0xBB0L
+        fun C_MapVetoPickController_m_nMapId2Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nMapId2
+
+        const val C_MapVetoPickController_m_nMapId3: Long = 0xCB0L
+        fun C_MapVetoPickController_m_nMapId3Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nMapId3
+
+        const val C_MapVetoPickController_m_nMapId4: Long = 0xDB0L
+        fun C_MapVetoPickController_m_nMapId4Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nMapId4
+
+        const val C_MapVetoPickController_m_nMapId5: Long = 0xEB0L
+        fun C_MapVetoPickController_m_nMapId5Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nMapId5
+
+        const val C_MapVetoPickController_m_nPhaseDurationTicks: Long = 0x10B8L
+        fun C_MapVetoPickController_m_nPhaseDurationTicksAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nPhaseDurationTicks
+
+        const val C_MapVetoPickController_m_nPhaseStartTick: Long = 0x10B4L
+        fun C_MapVetoPickController_m_nPhaseStartTickAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nPhaseStartTick
+
+        const val C_MapVetoPickController_m_nStartingSide0: Long = 0xFB0L
+        fun C_MapVetoPickController_m_nStartingSide0Address(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nStartingSide0
+
+        const val C_MapVetoPickController_m_nTeamWinningCoinToss: Long = 0x790L
+        fun C_MapVetoPickController_m_nTeamWinningCoinTossAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nTeamWinningCoinToss
+
+        const val C_MapVetoPickController_m_nTeamWithFirstChoice: Long = 0x794L
+        fun C_MapVetoPickController_m_nTeamWithFirstChoiceAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nTeamWithFirstChoice
+
+        const val C_MapVetoPickController_m_nVoteMapIdsList: Long = 0x894L
+        fun C_MapVetoPickController_m_nVoteMapIdsListAddress(objectAddress: Long): Long = objectAddress + C_MapVetoPickController_m_nVoteMapIdsList
+
+        const val C_MolotovProjectile_m_bIsIncGrenade: Long = 0x11BCL
+        fun C_MolotovProjectile_m_bIsIncGrenadeAddress(objectAddress: Long): Long = objectAddress + C_MolotovProjectile_m_bIsIncGrenade
+
+        const val C_OmniLight_m_flInnerAngle: Long = 0x1240L
+        fun C_OmniLight_m_flInnerAngleAddress(objectAddress: Long): Long = objectAddress + C_OmniLight_m_flInnerAngle
+
+        const val C_OmniLight_m_flOuterAngle: Long = 0x1244L
+        fun C_OmniLight_m_flOuterAngleAddress(objectAddress: Long): Long = objectAddress + C_OmniLight_m_flOuterAngle
+
+        const val C_ParticleSystem_m_bAnimateDuringGameplayPause: Long = 0x113CL
+        fun C_ParticleSystem_m_bAnimateDuringGameplayPauseAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_bAnimateDuringGameplayPause
+
+        const val C_ParticleSystem_m_bFrozen: Long = 0x1131L
+        fun C_ParticleSystem_m_bFrozenAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_bFrozen
+
+        const val C_ParticleSystem_m_bNoFreeze: Long = 0x1285L
+        fun C_ParticleSystem_m_bNoFreezeAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_bNoFreeze
+
+        const val C_ParticleSystem_m_bNoRamp: Long = 0x1286L
+        fun C_ParticleSystem_m_bNoRampAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_bNoRamp
+
+        const val C_ParticleSystem_m_bNoSave: Long = 0x1284L
+        fun C_ParticleSystem_m_bNoSaveAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_bNoSave
+
+        const val C_ParticleSystem_m_flPreSimTime: Long = 0x114CL
+        fun C_ParticleSystem_m_flPreSimTimeAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_flPreSimTime
+
+        const val C_ParticleSystem_m_hControlPointEnts: Long = 0x1184L
+        fun C_ParticleSystem_m_hControlPointEntsAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_hControlPointEnts
+
+        const val C_ParticleSystem_m_iServerControlPointAssignments: Long = 0x1180L
+        fun C_ParticleSystem_m_iServerControlPointAssignmentsAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_iServerControlPointAssignments
+
+        const val C_ParticleSystem_m_nStopType: Long = 0x1138L
+        fun C_ParticleSystem_m_nStopTypeAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_nStopType
+
+        const val C_ParticleSystem_m_szSnapshotFileName: Long = 0xF30L
+        fun C_ParticleSystem_m_szSnapshotFileNameAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_szSnapshotFileName
+
+        const val C_ParticleSystem_m_vServerControlPoints: Long = 0x1150L
+        fun C_ParticleSystem_m_vServerControlPointsAddress(objectAddress: Long): Long = objectAddress + C_ParticleSystem_m_vServerControlPoints
+
+        const val C_PathParticleRope_m_PathNodes_Color: Long = 0x818L
+        fun C_PathParticleRope_m_PathNodes_ColorAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_PathNodes_Color
+
+        const val C_PathParticleRope_m_PathNodes_PinEnabled: Long = 0x830L
+        fun C_PathParticleRope_m_PathNodes_PinEnabledAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_PathNodes_PinEnabled
+
+        const val C_PathParticleRope_m_PathNodes_Position: Long = 0x7D0L
+        fun C_PathParticleRope_m_PathNodes_PositionAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_PathNodes_Position
+
+        const val C_PathParticleRope_m_PathNodes_RadiusScale: Long = 0x848L
+        fun C_PathParticleRope_m_PathNodes_RadiusScaleAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_PathNodes_RadiusScale
+
+        const val C_PathParticleRope_m_PathNodes_TangentIn: Long = 0x7E8L
+        fun C_PathParticleRope_m_PathNodes_TangentInAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_PathNodes_TangentIn
+
+        const val C_PathParticleRope_m_PathNodes_TangentOut: Long = 0x800L
+        fun C_PathParticleRope_m_PathNodes_TangentOutAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_PathNodes_TangentOut
+
+        const val C_PathParticleRope_m_flParticleSpacing: Long = 0x7B0L
+        fun C_PathParticleRope_m_flParticleSpacingAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_flParticleSpacing
+
+        const val C_PathParticleRope_m_flSlack: Long = 0x7B4L
+        fun C_PathParticleRope_m_flSlackAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_flSlack
+
+        const val C_PathParticleRope_m_nEffectState: Long = 0x7C0L
+        fun C_PathParticleRope_m_nEffectStateAddress(objectAddress: Long): Long = objectAddress + C_PathParticleRope_m_nEffectState
+
+        const val C_PhysicsProp_m_bAwake: Long = 0x1248L
+        fun C_PhysicsProp_m_bAwakeAddress(objectAddress: Long): Long = objectAddress + C_PhysicsProp_m_bAwake
+
+        const val C_PlantedC4_m_bBeingDefused: Long = 0x1124L
+        fun C_PlantedC4_m_bBeingDefusedAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_bBeingDefused
+
+        const val C_PlantedC4_m_bBombDefused: Long = 0x113CL
+        fun C_PlantedC4_m_bBombDefusedAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_bBombDefused
+
+        const val C_PlantedC4_m_bBombTicking: Long = 0x10E8L
+        fun C_PlantedC4_m_bBombTickingAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_bBombTicking
+
+        const val C_PlantedC4_m_bCannotBeDefused: Long = 0x111CL
+        fun C_PlantedC4_m_bCannotBeDefusedAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_bCannotBeDefused
+
+        const val C_PlantedC4_m_bHasExploded: Long = 0x111DL
+        fun C_PlantedC4_m_bHasExplodedAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_bHasExploded
+
+        const val C_PlantedC4_m_flC4Blow: Long = 0x1118L
+        fun C_PlantedC4_m_flC4BlowAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_flC4Blow
+
+        const val C_PlantedC4_m_flDefuseCountDown: Long = 0x1138L
+        fun C_PlantedC4_m_flDefuseCountDownAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_flDefuseCountDown
+
+        const val C_PlantedC4_m_flDefuseLength: Long = 0x1134L
+        fun C_PlantedC4_m_flDefuseLengthAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_flDefuseLength
+
+        const val C_PlantedC4_m_flTimerLength: Long = 0x1120L
+        fun C_PlantedC4_m_flTimerLengthAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_flTimerLength
+
+        const val C_PlantedC4_m_hBombDefuser: Long = 0x1140L
+        fun C_PlantedC4_m_hBombDefuserAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_hBombDefuser
+
+        const val C_PlantedC4_m_nBombSite: Long = 0x10ECL
+        fun C_PlantedC4_m_nBombSiteAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_nBombSite
+
+        const val C_PlantedC4_m_nSourceSoundscapeHash: Long = 0x10F0L
+        fun C_PlantedC4_m_nSourceSoundscapeHashAddress(objectAddress: Long): Long = objectAddress + C_PlantedC4_m_nSourceSoundscapeHash
+
+        const val C_PlayerPing_m_bUrgent: Long = 0x7BCL
+        fun C_PlayerPing_m_bUrgentAddress(objectAddress: Long): Long = objectAddress + C_PlayerPing_m_bUrgent
+
+        const val C_PlayerPing_m_hPingedEntity: Long = 0x7B4L
+        fun C_PlayerPing_m_hPingedEntityAddress(objectAddress: Long): Long = objectAddress + C_PlayerPing_m_hPingedEntity
+
+        const val C_PlayerPing_m_hPlayer: Long = 0x7B0L
+        fun C_PlayerPing_m_hPlayerAddress(objectAddress: Long): Long = objectAddress + C_PlayerPing_m_hPlayer
+
+        const val C_PlayerPing_m_iType: Long = 0x7B8L
+        fun C_PlayerPing_m_iTypeAddress(objectAddress: Long): Long = objectAddress + C_PlayerPing_m_iType
+
+        const val C_PlayerPing_m_szPlaceName: Long = 0x7BDL
+        fun C_PlayerPing_m_szPlaceNameAddress(objectAddress: Long): Long = objectAddress + C_PlayerPing_m_szPlaceName
+
+        const val C_PlayerSprayDecal_m_flCreationTime: Long = 0xF7CL
+        fun C_PlayerSprayDecal_m_flCreationTimeAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_flCreationTime
+
+        const val C_PlayerSprayDecal_m_nEntity: Long = 0xF74L
+        fun C_PlayerSprayDecal_m_nEntityAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_nEntity
+
+        const val C_PlayerSprayDecal_m_nHitbox: Long = 0xF78L
+        fun C_PlayerSprayDecal_m_nHitboxAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_nHitbox
+
+        const val C_PlayerSprayDecal_m_nPlayer: Long = 0xF70L
+        fun C_PlayerSprayDecal_m_nPlayerAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_nPlayer
+
+        const val C_PlayerSprayDecal_m_nTintID: Long = 0xF80L
+        fun C_PlayerSprayDecal_m_nTintIDAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_nTintID
+
+        const val C_PlayerSprayDecal_m_nUniqueID: Long = 0xF30L
+        fun C_PlayerSprayDecal_m_nUniqueIDAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_nUniqueID
+
+        const val C_PlayerSprayDecal_m_nVersion: Long = 0xF84L
+        fun C_PlayerSprayDecal_m_nVersionAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_nVersion
+
+        const val C_PlayerSprayDecal_m_rtGcTime: Long = 0xF3CL
+        fun C_PlayerSprayDecal_m_rtGcTimeAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_rtGcTime
+
+        const val C_PlayerSprayDecal_m_ubSignature: Long = 0xF85L
+        fun C_PlayerSprayDecal_m_ubSignatureAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_ubSignature
+
+        const val C_PlayerSprayDecal_m_unAccountID: Long = 0xF34L
+        fun C_PlayerSprayDecal_m_unAccountIDAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_unAccountID
+
+        const val C_PlayerSprayDecal_m_unTraceID: Long = 0xF38L
+        fun C_PlayerSprayDecal_m_unTraceIDAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_unTraceID
+
+        const val C_PlayerSprayDecal_m_vecStart: Long = 0xF4CL
+        fun C_PlayerSprayDecal_m_vecStartAddress(objectAddress: Long): Long = objectAddress + C_PlayerSprayDecal_m_vecStart
+
+        const val C_PlayerVisibility_m_flFogDistanceMultiplier: Long = 0x780L
+        fun C_PlayerVisibility_m_flFogDistanceMultiplierAddress(objectAddress: Long): Long = objectAddress + C_PlayerVisibility_m_flFogDistanceMultiplier
+
+        const val C_PlayerVisibility_m_flFogMaxDensityMultiplier: Long = 0x784L
+        fun C_PlayerVisibility_m_flFogMaxDensityMultiplierAddress(objectAddress: Long): Long = objectAddress + C_PlayerVisibility_m_flFogMaxDensityMultiplier
+
+        const val C_PlayerVisibility_m_flVisibilityStrength: Long = 0x77CL
+        fun C_PlayerVisibility_m_flVisibilityStrengthAddress(objectAddress: Long): Long = objectAddress + C_PlayerVisibility_m_flVisibilityStrength
+
+        const val C_PointCamera_m_FOV: Long = 0x77CL
+        fun C_PointCamera_m_FOVAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_FOV
+
+        const val C_PointCamera_m_FogColor: Long = 0x785L
+        fun C_PointCamera_m_FogColorAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_FogColor
+
+        const val C_PointCamera_m_Resolution: Long = 0x780L
+        fun C_PointCamera_m_ResolutionAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_Resolution
+
+        const val C_PointCamera_m_bAlignWithParent: Long = 0x7B1L
+        fun C_PointCamera_m_bAlignWithParentAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_bAlignWithParent
+
+        const val C_PointCamera_m_bCanHLTVUse: Long = 0x7B0L
+        fun C_PointCamera_m_bCanHLTVUseAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_bCanHLTVUse
+
+        const val C_PointCamera_m_bFogEnable: Long = 0x784L
+        fun C_PointCamera_m_bFogEnableAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_bFogEnable
+
+        const val C_PointCamera_m_bNoSky: Long = 0x7A0L
+        fun C_PointCamera_m_bNoSkyAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_bNoSky
+
+        const val C_PointCamera_m_bUseScreenAspectRatio: Long = 0x799L
+        fun C_PointCamera_m_bUseScreenAspectRatioAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_bUseScreenAspectRatio
+
+        const val C_PointCamera_m_fBrightness: Long = 0x7A4L
+        fun C_PointCamera_m_fBrightnessAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_fBrightness
+
+        const val C_PointCamera_m_flAspectRatio: Long = 0x79CL
+        fun C_PointCamera_m_flAspectRatioAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_flAspectRatio
+
+        const val C_PointCamera_m_flFogEnd: Long = 0x790L
+        fun C_PointCamera_m_flFogEndAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_flFogEnd
+
+        const val C_PointCamera_m_flFogMaxDensity: Long = 0x794L
+        fun C_PointCamera_m_flFogMaxDensityAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_flFogMaxDensity
+
+        const val C_PointCamera_m_flFogStart: Long = 0x78CL
+        fun C_PointCamera_m_flFogStartAddress(objectAddress: Long): Long = objectAddress + C_PointCamera_m_flFogStart
+
+        const val C_PointClientUIWorldPanel_m_bDisableMipGen: Long = 0x1178L
+        fun C_PointClientUIWorldPanel_m_bDisableMipGenAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bDisableMipGen
+
+        const val C_PointClientUIWorldPanel_m_bExcludeFromSaveGames: Long = 0x1175L
+        fun C_PointClientUIWorldPanel_m_bExcludeFromSaveGamesAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bExcludeFromSaveGames
+
+        const val C_PointClientUIWorldPanel_m_bFollowPlayerAcrossTeleport: Long = 0x112AL
+        fun C_PointClientUIWorldPanel_m_bFollowPlayerAcrossTeleportAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bFollowPlayerAcrossTeleport
+
+        const val C_PointClientUIWorldPanel_m_bGrabbable: Long = 0x1176L
+        fun C_PointClientUIWorldPanel_m_bGrabbableAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bGrabbable
+
+        const val C_PointClientUIWorldPanel_m_bLit: Long = 0x1129L
+        fun C_PointClientUIWorldPanel_m_bLitAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bLit
+
+        const val C_PointClientUIWorldPanel_m_bNoDepth: Long = 0x1171L
+        fun C_PointClientUIWorldPanel_m_bNoDepthAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bNoDepth
+
+        const val C_PointClientUIWorldPanel_m_bOnlyRenderToTexture: Long = 0x1177L
+        fun C_PointClientUIWorldPanel_m_bOnlyRenderToTextureAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bOnlyRenderToTexture
+
+        const val C_PointClientUIWorldPanel_m_bOpaque: Long = 0x1170L
+        fun C_PointClientUIWorldPanel_m_bOpaqueAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bOpaque
+
+        const val C_PointClientUIWorldPanel_m_bRenderBackface: Long = 0x1173L
+        fun C_PointClientUIWorldPanel_m_bRenderBackfaceAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bRenderBackface
+
+        const val C_PointClientUIWorldPanel_m_bUseOffScreenIndicator: Long = 0x1174L
+        fun C_PointClientUIWorldPanel_m_bUseOffScreenIndicatorAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bUseOffScreenIndicator
+
+        const val C_PointClientUIWorldPanel_m_bVisibleWhenParentNoDraw: Long = 0x1172L
+        fun C_PointClientUIWorldPanel_m_bVisibleWhenParentNoDrawAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_bVisibleWhenParentNoDraw
+
+        const val C_PointClientUIWorldPanel_m_nExplicitImageLayout: Long = 0x117CL
+        fun C_PointClientUIWorldPanel_m_nExplicitImageLayoutAddress(objectAddress: Long): Long = objectAddress + C_PointClientUIWorldPanel_m_nExplicitImageLayout
+
+        const val C_PointCommentaryNode_m_bListenedTo: Long = 0x1128L
+        fun C_PointCommentaryNode_m_bListenedToAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_bListenedTo
+
+        const val C_PointCommentaryNode_m_flStartTimeInCommentary: Long = 0x1104L
+        fun C_PointCommentaryNode_m_flStartTimeInCommentaryAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_flStartTimeInCommentary
+
+        const val C_PointCommentaryNode_m_hViewPosition: Long = 0x1138L
+        fun C_PointCommentaryNode_m_hViewPositionAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_hViewPosition
+
+        const val C_PointCommentaryNode_m_iNodeNumber: Long = 0x1120L
+        fun C_PointCommentaryNode_m_iNodeNumberAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_iNodeNumber
+
+        const val C_PointCommentaryNode_m_iNodeNumberMax: Long = 0x1124L
+        fun C_PointCommentaryNode_m_iNodeNumberMaxAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_iNodeNumberMax
+
+        const val C_PointCommentaryNode_m_iszCommentaryFile: Long = 0x1108L
+        fun C_PointCommentaryNode_m_iszCommentaryFileAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_iszCommentaryFile
+
+        const val C_PointCommentaryNode_m_iszSpeakers: Long = 0x1118L
+        fun C_PointCommentaryNode_m_iszSpeakersAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_iszSpeakers
+
+        const val C_PointCommentaryNode_m_iszTitle: Long = 0x1110L
+        fun C_PointCommentaryNode_m_iszTitleAddress(objectAddress: Long): Long = objectAddress + C_PointCommentaryNode_m_iszTitle
+
+        const val C_PointValueRemapper_m_bRequiresUseKey: Long = 0x798L
+        fun C_PointValueRemapper_m_bRequiresUseKeyAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_bRequiresUseKey
+
+        const val C_PointValueRemapper_m_bUpdateOnClient: Long = 0x77EL
+        fun C_PointValueRemapper_m_bUpdateOnClientAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_bUpdateOnClient
+
+        const val C_PointValueRemapper_m_flDisengageDistance: Long = 0x790L
+        fun C_PointValueRemapper_m_flDisengageDistanceAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_flDisengageDistance
+
+        const val C_PointValueRemapper_m_flEngageDistance: Long = 0x794L
+        fun C_PointValueRemapper_m_flEngageDistanceAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_flEngageDistance
+
+        const val C_PointValueRemapper_m_flInputOffset: Long = 0x7D4L
+        fun C_PointValueRemapper_m_flInputOffsetAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_flInputOffset
+
+        const val C_PointValueRemapper_m_flMaximumChangePerSecond: Long = 0x78CL
+        fun C_PointValueRemapper_m_flMaximumChangePerSecondAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_flMaximumChangePerSecond
+
+        const val C_PointValueRemapper_m_flMomentumModifier: Long = 0x7C0L
+        fun C_PointValueRemapper_m_flMomentumModifierAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_flMomentumModifier
+
+        const val C_PointValueRemapper_m_flSnapValue: Long = 0x7C4L
+        fun C_PointValueRemapper_m_flSnapValueAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_flSnapValue
+
+        const val C_PointValueRemapper_m_hOutputEntities: Long = 0x7A0L
+        fun C_PointValueRemapper_m_hOutputEntitiesAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_hOutputEntities
+
+        const val C_PointValueRemapper_m_hRemapLineEnd: Long = 0x788L
+        fun C_PointValueRemapper_m_hRemapLineEndAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_hRemapLineEnd
+
+        const val C_PointValueRemapper_m_hRemapLineStart: Long = 0x784L
+        fun C_PointValueRemapper_m_hRemapLineStartAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_hRemapLineStart
+
+        const val C_PointValueRemapper_m_nHapticsType: Long = 0x7B8L
+        fun C_PointValueRemapper_m_nHapticsTypeAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_nHapticsType
+
+        const val C_PointValueRemapper_m_nInputType: Long = 0x780L
+        fun C_PointValueRemapper_m_nInputTypeAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_nInputType
+
+        const val C_PointValueRemapper_m_nMomentumType: Long = 0x7BCL
+        fun C_PointValueRemapper_m_nMomentumTypeAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_nMomentumType
+
+        const val C_PointValueRemapper_m_nOutputType: Long = 0x79CL
+        fun C_PointValueRemapper_m_nOutputTypeAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_nOutputType
+
+        const val C_PointValueRemapper_m_nRatchetType: Long = 0x7CCL
+        fun C_PointValueRemapper_m_nRatchetTypeAddress(objectAddress: Long): Long = objectAddress + C_PointValueRemapper_m_nRatchetType
+
+        const val C_PointWorldText_m_BackgroundMaterialName: Long = 0x1198L
+        fun C_PointWorldText_m_BackgroundMaterialNameAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_BackgroundMaterialName
+
+        const val C_PointWorldText_m_FontName: Long = 0x1158L
+        fun C_PointWorldText_m_FontNameAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_FontName
+
+        const val C_PointWorldText_m_bDrawBackground: Long = 0x11E8L
+        fun C_PointWorldText_m_bDrawBackgroundAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_bDrawBackground
+
+        const val C_PointWorldText_m_bFullbright: Long = 0x11D9L
+        fun C_PointWorldText_m_bFullbrightAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_bFullbright
+
+        const val C_PointWorldText_m_flBackgroundBorderHeight: Long = 0x11F0L
+        fun C_PointWorldText_m_flBackgroundBorderHeightAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_flBackgroundBorderHeight
+
+        const val C_PointWorldText_m_flBackgroundBorderWidth: Long = 0x11ECL
+        fun C_PointWorldText_m_flBackgroundBorderWidthAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_flBackgroundBorderWidth
+
+        const val C_PointWorldText_m_flBackgroundWorldToUV: Long = 0x11F4L
+        fun C_PointWorldText_m_flBackgroundWorldToUVAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_flBackgroundWorldToUV
+
+        const val C_PointWorldText_m_flFontSize: Long = 0x11E0L
+        fun C_PointWorldText_m_flFontSizeAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_flFontSize
+
+        const val C_PointWorldText_m_flWorldUnitsPerPx: Long = 0x11DCL
+        fun C_PointWorldText_m_flWorldUnitsPerPxAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_flWorldUnitsPerPx
+
+        const val C_PointWorldText_m_nJustifyHorizontal: Long = 0x11FCL
+        fun C_PointWorldText_m_nJustifyHorizontalAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_nJustifyHorizontal
+
+        const val C_PointWorldText_m_nJustifyVertical: Long = 0x1200L
+        fun C_PointWorldText_m_nJustifyVerticalAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_nJustifyVertical
+
+        const val C_PointWorldText_m_nReorientMode: Long = 0x1204L
+        fun C_PointWorldText_m_nReorientModeAddress(objectAddress: Long): Long = objectAddress + C_PointWorldText_m_nReorientMode
+
+        const val C_PostProcessingVolume_m_bExposureControl: Long = 0x103DL
+        fun C_PostProcessingVolume_m_bExposureControlAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_bExposureControl
+
+        const val C_PostProcessingVolume_m_flExposureCompensation: Long = 0x102CL
+        fun C_PostProcessingVolume_m_flExposureCompensationAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flExposureCompensation
+
+        const val C_PostProcessingVolume_m_flExposureFadeSpeedDown: Long = 0x1034L
+        fun C_PostProcessingVolume_m_flExposureFadeSpeedDownAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flExposureFadeSpeedDown
+
+        const val C_PostProcessingVolume_m_flExposureFadeSpeedUp: Long = 0x1030L
+        fun C_PostProcessingVolume_m_flExposureFadeSpeedUpAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flExposureFadeSpeedUp
+
+        const val C_PostProcessingVolume_m_flMaxExposure: Long = 0x1028L
+        fun C_PostProcessingVolume_m_flMaxExposureAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flMaxExposure
+
+        const val C_PostProcessingVolume_m_flMaxLogExposure: Long = 0x1020L
+        fun C_PostProcessingVolume_m_flMaxLogExposureAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flMaxLogExposure
+
+        const val C_PostProcessingVolume_m_flMinExposure: Long = 0x1024L
+        fun C_PostProcessingVolume_m_flMinExposureAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flMinExposure
+
+        const val C_PostProcessingVolume_m_flMinLogExposure: Long = 0x101CL
+        fun C_PostProcessingVolume_m_flMinLogExposureAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_flMinLogExposure
+
+        const val C_PostProcessingVolume_m_hPostSettings: Long = 0x1010L
+        fun C_PostProcessingVolume_m_hPostSettingsAddress(objectAddress: Long): Long = objectAddress + C_PostProcessingVolume_m_hPostSettings
+
+        const val C_RagdollPropAttached_m_attachmentPointBoneSpace: Long = 0x1170L
+        fun C_RagdollPropAttached_m_attachmentPointBoneSpaceAddress(objectAddress: Long): Long = objectAddress + C_RagdollPropAttached_m_attachmentPointBoneSpace
+
+        const val C_RagdollPropAttached_m_attachmentPointRagdollSpace: Long = 0x117CL
+        fun C_RagdollPropAttached_m_attachmentPointRagdollSpaceAddress(objectAddress: Long): Long = objectAddress + C_RagdollPropAttached_m_attachmentPointRagdollSpace
+
+        const val C_RagdollPropAttached_m_boneIndexAttached: Long = 0x1168L
+        fun C_RagdollPropAttached_m_boneIndexAttachedAddress(objectAddress: Long): Long = objectAddress + C_RagdollPropAttached_m_boneIndexAttached
+
+        const val C_RagdollPropAttached_m_ragdollAttachedObjectIndex: Long = 0x116CL
+        fun C_RagdollPropAttached_m_ragdollAttachedObjectIndexAddress(objectAddress: Long): Long = objectAddress + C_RagdollPropAttached_m_ragdollAttachedObjectIndex
+
+        const val C_RagdollProp_m_hRagdollSource: Long = 0x112CL
+        fun C_RagdollProp_m_hRagdollSourceAddress(objectAddress: Long): Long = objectAddress + C_RagdollProp_m_hRagdollSource
+
+        const val C_RagdollProp_m_ragAngles: Long = 0x1110L
+        fun C_RagdollProp_m_ragAnglesAddress(objectAddress: Long): Long = objectAddress + C_RagdollProp_m_ragAngles
+
+        const val C_RagdollProp_m_ragEnabled: Long = 0x10E0L
+        fun C_RagdollProp_m_ragEnabledAddress(objectAddress: Long): Long = objectAddress + C_RagdollProp_m_ragEnabled
+
+        const val C_RagdollProp_m_ragPos: Long = 0x10F8L
+        fun C_RagdollProp_m_ragPosAddress(objectAddress: Long): Long = objectAddress + C_RagdollProp_m_ragPos
+
+        const val C_RetakeGameRules_m_bBlockersPresent: Long = 0x13CL
+        fun C_RetakeGameRules_m_bBlockersPresentAddress(objectAddress: Long): Long = objectAddress + C_RetakeGameRules_m_bBlockersPresent
+
+        const val C_RetakeGameRules_m_bRoundInProgress: Long = 0x13DL
+        fun C_RetakeGameRules_m_bRoundInProgressAddress(objectAddress: Long): Long = objectAddress + C_RetakeGameRules_m_bRoundInProgress
+
+        const val C_RetakeGameRules_m_hBombPlanter: Long = 0x148L
+        fun C_RetakeGameRules_m_hBombPlanterAddress(objectAddress: Long): Long = objectAddress + C_RetakeGameRules_m_hBombPlanter
+
+        const val C_RetakeGameRules_m_iBombSite: Long = 0x144L
+        fun C_RetakeGameRules_m_iBombSiteAddress(objectAddress: Long): Long = objectAddress + C_RetakeGameRules_m_iBombSite
+
+        const val C_RetakeGameRules_m_iFirstSecondHalfRound: Long = 0x140L
+        fun C_RetakeGameRules_m_iFirstSecondHalfRoundAddress(objectAddress: Long): Long = objectAddress + C_RetakeGameRules_m_iFirstSecondHalfRound
+
+        const val C_RetakeGameRules_m_nMatchSeed: Long = 0x138L
+        fun C_RetakeGameRules_m_nMatchSeedAddress(objectAddress: Long): Long = objectAddress + C_RetakeGameRules_m_nMatchSeed
+
+        const val C_RopeKeyframe_m_RopeFlags: Long = 0xF70L
+        fun C_RopeKeyframe_m_RopeFlagsAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_RopeFlags
+
+        const val C_RopeKeyframe_m_RopeLength: Long = 0x1200L
+        fun C_RopeKeyframe_m_RopeLengthAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_RopeLength
+
+        const val C_RopeKeyframe_m_Slack: Long = 0x1202L
+        fun C_RopeKeyframe_m_SlackAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_Slack
+
+        const val C_RopeKeyframe_m_Subdiv: Long = 0x11FEL
+        fun C_RopeKeyframe_m_SubdivAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_Subdiv
+
+        const val C_RopeKeyframe_m_TextureScale: Long = 0x1204L
+        fun C_RopeKeyframe_m_TextureScaleAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_TextureScale
+
+        const val C_RopeKeyframe_m_Width: Long = 0x120CL
+        fun C_RopeKeyframe_m_WidthAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_Width
+
+        const val C_RopeKeyframe_m_bConstrainBetweenEndpoints: Long = 0x1298L
+        fun C_RopeKeyframe_m_bConstrainBetweenEndpointsAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_bConstrainBetweenEndpoints
+
+        const val C_RopeKeyframe_m_fLockedPoints: Long = 0x1208L
+        fun C_RopeKeyframe_m_fLockedPointsAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_fLockedPoints
+
+        const val C_RopeKeyframe_m_flScrollSpeed: Long = 0xF6CL
+        fun C_RopeKeyframe_m_flScrollSpeedAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_flScrollSpeed
+
+        const val C_RopeKeyframe_m_hEndPoint: Long = 0x11F8L
+        fun C_RopeKeyframe_m_hEndPointAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_hEndPoint
+
+        const val C_RopeKeyframe_m_hStartPoint: Long = 0x11F4L
+        fun C_RopeKeyframe_m_hStartPointAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_hStartPoint
+
+        const val C_RopeKeyframe_m_iEndAttachment: Long = 0x11FDL
+        fun C_RopeKeyframe_m_iEndAttachmentAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_iEndAttachment
+
+        const val C_RopeKeyframe_m_iRopeMaterialModelIndex: Long = 0xF78L
+        fun C_RopeKeyframe_m_iRopeMaterialModelIndexAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_iRopeMaterialModelIndex
+
+        const val C_RopeKeyframe_m_iStartAttachment: Long = 0x11FCL
+        fun C_RopeKeyframe_m_iStartAttachmentAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_iStartAttachment
+
+        const val C_RopeKeyframe_m_nChangeCount: Long = 0x1209L
+        fun C_RopeKeyframe_m_nChangeCountAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_nChangeCount
+
+        const val C_RopeKeyframe_m_nSegments: Long = 0x11F0L
+        fun C_RopeKeyframe_m_nSegmentsAddress(objectAddress: Long): Long = objectAddress + C_RopeKeyframe_m_nSegments
+
+        const val C_SceneEntity_m_bAllRequirementsComplete: Long = 0x78CL
+        fun C_SceneEntity_m_bAllRequirementsCompleteAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_bAllRequirementsComplete
+
+        const val C_SceneEntity_m_bAutogenerated: Long = 0x78BL
+        fun C_SceneEntity_m_bAutogeneratedAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_bAutogenerated
+
+        const val C_SceneEntity_m_bIsPlayingBack: Long = 0x788L
+        fun C_SceneEntity_m_bIsPlayingBackAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_bIsPlayingBack
+
+        const val C_SceneEntity_m_bMultiplayer: Long = 0x78AL
+        fun C_SceneEntity_m_bMultiplayerAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_bMultiplayer
+
+        const val C_SceneEntity_m_bPaused: Long = 0x789L
+        fun C_SceneEntity_m_bPausedAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_bPaused
+
+        const val C_SceneEntity_m_flForceClientTime: Long = 0x790L
+        fun C_SceneEntity_m_flForceClientTimeAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_flForceClientTime
+
+        const val C_SceneEntity_m_hActorList: Long = 0x7A0L
+        fun C_SceneEntity_m_hActorListAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_hActorList
+
+        const val C_SceneEntity_m_nSceneStringIndex: Long = 0x794L
+        fun C_SceneEntity_m_nSceneStringIndexAddress(objectAddress: Long): Long = objectAddress + C_SceneEntity_m_nSceneStringIndex
+
+        const val C_ShatterGlassShardPhysics_m_ShardDesc: Long = 0x1258L
+        fun C_ShatterGlassShardPhysics_m_ShardDescAddress(objectAddress: Long): Long = objectAddress + C_ShatterGlassShardPhysics_m_ShardDesc
+
+        const val C_SkyCamera_m_skyboxData: Long = 0x780L
+        fun C_SkyCamera_m_skyboxDataAddress(objectAddress: Long): Long = objectAddress + C_SkyCamera_m_skyboxData
+
+        const val C_SkyCamera_m_skyboxSlotToken: Long = 0x810L
+        fun C_SkyCamera_m_skyboxSlotTokenAddress(objectAddress: Long): Long = objectAddress + C_SkyCamera_m_skyboxSlotToken
+
+        const val C_SmokeGrenadeProjectile_m_VoxelFrameData: Long = 0x1200L
+        fun C_SmokeGrenadeProjectile_m_VoxelFrameDataAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_VoxelFrameData
+
+        const val C_SmokeGrenadeProjectile_m_bDidSmokeEffect: Long = 0x11DCL
+        fun C_SmokeGrenadeProjectile_m_bDidSmokeEffectAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_bDidSmokeEffect
+
+        const val C_SmokeGrenadeProjectile_m_nRandomSeed: Long = 0x11E0L
+        fun C_SmokeGrenadeProjectile_m_nRandomSeedAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_nRandomSeed
+
+        const val C_SmokeGrenadeProjectile_m_nSmokeEffectTickBegin: Long = 0x11D8L
+        fun C_SmokeGrenadeProjectile_m_nSmokeEffectTickBeginAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_nSmokeEffectTickBegin
+
+        const val C_SmokeGrenadeProjectile_m_nVoxelFrameDataSize: Long = 0x1218L
+        fun C_SmokeGrenadeProjectile_m_nVoxelFrameDataSizeAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_nVoxelFrameDataSize
+
+        const val C_SmokeGrenadeProjectile_m_nVoxelUpdate: Long = 0x121CL
+        fun C_SmokeGrenadeProjectile_m_nVoxelUpdateAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_nVoxelUpdate
+
+        const val C_SmokeGrenadeProjectile_m_vSmokeDetonationPos: Long = 0x11F0L
+        fun C_SmokeGrenadeProjectile_m_vSmokeDetonationPosAddress(objectAddress: Long): Long = objectAddress + C_SmokeGrenadeProjectile_m_vSmokeDetonationPos
+
+        const val C_SoundAreaEntityBase_m_iszSoundAreaType: Long = 0x788L
+        fun C_SoundAreaEntityBase_m_iszSoundAreaTypeAddress(objectAddress: Long): Long = objectAddress + C_SoundAreaEntityBase_m_iszSoundAreaType
+
+        const val C_SoundAreaEntityOrientedBox_m_vMax: Long = 0x7A8L
+        fun C_SoundAreaEntityOrientedBox_m_vMaxAddress(objectAddress: Long): Long = objectAddress + C_SoundAreaEntityOrientedBox_m_vMax
+
+        const val C_SoundAreaEntityOrientedBox_m_vMin: Long = 0x79CL
+        fun C_SoundAreaEntityOrientedBox_m_vMinAddress(objectAddress: Long): Long = objectAddress + C_SoundAreaEntityOrientedBox_m_vMin
+
+        const val C_SoundEventAABBEntity_m_vMaxs: Long = 0x844L
+        fun C_SoundEventAABBEntity_m_vMaxsAddress(objectAddress: Long): Long = objectAddress + C_SoundEventAABBEntity_m_vMaxs
+
+        const val C_SoundEventAABBEntity_m_vMins: Long = 0x838L
+        fun C_SoundEventAABBEntity_m_vMinsAddress(objectAddress: Long): Long = objectAddress + C_SoundEventAABBEntity_m_vMins
+
+        const val C_SoundEventOBBEntity_m_vMaxs: Long = 0x844L
+        fun C_SoundEventOBBEntity_m_vMaxsAddress(objectAddress: Long): Long = objectAddress + C_SoundEventOBBEntity_m_vMaxs
+
+        const val C_SoundEventOBBEntity_m_vMins: Long = 0x838L
+        fun C_SoundEventOBBEntity_m_vMinsAddress(objectAddress: Long): Long = objectAddress + C_SoundEventOBBEntity_m_vMins
+
+        const val C_SoundEventPathCornerEntity_m_vecCornerPairsNetworked: Long = 0x838L
+        fun C_SoundEventPathCornerEntity_m_vecCornerPairsNetworkedAddress(objectAddress: Long): Long = objectAddress + C_SoundEventPathCornerEntity_m_vecCornerPairsNetworked
+
+        const val C_SoundOpvarSetPointBase_m_bFastRefresh: Long = 0x79DL
+        fun C_SoundOpvarSetPointBase_m_bFastRefreshAddress(objectAddress: Long): Long = objectAddress + C_SoundOpvarSetPointBase_m_bFastRefresh
+
+        const val C_SoundOpvarSetPointBase_m_bUseAutoCompare: Long = 0x79CL
+        fun C_SoundOpvarSetPointBase_m_bUseAutoCompareAddress(objectAddress: Long): Long = objectAddress + C_SoundOpvarSetPointBase_m_bUseAutoCompare
+
+        const val C_SoundOpvarSetPointBase_m_iOpvarIndex: Long = 0x798L
+        fun C_SoundOpvarSetPointBase_m_iOpvarIndexAddress(objectAddress: Long): Long = objectAddress + C_SoundOpvarSetPointBase_m_iOpvarIndex
+
+        const val C_SpotlightEnd_m_Radius: Long = 0xF34L
+        fun C_SpotlightEnd_m_RadiusAddress(objectAddress: Long): Long = objectAddress + C_SpotlightEnd_m_Radius
+
+        const val C_Sprite_m_bWorldSpaceScale: Long = 0xF68L
+        fun C_Sprite_m_bWorldSpaceScaleAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_bWorldSpaceScale
+
+        const val C_Sprite_m_flBrightnessDuration: Long = 0xF5CL
+        fun C_Sprite_m_flBrightnessDurationAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_flBrightnessDuration
+
+        const val C_Sprite_m_flGlowProxySize: Long = 0xF6CL
+        fun C_Sprite_m_flGlowProxySizeAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_flGlowProxySize
+
+        const val C_Sprite_m_flScaleDuration: Long = 0xF64L
+        fun C_Sprite_m_flScaleDurationAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_flScaleDuration
+
+        const val C_Sprite_m_flSpriteFramerate: Long = 0xF40L
+        fun C_Sprite_m_flSpriteFramerateAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_flSpriteFramerate
+
+        const val C_Sprite_m_hAttachedToEntity: Long = 0xF38L
+        fun C_Sprite_m_hAttachedToEntityAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_hAttachedToEntity
+
+        const val C_Sprite_m_hSpriteMaterial: Long = 0xF30L
+        fun C_Sprite_m_hSpriteMaterialAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_hSpriteMaterial
+
+        const val C_Sprite_m_nAttachment: Long = 0xF3CL
+        fun C_Sprite_m_nAttachmentAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_nAttachment
+
+        const val C_Sprite_m_nBrightness: Long = 0xF58L
+        fun C_Sprite_m_nBrightnessAddress(objectAddress: Long): Long = objectAddress + C_Sprite_m_nBrightness
+
+        const val C_Team_m_aPlayerControllers: Long = 0x780L
+        fun C_Team_m_aPlayerControllersAddress(objectAddress: Long): Long = objectAddress + C_Team_m_aPlayerControllers
+
+        const val C_Team_m_aPlayers: Long = 0x798L
+        fun C_Team_m_aPlayersAddress(objectAddress: Long): Long = objectAddress + C_Team_m_aPlayers
+
+        const val C_Team_m_szTeamname: Long = 0x7B4L
+        fun C_Team_m_szTeamnameAddress(objectAddress: Long): Long = objectAddress + C_Team_m_szTeamname
+
+        const val C_TextureBasedAnimatable_m_flFPS: Long = 0xF34L
+        fun C_TextureBasedAnimatable_m_flFPSAddress(objectAddress: Long): Long = objectAddress + C_TextureBasedAnimatable_m_flFPS
+
+        const val C_TextureBasedAnimatable_m_flStartFrame: Long = 0xF64L
+        fun C_TextureBasedAnimatable_m_flStartFrameAddress(objectAddress: Long): Long = objectAddress + C_TextureBasedAnimatable_m_flStartFrame
+
+        const val C_TextureBasedAnimatable_m_hPositionKeys: Long = 0xF38L
+        fun C_TextureBasedAnimatable_m_hPositionKeysAddress(objectAddress: Long): Long = objectAddress + C_TextureBasedAnimatable_m_hPositionKeys
+
+        const val C_TextureBasedAnimatable_m_hRotationKeys: Long = 0xF40L
+        fun C_TextureBasedAnimatable_m_hRotationKeysAddress(objectAddress: Long): Long = objectAddress + C_TextureBasedAnimatable_m_hRotationKeys
+
+        const val C_TextureBasedAnimatable_m_vAnimationBoundsMax: Long = 0xF54L
+        fun C_TextureBasedAnimatable_m_vAnimationBoundsMaxAddress(objectAddress: Long): Long = objectAddress + C_TextureBasedAnimatable_m_vAnimationBoundsMax
+
+        const val C_TextureBasedAnimatable_m_vAnimationBoundsMin: Long = 0xF48L
+        fun C_TextureBasedAnimatable_m_vAnimationBoundsMinAddress(objectAddress: Long): Long = objectAddress + C_TextureBasedAnimatable_m_vAnimationBoundsMin
+
+        const val C_TonemapController2_m_flAutoExposureMax: Long = 0x780L
+        fun C_TonemapController2_m_flAutoExposureMaxAddress(objectAddress: Long): Long = objectAddress + C_TonemapController2_m_flAutoExposureMax
+
+        const val C_TonemapController2_m_flAutoExposureMin: Long = 0x77CL
+        fun C_TonemapController2_m_flAutoExposureMinAddress(objectAddress: Long): Long = objectAddress + C_TonemapController2_m_flAutoExposureMin
+
+        const val C_TonemapController2_m_flExposureAdaptationSpeedDown: Long = 0x788L
+        fun C_TonemapController2_m_flExposureAdaptationSpeedDownAddress(objectAddress: Long): Long = objectAddress + C_TonemapController2_m_flExposureAdaptationSpeedDown
+
+        const val C_TonemapController2_m_flExposureAdaptationSpeedUp: Long = 0x784L
+        fun C_TonemapController2_m_flExposureAdaptationSpeedUpAddress(objectAddress: Long): Long = objectAddress + C_TonemapController2_m_flExposureAdaptationSpeedUp
+
+        const val C_TriggerPhysics_m_angularDamping: Long = 0x1010L
+        fun C_TriggerPhysics_m_angularDampingAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_angularDamping
+
+        const val C_TriggerPhysics_m_angularLimit: Long = 0x100CL
+        fun C_TriggerPhysics_m_angularLimitAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_angularLimit
+
+        const val C_TriggerPhysics_m_bCollapseToForcePoint: Long = 0x102CL
+        fun C_TriggerPhysics_m_bCollapseToForcePointAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_bCollapseToForcePoint
+
+        const val C_TriggerPhysics_m_bConvertToDebrisWhenPossible: Long = 0x1048L
+        fun C_TriggerPhysics_m_bConvertToDebrisWhenPossibleAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_bConvertToDebrisWhenPossible
+
+        const val C_TriggerPhysics_m_flFrequency: Long = 0x1018L
+        fun C_TriggerPhysics_m_flFrequencyAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_flFrequency
+
+        const val C_TriggerPhysics_m_gravityScale: Long = 0x1000L
+        fun C_TriggerPhysics_m_gravityScaleAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_gravityScale
+
+        const val C_TriggerPhysics_m_linearDamping: Long = 0x1008L
+        fun C_TriggerPhysics_m_linearDampingAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_linearDamping
+
+        const val C_TriggerPhysics_m_linearForce: Long = 0x1014L
+        fun C_TriggerPhysics_m_linearForceAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_linearForce
+
+        const val C_TriggerPhysics_m_linearLimit: Long = 0x1004L
+        fun C_TriggerPhysics_m_linearLimitAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_linearLimit
+
+        const val C_TriggerPhysics_m_vecLinearForceDirection: Long = 0x103CL
+        fun C_TriggerPhysics_m_vecLinearForceDirectionAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_vecLinearForceDirection
+
+        const val C_TriggerPhysics_m_vecLinearForcePointAt: Long = 0x1020L
+        fun C_TriggerPhysics_m_vecLinearForcePointAtAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_vecLinearForcePointAt
+
+        const val C_TriggerPhysics_m_vecLinearForcePointAtWorld: Long = 0x1030L
+        fun C_TriggerPhysics_m_vecLinearForcePointAtWorldAddress(objectAddress: Long): Long = objectAddress + C_TriggerPhysics_m_vecLinearForcePointAtWorld
+
+        const val C_VoteController_m_bIsYesNoVote: Long = 0x7AEL
+        fun C_VoteController_m_bIsYesNoVoteAddress(objectAddress: Long): Long = objectAddress + C_VoteController_m_bIsYesNoVote
+
+        const val C_VoteController_m_iActiveIssueIndex: Long = 0x78CL
+        fun C_VoteController_m_iActiveIssueIndexAddress(objectAddress: Long): Long = objectAddress + C_VoteController_m_iActiveIssueIndex
+
+        const val C_VoteController_m_iOnlyTeamToVote: Long = 0x790L
+        fun C_VoteController_m_iOnlyTeamToVoteAddress(objectAddress: Long): Long = objectAddress + C_VoteController_m_iOnlyTeamToVote
+
+        const val C_VoteController_m_nPotentialVotes: Long = 0x7A8L
+        fun C_VoteController_m_nPotentialVotesAddress(objectAddress: Long): Long = objectAddress + C_VoteController_m_nPotentialVotes
+
+        const val C_VoteController_m_nVoteOptionCount: Long = 0x794L
+        fun C_VoteController_m_nVoteOptionCountAddress(objectAddress: Long): Long = objectAddress + C_VoteController_m_nVoteOptionCount
+
+        const val C_WeaponBaseItem_m_bRedraw: Long = 0x2B36L
+        fun C_WeaponBaseItem_m_bRedrawAddress(objectAddress: Long): Long = objectAddress + C_WeaponBaseItem_m_bRedraw
+
+        const val C_WeaponBaseItem_m_bSequenceInProgress: Long = 0x2B35L
+        fun C_WeaponBaseItem_m_bSequenceInProgressAddress(objectAddress: Long): Long = objectAddress + C_WeaponBaseItem_m_bSequenceInProgress
+
+        const val C_WeaponCZ75a_m_bMagazineRemoved: Long = 0x2B5CL
+        fun C_WeaponCZ75a_m_bMagazineRemovedAddress(objectAddress: Long): Long = objectAddress + C_WeaponCZ75a_m_bMagazineRemoved
+
+        const val C_WeaponTaser_m_fFireTime: Long = 0x2B5CL
+        fun C_WeaponTaser_m_fFireTimeAddress(objectAddress: Long): Long = objectAddress + C_WeaponTaser_m_fFireTime
+
+        const val CountdownTimer_m_duration: Long = 0x100L
+        fun CountdownTimer_m_durationAddress(objectAddress: Long): Long = objectAddress + CountdownTimer_m_duration
+
+        const val CountdownTimer_m_nWorldGroupId: Long = 0x14L
+        fun CountdownTimer_m_nWorldGroupIdAddress(objectAddress: Long): Long = objectAddress + CountdownTimer_m_nWorldGroupId
+
+        const val CountdownTimer_m_timescale: Long = 0x10L
+        fun CountdownTimer_m_timescaleAddress(objectAddress: Long): Long = objectAddress + CountdownTimer_m_timescale
+
+        const val CountdownTimer_m_timestamp: Long = 0x100L
+        fun CountdownTimer_m_timestampAddress(objectAddress: Long): Long = objectAddress + CountdownTimer_m_timestamp
+
+        const val EntityRenderAttribute_t_m_Values: Long = 0x34L
+        fun EntityRenderAttribute_t_m_ValuesAddress(objectAddress: Long): Long = objectAddress + EntityRenderAttribute_t_m_Values
+
+        const val EntitySpottedState_t_m_bSpotted: Long = 0x8L
+        fun EntitySpottedState_t_m_bSpottedAddress(objectAddress: Long): Long = objectAddress + EntitySpottedState_t_m_bSpotted
+
+        const val SellbackPurchaseEntry_t_m_hItem: Long = 0x40L
+        fun SellbackPurchaseEntry_t_m_hItemAddress(objectAddress: Long): Long = objectAddress + SellbackPurchaseEntry_t_m_hItem
+
+        const val SellbackPurchaseEntry_t_m_nPrevArmor: Long = 0x38L
+        fun SellbackPurchaseEntry_t_m_nPrevArmorAddress(objectAddress: Long): Long = objectAddress + SellbackPurchaseEntry_t_m_nPrevArmor
+
+        const val SellbackPurchaseEntry_t_m_unDefIdx: Long = 0x30L
+        fun SellbackPurchaseEntry_t_m_unDefIdxAddress(objectAddress: Long): Long = objectAddress + SellbackPurchaseEntry_t_m_unDefIdx
+
+        const val ServerAuthoritativeWeaponSlot_t_unClass: Long = 0x30L
+        fun ServerAuthoritativeWeaponSlot_t_unClassAddress(objectAddress: Long): Long = objectAddress + ServerAuthoritativeWeaponSlot_t_unClass
+
+        const val ServerAuthoritativeWeaponSlot_t_unItemDefIdx: Long = 0x34L
+        fun ServerAuthoritativeWeaponSlot_t_unItemDefIdxAddress(objectAddress: Long): Long = objectAddress + ServerAuthoritativeWeaponSlot_t_unItemDefIdx
+
+        const val ServerAuthoritativeWeaponSlot_t_unSlot: Long = 0x32L
+        fun ServerAuthoritativeWeaponSlot_t_unSlotAddress(objectAddress: Long): Long = objectAddress + ServerAuthoritativeWeaponSlot_t_unSlot
+
+        const val VPhysicsCollisionAttribute_t_m_nCollisionFunctionMask: Long = 0x2FL
+        fun VPhysicsCollisionAttribute_t_m_nCollisionFunctionMaskAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nCollisionFunctionMask
+
+        const val VPhysicsCollisionAttribute_t_m_nCollisionGroup: Long = 0x2EL
+        fun VPhysicsCollisionAttribute_t_m_nCollisionGroupAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nCollisionGroup
+
+        const val VPhysicsCollisionAttribute_t_m_nDetailLayerMask: Long = 0x2AL
+        fun VPhysicsCollisionAttribute_t_m_nDetailLayerMaskAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nDetailLayerMask
+
+        const val VPhysicsCollisionAttribute_t_m_nDetailLayerMaskType: Long = 0x2CL
+        fun VPhysicsCollisionAttribute_t_m_nDetailLayerMaskTypeAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nDetailLayerMaskType
+
+        const val VPhysicsCollisionAttribute_t_m_nEntityId: Long = 0x20L
+        fun VPhysicsCollisionAttribute_t_m_nEntityIdAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nEntityId
+
+        const val VPhysicsCollisionAttribute_t_m_nHierarchyId: Long = 0x28L
+        fun VPhysicsCollisionAttribute_t_m_nHierarchyIdAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nHierarchyId
+
+        const val VPhysicsCollisionAttribute_t_m_nInteractsExclude: Long = 0x18L
+        fun VPhysicsCollisionAttribute_t_m_nInteractsExcludeAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nInteractsExclude
+
+        const val VPhysicsCollisionAttribute_t_m_nInteractsWith: Long = 0x10L
+        fun VPhysicsCollisionAttribute_t_m_nInteractsWithAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nInteractsWith
+
+        const val VPhysicsCollisionAttribute_t_m_nOwnerId: Long = 0x24L
+        fun VPhysicsCollisionAttribute_t_m_nOwnerIdAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nOwnerId
+
+        const val VPhysicsCollisionAttribute_t_m_nTargetDetailLayer: Long = 0x2DL
+        fun VPhysicsCollisionAttribute_t_m_nTargetDetailLayerAddress(objectAddress: Long): Long = objectAddress + VPhysicsCollisionAttribute_t_m_nTargetDetailLayer
+
+        const val ViewAngleServerChange_t_nIndex: Long = 0x40L
+        fun ViewAngleServerChange_t_nIndexAddress(objectAddress: Long): Long = objectAddress + ViewAngleServerChange_t_nIndex
+
+        const val ViewAngleServerChange_t_nType: Long = 0x30L
+        fun ViewAngleServerChange_t_nTypeAddress(objectAddress: Long): Long = objectAddress + ViewAngleServerChange_t_nType
+
+        const val ViewAngleServerChange_t_qAngle: Long = 0x34L
+        fun ViewAngleServerChange_t_qAngleAddress(objectAddress: Long): Long = objectAddress + ViewAngleServerChange_t_qAngle
+
+        const val WeaponPurchaseCount_t_m_nCount: Long = 0x32L
+        fun WeaponPurchaseCount_t_m_nCountAddress(objectAddress: Long): Long = objectAddress + WeaponPurchaseCount_t_m_nCount
+
+        const val WeaponPurchaseCount_t_m_nItemDefIndex: Long = 0x30L
+        fun WeaponPurchaseCount_t_m_nItemDefIndexAddress(objectAddress: Long): Long = objectAddress + WeaponPurchaseCount_t_m_nItemDefIndex
+
+        const val audioparams_t_localBits: Long = 0x6CL
+        fun audioparams_t_localBitsAddress(objectAddress: Long): Long = objectAddress + audioparams_t_localBits
+
+        const val audioparams_t_soundEventHash: Long = 0x74L
+        fun audioparams_t_soundEventHashAddress(objectAddress: Long): Long = objectAddress + audioparams_t_soundEventHash
+
+        const val audioparams_t_soundscapeEntityListIndex: Long = 0x70L
+        fun audioparams_t_soundscapeEntityListIndexAddress(objectAddress: Long): Long = objectAddress + audioparams_t_soundscapeEntityListIndex
+
+        const val audioparams_t_soundscapeIndex: Long = 0x68L
+        fun audioparams_t_soundscapeIndexAddress(objectAddress: Long): Long = objectAddress + audioparams_t_soundscapeIndex
 
         const val buttons_attack: Long = 0x4671950L
         fun buttons_attackAddress(moduleBase: Long): Long = moduleBase + buttons_attack
@@ -97,6 +3721,123 @@ object Offsets {
 
         const val dwWorldToProjectionMatrix: Long = 0x4682FC0L
         fun dwWorldToProjectionMatrixAddress(moduleBase: Long): Long = moduleBase + dwWorldToProjectionMatrix
+
+        const val fogparams_t_HDRColorScale: Long = 0x38L
+        fun fogparams_t_HDRColorScaleAddress(objectAddress: Long): Long = objectAddress + fogparams_t_HDRColorScale
+
+        const val fogparams_t_blend: Long = 0x65L
+        fun fogparams_t_blendAddress(objectAddress: Long): Long = objectAddress + fogparams_t_blend
+
+        const val fogparams_t_blendtobackground: Long = 0x58L
+        fun fogparams_t_blendtobackgroundAddress(objectAddress: Long): Long = objectAddress + fogparams_t_blendtobackground
+
+        const val fogparams_t_colorPrimary: Long = 0x14L
+        fun fogparams_t_colorPrimaryAddress(objectAddress: Long): Long = objectAddress + fogparams_t_colorPrimary
+
+        const val fogparams_t_colorPrimaryLerpTo: Long = 0x1CL
+        fun fogparams_t_colorPrimaryLerpToAddress(objectAddress: Long): Long = objectAddress + fogparams_t_colorPrimaryLerpTo
+
+        const val fogparams_t_colorSecondary: Long = 0x18L
+        fun fogparams_t_colorSecondaryAddress(objectAddress: Long): Long = objectAddress + fogparams_t_colorSecondary
+
+        const val fogparams_t_colorSecondaryLerpTo: Long = 0x20L
+        fun fogparams_t_colorSecondaryLerpToAddress(objectAddress: Long): Long = objectAddress + fogparams_t_colorSecondaryLerpTo
+
+        const val fogparams_t_duration: Long = 0x54L
+        fun fogparams_t_durationAddress(objectAddress: Long): Long = objectAddress + fogparams_t_duration
+
+        const val fogparams_t_enable: Long = 0x64L
+        fun fogparams_t_enableAddress(objectAddress: Long): Long = objectAddress + fogparams_t_enable
+
+        const val fogparams_t_end: Long = 0x28L
+        fun fogparams_t_endAddress(objectAddress: Long): Long = objectAddress + fogparams_t_end
+
+        const val fogparams_t_endLerpTo: Long = 0x48L
+        fun fogparams_t_endLerpToAddress(objectAddress: Long): Long = objectAddress + fogparams_t_endLerpTo
+
+        const val fogparams_t_exponent: Long = 0x34L
+        fun fogparams_t_exponentAddress(objectAddress: Long): Long = objectAddress + fogparams_t_exponent
+
+        const val fogparams_t_farz: Long = 0x2CL
+        fun fogparams_t_farzAddress(objectAddress: Long): Long = objectAddress + fogparams_t_farz
+
+        const val fogparams_t_lerptime: Long = 0x50L
+        fun fogparams_t_lerptimeAddress(objectAddress: Long): Long = objectAddress + fogparams_t_lerptime
+
+        const val fogparams_t_locallightscale: Long = 0x60L
+        fun fogparams_t_locallightscaleAddress(objectAddress: Long): Long = objectAddress + fogparams_t_locallightscale
+
+        const val fogparams_t_maxdensity: Long = 0x30L
+        fun fogparams_t_maxdensityAddress(objectAddress: Long): Long = objectAddress + fogparams_t_maxdensity
+
+        const val fogparams_t_maxdensityLerpTo: Long = 0x4CL
+        fun fogparams_t_maxdensityLerpToAddress(objectAddress: Long): Long = objectAddress + fogparams_t_maxdensityLerpTo
+
+        const val fogparams_t_scattering: Long = 0x5CL
+        fun fogparams_t_scatteringAddress(objectAddress: Long): Long = objectAddress + fogparams_t_scattering
+
+        const val fogparams_t_skyboxFogFactor: Long = 0x3CL
+        fun fogparams_t_skyboxFogFactorAddress(objectAddress: Long): Long = objectAddress + fogparams_t_skyboxFogFactor
+
+        const val fogparams_t_skyboxFogFactorLerpTo: Long = 0x40L
+        fun fogparams_t_skyboxFogFactorLerpToAddress(objectAddress: Long): Long = objectAddress + fogparams_t_skyboxFogFactorLerpTo
+
+        const val fogparams_t_start: Long = 0x24L
+        fun fogparams_t_startAddress(objectAddress: Long): Long = objectAddress + fogparams_t_start
+
+        const val fogparams_t_startLerpTo: Long = 0x44L
+        fun fogparams_t_startLerpToAddress(objectAddress: Long): Long = objectAddress + fogparams_t_startLerpTo
+
+        const val shard_model_desc_t_m_SurfacePropStringToken: Long = 0x78L
+        fun shard_model_desc_t_m_SurfacePropStringTokenAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_SurfacePropStringToken
+
+        const val shard_model_desc_t_m_bParentFrozen: Long = 0x75L
+        fun shard_model_desc_t_m_bParentFrozenAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_bParentFrozen
+
+        const val shard_model_desc_t_m_flGlassHalfThickness: Long = 0x70L
+        fun shard_model_desc_t_m_flGlassHalfThicknessAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_flGlassHalfThickness
+
+        const val shard_model_desc_t_m_hMaterialBase: Long = 0x10L
+        fun shard_model_desc_t_m_hMaterialBaseAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_hMaterialBase
+
+        const val shard_model_desc_t_m_hMaterialDamageOverlay: Long = 0x18L
+        fun shard_model_desc_t_m_hMaterialDamageOverlayAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_hMaterialDamageOverlay
+
+        const val shard_model_desc_t_m_solid: Long = 0x20L
+        fun shard_model_desc_t_m_solidAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_solid
+
+        const val shard_model_desc_t_m_vInitialPanelVertices: Long = 0x58L
+        fun shard_model_desc_t_m_vInitialPanelVerticesAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_vInitialPanelVertices
+
+        const val shard_model_desc_t_m_vecPanelSize: Long = 0x24L
+        fun shard_model_desc_t_m_vecPanelSizeAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_vecPanelSize
+
+        const val shard_model_desc_t_m_vecPanelVertices: Long = 0x40L
+        fun shard_model_desc_t_m_vecPanelVerticesAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_vecPanelVertices
+
+        const val shard_model_desc_t_m_vecStressPositionA: Long = 0x2CL
+        fun shard_model_desc_t_m_vecStressPositionAAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_vecStressPositionA
+
+        const val shard_model_desc_t_m_vecStressPositionB: Long = 0x34L
+        fun shard_model_desc_t_m_vecStressPositionBAddress(objectAddress: Long): Long = objectAddress + shard_model_desc_t_m_vecStressPositionB
+
+        const val sky3dparams_t_bClip3DSkyBoxNearToWorldFar: Long = 0x18L
+        fun sky3dparams_t_bClip3DSkyBoxNearToWorldFarAddress(objectAddress: Long): Long = objectAddress + sky3dparams_t_bClip3DSkyBoxNearToWorldFar
+
+        const val sky3dparams_t_flClip3DSkyBoxNearToWorldFarOffset: Long = 0x1CL
+        fun sky3dparams_t_flClip3DSkyBoxNearToWorldFarOffsetAddress(objectAddress: Long): Long = objectAddress + sky3dparams_t_flClip3DSkyBoxNearToWorldFarOffset
+
+        const val sky3dparams_t_fog: Long = 0x20L
+        fun sky3dparams_t_fogAddress(objectAddress: Long): Long = objectAddress + sky3dparams_t_fog
+
+        const val sky3dparams_t_m_nWorldGroupID: Long = 0x88L
+        fun sky3dparams_t_m_nWorldGroupIDAddress(objectAddress: Long): Long = objectAddress + sky3dparams_t_m_nWorldGroupID
+
+        const val sky3dparams_t_origin: Long = 0x80000L
+        fun sky3dparams_t_originAddress(objectAddress: Long): Long = objectAddress + sky3dparams_t_origin
+
+        const val sky3dparams_t_scale: Long = 0x80000L
+        fun sky3dparams_t_scaleAddress(objectAddress: Long): Long = objectAddress + sky3dparams_t_scale
 
     }
 

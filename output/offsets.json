@@ -1,11 +1,4843 @@
 {
   "client": {
+    "ActiveModelConfig_t_m_AssociatedEntities": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "ActiveModelConfig_t_m_AssociatedEntityNames": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "ActiveModelConfig_t_m_Name": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "AnimGraph2SerializedPoseRecipeSlot_t_m_topology": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CAttributeManager_m_ProviderType": {
+      "rva": 44,
+      "access": "member_offset"
+    },
+    "CAttributeManager_m_hOuter": {
+      "rva": 36,
+      "access": "member_offset"
+    },
+    "CAttributeManager_m_iReapplyProvisionParity": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_SerializePoseRecipeAG2Dynamic": {
+      "rva": 1008,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_SerializePoseRecipeAG2Slots": {
+      "rva": 904,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_flSeqFixedCycle": {
+      "rva": 200,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_flSeqStartTime": {
+      "rva": 196,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_hGraphDefinitionAG2": {
+      "rva": 896,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nAnimLoopMode": {
+      "rva": 204,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nAnimationAlgorithm": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nSecondarySkeletonMasterCount": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nSerializePoseRecipeAG2ActiveSlot": {
+      "rva": 1032,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nSerializePoseRecipeVersionAG2": {
+      "rva": 1036,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nServerGraphInstanceIteration": {
+      "rva": 1040,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_nServerSerializationContextIteration": {
+      "rva": 1044,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_primaryGraphId": {
+      "rva": 1048,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_vecExternalClipIds": {
+      "rva": 1080,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_vecExternalGraphIds": {
+      "rva": 1056,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_vecSecondarySkeletonSlotIDs": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraphController_m_vecSecondarySkeletons": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_RagdollPose": {
+      "rva": 4144,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_bAnimGraphUpdateEnabled": {
+      "rva": 4088,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_bInitiallyPopulateInterpHistory": {
+      "rva": 4072,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_bRagdollClientSide": {
+      "rva": 4217,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_bRagdollEnabled": {
+      "rva": 4216,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_nForceBone": {
+      "rva": 4104,
+      "access": "member_offset"
+    },
+    "CBaseAnimGraph_m_vecForce": {
+      "rva": 4092,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_bKnownTeamMismatch": {
+      "rva": 2112,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_bNoClipEnabled": {
+      "rva": 2313,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_hPawn": {
+      "rva": 2108,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_iConnected": {
+      "rva": 2156,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_iDesiredFOV": {
+      "rva": 2316,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_iMostConnected": {
+      "rva": 2160,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_iszPlayerName": {
+      "rva": 2164,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_nTickBase": {
+      "rva": 2104,
+      "access": "member_offset"
+    },
+    "CBasePlayerController_m_steamID": {
+      "rva": 2304,
+      "access": "member_offset"
+    },
+    "CBodyComponentBaseAnimGraph_m_animationController": {
+      "rva": 1264,
+      "access": "member_offset"
+    },
+    "CBodyComponentPoint_m_sceneNode": {
+      "rva": 128,
+      "access": "member_offset"
+    },
+    "CBodyComponentSkeletonInstance_m_skeletonInstance": {
+      "rva": 128,
+      "access": "member_offset"
+    },
+    "CBombTarget_m_bBombPlantedHere": {
+      "rva": 4093,
+      "access": "member_offset"
+    },
+    "CCSGameModeRules_ArmsRace_m_WeaponSequence": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CCSGameModeRules_Deathmatch_m_flDMBonusStartTime": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CCSGameModeRules_Deathmatch_m_flDMBonusTimeLength": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "CCSGameModeRules_Deathmatch_m_sDMBonusWeapon": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "CCSPlayerBase_CameraServices_m_flFOVRate": {
+      "rva": 676,
+      "access": "member_offset"
+    },
+    "CCSPlayerBase_CameraServices_m_flFOVTime": {
+      "rva": 672,
+      "access": "member_offset"
+    },
+    "CCSPlayerBase_CameraServices_m_hZoomOwner": {
+      "rva": 680,
+      "access": "member_offset"
+    },
+    "CCSPlayerBase_CameraServices_m_iFOV": {
+      "rva": 664,
+      "access": "member_offset"
+    },
+    "CCSPlayerBase_CameraServices_m_iFOVStart": {
+      "rva": 668,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_ActionTrackingServices_m_flTotalRoundDamageDealt": {
+      "rva": 296,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_ActionTrackingServices_m_iNumRoundKills": {
+      "rva": 288,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_ActionTrackingServices_m_iNumRoundKillsHeadshots": {
+      "rva": 292,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_ActionTrackingServices_m_matchStats": {
+      "rva": 168,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_ActionTrackingServices_m_perRoundStats": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_DamageServices_m_DamageList": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_DamageServices_m_nSendUpdate": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InGameMoneyServices_m_iAccount": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InGameMoneyServices_m_iCashSpentThisRound": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InGameMoneyServices_m_iStartAccount": {
+      "rva": 68,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InGameMoneyServices_m_iTotalCashSpent": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsFriendly": {
+      "rva": 128,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsLeader": {
+      "rva": 120,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_nPersonaDataPublicCommendsTeacher": {
+      "rva": 124,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_nPersonaDataPublicLevel": {
+      "rva": 116,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_nPersonaDataXpTrailLevel": {
+      "rva": 132,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_rank": {
+      "rva": 92,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_unMusicID": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_InventoryServices_m_vecServerAuthoritativeWeaponSlots": {
+      "rva": 136,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bCanControlObservedBot": {
+      "rva": 2696,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bControllingBot": {
+      "rva": 2688,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bEverPlayedOnTeam": {
+      "rva": 2508,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bFireBulletsSeedSynchronized": {
+      "rva": 2773,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bHasCommunicationAbuseMute": {
+      "rva": 2476,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bHasControlledBotThisRound": {
+      "rva": 2689,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bMvpNoMusic": {
+      "rva": 2754,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bPawnHasDefuser": {
+      "rva": 2720,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bPawnHasHelmet": {
+      "rva": 2721,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_bPawnIsAlive": {
+      "rva": 2708,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_eMvpReason": {
+      "rva": 2756,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_flForceTeamTime": {
+      "rva": 2500,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_hObserverPawn": {
+      "rva": 2704,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_hPlayerPawn": {
+      "rva": 2700,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCoachingTeam": {
+      "rva": 2536,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompTeammateColor": {
+      "rva": 2504,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompetitiveRankType": {
+      "rva": 2568,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompetitiveRanking": {
+      "rva": 2560,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompetitiveRankingPredicted_Loss": {
+      "rva": 2576,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompetitiveRankingPredicted_Tie": {
+      "rva": 2580,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompetitiveRankingPredicted_Win": {
+      "rva": 2572,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iCompetitiveWins": {
+      "rva": 2564,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iMVPs": {
+      "rva": 2768,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iMusicKitID": {
+      "rva": 2760,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iMusicKitMVPs": {
+      "rva": 2764,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPawnArmor": {
+      "rva": 2716,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPawnBotDifficulty": {
+      "rva": 2732,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPawnHealth": {
+      "rva": 2712,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPawnLifetimeEnd": {
+      "rva": 2728,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPawnLifetimeStart": {
+      "rva": 2724,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPendingTeamNum": {
+      "rva": 2496,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_iPing": {
+      "rva": 2472,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nDisconnectionTick": {
+      "rva": 2672,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nEndMatchNextMapVote": {
+      "rva": 2584,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nFirstKill": {
+      "rva": 2752,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nKillCount": {
+      "rva": 2753,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nPawnCharacterDefIndex": {
+      "rva": 2722,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nPlayerDominated": {
+      "rva": 2544,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nPlayerDominatingMe": {
+      "rva": 2552,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_nQuestProgressReason": {
+      "rva": 2596,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_recentKillQueue": {
+      "rva": 2744,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_rtActiveMissionPeriod": {
+      "rva": 2592,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_szClan": {
+      "rva": 2520,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_szCrosshairCodes": {
+      "rva": 2488,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_uiCommunicationMuteFlags": {
+      "rva": 2480,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_unActiveQuestId": {
+      "rva": 2588,
+      "access": "member_offset"
+    },
+    "CCSPlayerController_m_unPlayerTvControlFlags": {
+      "rva": 2600,
+      "access": "member_offset"
+    },
+    "CCSPlayerLegacyJump_m_bOldJumpPressed": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_flLastActualJumpPressFrac": {
+      "rva": 20,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_flLastLandedFrac": {
+      "rva": 36,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_flLastLandedVelocityX": {
+      "rva": 40,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_flLastLandedVelocityY": {
+      "rva": 44,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_flLastLandedVelocityZ": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_flLastUsableJumpPressFrac": {
+      "rva": 28,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_nLastActualJumpPressTick": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_nLastLandedTick": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "CCSPlayerModernJump_m_nLastUsableJumpPressTick": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "CCSPlayer_ActionTrackingServices_m_bIsRescuing": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisMatch": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "CCSPlayer_ActionTrackingServices_m_weaponPurchasesThisRound": {
+      "rva": 192,
+      "access": "member_offset"
+    },
+    "CCSPlayer_AimPunchServices_m_predictableBaseAngle": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "CCSPlayer_AimPunchServices_m_predictableBaseAngleVel": {
+      "rva": 92,
+      "access": "member_offset"
+    },
+    "CCSPlayer_AimPunchServices_m_predictableBaseTick": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayer_AimPunchServices_m_predictableBaseTickInterpAmount": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CCSPlayer_AimPunchServices_m_unpredictableBaseAngle": {
+      "rva": 164,
+      "access": "member_offset"
+    },
+    "CCSPlayer_AimPunchServices_m_unpredictableBaseTick": {
+      "rva": 160,
+      "access": "member_offset"
+    },
+    "CCSPlayer_BulletServices_m_totalHitsOnServer": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayer_BuyServices_m_vecSellbackPurchaseEntries": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayer_HostageServices_m_hCarriedHostage": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayer_HostageServices_m_hCarriedHostageProp": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CCSPlayer_ItemServices_m_bHasDefuser": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayer_ItemServices_m_bHasHelmet": {
+      "rva": 73,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_LegacyJump": {
+      "rva": 1720,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_ModernJump": {
+      "rva": 1744,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bDesiresDuck": {
+      "rva": 1045,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bDuckOverride": {
+      "rva": 1044,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bDucked": {
+      "rva": 1032,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bDucking": {
+      "rva": 1046,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bHasEverProcessedCommand": {
+      "rva": 4056,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bJumpApexPending": {
+      "rva": 1812,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bUseFrictionStashedSpeed": {
+      "rva": 1680,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bUsingGroundTopologyOffset": {
+      "rva": 1008,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_bWasSurfing": {
+      "rva": 1820,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_fStashGrenadeParameterWhen": {
+      "rva": 1668,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flBombPlantViewOffset": {
+      "rva": 1060,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flDuckAmount": {
+      "rva": 1036,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flDuckRootOffset": {
+      "rva": 1048,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flDuckSpeed": {
+      "rva": 1040,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flDuckViewOffset": {
+      "rva": 1052,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flFrictionStashedSpeed": {
+      "rva": 1688,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flLastDuckTime": {
+      "rva": 1056,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flLastJumpFrac": {
+      "rva": 1804,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flLastJumpVelocityZ": {
+      "rva": 1808,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flStamina": {
+      "rva": 1692,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flUseFrictionStashedSpeedUntilFrac": {
+      "rva": 1684,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_flUsingGroundTopologyOffsetTransitionSmoothing": {
+      "rva": 1012,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_nButtonDownMaskPrev": {
+      "rva": 1672,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_nGameCodeHasMovedPlayerAfterCommand": {
+      "rva": 1664,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_nLadderSurfacePropIndex": {
+      "rva": 1028,
+      "access": "member_offset"
+    },
+    "CCSPlayer_MovementServices_m_nLastJumpTick": {
+      "rva": 1800,
+      "access": "member_offset"
+    },
+    "CCSPlayer_PingServices_m_hPlayerPing": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CCSPlayer_WeaponServices_m_bBlockInspectUntilNextGraphUpdate": {
+      "rva": 5536,
+      "access": "member_offset"
+    },
+    "CCSPlayer_WeaponServices_m_networkAnimTiming": {
+      "rva": 5512,
+      "access": "member_offset"
+    },
+    "CCitadelSoundOpvarSetOBB_m_nAABBDirection": {
+      "rva": 2016,
+      "access": "member_offset"
+    },
+    "CCitadelSoundOpvarSetOBB_m_vDistanceInnerMaxs": {
+      "rva": 1980,
+      "access": "member_offset"
+    },
+    "CCitadelSoundOpvarSetOBB_m_vDistanceInnerMins": {
+      "rva": 1968,
+      "access": "member_offset"
+    },
+    "CCitadelSoundOpvarSetOBB_m_vDistanceOuterMaxs": {
+      "rva": 2004,
+      "access": "member_offset"
+    },
+    "CCitadelSoundOpvarSetOBB_m_vDistanceOuterMins": {
+      "rva": 1992,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_CollisionGroup": {
+      "rva": 94,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_collisionAttribute": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_flCapsuleRadius": {
+      "rva": 172,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_nEnablePhysics": {
+      "rva": 95,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_nSurroundType": {
+      "rva": 93,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_vCapsuleCenter1": {
+      "rva": 148,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_vCapsuleCenter2": {
+      "rva": 160,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_vecSpecifiedSurroundingMaxs": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "CCollisionProperty_m_vecSpecifiedSurroundingMins": {
+      "rva": 100,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_DamagerXuid": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_PlayerDamager": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_PlayerRecipient": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_RecipientXuid": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_bIsOtherEnemy": {
+      "rva": 116,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_flActualHealthRemoved": {
+      "rva": 104,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_hPlayerControllerDamager": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_hPlayerControllerRecipient": {
+      "rva": 60,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_iLastBulletUpdate": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_iNumHits": {
+      "rva": 108,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_killType": {
+      "rva": 117,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_szPlayerDamagerName": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CDamageRecord_m_szPlayerRecipientName": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CEconItemAttribute_m_bSetBonus": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CEconItemAttribute_m_flInitialValue": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "CEconItemAttribute_m_flValue": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "CEconItemAttribute_m_iAttributeDefinitionIndex": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CEconItemAttribute_m_nRefundableCurrency": {
+      "rva": 60,
+      "access": "member_offset"
+    },
+    "CEntityIdentity_m_nameStringTableIndex": {
+      "rva": 20,
+      "access": "member_offset"
+    },
     "CGameEntitySystem_m_EntityClasses": {
       "rva": 2720,
       "access": "member_offset"
     },
     "CGameEntitySystem_m_EntityList": {
       "rva": 16,
+      "access": "member_offset"
+    },
+    "CGameSceneNode_m_hParent": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "CGameSceneNode_m_hierarchyAttachName": {
+      "rva": 296,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_bEligibleForScreenHighlight": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_bFlashing": {
+      "rva": 68,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_flGlowStartTime": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_flGlowTime": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_glowColorOverride": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_iGlowTeam": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "CGlowProperty_m_iGlowType": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CInfoFan_m_FanForceCurveString": {
+      "rva": 2000,
+      "access": "member_offset"
+    },
+    "CInfoFan_m_fFanForceMaxRadius": {
+      "rva": 1984,
+      "access": "member_offset"
+    },
+    "CInfoFan_m_fFanForceMinRadius": {
+      "rva": 1988,
+      "access": "member_offset"
+    },
+    "CInfoFan_m_flCurveDistRange": {
+      "rva": 1992,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_RenderAttrName": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_TargetEntities": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_nResolutionX": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_nResolutionY": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_nTargetChangeCount": {
+      "rva": 1976,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_szLayoutFileName": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "CInfoOffscreenPanoramaTexture_m_szPanelType": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "CInfoWorldLayer_m_bEntitiesSpawned": {
+      "rva": 1961,
+      "access": "member_offset"
+    },
+    "CInfoWorldLayer_m_bWorldLayerVisible": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "CInfoWorldLayer_m_layerName": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "CInfoWorldLayer_m_worldName": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_Pattern": {
+      "rva": 216,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_SecondaryColor": {
+      "rva": 121,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_SkyAmbientBounce": {
+      "rva": 408,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_SkyColor": {
+      "rva": 400,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bAllowSSTGeneration": {
+      "rva": 289,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bFlicker": {
+      "rva": 321,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bMixedShadows": {
+      "rva": 413,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bRenderDiffuse": {
+      "rva": 192,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bRenderTransmissive": {
+      "rva": 200,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bUseSecondaryColor": {
+      "rva": 412,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_bUsesBakedShadowing": {
+      "rva": 268,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flAttenuation0": {
+      "rva": 148,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flAttenuation1": {
+      "rva": 152,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flAttenuation2": {
+      "rva": 156,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flBrightnessMult": {
+      "rva": 136,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flCapsuleLength": {
+      "rva": 420,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flFadeMaxDist": {
+      "rva": 308,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flFadeMinDist": {
+      "rva": 304,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flFalloff": {
+      "rva": 144,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flFogContributionStength": {
+      "rva": 392,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flNearClipPlane": {
+      "rva": 396,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flOrthoLightHeight": {
+      "rva": 208,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flOrthoLightWidth": {
+      "rva": 204,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flPhi": {
+      "rva": 164,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flPrecomputedMaxRange": {
+      "rva": 384,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowCascadeCrossFade": {
+      "rva": 228,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowCascadeDistance0": {
+      "rva": 236,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowCascadeDistance1": {
+      "rva": 240,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowCascadeDistance2": {
+      "rva": 244,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowCascadeDistance3": {
+      "rva": 248,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowCascadeDistanceFade": {
+      "rva": 232,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowFadeMaxDist": {
+      "rva": 316,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flShadowFadeMinDist": {
+      "rva": 312,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flSkyIntensity": {
+      "rva": 404,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_flTheta": {
+      "rva": 160,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nCascadeRenderStaticObjects": {
+      "rva": 224,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nCascades": {
+      "rva": 176,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nFogLightingMode": {
+      "rva": 388,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nRenderSpecular": {
+      "rva": 196,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nShadowCascadeResolution0": {
+      "rva": 252,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nShadowCascadeResolution1": {
+      "rva": 256,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nShadowCascadeResolution2": {
+      "rva": 260,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nShadowCascadeResolution3": {
+      "rva": 264,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nShadowHeight": {
+      "rva": 188,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nShadowWidth": {
+      "rva": 184,
+      "access": "member_offset"
+    },
+    "CLightComponent_m_nStyle": {
+      "rva": 212,
+      "access": "member_offset"
+    },
+    "CModelState_m_MeshGroupMask": {
+      "rva": 456,
+      "access": "member_offset"
+    },
+    "CModelState_m_bClientClothCreationSuppressed": {
+      "rva": 272,
+      "access": "member_offset"
+    },
+    "CModelState_m_flRootBoneOffset_x": {
+      "rva": 232,
+      "access": "member_offset"
+    },
+    "CModelState_m_flRootBoneOffset_y": {
+      "rva": 236,
+      "access": "member_offset"
+    },
+    "CModelState_m_flRootBoneOffset_z": {
+      "rva": 240,
+      "access": "member_offset"
+    },
+    "CModelState_m_hModel": {
+      "rva": 160,
+      "access": "member_offset"
+    },
+    "CModelState_m_nAnimStateNoInterpSerialNumber": {
+      "rva": 448,
+      "access": "member_offset"
+    },
+    "CModelState_m_nBodyGroupChoices": {
+      "rva": 552,
+      "access": "member_offset"
+    },
+    "CModelState_m_nIdealMotionType": {
+      "rva": 626,
+      "access": "member_offset"
+    },
+    "CModelState_m_nRootBoneOffsetResetSerialNumber": {
+      "rva": 244,
+      "access": "member_offset"
+    },
+    "CNetworkedSequenceOperation_m_flPrevCycle": {
+      "rva": 1280,
+      "access": "member_offset"
+    },
+    "CPathNode_m_strParentPathUniqueID": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "CPathNode_m_strPathNodeParameter": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "CPathSimple_m_pathString": {
+      "rva": 2176,
+      "access": "member_offset"
+    },
+    "CPathWithDynamicNodes_m_vecPathNodes": {
+      "rva": 2192,
+      "access": "member_offset"
+    },
+    "CPathWithDynamicNodes_m_xInitialPathWorldToLocal": {
+      "rva": 2224,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_PlayerFog": {
+      "rva": 96,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_PostProcessingVolumes": {
+      "rva": 296,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_audio": {
+      "rva": 176,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_flCsViewPunchAngleTickRatio": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_hColorCorrectionCtrl": {
+      "rva": 160,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_hTonemapController": {
+      "rva": 168,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_hViewEntity": {
+      "rva": 164,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_nCsViewPunchAngleTick": {
+      "rva": 84,
+      "access": "member_offset"
+    },
+    "CPlayer_CameraServices_m_vecCsViewPunchAngle": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CPlayer_MovementServices_Humanoid_m_flFallVelocity": {
+      "rva": 604,
+      "access": "member_offset"
+    },
+    "CPlayer_MovementServices_m_arrForceSubtickMoveWhen": {
+      "rva": 432,
+      "access": "member_offset"
+    },
+    "CPlayer_MovementServices_m_flMaxspeed": {
+      "rva": 428,
+      "access": "member_offset"
+    },
+    "CPlayer_MovementServices_m_nToggleButtonDownMask": {
+      "rva": 400,
+      "access": "member_offset"
+    },
+    "CPlayer_ObserverServices_m_hObserverTarget": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CPlayer_ObserverServices_m_iObserverMode": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CPlayer_WeaponServices_m_hActiveWeapon": {
+      "rva": 96,
+      "access": "member_offset"
+    },
+    "CPlayer_WeaponServices_m_hLastWeapon": {
+      "rva": 100,
+      "access": "member_offset"
+    },
+    "CPlayer_WeaponServices_m_hMyWeapons": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CPlayer_WeaponServices_m_iAmmo": {
+      "rva": 104,
+      "access": "member_offset"
+    },
+    "CPulseGameBlackboard_m_strGraphName": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "CPulseGameBlackboard_m_strStateBlob": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "CRagdollManager_m_iCurrentMaxRagdollCount": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "CSMatchStats_t_m_iEnemy3Ks": {
+      "rva": 108,
+      "access": "member_offset"
+    },
+    "CSMatchStats_t_m_iEnemy4Ks": {
+      "rva": 104,
+      "access": "member_offset"
+    },
+    "CSMatchStats_t_m_iEnemy5Ks": {
+      "rva": 100,
+      "access": "member_offset"
+    },
+    "CSMatchStats_t_m_iEnemyKnifeKills": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "CSMatchStats_t_m_iEnemyTaserKills": {
+      "rva": 116,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iAssists": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iCashEarned": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iDeaths": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iEnemiesFlashed": {
+      "rva": 96,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iEquipmentValue": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iHeadShotKills": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iKillReward": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iKills": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iLiveTime": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iMoneySaved": {
+      "rva": 68,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iObjective": {
+      "rva": 84,
+      "access": "member_offset"
+    },
+    "CSPerRoundStats_t_m_iUtilityDamage": {
+      "rva": 92,
+      "access": "member_offset"
+    },
+    "CSkeletonInstance_m_bUseParentRenderBounds": {
+      "rva": 976,
+      "access": "member_offset"
+    },
+    "CSkeletonInstance_m_materialGroup": {
+      "rva": 980,
+      "access": "member_offset"
+    },
+    "CSkeletonInstance_m_modelState": {
+      "rva": 336,
+      "access": "member_offset"
+    },
+    "CSkeletonInstance_m_nHitboxSet": {
+      "rva": 984,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_RampTimer": {
+      "rva": 4160,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_bFalloff": {
+      "rva": 4152,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_bPushAwayFromInfoTarget": {
+      "rva": 4121,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_bPushTowardsInfoTarget": {
+      "rva": 4120,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_flForce": {
+      "rva": 4148,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_hInfoFan": {
+      "rva": 4144,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_qNoiseDelta": {
+      "rva": 4128,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_vDirection": {
+      "rva": 4108,
+      "access": "member_offset"
+    },
+    "CTriggerFan_m_vFanOriginOffset": {
+      "rva": 4096,
+      "access": "member_offset"
+    },
+    "C_AttributeContainer_m_Item": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_LightStyleEvents": {
+      "rva": 3984,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_LightStyleString": {
+      "rva": 3944,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_LightStyleTargets": {
+      "rva": 4008,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_QueuedLightStyleStrings": {
+      "rva": 3960,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_VisClusters": {
+      "rva": 4640,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_bContactShadow": {
+      "rva": 4216,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_bForceShadowsEnabled": {
+      "rva": 4217,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_fAlternateColorBrightness": {
+      "rva": 4244,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flBakeSpecularToCubemapsScale": {
+      "rva": 4200,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flColorTemperature": {
+      "rva": 3900,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flFadeSizeEnd": {
+      "rva": 4268,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flFadeSizeStart": {
+      "rva": 4264,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flFogScale": {
+      "rva": 4260,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flLuminaireAnisotropy": {
+      "rva": 3936,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flLuminaireSize": {
+      "rva": 3932,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flShadowFadeSizeEnd": {
+      "rva": 4276,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flShadowFadeSizeStart": {
+      "rva": 4272,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flShape": {
+      "rva": 4136,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flSkirt": {
+      "rva": 4148,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flSkirtNear": {
+      "rva": 4152,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flSoftX": {
+      "rva": 4140,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_flSoftY": {
+      "rva": 4144,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nBakeSpecularToCubemaps": {
+      "rva": 4184,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nColorMode": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nFog": {
+      "rva": 4248,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nFogShadows": {
+      "rva": 4256,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nLuminaireShape": {
+      "rva": 3928,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nPrecomputedSubFrusta": {
+      "rva": 4344,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_nShadowMapSize": {
+      "rva": 4208,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vAlternateColor": {
+      "rva": 4232,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vBakeSpecularToCubemapsSize": {
+      "rva": 4188,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBAngles0": {
+      "rva": 4360,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBAngles1": {
+      "rva": 4396,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBAngles2": {
+      "rva": 4432,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBAngles3": {
+      "rva": 4468,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBAngles4": {
+      "rva": 4504,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBAngles5": {
+      "rva": 4540,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBExtent0": {
+      "rva": 4372,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBExtent1": {
+      "rva": 4408,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBExtent2": {
+      "rva": 4444,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBExtent3": {
+      "rva": 4480,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBExtent4": {
+      "rva": 4516,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBExtent5": {
+      "rva": 4552,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBOrigin0": {
+      "rva": 4348,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBOrigin1": {
+      "rva": 4384,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBOrigin2": {
+      "rva": 4420,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBOrigin3": {
+      "rva": 4456,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBOrigin4": {
+      "rva": 4492,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vPrecomputedOBBOrigin5": {
+      "rva": 4528,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vShear": {
+      "rva": 4172,
+      "access": "member_offset"
+    },
+    "C_BarnLight_m_vSizeParams": {
+      "rva": 4156,
+      "access": "member_offset"
+    },
+    "C_BaseButton_m_glowEntity": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_BaseButton_m_szDisplayText": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_BaseButton_m_usable": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenadeProjectile_m_nBounces": {
+      "rva": 4416,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenadeProjectile_m_nExplodeEffectIndex": {
+      "rva": 4424,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenadeProjectile_m_nExplodeEffectTickBegin": {
+      "rva": 4432,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenadeProjectile_m_vInitialPosition": {
+      "rva": 4392,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenadeProjectile_m_vInitialVelocity": {
+      "rva": 4404,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenadeProjectile_m_vecExplodeEffectOrigin": {
+      "rva": 4436,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_bIsHeldByPlayer": {
+      "rva": 11063,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_bJumpThrow": {
+      "rva": 11065,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_bJustPulledPin": {
+      "rva": 11208,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_bPinPulled": {
+      "rva": 11064,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_bRedraw": {
+      "rva": 11062,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_bThrowAnimating": {
+      "rva": 11066,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_fDropTime": {
+      "rva": 11200,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_fPinPullTime": {
+      "rva": 11204,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_fThrowTime": {
+      "rva": 11068,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_flNextHoldFrac": {
+      "rva": 11216,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_hSwitchToWeaponAfterThrow": {
+      "rva": 11220,
+      "access": "member_offset"
+    },
+    "C_BaseCSGrenade_m_nNextHoldTick": {
+      "rva": 11212,
+      "access": "member_offset"
+    },
+    "C_BaseClientUIEntity_m_DialogXMLName": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_BaseClientUIEntity_m_PanelClassName": {
+      "rva": 3912,
+      "access": "member_offset"
+    },
+    "C_BaseClientUIEntity_m_PanelID": {
+      "rva": 3920,
+      "access": "member_offset"
+    },
+    "C_BaseCombatCharacter_m_hMyWearables": {
+      "rva": 4320,
+      "access": "member_offset"
+    },
+    "C_BaseDoor_m_bIsUsable": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_MoveType": {
+      "rva": 1693,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_bAnimatedEveryTick": {
+      "rva": 1728,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_bClientSideRagdoll": {
+      "rva": 1370,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_bGravityDisabled": {
+      "rva": 1729,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_bTakesDamage": {
+      "rva": 1221,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_fEffects": {
+      "rva": 1700,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flAnimTime": {
+      "rva": 1316,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flCreateTime": {
+      "rva": 1360,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flElasticity": {
+      "rva": 1716,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flFriction": {
+      "rva": 1712,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flGravityScale": {
+      "rva": 1720,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flNavIgnoreUntilTime": {
+      "rva": 1732,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flSimulationTime": {
+      "rva": 1320,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flTimeScale": {
+      "rva": 1724,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_flWaterLevel": {
+      "rva": 1696,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_iHealth": {
+      "rva": 1212,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_iMaxHealth": {
+      "rva": 1208,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_iTeamNum": {
+      "rva": 1371,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_lifeState": {
+      "rva": 1220,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_nBloodType": {
+      "rva": 1912,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_nGroundBodyIndex": {
+      "rva": 1708,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_nPlatformType": {
+      "rva": 1232,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_nSubclassID": {
+      "rva": 1264,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_spawnflags": {
+      "rva": 1372,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_ubInterpolationFrame": {
+      "rva": 1233,
+      "access": "member_offset"
+    },
+    "C_BaseEntity_m_vecBaseVelocity": {
+      "rva": 1672,
+      "access": "member_offset"
+    },
+    "C_BaseGrenade_m_DmgRadius": {
+      "rva": 4324,
+      "access": "member_offset"
+    },
+    "C_BaseGrenade_m_bIsLive": {
+      "rva": 4322,
+      "access": "member_offset"
+    },
+    "C_BaseGrenade_m_flDetonateTime": {
+      "rva": 4328,
+      "access": "member_offset"
+    },
+    "C_BaseGrenade_m_hThrower": {
+      "rva": 4360,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_Glow": {
+      "rva": 3416,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_bNoInterpolate": {
+      "rva": 3233,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_bvDisabledHitGroups": {
+      "rva": 3872,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_clrRender": {
+      "rva": 3096,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_fadeMaxDist": {
+      "rva": 3512,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_fadeMinDist": {
+      "rva": 3508,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_flGlowBackfaceMult": {
+      "rva": 3504,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_flShadowStrength": {
+      "rva": 3520,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_nObjectCulling": {
+      "rva": 3524,
+      "access": "member_offset"
+    },
+    "C_BaseModelEntity_m_vecRenderAttributes": {
+      "rva": 3104,
+      "access": "member_offset"
+    },
+    "C_BasePlayerPawn_m_ServerViewAngleChanges": {
+      "rva": 4536,
+      "access": "member_offset"
+    },
+    "C_BasePlayerPawn_m_flDeathTime": {
+      "rva": 4816,
+      "access": "member_offset"
+    },
+    "C_BasePlayerPawn_m_hController": {
+      "rva": 4912,
+      "access": "member_offset"
+    },
+    "C_BasePlayerPawn_m_hDefaultController": {
+      "rva": 4916,
+      "access": "member_offset"
+    },
+    "C_BasePlayerPawn_m_iHideHUD": {
+      "rva": 4664,
+      "access": "member_offset"
+    },
+    "C_BasePlayerPawn_m_skybox3d": {
+      "rva": 4672,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_flNextPrimaryAttackTickRatio": {
+      "rva": 9564,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_flNextSecondaryAttackTickRatio": {
+      "rva": 9572,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_iClip1": {
+      "rva": 9576,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_iClip2": {
+      "rva": 9580,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_nNextPrimaryAttackTick": {
+      "rva": 9560,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_nNextSecondaryAttackTick": {
+      "rva": 9568,
+      "access": "member_offset"
+    },
+    "C_BasePlayerWeapon_m_pReserveAmmo": {
+      "rva": 9584,
+      "access": "member_offset"
+    },
+    "C_BasePropDoor_m_bLocked": {
+      "rva": 4897,
+      "access": "member_offset"
+    },
+    "C_BasePropDoor_m_bNoNPCs": {
+      "rva": 4898,
+      "access": "member_offset"
+    },
+    "C_BasePropDoor_m_closedAngles": {
+      "rva": 4912,
+      "access": "member_offset"
+    },
+    "C_BasePropDoor_m_closedPosition": {
+      "rva": 4900,
+      "access": "member_offset"
+    },
+    "C_Beam_m_bTurnedOff": {
+      "rva": 4056,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fAmplitude": {
+      "rva": 4036,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fEndWidth": {
+      "rva": 4024,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fFadeLength": {
+      "rva": 4028,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fHaloScale": {
+      "rva": 4032,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fSpeed": {
+      "rva": 4044,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fStartFrame": {
+      "rva": 4040,
+      "access": "member_offset"
+    },
+    "C_Beam_m_fWidth": {
+      "rva": 4020,
+      "access": "member_offset"
+    },
+    "C_Beam_m_hAttachEntity": {
+      "rva": 3968,
+      "access": "member_offset"
+    },
+    "C_Beam_m_hBaseMaterial": {
+      "rva": 3944,
+      "access": "member_offset"
+    },
+    "C_Beam_m_nAttachIndex": {
+      "rva": 4008,
+      "access": "member_offset"
+    },
+    "C_Beam_m_nBeamFlags": {
+      "rva": 3964,
+      "access": "member_offset"
+    },
+    "C_Beam_m_nBeamType": {
+      "rva": 3960,
+      "access": "member_offset"
+    },
+    "C_Beam_m_nClipStyle": {
+      "rva": 4052,
+      "access": "member_offset"
+    },
+    "C_Beam_m_nHaloIndex": {
+      "rva": 3952,
+      "access": "member_offset"
+    },
+    "C_Beam_m_nNumBeamEnts": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_C4_m_bBombPlacedAnimation": {
+      "rva": 11080,
+      "access": "member_offset"
+    },
+    "C_C4_m_bIsPlantingViaUse": {
+      "rva": 11081,
+      "access": "member_offset"
+    },
+    "C_C4_m_bStartedArming": {
+      "rva": 11072,
+      "access": "member_offset"
+    },
+    "C_C4_m_fArmedTime": {
+      "rva": 11076,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_agentItem": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_glovesItem": {
+      "rva": 6928,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_nOrdinal": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_nRandom": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_sWeaponName": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_weaponItem": {
+      "rva": 11912,
+      "access": "member_offset"
+    },
+    "C_CSGO_TeamPreviewCharacterPosition_m_xuid": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_MatchDevice": {
+      "rva": 164,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_MinimapVerticalSectionHeights": {
+      "rva": 3120,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_RetakeRules": {
+      "rva": 3480,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_TeamRespawnWaveTimes": {
+      "rva": 2840,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_arrProhibitedItemIndices": {
+      "rva": 2240,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_arrTournamentActiveCasterAccounts": {
+      "rva": 2440,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bAnyHostageReached": {
+      "rva": 144,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bBombDropped": {
+      "rva": 2464,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bCTCantBuy": {
+      "rva": 2477,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bCTTimeOutActive": {
+      "rva": 69,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bFreezePeriod": {
+      "rva": 57,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bGameRestart": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bHasMatchStarted": {
+      "rva": 168,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bIsDroppingItems": {
+      "rva": 2236,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bIsHltvActive": {
+      "rva": 2238,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bIsQuestEligible": {
+      "rva": 2237,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bIsQueuedMatchmaking": {
+      "rva": 148,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bIsValveDS": {
+      "rva": 156,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bLogoMap": {
+      "rva": 157,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bMapHasBombTarget": {
+      "rva": 145,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bMapHasBuyZone": {
+      "rva": 147,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bMapHasRescueZone": {
+      "rva": 146,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bMatchWaitingForResume": {
+      "rva": 89,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bPlayAllStepSoundsOnServer": {
+      "rva": 158,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bRoundEndNoMusic": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bRoundEndShowTimerDefend": {
+      "rva": 3848,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bTCantBuy": {
+      "rva": 2476,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bTeamIntroPeriod": {
+      "rva": 3836,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bTechnicalTimeOut": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bTerroristTimeOutActive": {
+      "rva": 68,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_bWarmupPeriod": {
+      "rva": 58,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_eRoundEndReason": {
+      "rva": 3844,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_eRoundWinReason": {
+      "rva": 2472,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_fMatchStartTime": {
+      "rva": 100,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_fRoundStartTime": {
+      "rva": 104,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_fWarmupPeriodEnd": {
+      "rva": 60,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_fWarmupPeriodStart": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flCMMItemDropRevealEndTime": {
+      "rva": 2232,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flCMMItemDropRevealStartTime": {
+      "rva": 2228,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flCTTimeOutRemaining": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flGameStartTime": {
+      "rva": 116,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flNextRespawnWave": {
+      "rva": 2968,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flRestartRoundTime": {
+      "rva": 108,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_flTerroristTimeOutRemaining": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_gamePhase": {
+      "rva": 124,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iFreezeTime": {
+      "rva": 92,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iHostagesRemaining": {
+      "rva": 140,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iMatchStats_PlayersAlive_CT": {
+      "rva": 2600,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iMatchStats_PlayersAlive_T": {
+      "rva": 2720,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iMatchStats_RoundResults": {
+      "rva": 2480,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iNumConsecutiveCTLoses": {
+      "rva": 3244,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iNumConsecutiveTerroristLoses": {
+      "rva": 3248,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndFunFactData1": {
+      "rva": 3868,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndFunFactData2": {
+      "rva": 3872,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndFunFactData3": {
+      "rva": 3876,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndFunFactPlayerSlot": {
+      "rva": 3864,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndLegacy": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndPlayerCount": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndTimerTime": {
+      "rva": 3852,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundEndWinnerTeam": {
+      "rva": 3840,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundStartRoundNumber": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundTime": {
+      "rva": 96,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iRoundWinStatus": {
+      "rva": 2468,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_iSpectatorSlotCount": {
+      "rva": 160,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nCTTeamIntroVariant": {
+      "rva": 3832,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nCTTimeOuts": {
+      "rva": 84,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nEndMatchMapGroupVoteOptions": {
+      "rva": 3200,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nEndMatchMapGroupVoteTypes": {
+      "rva": 3160,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nEndMatchMapVoteWinner": {
+      "rva": 3240,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nHalloweenMaskListSeed": {
+      "rva": 2460,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nMatchAbortedEarlyReason": {
+      "rva": 3440,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nMatchEndCount": {
+      "rva": 3824,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nNextMapInMapgroup": {
+      "rva": 172,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nOvertimePlaying": {
+      "rva": 136,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nQueuedMatchmakingMode": {
+      "rva": 152,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nRoundEndCount": {
+      "rva": 3900,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nRoundStartCount": {
+      "rva": 3908,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nRoundsPlayedThisPhase": {
+      "rva": 132,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nTTeamIntroVariant": {
+      "rva": 3828,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nTerroristTimeOuts": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_nTournamentPredictionsPct": {
+      "rva": 2224,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_numBestOfMaps": {
+      "rva": 2456,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_sRoundEndFunFactToken": {
+      "rva": 3856,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_sRoundEndMessage": {
+      "rva": 3880,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_szMatchStatTxt": {
+      "rva": 1200,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_szTournamentEventName": {
+      "rva": 176,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_szTournamentEventStage": {
+      "rva": 688,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_szTournamentPredictionsTxt": {
+      "rva": 1712,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_timeUntilNextPhaseStarts": {
+      "rva": 120,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_totalRoundsPlayed": {
+      "rva": 128,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_vMinimapMaxs": {
+      "rva": 3108,
+      "access": "member_offset"
+    },
+    "C_CSGameRules_m_vMinimapMins": {
+      "rva": 3096,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_bHasMovedSinceSpawn": {
+      "rva": 4960,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_flFlashDuration": {
+      "rva": 5000,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_flFlashMaxAlpha": {
+      "rva": 4996,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_flProgressBarStartTime": {
+      "rva": 4972,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_hOriginalController": {
+      "rva": 5080,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_iPlayerState": {
+      "rva": 4956,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawnBase_m_iProgressBarDuration": {
+      "rva": 4968,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_ArmorValue": {
+      "rva": 11020,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_EconGloves": {
+      "rva": 5600,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_GunGameImmunityColor": {
+      "rva": 10840,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_RetakesMVPBoostExtraUtility": {
+      "rva": 5592,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bGunGameImmunity": {
+      "rva": 16584,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bHasFemaleVoice": {
+      "rva": 5168,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bInBombZone": {
+      "rva": 5225,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bInBuyZone": {
+      "rva": 5216,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bInHostageRescueZone": {
+      "rva": 5224,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bInNoDefuseArea": {
+      "rva": 10988,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bIsBuyMenuOpen": {
+      "rva": 5226,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bIsGrabbingHostage": {
+      "rva": 10979,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bIsScoped": {
+      "rva": 10976,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bKilledByHeadshot": {
+      "rva": 11017,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bLeftHanded": {
+      "rva": 10744,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bRagdollDamageHeadshot": {
+      "rva": 10680,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bResumeZoom": {
+      "rva": 10977,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bRetakesHasDefuseKit": {
+      "rva": 5584,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bRetakesMVPLastRound": {
+      "rva": 5585,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_bWaitForNoAttack": {
+      "rva": 11008,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_fImmuneToGunGameDamageTime": {
+      "rva": 16580,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_fMolotovDamageTime": {
+      "rva": 16592,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_fSwitchedHandednessTime": {
+      "rva": 10748,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flEmitSoundTime": {
+      "rva": 10984,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flFlinchStack": {
+      "rva": 11000,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flHealthShotBoostExpirationTime": {
+      "rva": 5160,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flNextSprayDecalTime": {
+      "rva": 5232,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flTimeOfLastInjury": {
+      "rva": 5228,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flVelocityModifier": {
+      "rva": 11004,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flViewmodelFOV": {
+      "rva": 10764,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flViewmodelOffsetX": {
+      "rva": 10752,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flViewmodelOffsetY": {
+      "rva": 10756,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_flViewmodelOffsetZ": {
+      "rva": 10760,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_iBlockingUseActionInProgress": {
+      "rva": 10980,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_iRetakesMVPBoostItem": {
+      "rva": 5588,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_iRetakesOffering": {
+      "rva": 5576,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_iRetakesOfferingCard": {
+      "rva": 5580,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_iShotsFired": {
+      "rva": 10996,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_nEconGlovesChanged": {
+      "rva": 10584,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_nLastKillerIndex": {
+      "rva": 11032,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_nRagdollDamageBone": {
+      "rva": 10588,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_nWhichBombZone": {
+      "rva": 10992,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_qDeathEyeAngles": {
+      "rva": 10732,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_szLastPlaceName": {
+      "rva": 5180,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_szRagdollDamageWeaponName": {
+      "rva": 10616,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_unCurrentEquipmentValue": {
+      "rva": 11024,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_unFreezetimeEndEquipmentValue": {
+      "rva": 11028,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_unRoundStartEquipmentValue": {
+      "rva": 11026,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_vRagdollDamageForce": {
+      "rva": 10592,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_vRagdollDamagePosition": {
+      "rva": 10604,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_vRagdollServerOrigin": {
+      "rva": 10684,
+      "access": "member_offset"
+    },
+    "C_CSPlayerPawn_m_vecPlayerPatchEconIndices": {
+      "rva": 10768,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_bEndMatchNextMapAllVoted": {
+      "rva": 2060,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_bHostageAlive": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_bombsiteCenterA": {
+      "rva": 1988,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_bombsiteCenterB": {
+      "rva": 2000,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_hostageRescueX": {
+      "rva": 2012,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_hostageRescueY": {
+      "rva": 2028,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_hostageRescueZ": {
+      "rva": 2044,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_iHostageEntityIDs": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_CSPlayerResource_m_isHostageFollowingSomeone": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_bSurrendered": {
+      "rva": 2620,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_iClanID": {
+      "rva": 2768,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_numMapVictories": {
+      "rva": 2616,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_scoreFirstHalf": {
+      "rva": 2624,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_scoreOvertime": {
+      "rva": 2632,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_scoreSecondHalf": {
+      "rva": 2628,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_szClanTeamname": {
+      "rva": 2636,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_szTeamFlagImage": {
+      "rva": 2772,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_szTeamLogoImage": {
+      "rva": 2780,
+      "access": "member_offset"
+    },
+    "C_CSTeam_m_szTeamMatchStat": {
+      "rva": 2101,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBaseGun_m_bNeedsBoltAction": {
+      "rva": 11093,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBaseGun_m_iBurstShotsRemaining": {
+      "rva": 11068,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBaseGun_m_nRevolverCylinderIdx": {
+      "rva": 11096,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBaseGun_m_zoomLevel": {
+      "rva": 11064,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bBurstMode": {
+      "rva": 9844,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bCanBePickedUp": {
+      "rva": 10072,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bDroppedNearBuyZone": {
+      "rva": 9896,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bInReload": {
+      "rva": 9860,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bInspectPending": {
+      "rva": 9716,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bInspectShouldLoop": {
+      "rva": 9717,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bIsHauledBack": {
+      "rva": 9876,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bSilencerOn": {
+      "rva": 9877,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_bWasActiveWeaponWhenDropped": {
+      "rva": 10088,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_fAccuracyPenalty": {
+      "rva": 9824,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_fLastShotTime": {
+      "rva": 10128,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flDroppedAtTime": {
+      "rva": 9868,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flInspectCancelCompleteTime": {
+      "rva": 9712,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flLastShakeTime": {
+      "rva": 10636,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flPostponeFireReadyFrac": {
+      "rva": 9856,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flRecoilIndex": {
+      "rva": 9840,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flTimeSilencerSwitchComplete": {
+      "rva": 9880,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flWatTickOffset": {
+      "rva": 10616,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flWeaponActionPlaybackRate": {
+      "rva": 9884,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_flWeaponGameplayAnimStateTimestamp": {
+      "rva": 9708,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_hPrevOwner": {
+      "rva": 10080,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_iIronSightMode": {
+      "rva": 10400,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_iMostRecentTeamNumber": {
+      "rva": 9892,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_iOriginalTeamNumber": {
+      "rva": 9888,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_iRecoilIndex": {
+      "rva": 9836,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_iWeaponGameplayAnimState": {
+      "rva": 9704,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_nDeployTick": {
+      "rva": 9864,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_nDropTick": {
+      "rva": 10084,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_nPostponeFireReadyTicks": {
+      "rva": 9852,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_nextPrevOwnerUseTime": {
+      "rva": 10076,
+      "access": "member_offset"
+    },
+    "C_CSWeaponBase_m_weaponMode": {
+      "rva": 9800,
+      "access": "member_offset"
+    },
+    "C_ColorCorrectionVolume_m_FadeDuration": {
+      "rva": 4120,
+      "access": "member_offset"
+    },
+    "C_ColorCorrectionVolume_m_MaxWeight": {
+      "rva": 4116,
+      "access": "member_offset"
+    },
+    "C_ColorCorrectionVolume_m_Weight": {
+      "rva": 4124,
+      "access": "member_offset"
+    },
+    "C_ColorCorrectionVolume_m_lookupFilename": {
+      "rva": 4128,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_MaxFalloff": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_MinFalloff": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_bExclusive": {
+      "rva": 2467,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_flCurWeight": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_flFadeInDuration": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_flFadeOutDuration": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_flMaxWeight": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_ColorCorrection_m_netlookupFilename": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_DecoyProjectile_m_nDecoyShotTick": {
+      "rva": 4540,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_Exponent": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_Flags": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_InnerAngle": {
+      "rva": 3900,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_LightStyle": {
+      "rva": 3889,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_OuterAngle": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_Radius": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_DynamicLight_m_SpotRadius": {
+      "rva": 3908,
+      "access": "member_offset"
+    },
+    "C_DynamicProp_m_bUseAnimGraph": {
+      "rva": 4681,
+      "access": "member_offset"
+    },
+    "C_DynamicProp_m_bUseHitboxesForRenderBox": {
+      "rva": 4680,
+      "access": "member_offset"
+    },
+    "C_EconEntity_m_OriginalOwnerXuidHigh": {
+      "rva": 9444,
+      "access": "member_offset"
+    },
+    "C_EconEntity_m_OriginalOwnerXuidLow": {
+      "rva": 9440,
+      "access": "member_offset"
+    },
+    "C_EconEntity_m_flFallbackWear": {
+      "rva": 9456,
+      "access": "member_offset"
+    },
+    "C_EconEntity_m_nFallbackPaintKit": {
+      "rva": 9448,
+      "access": "member_offset"
+    },
+    "C_EconEntity_m_nFallbackSeed": {
+      "rva": 9452,
+      "access": "member_offset"
+    },
+    "C_EconEntity_m_nFallbackStatTrak": {
+      "rva": 9460,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_AttributeList": {
+      "rva": 4368,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_NetworkedDynamicAttributes": {
+      "rva": 4488,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_bInitialized": {
+      "rva": 4336,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iAccountID": {
+      "rva": 4320,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iEntityLevel": {
+      "rva": 4296,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iEntityQuality": {
+      "rva": 4292,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iInventoryPosition": {
+      "rva": 4324,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iItemDefinitionIndex": {
+      "rva": 4290,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iItemIDHigh": {
+      "rva": 4312,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_iItemIDLow": {
+      "rva": 4316,
+      "access": "member_offset"
+    },
+    "C_EconItemView_m_szCustomName": {
+      "rva": 4608,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_flFadeInLength": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_flFadeOutLength": {
+      "rva": 3920,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_flFadeOutModelLength": {
+      "rva": 3912,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_flFadeOutModelStart": {
+      "rva": 3908,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_flFadeOutStart": {
+      "rva": 3916,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_nMagnitude": {
+      "rva": 3944,
+      "access": "member_offset"
+    },
+    "C_EntityDissolve_m_vDissolverOrigin": {
+      "rva": 3932,
+      "access": "member_offset"
+    },
+    "C_EntityFlame_m_bCheapEffect": {
+      "rva": 1956,
+      "access": "member_offset"
+    },
+    "C_EntityFlame_m_hEntAttached": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_EnvCombinedLightProbeVolume_m_Entity_Color": {
+      "rva": 6136,
+      "access": "member_offset"
+    },
+    "C_EnvCombinedLightProbeVolume_m_Entity_flBrightness": {
+      "rva": 6140,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_DistanceFogCurveString": {
+      "rva": 2000,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_HeightFogCurveString": {
+      "rva": 2008,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_bHasHeightFogEnd": {
+      "rva": 2168,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flEndDistance": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flFogHeightEnd": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flFogHeightExponent": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flFogHeightStart": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flFogHeightWidth": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flLODBias": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_flStartDistance": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_hFogCubemapTexture": {
+      "rva": 2160,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_iszSkyEntity": {
+      "rva": 1976,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_nCubemapSourceType": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_nDistanceFogType": {
+      "rva": 1996,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_nFogHeightBlendMode": {
+      "rva": 1988,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_nFogHeightCoordinateSpace": {
+      "rva": 1992,
+      "access": "member_offset"
+    },
+    "C_EnvCubemapFog_m_nHeightFogType": {
+      "rva": 1984,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_bCopyDiffuseFromDefaultCubemap": {
+      "rva": 2128,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_bDefaultEnvMap": {
+      "rva": 2125,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_bDefaultSpecEnvMap": {
+      "rva": 2126,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_bIndoorCubeMap": {
+      "rva": 2127,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_flDiffuseScale": {
+      "rva": 2120,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_flInfluenceRadius": {
+      "rva": 2060,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_vBoxProjectMaxs": {
+      "rva": 2076,
+      "access": "member_offset"
+    },
+    "C_EnvCubemap_m_Entity_vBoxProjectMins": {
+      "rva": 2064,
+      "access": "member_offset"
+    },
+    "C_EnvDecal_m_bProjectOnCharacters": {
+      "rva": 3913,
+      "access": "member_offset"
+    },
+    "C_EnvDecal_m_bProjectOnWater": {
+      "rva": 3914,
+      "access": "member_offset"
+    },
+    "C_EnvDecal_m_bProjectOnWorld": {
+      "rva": 3912,
+      "access": "member_offset"
+    },
+    "C_EnvDecal_m_flDepthSortBias": {
+      "rva": 3916,
+      "access": "member_offset"
+    },
+    "C_EnvDecal_m_hDecalMaterial": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_EnvDecal_m_nRenderOrder": {
+      "rva": 3908,
+      "access": "member_offset"
+    },
+    "C_EnvDetailController_m_flFadeEndDist": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_EnvDetailController_m_flFadeStartDist": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_EnvParticleGlow_m_flAlphaScale": {
+      "rva": 5344,
+      "access": "member_offset"
+    },
+    "C_EnvParticleGlow_m_flRadiusScale": {
+      "rva": 5348,
+      "access": "member_offset"
+    },
+    "C_EnvParticleGlow_m_flSelfIllumScale": {
+      "rva": 5352,
+      "access": "member_offset"
+    },
+    "C_EnvParticleGlow_m_hTextureOverride": {
+      "rva": 5360,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_flFogMaxEnd": {
+      "rva": 3936,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_flFogMaxStart": {
+      "rva": 3932,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_flFogMinEnd": {
+      "rva": 3928,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_flFogMinStart": {
+      "rva": 3924,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_hSkyMaterialLightingOnly": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_nFogType": {
+      "rva": 3920,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_vTintColor": {
+      "rva": 3905,
+      "access": "member_offset"
+    },
+    "C_EnvSky_m_vTintColorLightingOnly": {
+      "rva": 3909,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_bEnableIndirect": {
+      "rva": 2033,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_fFirstVolumeSliceThickness": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_fNoiseSpeed": {
+      "rva": 2052,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_fWindSpeed": {
+      "rva": 2072,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flAnisotropy": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flDefaultAnisotropy": {
+      "rva": 2020,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flDefaultDrawDistance": {
+      "rva": 2028,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flDefaultScattering": {
+      "rva": 2024,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flDrawDistance": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flFadeInEnd": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flFadeSpeed": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flIndirectStrength": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flScattering": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flStartAnisoTime": {
+      "rva": 1996,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flStartAnisotropy": {
+      "rva": 2008,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flStartDrawDistance": {
+      "rva": 2016,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flStartDrawDistanceTime": {
+      "rva": 2004,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flStartScatterTime": {
+      "rva": 2000,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_flStartScattering": {
+      "rva": 2012,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_hFogIndirectTexture": {
+      "rva": 2040,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_nForceRefreshCount": {
+      "rva": 2048,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_nIndirectTextureDimX": {
+      "rva": 1956,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_nIndirectTextureDimY": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_nIndirectTextureDimZ": {
+      "rva": 1964,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_nVolumeDepth": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_vNoiseScale": {
+      "rva": 2060,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogController_m_vWindDirection": {
+      "rva": 2076,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_bIndirectUseLPVs": {
+      "rva": 1945,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_bOverrideIndirectLightStrength": {
+      "rva": 1985,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_bOverrideNoiseStrength": {
+      "rva": 1987,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_bOverrideSunLightStrength": {
+      "rva": 1986,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_bOverrideTintColor": {
+      "rva": 1984,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_fHeightFogEdgeWidth": {
+      "rva": 1964,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_fIndirectLightStrength": {
+      "rva": 1968,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_fSunLightStrength": {
+      "rva": 1972,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_flFalloffExponent": {
+      "rva": 1956,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_flHeightFogDepth": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_flStrength": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_EnvVolumetricFogVolume_m_nFalloffShape": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_EnvWindClientside_m_EnvWindShared": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_EnvWindShared": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_fDirectionVariation": {
+      "rva": 2168,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_fSpeedVariation": {
+      "rva": 2172,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_fTurbulence": {
+      "rva": 2176,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_fVolumeHalfExtentXY": {
+      "rva": 2180,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_fVolumeHalfExtentZ": {
+      "rva": 2184,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_nClipmapLevels": {
+      "rva": 2196,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_nVolumeResolutionXY": {
+      "rva": 2188,
+      "access": "member_offset"
+    },
+    "C_EnvWindController_m_nVolumeResolutionZ": {
+      "rva": 2192,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_flGustDuration": {
+      "rva": 36,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_flInitialWindSpeed": {
+      "rva": 44,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_flMaxGustDelay": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_flMinGustDelay": {
+      "rva": 28,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_iGustDirChange": {
+      "rva": 40,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_iInitialWindDir": {
+      "rva": 42,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_iMaxGust": {
+      "rva": 26,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_iMaxWind": {
+      "rva": 18,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_iMinGust": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_iMinWind": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_location": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "C_EnvWindShared_m_windRadius": {
+      "rva": 20,
+      "access": "member_offset"
+    },
+    "C_EnvWindVolume_m_fWindDirectionVariationMultiplier": {
+      "rva": 1964,
+      "access": "member_offset"
+    },
+    "C_EnvWindVolume_m_fWindSpeedMultiplier": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_EnvWindVolume_m_fWindSpeedVariationMultiplier": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_EnvWindVolume_m_fWindTurbulenceMultiplier": {
+      "rva": 1956,
+      "access": "member_offset"
+    },
+    "C_EnvWindVolume_m_nShape": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_EnvWind_m_EnvWindShared": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_Fish_m_angle": {
+      "rva": 4464,
+      "access": "member_offset"
+    },
+    "C_Fish_m_poolOrigin": {
+      "rva": 4432,
+      "access": "member_offset"
+    },
+    "C_Fish_m_waterLevel": {
+      "rva": 4444,
+      "access": "member_offset"
+    },
+    "C_FogController_m_fog": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_FootstepControl_m_destination": {
+      "rva": 4104,
+      "access": "member_offset"
+    },
+    "C_FootstepControl_m_source": {
+      "rva": 4096,
+      "access": "member_offset"
+    },
+    "C_FuncConveyor_m_flTargetSpeed": {
+      "rva": 3908,
+      "access": "member_offset"
+    },
+    "C_FuncConveyor_m_flTransitionStartSpeed": {
+      "rva": 3920,
+      "access": "member_offset"
+    },
+    "C_FuncConveyor_m_hConveyorModels": {
+      "rva": 3928,
+      "access": "member_offset"
+    },
+    "C_FuncConveyor_m_nTransitionDurationTicks": {
+      "rva": 3916,
+      "access": "member_offset"
+    },
+    "C_FuncConveyor_m_nTransitionStartTick": {
+      "rva": 3912,
+      "access": "member_offset"
+    },
+    "C_FuncConveyor_m_vecMoveDirEntitySpace": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_FuncElectrifiedVolume_m_EffectName": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_FuncElectrifiedVolume_m_bState": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_FuncLadder_m_bFakeLadder": {
+      "rva": 3969,
+      "access": "member_offset"
+    },
+    "C_FuncLadder_m_flAutoRideSpeed": {
+      "rva": 3964,
+      "access": "member_offset"
+    },
+    "C_FuncLadder_m_vecLadderDir": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_FuncLadder_m_vecPlayerMountPositionBottom": {
+      "rva": 3952,
+      "access": "member_offset"
+    },
+    "C_FuncLadder_m_vecPlayerMountPositionTop": {
+      "rva": 3940,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_bDraw3DSkybox": {
+      "rva": 3917,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_bRenderShadows": {
+      "rva": 3900,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_bUseUniqueColorTarget": {
+      "rva": 3901,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_brushModelName": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_hTargetCamera": {
+      "rva": 3912,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_nResolutionEnum": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_FuncMonitor_m_targetCamera": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_GameRules_m_bGamePaused": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "C_GameRules_m_nPauseStartTick": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "C_GameRules_m_nTotalPausedTicks": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_flFogEndDistance": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_flFogEndHeight": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_flFogStartDistance": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_flFogStartHeight": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_flFogVerticalExponent": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_fogColor": {
+      "rva": 1964,
+      "access": "member_offset"
+    },
+    "C_GradientFog_m_hGradientFogTexture": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_HandleTest_m_bSendHandle": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_bHandsHaveBeenCut": {
+      "rva": 4532,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_flDropStartTime": {
+      "rva": 4564,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_flGrabSuccessTime": {
+      "rva": 4560,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_flRescueStartTime": {
+      "rva": 4556,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_hHostageGrabber": {
+      "rva": 4536,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_isRescued": {
+      "rva": 4524,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_nHostageState": {
+      "rva": 4528,
+      "access": "member_offset"
+    },
+    "C_Hostage_m_reuseTimer": {
+      "rva": 4488,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_BurnNormal": {
+      "rva": 5600,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_bFireIsBurning": {
+      "rva": 5536,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_bInPostEffectTime": {
+      "rva": 6380,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_fireCount": {
+      "rva": 6368,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_fireParentPositions": {
+      "rva": 4768,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_firePositions": {
+      "rva": 4000,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_nFireEffectTickBegin": {
+      "rva": 6388,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_nFireLifetime": {
+      "rva": 6376,
+      "access": "member_offset"
+    },
+    "C_Inferno_m_nInfernoType": {
+      "rva": 6372,
+      "access": "member_offset"
+    },
+    "C_InfoVisibilityBox_m_vBoxSize": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_ItemDogtags_m_KillingPlayer": {
+      "rva": 9820,
+      "access": "member_offset"
+    },
+    "C_ItemDogtags_m_OwningPlayer": {
+      "rva": 9816,
+      "access": "member_offset"
+    },
+    "C_Knife_m_bFirstAttack": {
+      "rva": 11061,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nAccountIDs": {
+      "rva": 2224,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nCurrentPhase": {
+      "rva": 4272,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nDraftType": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nMapId0": {
+      "rva": 2480,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nMapId1": {
+      "rva": 2736,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nMapId2": {
+      "rva": 2992,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nMapId3": {
+      "rva": 3248,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nMapId4": {
+      "rva": 3504,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nMapId5": {
+      "rva": 3760,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nPhaseDurationTicks": {
+      "rva": 4280,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nPhaseStartTick": {
+      "rva": 4276,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nStartingSide0": {
+      "rva": 4016,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nTeamWinningCoinToss": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nTeamWithFirstChoice": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_MapVetoPickController_m_nVoteMapIdsList": {
+      "rva": 2196,
+      "access": "member_offset"
+    },
+    "C_MolotovProjectile_m_bIsIncGrenade": {
+      "rva": 4540,
+      "access": "member_offset"
+    },
+    "C_OmniLight_m_flInnerAngle": {
+      "rva": 4672,
+      "access": "member_offset"
+    },
+    "C_OmniLight_m_flOuterAngle": {
+      "rva": 4676,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_bAnimateDuringGameplayPause": {
+      "rva": 4412,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_bFrozen": {
+      "rva": 4401,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_bNoFreeze": {
+      "rva": 4741,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_bNoRamp": {
+      "rva": 4742,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_bNoSave": {
+      "rva": 4740,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_flPreSimTime": {
+      "rva": 4428,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_hControlPointEnts": {
+      "rva": 4484,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_iServerControlPointAssignments": {
+      "rva": 4480,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_nStopType": {
+      "rva": 4408,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_szSnapshotFileName": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_ParticleSystem_m_vServerControlPoints": {
+      "rva": 4432,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_PathNodes_Color": {
+      "rva": 2072,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_PathNodes_PinEnabled": {
+      "rva": 2096,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_PathNodes_Position": {
+      "rva": 2000,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_PathNodes_RadiusScale": {
+      "rva": 2120,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_PathNodes_TangentIn": {
+      "rva": 2024,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_PathNodes_TangentOut": {
+      "rva": 2048,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_flParticleSpacing": {
+      "rva": 1968,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_flSlack": {
+      "rva": 1972,
+      "access": "member_offset"
+    },
+    "C_PathParticleRope_m_nEffectState": {
+      "rva": 1984,
+      "access": "member_offset"
+    },
+    "C_PhysicsProp_m_bAwake": {
+      "rva": 4680,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_bBeingDefused": {
+      "rva": 4388,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_bBombDefused": {
+      "rva": 4412,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_bBombTicking": {
+      "rva": 4328,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_bCannotBeDefused": {
+      "rva": 4380,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_bHasExploded": {
+      "rva": 4381,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_flC4Blow": {
+      "rva": 4376,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_flDefuseCountDown": {
+      "rva": 4408,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_flDefuseLength": {
+      "rva": 4404,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_flTimerLength": {
+      "rva": 4384,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_hBombDefuser": {
+      "rva": 4416,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_nBombSite": {
+      "rva": 4332,
+      "access": "member_offset"
+    },
+    "C_PlantedC4_m_nSourceSoundscapeHash": {
+      "rva": 4336,
+      "access": "member_offset"
+    },
+    "C_PlayerPing_m_bUrgent": {
+      "rva": 1980,
+      "access": "member_offset"
+    },
+    "C_PlayerPing_m_hPingedEntity": {
+      "rva": 1972,
+      "access": "member_offset"
+    },
+    "C_PlayerPing_m_hPlayer": {
+      "rva": 1968,
+      "access": "member_offset"
+    },
+    "C_PlayerPing_m_iType": {
+      "rva": 1976,
+      "access": "member_offset"
+    },
+    "C_PlayerPing_m_szPlaceName": {
+      "rva": 1981,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_flCreationTime": {
+      "rva": 3964,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_nEntity": {
+      "rva": 3956,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_nHitbox": {
+      "rva": 3960,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_nPlayer": {
+      "rva": 3952,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_nTintID": {
+      "rva": 3968,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_nUniqueID": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_nVersion": {
+      "rva": 3972,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_rtGcTime": {
+      "rva": 3900,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_ubSignature": {
+      "rva": 3973,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_unAccountID": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_unTraceID": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_PlayerSprayDecal_m_vecStart": {
+      "rva": 3916,
+      "access": "member_offset"
+    },
+    "C_PlayerVisibility_m_flFogDistanceMultiplier": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_PlayerVisibility_m_flFogMaxDensityMultiplier": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_PlayerVisibility_m_flVisibilityStrength": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_FOV": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_FogColor": {
+      "rva": 1925,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_Resolution": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_bAlignWithParent": {
+      "rva": 1969,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_bCanHLTVUse": {
+      "rva": 1968,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_bFogEnable": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_bNoSky": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_bUseScreenAspectRatio": {
+      "rva": 1945,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_fBrightness": {
+      "rva": 1956,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_flAspectRatio": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_flFogEnd": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_flFogMaxDensity": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_PointCamera_m_flFogStart": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bDisableMipGen": {
+      "rva": 4472,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bExcludeFromSaveGames": {
+      "rva": 4469,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bFollowPlayerAcrossTeleport": {
+      "rva": 4394,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bGrabbable": {
+      "rva": 4470,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bLit": {
+      "rva": 4393,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bNoDepth": {
+      "rva": 4465,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bOnlyRenderToTexture": {
+      "rva": 4471,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bOpaque": {
+      "rva": 4464,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bRenderBackface": {
+      "rva": 4467,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bUseOffScreenIndicator": {
+      "rva": 4468,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_bVisibleWhenParentNoDraw": {
+      "rva": 4466,
+      "access": "member_offset"
+    },
+    "C_PointClientUIWorldPanel_m_nExplicitImageLayout": {
+      "rva": 4476,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_bListenedTo": {
+      "rva": 4392,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_flStartTimeInCommentary": {
+      "rva": 4356,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_hViewPosition": {
+      "rva": 4408,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_iNodeNumber": {
+      "rva": 4384,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_iNodeNumberMax": {
+      "rva": 4388,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_iszCommentaryFile": {
+      "rva": 4360,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_iszSpeakers": {
+      "rva": 4376,
+      "access": "member_offset"
+    },
+    "C_PointCommentaryNode_m_iszTitle": {
+      "rva": 4368,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_bRequiresUseKey": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_bUpdateOnClient": {
+      "rva": 1918,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_flDisengageDistance": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_flEngageDistance": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_flInputOffset": {
+      "rva": 2004,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_flMaximumChangePerSecond": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_flMomentumModifier": {
+      "rva": 1984,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_flSnapValue": {
+      "rva": 1988,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_hOutputEntities": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_hRemapLineEnd": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_hRemapLineStart": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_nHapticsType": {
+      "rva": 1976,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_nInputType": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_nMomentumType": {
+      "rva": 1980,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_nOutputType": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_PointValueRemapper_m_nRatchetType": {
+      "rva": 1996,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_BackgroundMaterialName": {
+      "rva": 4504,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_FontName": {
+      "rva": 4440,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_bDrawBackground": {
+      "rva": 4584,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_bFullbright": {
+      "rva": 4569,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_flBackgroundBorderHeight": {
+      "rva": 4592,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_flBackgroundBorderWidth": {
+      "rva": 4588,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_flBackgroundWorldToUV": {
+      "rva": 4596,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_flFontSize": {
+      "rva": 4576,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_flWorldUnitsPerPx": {
+      "rva": 4572,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_nJustifyHorizontal": {
+      "rva": 4604,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_nJustifyVertical": {
+      "rva": 4608,
+      "access": "member_offset"
+    },
+    "C_PointWorldText_m_nReorientMode": {
+      "rva": 4612,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_bExposureControl": {
+      "rva": 4157,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flExposureCompensation": {
+      "rva": 4140,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flExposureFadeSpeedDown": {
+      "rva": 4148,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flExposureFadeSpeedUp": {
+      "rva": 4144,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flMaxExposure": {
+      "rva": 4136,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flMaxLogExposure": {
+      "rva": 4128,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flMinExposure": {
+      "rva": 4132,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_flMinLogExposure": {
+      "rva": 4124,
+      "access": "member_offset"
+    },
+    "C_PostProcessingVolume_m_hPostSettings": {
+      "rva": 4112,
+      "access": "member_offset"
+    },
+    "C_RagdollPropAttached_m_attachmentPointBoneSpace": {
+      "rva": 4464,
+      "access": "member_offset"
+    },
+    "C_RagdollPropAttached_m_attachmentPointRagdollSpace": {
+      "rva": 4476,
+      "access": "member_offset"
+    },
+    "C_RagdollPropAttached_m_boneIndexAttached": {
+      "rva": 4456,
+      "access": "member_offset"
+    },
+    "C_RagdollPropAttached_m_ragdollAttachedObjectIndex": {
+      "rva": 4460,
+      "access": "member_offset"
+    },
+    "C_RagdollProp_m_hRagdollSource": {
+      "rva": 4396,
+      "access": "member_offset"
+    },
+    "C_RagdollProp_m_ragAngles": {
+      "rva": 4368,
+      "access": "member_offset"
+    },
+    "C_RagdollProp_m_ragEnabled": {
+      "rva": 4320,
+      "access": "member_offset"
+    },
+    "C_RagdollProp_m_ragPos": {
+      "rva": 4344,
+      "access": "member_offset"
+    },
+    "C_RetakeGameRules_m_bBlockersPresent": {
+      "rva": 316,
+      "access": "member_offset"
+    },
+    "C_RetakeGameRules_m_bRoundInProgress": {
+      "rva": 317,
+      "access": "member_offset"
+    },
+    "C_RetakeGameRules_m_hBombPlanter": {
+      "rva": 328,
+      "access": "member_offset"
+    },
+    "C_RetakeGameRules_m_iBombSite": {
+      "rva": 324,
+      "access": "member_offset"
+    },
+    "C_RetakeGameRules_m_iFirstSecondHalfRound": {
+      "rva": 320,
+      "access": "member_offset"
+    },
+    "C_RetakeGameRules_m_nMatchSeed": {
+      "rva": 312,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_RopeFlags": {
+      "rva": 3952,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_RopeLength": {
+      "rva": 4608,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_Slack": {
+      "rva": 4610,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_Subdiv": {
+      "rva": 4606,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_TextureScale": {
+      "rva": 4612,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_Width": {
+      "rva": 4620,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_bConstrainBetweenEndpoints": {
+      "rva": 4760,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_fLockedPoints": {
+      "rva": 4616,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_flScrollSpeed": {
+      "rva": 3948,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_hEndPoint": {
+      "rva": 4600,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_hStartPoint": {
+      "rva": 4596,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_iEndAttachment": {
+      "rva": 4605,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_iRopeMaterialModelIndex": {
+      "rva": 3960,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_iStartAttachment": {
+      "rva": 4604,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_nChangeCount": {
+      "rva": 4617,
+      "access": "member_offset"
+    },
+    "C_RopeKeyframe_m_nSegments": {
+      "rva": 4592,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_bAllRequirementsComplete": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_bAutogenerated": {
+      "rva": 1931,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_bIsPlayingBack": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_bMultiplayer": {
+      "rva": 1930,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_bPaused": {
+      "rva": 1929,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_flForceClientTime": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_hActorList": {
+      "rva": 1952,
+      "access": "member_offset"
+    },
+    "C_SceneEntity_m_nSceneStringIndex": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_ShatterGlassShardPhysics_m_ShardDesc": {
+      "rva": 4696,
+      "access": "member_offset"
+    },
+    "C_SkyCamera_m_skyboxData": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_SkyCamera_m_skyboxSlotToken": {
+      "rva": 2064,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_VoxelFrameData": {
+      "rva": 4608,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_bDidSmokeEffect": {
+      "rva": 4572,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_nRandomSeed": {
+      "rva": 4576,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_nSmokeEffectTickBegin": {
+      "rva": 4568,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_nVoxelFrameDataSize": {
+      "rva": 4632,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_nVoxelUpdate": {
+      "rva": 4636,
+      "access": "member_offset"
+    },
+    "C_SmokeGrenadeProjectile_m_vSmokeDetonationPos": {
+      "rva": 4592,
+      "access": "member_offset"
+    },
+    "C_SoundAreaEntityBase_m_iszSoundAreaType": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_SoundAreaEntityOrientedBox_m_vMax": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_SoundAreaEntityOrientedBox_m_vMin": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_SoundEventAABBEntity_m_vMaxs": {
+      "rva": 2116,
+      "access": "member_offset"
+    },
+    "C_SoundEventAABBEntity_m_vMins": {
+      "rva": 2104,
+      "access": "member_offset"
+    },
+    "C_SoundEventOBBEntity_m_vMaxs": {
+      "rva": 2116,
+      "access": "member_offset"
+    },
+    "C_SoundEventOBBEntity_m_vMins": {
+      "rva": 2104,
+      "access": "member_offset"
+    },
+    "C_SoundEventPathCornerEntity_m_vecCornerPairsNetworked": {
+      "rva": 2104,
+      "access": "member_offset"
+    },
+    "C_SoundOpvarSetPointBase_m_bFastRefresh": {
+      "rva": 1949,
+      "access": "member_offset"
+    },
+    "C_SoundOpvarSetPointBase_m_bUseAutoCompare": {
+      "rva": 1948,
+      "access": "member_offset"
+    },
+    "C_SoundOpvarSetPointBase_m_iOpvarIndex": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_SpotlightEnd_m_Radius": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_bWorldSpaceScale": {
+      "rva": 3944,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_flBrightnessDuration": {
+      "rva": 3932,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_flGlowProxySize": {
+      "rva": 3948,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_flScaleDuration": {
+      "rva": 3940,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_flSpriteFramerate": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_hAttachedToEntity": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_hSpriteMaterial": {
+      "rva": 3888,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_nAttachment": {
+      "rva": 3900,
+      "access": "member_offset"
+    },
+    "C_Sprite_m_nBrightness": {
+      "rva": 3928,
+      "access": "member_offset"
+    },
+    "C_Team_m_aPlayerControllers": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_Team_m_aPlayers": {
+      "rva": 1944,
+      "access": "member_offset"
+    },
+    "C_Team_m_szTeamname": {
+      "rva": 1972,
+      "access": "member_offset"
+    },
+    "C_TextureBasedAnimatable_m_flFPS": {
+      "rva": 3892,
+      "access": "member_offset"
+    },
+    "C_TextureBasedAnimatable_m_flStartFrame": {
+      "rva": 3940,
+      "access": "member_offset"
+    },
+    "C_TextureBasedAnimatable_m_hPositionKeys": {
+      "rva": 3896,
+      "access": "member_offset"
+    },
+    "C_TextureBasedAnimatable_m_hRotationKeys": {
+      "rva": 3904,
+      "access": "member_offset"
+    },
+    "C_TextureBasedAnimatable_m_vAnimationBoundsMax": {
+      "rva": 3924,
+      "access": "member_offset"
+    },
+    "C_TextureBasedAnimatable_m_vAnimationBoundsMin": {
+      "rva": 3912,
+      "access": "member_offset"
+    },
+    "C_TonemapController2_m_flAutoExposureMax": {
+      "rva": 1920,
+      "access": "member_offset"
+    },
+    "C_TonemapController2_m_flAutoExposureMin": {
+      "rva": 1916,
+      "access": "member_offset"
+    },
+    "C_TonemapController2_m_flExposureAdaptationSpeedDown": {
+      "rva": 1928,
+      "access": "member_offset"
+    },
+    "C_TonemapController2_m_flExposureAdaptationSpeedUp": {
+      "rva": 1924,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_angularDamping": {
+      "rva": 4112,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_angularLimit": {
+      "rva": 4108,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_bCollapseToForcePoint": {
+      "rva": 4140,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_bConvertToDebrisWhenPossible": {
+      "rva": 4168,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_flFrequency": {
+      "rva": 4120,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_gravityScale": {
+      "rva": 4096,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_linearDamping": {
+      "rva": 4104,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_linearForce": {
+      "rva": 4116,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_linearLimit": {
+      "rva": 4100,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_vecLinearForceDirection": {
+      "rva": 4156,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_vecLinearForcePointAt": {
+      "rva": 4128,
+      "access": "member_offset"
+    },
+    "C_TriggerPhysics_m_vecLinearForcePointAtWorld": {
+      "rva": 4144,
+      "access": "member_offset"
+    },
+    "C_VoteController_m_bIsYesNoVote": {
+      "rva": 1966,
+      "access": "member_offset"
+    },
+    "C_VoteController_m_iActiveIssueIndex": {
+      "rva": 1932,
+      "access": "member_offset"
+    },
+    "C_VoteController_m_iOnlyTeamToVote": {
+      "rva": 1936,
+      "access": "member_offset"
+    },
+    "C_VoteController_m_nPotentialVotes": {
+      "rva": 1960,
+      "access": "member_offset"
+    },
+    "C_VoteController_m_nVoteOptionCount": {
+      "rva": 1940,
+      "access": "member_offset"
+    },
+    "C_WeaponBaseItem_m_bRedraw": {
+      "rva": 11062,
+      "access": "member_offset"
+    },
+    "C_WeaponBaseItem_m_bSequenceInProgress": {
+      "rva": 11061,
+      "access": "member_offset"
+    },
+    "C_WeaponCZ75a_m_bMagazineRemoved": {
+      "rva": 11100,
+      "access": "member_offset"
+    },
+    "C_WeaponTaser_m_fFireTime": {
+      "rva": 11100,
+      "access": "member_offset"
+    },
+    "CountdownTimer_m_duration": {
+      "rva": 256,
+      "access": "member_offset"
+    },
+    "CountdownTimer_m_nWorldGroupId": {
+      "rva": 20,
+      "access": "member_offset"
+    },
+    "CountdownTimer_m_timescale": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "CountdownTimer_m_timestamp": {
+      "rva": 256,
+      "access": "member_offset"
+    },
+    "EntityRenderAttribute_t_m_Values": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "EntitySpottedState_t_m_bSpotted": {
+      "rva": 8,
+      "access": "member_offset"
+    },
+    "SellbackPurchaseEntry_t_m_hItem": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "SellbackPurchaseEntry_t_m_nPrevArmor": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "SellbackPurchaseEntry_t_m_unDefIdx": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "ServerAuthoritativeWeaponSlot_t_unClass": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "ServerAuthoritativeWeaponSlot_t_unItemDefIdx": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "ServerAuthoritativeWeaponSlot_t_unSlot": {
+      "rva": 50,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nCollisionFunctionMask": {
+      "rva": 47,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nCollisionGroup": {
+      "rva": 46,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nDetailLayerMask": {
+      "rva": 42,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nDetailLayerMaskType": {
+      "rva": 44,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nEntityId": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nHierarchyId": {
+      "rva": 40,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nInteractsExclude": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nInteractsWith": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nOwnerId": {
+      "rva": 36,
+      "access": "member_offset"
+    },
+    "VPhysicsCollisionAttribute_t_m_nTargetDetailLayer": {
+      "rva": 45,
+      "access": "member_offset"
+    },
+    "ViewAngleServerChange_t_nIndex": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "ViewAngleServerChange_t_nType": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "ViewAngleServerChange_t_qAngle": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "WeaponPurchaseCount_t_m_nCount": {
+      "rva": 50,
+      "access": "member_offset"
+    },
+    "WeaponPurchaseCount_t_m_nItemDefIndex": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "audioparams_t_localBits": {
+      "rva": 108,
+      "access": "member_offset"
+    },
+    "audioparams_t_soundEventHash": {
+      "rva": 116,
+      "access": "member_offset"
+    },
+    "audioparams_t_soundscapeEntityListIndex": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "audioparams_t_soundscapeIndex": {
+      "rva": 104,
       "access": "member_offset"
     },
     "buttons_attack": {
@@ -111,6 +4943,162 @@
     "dwWorldToProjectionMatrix": {
       "rva": 73936832,
       "access": "direct_address_rva"
+    },
+    "fogparams_t_HDRColorScale": {
+      "rva": 56,
+      "access": "member_offset"
+    },
+    "fogparams_t_blend": {
+      "rva": 101,
+      "access": "member_offset"
+    },
+    "fogparams_t_blendtobackground": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "fogparams_t_colorPrimary": {
+      "rva": 20,
+      "access": "member_offset"
+    },
+    "fogparams_t_colorPrimaryLerpTo": {
+      "rva": 28,
+      "access": "member_offset"
+    },
+    "fogparams_t_colorSecondary": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "fogparams_t_colorSecondaryLerpTo": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "fogparams_t_duration": {
+      "rva": 84,
+      "access": "member_offset"
+    },
+    "fogparams_t_enable": {
+      "rva": 100,
+      "access": "member_offset"
+    },
+    "fogparams_t_end": {
+      "rva": 40,
+      "access": "member_offset"
+    },
+    "fogparams_t_endLerpTo": {
+      "rva": 72,
+      "access": "member_offset"
+    },
+    "fogparams_t_exponent": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "fogparams_t_farz": {
+      "rva": 44,
+      "access": "member_offset"
+    },
+    "fogparams_t_lerptime": {
+      "rva": 80,
+      "access": "member_offset"
+    },
+    "fogparams_t_locallightscale": {
+      "rva": 96,
+      "access": "member_offset"
+    },
+    "fogparams_t_maxdensity": {
+      "rva": 48,
+      "access": "member_offset"
+    },
+    "fogparams_t_maxdensityLerpTo": {
+      "rva": 76,
+      "access": "member_offset"
+    },
+    "fogparams_t_scattering": {
+      "rva": 92,
+      "access": "member_offset"
+    },
+    "fogparams_t_skyboxFogFactor": {
+      "rva": 60,
+      "access": "member_offset"
+    },
+    "fogparams_t_skyboxFogFactorLerpTo": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "fogparams_t_start": {
+      "rva": 36,
+      "access": "member_offset"
+    },
+    "fogparams_t_startLerpTo": {
+      "rva": 68,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_SurfacePropStringToken": {
+      "rva": 120,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_bParentFrozen": {
+      "rva": 117,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_flGlassHalfThickness": {
+      "rva": 112,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_hMaterialBase": {
+      "rva": 16,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_hMaterialDamageOverlay": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_solid": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_vInitialPanelVertices": {
+      "rva": 88,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_vecPanelSize": {
+      "rva": 36,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_vecPanelVertices": {
+      "rva": 64,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_vecStressPositionA": {
+      "rva": 44,
+      "access": "member_offset"
+    },
+    "shard_model_desc_t_m_vecStressPositionB": {
+      "rva": 52,
+      "access": "member_offset"
+    },
+    "sky3dparams_t_bClip3DSkyBoxNearToWorldFar": {
+      "rva": 24,
+      "access": "member_offset"
+    },
+    "sky3dparams_t_flClip3DSkyBoxNearToWorldFarOffset": {
+      "rva": 28,
+      "access": "member_offset"
+    },
+    "sky3dparams_t_fog": {
+      "rva": 32,
+      "access": "member_offset"
+    },
+    "sky3dparams_t_m_nWorldGroupID": {
+      "rva": 136,
+      "access": "member_offset"
+    },
+    "sky3dparams_t_origin": {
+      "rva": 524288,
+      "access": "member_offset"
+    },
+    "sky3dparams_t_scale": {
+      "rva": 524288,
+      "access": "member_offset"
     }
   },
   "sdl3": {

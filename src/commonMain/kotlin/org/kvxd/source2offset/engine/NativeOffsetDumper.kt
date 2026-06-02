@@ -31,6 +31,7 @@ class NativeOffsetDumper(
 
         globalRules.forEach { resolveGlobal(it, log) }
         resolveButtons(log)
+        resolveNetworkVarFields(log)
         memberRules.forEach { resolveMember(it, log) }
 
         val grouped = entries
@@ -218,12 +219,248 @@ class NativeOffsetDumper(
         return normalised.takeIf { it.isNotEmpty() }
     }
 
+    private fun resolveNetworkVarFields(log: (String) -> Unit) {
+        val client = modules.firstOrNull { it.name == "libclient.so" } ?: return
+        val image = runCatching { readFile(client.path) }.getOrNull() ?: return
+        val elf = runCatching { ElfParser(image) }.getOrNull() ?: return
+        val networkStrings = extractStringsContaining(image, NETWORK_VAR_PREFIX)
+        val fields = networkStrings
+            .asSequence()
+            .filter { "NetworkVar_" in it.value }
+            .flatMap { parseNetworkVarFields(it.value).asSequence() }
+            .distinct()
+            .toList()
+        val fieldsByName = fields.groupBy { it.fieldName }
+        val nameRvasByFieldName = findFieldNameRvas(image, elf, fieldsByName.keys)
+        val fieldsByNameRva = nameRvasByFieldName
+            .flatMap { (fieldName, nameRvas) ->
+                val matchingFields = fieldsByName[fieldName].orEmpty()
+                nameRvas.map { nameRva -> nameRva to matchingFields }
+            }
+            .toMap()
+        val offsetsByField = findNetworkFieldOffsets(image, fieldsByNameRva)
+
+        for (field in fields) {
+            val offsets = offsetsByField[field].orEmpty()
+                .distinct()
+                .filter { it in 0..MAX_NETWORK_FIELD_OFFSET }
+
+            val offset = offsets
+                .filter { it >= MIN_NETWORK_FIELD_OFFSET }
+                .singleOrNull()
+                ?: offsets.singleOrNull()
+                ?: continue
+
+            emit(
+                OffsetEntry(
+                    name = "${field.className}_${field.fieldName}",
+                    moduleName = client.name,
+                    rva = offset.toLong(),
+                    access = "member_offset",
+                    discovery = "client_networkvar_metadata",
+                    note = "Recovered from client network-var metadata for ${field.className}.${field.fieldName}.",
+                ),
+                log,
+            )
+        }
+    }
+
+    private fun findFieldNameRvas(
+        image: ByteArray,
+        elf: ElfParser,
+        fieldNames: Set<String>,
+    ): Map<String, Set<Long>> {
+        if (fieldNames.isEmpty()) return emptyMap()
+
+        val namesByLength = fieldNames.groupBy { it.length }
+            .mapValues { (_, names) -> names.toSet() }
+        val rvasByName = mutableMapOf<String, MutableSet<Long>>()
+        var start = 0
+        var cursor = 0
+
+        while (cursor <= image.size) {
+            val ended = cursor == image.size || image[cursor] == 0.toByte()
+            if (ended) {
+                val length = cursor - start
+                val candidates = namesByLength[length]
+                if (candidates != null && image.isPrintableAscii(start, cursor)) {
+                    val value = image.decodeToString(start, cursor)
+                    if (value in candidates) {
+                        val rva = elf.fileOffsetToRva(start.toLong())
+                        if (rva != null) {
+                            rvasByName.getOrPut(value) { mutableSetOf() } += rva
+                        }
+                    }
+                }
+                start = cursor + 1
+            }
+            cursor++
+        }
+
+        return rvasByName
+    }
+
+    private fun findNetworkFieldOffsets(
+        image: ByteArray,
+        fieldsByNameRva: Map<Long, List<NetworkVarField>>,
+    ): Map<NetworkVarField, Set<Int>> {
+        if (fieldsByNameRva.isEmpty()) return emptyMap()
+
+        val minNameRva = fieldsByNameRva.keys.min()
+        val maxNameRva = fieldsByNameRva.keys.max()
+        val offsetsByField = mutableMapOf<NetworkVarField, MutableSet<Int>>()
+        var at = 0
+
+        while (at <= image.size - POINTER_SIZE) {
+            val maybeNameRva = readU64(image, at)
+            if (maybeNameRva in minNameRva..maxNameRva) {
+                val fields = fieldsByNameRva[maybeNameRva]
+                if (fields != null) {
+                    val schemaOffset = readCandidateFieldOffset(image, at + 0x10)
+                    for (field in fields) {
+                        val offsets = offsetsByField.getOrPut(field) { mutableSetOf() }
+                        if (schemaOffset != null) offsets += schemaOffset
+                    }
+                }
+            }
+
+            at += POINTER_SIZE.toInt()
+        }
+
+        return offsetsByField
+    }
+
+    private fun readCandidateFieldOffset(image: ByteArray, at: Int): Int? {
+        if (at < 0 || at + 4 > image.size) return null
+        return readI32(image, at).takeIf { it in 0..MAX_NETWORK_FIELD_OFFSET }
+    }
+
+    private fun parseNetworkVarFields(value: String): List<NetworkVarField> {
+        val fields = mutableListOf<NetworkVarField>()
+        var start = 0
+
+        while (start < value.length) {
+            val marker = value.indexOf('N', start)
+            if (marker < 0) break
+
+            val parsedClass = parseLengthPrefixedToken(value, marker + 1)
+            if (parsedClass == null) {
+                start = marker + 1
+                continue
+            }
+
+            val parsedField = parseLengthPrefixedToken(value, parsedClass.nextIndex)
+            if (parsedField == null) {
+                start = marker + 1
+                continue
+            }
+
+            if (parsedField.token.startsWith(NETWORK_VAR_PREFIX)) {
+                val fieldName = parsedField.token.removePrefix(NETWORK_VAR_PREFIX)
+                if (fieldName.isUsefulNetworkFieldName()) {
+                    fields += NetworkVarField(parsedClass.token, fieldName)
+                }
+            }
+
+            start = parsedClass.nextIndex
+        }
+
+        return fields
+    }
+
+    private fun parseLengthPrefixedToken(value: String, start: Int): ParsedToken? {
+        var cursor = start
+        if (cursor >= value.length || !value[cursor].isDigit()) return null
+
+        var length = 0
+        while (cursor < value.length && value[cursor].isDigit()) {
+            length = length * 10 + (value[cursor].code - '0'.code)
+            cursor++
+        }
+
+        if (length <= 0 || cursor + length > value.length) return null
+        return ParsedToken(
+            token = value.substring(cursor, cursor + length),
+            nextIndex = cursor + length,
+        )
+    }
+
+    private fun String.isUsefulNetworkFieldName(): Boolean =
+        isNotBlank() &&
+                length <= 128 &&
+                first().let { it == '_' || it.isLetter() } &&
+                all { it == '_' || it.isLetterOrDigit() }
+
+    private fun extractStringsContaining(image: ByteArray, needle: String): List<AsciiString> {
+        val needleBytes = needle.encodeToByteArray()
+        val stringsByOffset = mutableMapOf<Int, String>()
+        var searchStart = 0
+
+        while (searchStart <= image.size - needleBytes.size) {
+            val hit = image.indexOfBytes(needleBytes, searchStart)
+            if (hit < 0) break
+
+            var start = hit
+            while (start > 0 && image[start - 1] != 0.toByte()) start--
+
+            var end = hit + needleBytes.size
+            while (end < image.size && image[end] != 0.toByte()) end++
+
+            if (image.isPrintableAscii(start, end)) {
+                stringsByOffset[start] = image.decodeToString(start, end)
+            }
+
+            searchStart = hit + 1
+        }
+
+        return stringsByOffset
+            .map { (fileOffset, value) -> AsciiString(fileOffset, value) }
+            .sortedBy { it.fileOffset }
+    }
+
+    private fun ByteArray.isPrintableAscii(start: Int, endExclusive: Int): Boolean {
+        for (index in start until endExclusive) {
+            if (this[index].toInt() !in 0x20..0x7E) return false
+        }
+        return true
+    }
+
+    private fun ByteArray.indexOfBytes(needle: ByteArray, startIndex: Int): Int {
+        if (needle.isEmpty()) return startIndex.coerceAtMost(size)
+        var at = startIndex.coerceAtLeast(0)
+        val last = size - needle.size
+        while (at <= last) {
+            if (this[at] == needle[0]) {
+                var matches = true
+                for (index in 1 until needle.size) {
+                    if (this[at + index] != needle[index]) {
+                        matches = false
+                        break
+                    }
+                }
+                if (matches) return at
+            }
+            at++
+        }
+        return -1
+    }
+
     private fun emit(entry: OffsetEntry, log: (String) -> Unit) {
         if (entries.none { it.moduleName == entry.moduleName && it.name == entry.name }) {
             entries += entry
             log("  [offset] ${entry.moduleName}:${entry.name} = 0x${entry.rva.toULong().toString(16)}")
         }
     }
+
+    private fun readU64(bytes: ByteArray, at: Int): Long =
+        (bytes[at].toLong() and 0xFF) or
+                ((bytes[at + 1].toLong() and 0xFF) shl 8) or
+                ((bytes[at + 2].toLong() and 0xFF) shl 16) or
+                ((bytes[at + 3].toLong() and 0xFF) shl 24) or
+                ((bytes[at + 4].toLong() and 0xFF) shl 32) or
+                ((bytes[at + 5].toLong() and 0xFF) shl 40) or
+                ((bytes[at + 6].toLong() and 0xFF) shl 48) or
+                ((bytes[at + 7].toLong() and 0xFF) shl 56)
 
     private fun readI32(bytes: ByteArray, at: Int): Int =
         (bytes[at].toInt() and 0xFF) or
@@ -259,6 +496,21 @@ class NativeOffsetDumper(
         val note: String,
     )
 
+    private data class AsciiString(
+        val fileOffset: Int,
+        val value: String,
+    )
+
+    private data class ParsedToken(
+        val token: String,
+        val nextIndex: Int,
+    )
+
+    private data class NetworkVarField(
+        val className: String,
+        val fieldName: String,
+    )
+
     private class BytePattern(pattern: String) {
         private val tokens: List<Int?> = pattern.trim().split(Regex("\\s+")).map { token ->
             if (token == "?" || token == "??") null else token.toInt(16)
@@ -269,9 +521,18 @@ class NativeOffsetDumper(
             if (tokens.isEmpty() || bytes.size < tokens.size) return emptyList()
             val results = mutableListOf<Int>()
             val last = bytes.size - tokens.size
-            for (at in 0..last) {
-                val expectedAnchor = tokens[anchor]
-                if (expectedAnchor != null && (bytes[at + anchor].toInt() and 0xFF) != expectedAnchor) continue
+            val expectedAnchor = tokens[anchor]
+            var searchStart = 0
+
+            while (searchStart <= last) {
+                val at = if (expectedAnchor == null) {
+                    searchStart
+                } else {
+                    val anchorHit = indexOfByte(bytes, expectedAnchor, searchStart + anchor)
+                    if (anchorHit < 0 || anchorHit - anchor > last) break
+                    anchorHit - anchor
+                }
+
                 var matches = true
                 for (i in tokens.indices) {
                     val expected = tokens[i] ?: continue
@@ -281,8 +542,19 @@ class NativeOffsetDumper(
                     }
                 }
                 if (matches) results += at
+                searchStart = at + 1
             }
             return results
+        }
+
+        private fun indexOfByte(bytes: ByteArray, value: Int, startIndex: Int): Int {
+            var at = startIndex.coerceAtLeast(0)
+            val byteValue = value.toByte()
+            while (at < bytes.size) {
+                if (bytes[at] == byteValue) return at
+                at++
+            }
+            return -1
         }
     }
 
@@ -393,6 +665,9 @@ class NativeOffsetDumper(
         private const val CCSGO_INPUT_BUTTON_POINTERS = 0x10L
         private const val CCSGO_INPUT_BUTTON_SLOT_COUNT = 64
         private const val POINTER_SIZE = 0x8L
+        private const val MIN_NETWORK_FIELD_OFFSET = 0x10
+        private const val MAX_NETWORK_FIELD_OFFSET = 0x100000
+        private const val NETWORK_VAR_PREFIX = "NetworkVar_"
 
         private const val KEY_BUTTON_NAME_POINTER = 0x08L
         private const val KEY_BUTTON_STATE = 0x30L
