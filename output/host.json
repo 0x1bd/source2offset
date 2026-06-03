@@ -3,10 +3,6 @@
     "offsetSemantics": "declared_fields_relative_to_class_object",
     "wrapperInheritanceGenerated": false,
     "classes": {
-      ".friends": {
-        "fieldsAreDeclaredDirectlyOnThisClass": true,
-        "fields": {}
-      },
       "CAnimScriptBase": {
         "fieldsAreDeclaredDirectlyOnThisClass": true,
         "fields": {
