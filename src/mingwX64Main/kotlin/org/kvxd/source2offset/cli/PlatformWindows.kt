@@ -2,19 +2,39 @@ package org.kvxd.source2offset.cli
 
 import kotlinx.cinterop.*
 import org.kvxd.source2offset.core.findPidByExecutableName
+import org.kvxd.source2offset.core.readCommandLines
 import platform.posix.*
 
 actual fun findProcessPid(name: String): Int? = findPidByExecutableName(name)
 
-@OptIn(ExperimentalForeignApi::class)
-actual fun currentIsoTimestamp(): String = memScoped {
-    val now = alloc<time_tVar>()
-    time(now.ptr)
-    val tm = alloc<tm>()
-    gmtime_s(tm.ptr, now.ptr)
-    val buffer = allocArray<ByteVar>(32)
-    strftime(buffer, 31u, "%Y-%m-%dT%H:%M:%SZ", tm.ptr)
-    buffer.toKString()
+actual fun processHasLaunchArgument(pid: Int, argument: String): Boolean? {
+    val command = "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& { " +
+            "Get-CimInstance Win32_Process -Filter 'ProcessId = $pid' | " +
+            "Select-Object -ExpandProperty CommandLine }\""
+    val commandLine = readCommandLines(command).firstOrNull() ?: return null
+    return splitWindowsCommandLine(commandLine).any { it == argument }
+}
+
+private fun splitWindowsCommandLine(commandLine: String): List<String> {
+    val args = mutableListOf<String>()
+    val current = StringBuilder()
+    var inQuotes = false
+
+    for (char in commandLine) {
+        when {
+            char == '"' -> inQuotes = !inQuotes
+            char.isWhitespace() && !inQuotes -> {
+                if (current.isNotEmpty()) {
+                    args += current.toString()
+                    current.clear()
+                }
+            }
+            else -> current.append(char)
+        }
+    }
+
+    if (current.isNotEmpty()) args += current.toString()
+    return args
 }
 
 @OptIn(ExperimentalForeignApi::class)

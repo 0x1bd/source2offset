@@ -36,7 +36,6 @@ class RuntimeRootDumper(
                     sourceInterfaceRva = source.rva,
                     memberOffset = offset,
                     targetType = type.typeName,
-                    targetAddress = target,
                 )
                 log("  [root] ${source.name}+0x${offset.toString(16)} -> ${type.typeName}")
             }

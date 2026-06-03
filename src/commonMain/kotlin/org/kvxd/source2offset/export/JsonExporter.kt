@@ -17,7 +17,6 @@ object JsonExporter {
                     for (entry in entries.sortedBy { it.name }) {
                         putJsonObject(entry.name) {
                             put("rva", entry.rva)
-                            put("addressAtDumpTime", entry.address)
                         }
                     }
                 }
@@ -70,7 +69,6 @@ object JsonExporter {
                         put("sourceInterfaceRva", root.sourceInterfaceRva)
                         put("memberOffset", root.memberOffset)
                         put("verifiedTargetType", root.targetType)
-                        put("targetAddressAtDumpTime", root.targetAddress)
                     }
                 }
             }
@@ -79,7 +77,6 @@ object JsonExporter {
 
     fun buildReportJson(result: DumpResult): String = json.encodeToString(
         buildJsonObject {
-            put("timestamp", result.timestamp)
             put("schemaScopes", result.schemas.size)
             put("schemaClasses", result.schemas.sumOf { it.classes.size })
             put("schemaFields", result.schemas.sumOf { scope -> scope.classes.sumOf { it.fields.size } })

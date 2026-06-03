@@ -34,23 +34,44 @@ actual fun findProcessPid(name: String): Int? {
 }
 
 @OptIn(ExperimentalForeignApi::class)
+actual fun processHasLaunchArgument(pid: Int, argument: String): Boolean? {
+    val file = fopen("/proc/$pid/cmdline", "rb") ?: return null
+    return try {
+        memScoped {
+            val bytes = mutableListOf<Byte>()
+            val buffer = allocArray<ByteVar>(4096)
+            while (true) {
+                val read = fread(buffer, 1.convert(), 4096.convert(), file).toInt()
+                if (read <= 0) break
+                for (i in 0 until read) bytes += buffer[i]
+            }
+            nullSeparatedStrings(bytes).any { it == argument }
+        }
+    } finally {
+        fclose(file)
+    }
+}
+
+private fun nullSeparatedStrings(bytes: List<Byte>): List<String> {
+    val values = mutableListOf<String>()
+    var start = 0
+    for (i in bytes.indices) {
+        if (bytes[i] == 0.toByte()) {
+            if (i > start) values += bytes.subList(start, i).toByteArray().decodeToString()
+            start = i + 1
+        }
+    }
+    if (start < bytes.size) values += bytes.subList(start, bytes.size).toByteArray().decodeToString()
+    return values
+}
+
+@OptIn(ExperimentalForeignApi::class)
 private fun readLink(path: String): String? {
     val result = ByteArray(4096)
     return result.usePinned { buffer ->
         val length = readlink(path, buffer.addressOf(0), result.size.convert())
         if (length <= 0) null else result.decodeToString(0, length.toInt())
     }
-}
-
-@OptIn(ExperimentalForeignApi::class)
-actual fun currentIsoTimestamp(): String = memScoped {
-    val now = alloc<time_tVar>()
-    time(now.ptr)
-    val tm = alloc<tm>()
-    gmtime_r(now.ptr, tm.ptr)
-    val buffer = allocArray<ByteVar>(32)
-    strftime(buffer, 31u, "%Y-%m-%dT%H:%M:%SZ", tm.ptr)
-    buffer.toKString()
 }
 
 @OptIn(ExperimentalForeignApi::class)

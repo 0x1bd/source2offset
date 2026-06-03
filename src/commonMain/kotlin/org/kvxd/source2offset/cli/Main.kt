@@ -18,7 +18,7 @@ import org.kvxd.source2offset.export.JsonExporter
 import org.kvxd.source2offset.export.KotlinExporter
 
 expect fun findProcessPid(name: String): Int?
-expect fun currentIsoTimestamp(): String
+expect fun processHasLaunchArgument(pid: Int, argument: String): Boolean?
 expect fun readFileBytes(path: String): ByteArray
 
 private data class CliOptions(
@@ -131,6 +131,20 @@ private class Source2OffsetCmd(private val options: CliOptions) {
         }
         println("Process: pid=$pid")
 
+        when (processHasLaunchArgument(pid, "-insecure")) {
+            true -> Unit
+            false -> {
+                println("ERROR: CS2 must be launched with -insecure before source2offset can run.")
+                println("Add -insecure to CS2 launch options, restart the game, then run source2offset again.")
+                return
+            }
+            null -> {
+                println("ERROR: unable to verify that CS2 was launched with -insecure.")
+                println("source2offset will not run unless -insecure can be confirmed in the CS2 command line.")
+                return
+            }
+        }
+
         val mappings = runCatching { parseMemoryMap(pid) }.getOrElse { error ->
             println("ERROR: unable to read process module map for pid=$pid: ${error.message}")
             return
@@ -188,7 +202,6 @@ private class Source2OffsetCmd(private val options: CliOptions) {
                 mappings = mappings,
                 resolvedInterfaces = interfaces,
                 readFile = ::readFileBytes,
-                timestamp = currentIsoTimestamp(),
                 log = ::printIssue,
                 progress = { println(it) },
             ).run()
@@ -230,7 +243,7 @@ private class Source2OffsetCmd(private val options: CliOptions) {
 
     private fun printSummary(result: DumpResult) {
         println()
-        println("Dump complete: ${result.timestamp}")
+        println("Dump complete.")
         println("  Interfaces : ${result.interfaces.values.sumOf { it.size }}")
         println("  Offsets    : ${result.offsets.values.sumOf { it.size }}")
         println("  Schemas    : ${result.schemas.size} scope(s), ${result.schemas.sumOf { it.classes.size }} class(es)")

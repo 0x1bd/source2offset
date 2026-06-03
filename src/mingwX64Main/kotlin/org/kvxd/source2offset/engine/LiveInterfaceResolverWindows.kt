@@ -53,7 +53,7 @@ actual class LiveInterfaceResolver actual constructor(
                     }.getOrNull()
 
                     if (entry != null) {
-                        log("  [interface] ${entry.moduleName}:${entry.name} -> 0x${entry.address.toULong().toString(16)}")
+                        log("  [interface] ${entry.moduleName}:${entry.name} -> rva=0x${entry.rva.toULong().toString(16)}")
                         entries += entry
                     }
                 }

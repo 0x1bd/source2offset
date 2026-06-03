@@ -6,8 +6,7 @@
       "sourceInterface": "GameResourceServiceClientV001",
       "sourceInterfaceRva": 10238752,
       "memberOffset": 80,
-      "verifiedTargetType": "CGameEntitySystem",
-      "targetAddressAtDumpTime": 140713630287872
+      "verifiedTargetType": "CGameEntitySystem"
     }
   ]
 }

@@ -24,7 +24,6 @@ data class RuntimeRootEntry(
     val sourceInterfaceRva: Long,
     val memberOffset: Long,
     val targetType: String,
-    val targetAddress: Long,
 )
 
 data class OffsetEntry(

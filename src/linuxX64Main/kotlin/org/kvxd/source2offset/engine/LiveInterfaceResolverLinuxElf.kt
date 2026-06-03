@@ -47,7 +47,7 @@ actual class LiveInterfaceResolver actual constructor(
                 rva = address - result.call.moduleBase,
                 address = address,
             )
-            log("  [interface] ${entry.moduleName}:${entry.name} -> 0x${entry.address.toULong().toString(16)}")
+            log("  [interface] ${entry.moduleName}:${entry.name} -> rva=0x${entry.rva.toULong().toString(16)}")
             entry
         }
     }

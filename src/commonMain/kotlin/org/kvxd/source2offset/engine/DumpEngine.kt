@@ -19,7 +19,6 @@ class DumpEngine(
     private val mappings: List<MemoryMapping>,
     private val resolvedInterfaces: List<InterfaceEntry>,
     private val readFile: (String) -> ByteArray,
-    private val timestamp: String,
     private val log: (String) -> Unit = {},
     private val progress: (String) -> Unit = {},
 ) {
@@ -74,7 +73,6 @@ class DumpEngine(
         }
 
         return DumpResult(
-            timestamp = timestamp,
             interfaces = interfaceMap,
             offsets = offsetResult.offsets,
             schemas = schemas,

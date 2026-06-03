@@ -10,6 +10,15 @@ import org.kvxd.unsafeKt.mem.Struct
 
 object HostSchema {
 
+    /** Fields declared directly by .friends. */
+    object _friends {
+        const val SCHEMA_NAME: String = ".friends"
+    }
+
+    class _friendsStruct(base: Long, mem: UnsafeKt) : Struct(base, mem) {
+        // No directly declared reflected fields.
+    }
+
     /** Fields declared directly by CAnimScriptBase. */
     object CAnimScriptBase {
         const val SCHEMA_NAME: String = "CAnimScriptBase"

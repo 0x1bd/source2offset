@@ -1,32 +1,27 @@
 {
   "client": {
     "Source2ClientPrediction001": {
-      "rva": 73907456,
-      "addressAtDumpTime": 140714086743296
+      "rva": 73907456
     }
   },
   "engine2": {
     "GameResourceServiceClientV001": {
-      "rva": 10238752,
-      "addressAtDumpTime": 140718221572896
+      "rva": 10238752
     }
   },
   "inputsystem": {
     "InputSystemVersion001": {
-      "rva": 520160,
-      "addressAtDumpTime": 140717907922912
+      "rva": 520160
     }
   },
   "schemasystem": {
     "SchemaSystem_001": {
-      "rva": 744864,
-      "addressAtDumpTime": 140717540216224
+      "rva": 744864
     }
   },
   "soundsystem": {
     "SoundSystem001": {
-      "rva": 7715328,
-      "addressAtDumpTime": 140714863606272
+      "rva": 7715328
     }
   }
 }
