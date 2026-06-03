@@ -3,6 +3,7 @@ package org.kvxd.source2offset.engine
 import org.kvxd.source2offset.core.MemReader
 import org.kvxd.source2offset.core.MemoryMapping
 import org.kvxd.source2offset.core.Module
+import org.kvxd.source2offset.core.currentPlatform
 import org.kvxd.source2offset.engine.rtti.RttiInspector
 import org.kvxd.source2offset.export.DumpResult
 import org.kvxd.source2offset.export.InterfaceEntry
@@ -27,32 +28,45 @@ class DumpEngine(
             .groupBy { normaliseModuleName(it.moduleName) }
             .mapValues { (_, entries) -> entries.sortedBy { it.name } }
 
-        val symbols = if (includeSymbols) {
+        val symbols = if (includeSymbols && currentPlatform.supportsElfSymbols) {
             progress("Writing ELF symbols...")
             SymbolDumper(readFile).dump(modulesForSymbols, log)
+        } else if (includeSymbols) {
+            log("WARN: ELF symbol export is not available for ${currentPlatform.moduleKindName} modules.")
+            emptyMap()
         } else {
             emptyMap()
         }
 
-        progress("Dumping schema metadata...")
-        val schemaInterface = resolvedInterfaces.firstOrNull { it.name == "SchemaSystem_001" }
-        val schemas = if (schemaInterface == null) {
+        val schemas = if (!currentPlatform.supportsLiveSchemas) {
+            progress("Skipping live schema metadata on this platform...")
             emptyList()
         } else {
-            runCatching { SchemaDumper(mem).dump(schemaInterface.address, log) }
-                .getOrElse { error ->
-                    log("ERROR: schema dump failed: ${error.message}")
-                    emptyList()
-                }
+            progress("Dumping schema metadata...")
+            val schemaInterface = resolvedInterfaces.firstOrNull { it.name == "SchemaSystem_001" }
+            if (schemaInterface == null) {
+                emptyList()
+            } else {
+                runCatching { SchemaDumper(mem).dump(schemaInterface.address, log) }
+                    .getOrElse { error ->
+                        log("ERROR: schema dump failed: ${error.message}")
+                        emptyList()
+                    }
+            }
         }
 
-        val rtti = RttiInspector(mem, mappings)
-        progress("Inspecting runtime roots...")
-        val roots = RuntimeRootDumper(mem, rtti).dump(resolvedInterfaces, log)
+        val roots = if (currentPlatform.supportsRuntimeRoots) {
+            val rtti = RttiInspector(mem, mappings)
+            progress("Inspecting runtime roots...")
+            RuntimeRootDumper(mem, rtti).dump(resolvedInterfaces, log)
+        } else {
+            progress("Skipping runtime roots on this platform...")
+            emptyList()
+        }
 
         val offsetResult = if (includePrivateOffsets) {
             progress("Dumping offsets...")
-            NativeOffsetDumper(mem, gameModules, rtti, readFile).dump(resolvedInterfaces, roots, log)
+            NativeOffsetDumper(mem, gameModules, readFile).dump(log)
         } else {
             OffsetDiscoveryResult(
                 offsets = emptyMap(),

@@ -3,6 +3,16 @@ package org.kvxd.source2offset.core
 import kotlinx.cinterop.*
 import platform.posix.*
 
+actual val currentPlatform: PlatformInfo = PlatformInfo(
+    processName = "cs2",
+    moduleKindName = "ELF",
+    supportsElfSymbols = true,
+    supportsLiveInterfaces = true,
+    supportsLiveSchemas = true,
+    supportsRuntimeRoots = true,
+    coreSymbolModules = setOf("libclient.so", "libengine2.so", "libschemasystem.so"),
+)
+
 private fun parseMapsLine(line: String): MemoryMapping? {
     val parts = line.trimEnd().trimStart().split(Regex("\\s+"), limit = 6)
     if (parts.size < 5) return null
@@ -21,6 +31,28 @@ private fun parseMapsLine(line: String): MemoryMapping? {
 
     return MemoryMapping(start, end, perms, offset, device, inode, path)
 }
+
+private val GAME_PATH_MARKERS = listOf(
+    "Counter-Strike Global Offensive/game",
+    "game/bin/linuxsteamrt64",
+    "game/csgo/bin/linuxsteamrt64",
+)
+
+actual fun filterGameModulesForPlatform(modules: List<Module>, gameDir: String?): Pair<String?, List<Module>> {
+    val root = gameDir ?: modules.firstOrNull { module ->
+        GAME_PATH_MARKERS.any { marker -> marker in module.path }
+    }?.path?.let { path ->
+        val marker = "Counter-Strike Global Offensive/game"
+        val at = path.indexOf(marker)
+        if (at >= 0) path.substring(0, at + marker.length) else path.substringBefore("/bin/linuxsteamrt64/")
+    }
+
+    if (root == null) return null to emptyList()
+    return root to modules.filter { it.path.startsWith(root) && it.name.isSharedObjectName() }
+}
+
+private fun String.isSharedObjectName(): Boolean =
+    endsWith(".so") || contains(".so.")
 
 @OptIn(ExperimentalForeignApi::class)
 actual fun parseMemoryMap(pid: Int): List<MemoryMapping> {

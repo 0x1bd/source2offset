@@ -36,6 +36,7 @@ data class Module(
 
 expect fun parseMemoryMap(pid: Int): List<MemoryMapping>
 expect fun findPidsByMapsKeyword(keyword: String): List<Int>
+expect fun filterGameModulesForPlatform(modules: List<Module>, gameDir: String? = null): Pair<String?, List<Module>>
 
 fun parseModuleMap(pid: Int): List<Module> =
     parseMemoryMap(pid)
@@ -48,7 +49,7 @@ fun parseModuleMap(pid: Int): List<Module> =
                 .map { it.start - it.fileOffset }
                 .minWithOrNull(compareBy { it.toULong() })!!
             Module(
-                name = path.substringAfterLast('/'),
+                name = path.substringAfterLast('/').substringAfterLast('\\'),
                 path = path,
                 base = base,
                 start = ordered.first().start,
@@ -61,26 +62,8 @@ fun parseModuleMap(pid: Int): List<Module> =
 fun List<Module>.findByKeyword(keyword: String): Module? =
     firstOrNull { it.name.contains(keyword, ignoreCase = true) }
 
-private val GAME_PATH_MARKERS = listOf(
-    "Counter-Strike Global Offensive/game",
-    "game/bin/linuxsteamrt64",
-    "game/csgo/bin/linuxsteamrt64",
-)
-
 fun List<Module>.filterGameModules(gameDir: String? = null): Pair<String?, List<Module>> {
-    val root = gameDir ?: firstOrNull { module ->
-        GAME_PATH_MARKERS.any { marker -> marker in module.path }
-    }?.path?.let { path ->
-        val marker = "Counter-Strike Global Offensive/game"
-        val at = path.indexOf(marker)
-        if (at >= 0) path.substring(0, at + marker.length) else path.substringBefore("/bin/linuxsteamrt64/")
-    }
-
-    if (root == null) return null to emptyList()
-    return root to filter { it.path.startsWith(root) && it.name.isSharedObjectName() }
+    return filterGameModulesForPlatform(this, gameDir)
 }
 
 fun Long.hexAddress(): String = "0x${toULong().toString(16)}"
-
-private fun String.isSharedObjectName(): Boolean =
-    endsWith(".so") || contains(".so.")

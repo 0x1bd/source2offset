@@ -5,6 +5,7 @@ import okio.Path.Companion.toPath
 import org.kvxd.source2offset.core.MemReader
 import org.kvxd.source2offset.core.Module
 import org.kvxd.source2offset.core.ProcessHandle
+import org.kvxd.source2offset.core.currentPlatform
 import org.kvxd.source2offset.core.filterGameModules
 import org.kvxd.source2offset.core.hexAddress
 import org.kvxd.source2offset.core.parseMemoryMap
@@ -124,35 +125,42 @@ private class Source2OffsetCmd(private val options: CliOptions) {
         println("source2offset")
         println()
 
-        val pid = findProcessPid("cs2") ?: run {
+        val pid = findProcessPid(currentPlatform.processName) ?: run {
             println("ERROR: no native CS2 process was found.")
             return
         }
         println("Process: pid=$pid")
 
         val mappings = runCatching { parseMemoryMap(pid) }.getOrElse { error ->
-            println("ERROR: unable to read /proc/$pid/maps: ${error.message}")
+            println("ERROR: unable to read process module map for pid=$pid: ${error.message}")
             return
         }
         val modules = parseModuleMap(pid)
         val (detectedGameDir, gameModules) = modules.filterGameModules(options.gameDir)
         if (gameModules.isEmpty()) {
-            println("ERROR: no native CS2 ELF modules found in the process mappings.")
+            println("ERROR: no native CS2 ${currentPlatform.moduleKindName} modules found in the process mappings.")
             println("Game directory candidate: ${detectedGameDir ?: options.gameDir ?: "none"}")
             return
         }
         println("Game directory: $detectedGameDir")
-        println("Native ELF modules: ${gameModules.size}")
+        println("Native ${currentPlatform.moduleKindName} modules: ${gameModules.size}")
         gameModules.sortedBy { it.name }.forEach {
             println("  ${it.name.padEnd(30)} ${it.base.hexAddress()}")
         }
         println()
 
         val requests = buildRequests()
-        println("Resolving named interfaces through live CreateInterface calls...")
-        val interfaces = LiveInterfaceResolver(gameModules, ::readFileBytes)
-            .resolve(pid, requests, ::printIssue)
-        println("Resolved interfaces: ${interfaces.size}/${requests.size}")
+        val interfaces = if (currentPlatform.supportsLiveInterfaces) {
+            println("Resolving named interfaces through live CreateInterface calls...")
+            LiveInterfaceResolver(gameModules, ::readFileBytes)
+                .resolve(pid, requests, ::printIssue)
+        } else {
+            println("Live CreateInterface resolution is not available on this platform.")
+            emptyList()
+        }
+        if (currentPlatform.supportsLiveInterfaces) {
+            println("Resolved interfaces: ${interfaces.size}/${requests.size}")
+        }
         println()
 
         val handle = runCatching { ProcessHandle(pid) }.getOrElse { error ->
@@ -253,8 +261,7 @@ private class Source2OffsetCmd(private val options: CliOptions) {
     }
 
     private fun coreSymbolModules(modules: List<Module>): List<Module> {
-        val core = setOf("libclient.so", "libengine2.so", "libschemasystem.so")
-        return modules.filter { it.name in core }
+        return modules.filter { it.name in currentPlatform.coreSymbolModules }
     }
 
     private fun printIssue(message: String) {

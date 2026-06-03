@@ -29,6 +29,23 @@ kotlin {
         }
     }
 
+    mingwX64 {
+        binaries {
+            executable {
+                entryPoint = "org.kvxd.source2offset.cli.main"
+                baseName = "source2offset"
+            }
+        }
+
+        compilations.all {
+            compileTaskProvider.configure {
+                compilerOptions {
+                    freeCompilerArgs.add("-Xexpect-actual-classes")
+                }
+            }
+        }
+    }
+
     sourceSets {
         commonMain.dependencies {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")

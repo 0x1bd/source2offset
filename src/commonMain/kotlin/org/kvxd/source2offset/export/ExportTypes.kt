@@ -33,7 +33,6 @@ data class OffsetEntry(
     val rva: Long,
     val access: String,
     val discovery: String,
-    val note: String = "",
 )
 
 fun normaliseModuleName(name: String): String {
